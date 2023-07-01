@@ -12,6 +12,8 @@ namespace BackOffice
 {
     public partial class QuickCarry : Form
     {
+
+
         public QuickCarry()
         {
             InitializeComponent();
@@ -30,23 +32,9 @@ namespace BackOffice
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            /*
-             [BUG] - > No reescala items del form.
-             this.WindowState = FormWindowState.Minimized;
-
-             */
         }
 
         private void SlidePanel_MouseDown(object sender, MouseEventArgs e)
@@ -54,6 +42,26 @@ namespace BackOffice
             m = 1;
             x = e.X;
             y = e.Y;
+        }
+
+        private void buttonMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void buttonMaximize_Click(object sender, EventArgs e)
+        {
+
+            //[BUG] - > No reescala items
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+
         }
 
         private void SlidePanel_MouseMove(object sender, MouseEventArgs e)
