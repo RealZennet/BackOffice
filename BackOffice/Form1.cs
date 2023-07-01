@@ -17,9 +17,6 @@ namespace BackOffice
         public QuickCarry()
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(22, 75, 96);
-            this.SlidePanel.BackColor = Color.FromArgb(79, 192, 208);
-            this.buttonClose.BackColor = Color.FromArgb(27, 107, 147);
             this.buttonMaximize.BackColor = Color.FromArgb(27, 107, 147);
             this.buttonMinimize.BackColor = Color.FromArgb(27, 107, 147);
         }
