@@ -16,7 +16,7 @@ namespace capa_datos
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO producto(nombre, precio) VALUES(" +
+            this.Command.CommandText = $"INSERT INTO producto(nom_Prod, peso_Prod, cant_Prod, desc_Prod) VALUES(" +
                 $"'{this.NombreProducto}', " +
                 $"{this.PesoProducto}, " +
                 $"{this.CantidadProducto}, " +

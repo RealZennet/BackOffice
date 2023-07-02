@@ -39,5 +39,34 @@ namespace BackOffice
         {
             RefreshTable();
         }
+
+        private void buttonAddProduct_Click(object sender, EventArgs e)
+        {
+            ProductosController.Crear(txtBoxName.Text, Int32.Parse(txtBoxAmount.Text), Int32.Parse(txtBoxAmount.Text), txtBoxDescription.Text);
+            MessageBox.Show("Producto Agregado");
+            RefreshTable();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewProducts.SelectedRows.Count > 0)
+            {
+
+                int selectedIndex = dataGridViewProducts.SelectedRows[0].Index;
+
+
+                int id = (int)dataGridViewProducts.Rows[selectedIndex].Cells["id"].Value;
+
+
+                DataTable dataTableProducts = (DataTable)dataGridViewProducts.DataSource;
+                dataTableProducts.Rows.RemoveAt(selectedIndex);
+                MessageBox.Show("El producto fue eliminado!");
+
+                ProductosController.EliminarProducto(id);
+                dataGridViewProducts.DataSource = dataTableProducts;
+                RefreshTable();
+
+            }
+        }
     }
 }
