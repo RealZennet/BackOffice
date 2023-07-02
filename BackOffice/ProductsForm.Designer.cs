@@ -49,7 +49,9 @@
             this.dataGridViewProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewProducts.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.dataGridViewProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProducts.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridViewProducts.Location = new System.Drawing.Point(12, 44);
             this.dataGridViewProducts.Name = "dataGridViewProducts";
             this.dataGridViewProducts.Size = new System.Drawing.Size(480, 503);
