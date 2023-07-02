@@ -33,24 +33,25 @@
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.leftPanelContainer = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.buttonProducts = new System.Windows.Forms.Button();
-            this.productsPanel = new System.Windows.Forms.Panel();
-            this.buttonProductsManager = new System.Windows.Forms.Button();
-            this.buttonUsers = new System.Windows.Forms.Button();
-            this.buttonLotesManager = new System.Windows.Forms.Button();
+            this.managementPanel = new System.Windows.Forms.Panel();
+            this.wareHouseButton = new System.Windows.Forms.Button();
+            this.buttonTrucksManager = new System.Windows.Forms.Button();
+            this.buttonShippingManager = new System.Windows.Forms.Button();
+            this.buttonManagement = new System.Windows.Forms.Button();
             this.usersPanel = new System.Windows.Forms.Panel();
             this.buttonUsersManager = new System.Windows.Forms.Button();
-            this.buttonManagement = new System.Windows.Forms.Button();
-            this.managementPanel = new System.Windows.Forms.Panel();
-            this.buttonShippingManager = new System.Windows.Forms.Button();
-            this.buttonTrucksManager = new System.Windows.Forms.Button();
-            this.wareHouseButton = new System.Windows.Forms.Button();
+            this.buttonUsers = new System.Windows.Forms.Button();
+            this.productsAndLotsPanel = new System.Windows.Forms.Panel();
+            this.buttonLotesManager = new System.Windows.Forms.Button();
+            this.buttonProductsManager = new System.Windows.Forms.Button();
+            this.buttonProducts = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SlidePanel.SuspendLayout();
             this.leftPanelContainer.SuspendLayout();
-            this.productsPanel.SuspendLayout();
-            this.usersPanel.SuspendLayout();
             this.managementPanel.SuspendLayout();
+            this.usersPanel.SuspendLayout();
+            this.productsAndLotsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // SlidePanel
@@ -106,95 +107,90 @@
             // 
             // leftPanelContainer
             // 
+            this.leftPanelContainer.AutoScroll = true;
             this.leftPanelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(96)))));
             this.leftPanelContainer.Controls.Add(this.managementPanel);
             this.leftPanelContainer.Controls.Add(this.buttonManagement);
             this.leftPanelContainer.Controls.Add(this.usersPanel);
             this.leftPanelContainer.Controls.Add(this.buttonUsers);
-            this.leftPanelContainer.Controls.Add(this.productsPanel);
+            this.leftPanelContainer.Controls.Add(this.productsAndLotsPanel);
             this.leftPanelContainer.Controls.Add(this.buttonProducts);
             this.leftPanelContainer.Controls.Add(this.panelLogo);
             this.leftPanelContainer.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanelContainer.Location = new System.Drawing.Point(0, 41);
             this.leftPanelContainer.Name = "leftPanelContainer";
-            this.leftPanelContainer.Size = new System.Drawing.Size(250, 640);
+            this.leftPanelContainer.Size = new System.Drawing.Size(250, 566);
             this.leftPanelContainer.TabIndex = 1;
             // 
-            // panelLogo
+            // managementPanel
             // 
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 100);
-            this.panelLogo.TabIndex = 0;
+            this.managementPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
+            this.managementPanel.Controls.Add(this.button1);
+            this.managementPanel.Controls.Add(this.wareHouseButton);
+            this.managementPanel.Controls.Add(this.buttonTrucksManager);
+            this.managementPanel.Controls.Add(this.buttonShippingManager);
+            this.managementPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.managementPanel.Location = new System.Drawing.Point(0, 407);
+            this.managementPanel.Name = "managementPanel";
+            this.managementPanel.Size = new System.Drawing.Size(250, 152);
+            this.managementPanel.TabIndex = 6;
             // 
-            // buttonProducts
+            // wareHouseButton
             // 
-            this.buttonProducts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonProducts.FlatAppearance.BorderSize = 0;
-            this.buttonProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonProducts.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonProducts.Location = new System.Drawing.Point(0, 100);
-            this.buttonProducts.Name = "buttonProducts";
-            this.buttonProducts.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonProducts.Size = new System.Drawing.Size(250, 45);
-            this.buttonProducts.TabIndex = 1;
-            this.buttonProducts.Text = "Distribucion de productos y lotes";
-            this.buttonProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonProducts.UseVisualStyleBackColor = true;
+            this.wareHouseButton.FlatAppearance.BorderSize = 0;
+            this.wareHouseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wareHouseButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.wareHouseButton.Location = new System.Drawing.Point(0, 99);
+            this.wareHouseButton.Name = "wareHouseButton";
+            this.wareHouseButton.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.wareHouseButton.Size = new System.Drawing.Size(250, 40);
+            this.wareHouseButton.TabIndex = 2;
+            this.wareHouseButton.Text = "Gestionar Almacenes";
+            this.wareHouseButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.wareHouseButton.UseVisualStyleBackColor = true;
             // 
-            // productsPanel
+            // buttonTrucksManager
             // 
-            this.productsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
-            this.productsPanel.Controls.Add(this.buttonLotesManager);
-            this.productsPanel.Controls.Add(this.buttonProductsManager);
-            this.productsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.productsPanel.Location = new System.Drawing.Point(0, 145);
-            this.productsPanel.Name = "productsPanel";
-            this.productsPanel.Size = new System.Drawing.Size(250, 102);
-            this.productsPanel.TabIndex = 2;
+            this.buttonTrucksManager.FlatAppearance.BorderSize = 0;
+            this.buttonTrucksManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTrucksManager.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonTrucksManager.Location = new System.Drawing.Point(0, 53);
+            this.buttonTrucksManager.Name = "buttonTrucksManager";
+            this.buttonTrucksManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonTrucksManager.Size = new System.Drawing.Size(250, 40);
+            this.buttonTrucksManager.TabIndex = 0;
+            this.buttonTrucksManager.Text = "Gestionar Camiones";
+            this.buttonTrucksManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTrucksManager.UseVisualStyleBackColor = true;
             // 
-            // buttonProductsManager
+            // buttonShippingManager
             // 
-            this.buttonProductsManager.FlatAppearance.BorderSize = 0;
-            this.buttonProductsManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonProductsManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonProductsManager.Location = new System.Drawing.Point(0, 7);
-            this.buttonProductsManager.Name = "buttonProductsManager";
-            this.buttonProductsManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonProductsManager.Size = new System.Drawing.Size(250, 40);
-            this.buttonProductsManager.TabIndex = 0;
-            this.buttonProductsManager.Text = "Gestionar Productos";
-            this.buttonProductsManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonProductsManager.UseVisualStyleBackColor = true;
+            this.buttonShippingManager.FlatAppearance.BorderSize = 0;
+            this.buttonShippingManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonShippingManager.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonShippingManager.Location = new System.Drawing.Point(0, 7);
+            this.buttonShippingManager.Name = "buttonShippingManager";
+            this.buttonShippingManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonShippingManager.Size = new System.Drawing.Size(250, 40);
+            this.buttonShippingManager.TabIndex = 0;
+            this.buttonShippingManager.Text = "Gestionar Envios";
+            this.buttonShippingManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonShippingManager.UseVisualStyleBackColor = true;
             // 
-            // buttonUsers
+            // buttonManagement
             // 
-            this.buttonUsers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonUsers.FlatAppearance.BorderSize = 0;
-            this.buttonUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUsers.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonUsers.Location = new System.Drawing.Point(0, 247);
-            this.buttonUsers.Name = "buttonUsers";
-            this.buttonUsers.Size = new System.Drawing.Size(250, 45);
-            this.buttonUsers.TabIndex = 3;
-            this.buttonUsers.Text = "Usuarios";
-            this.buttonUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUsers.UseVisualStyleBackColor = true;
-            // 
-            // buttonLotesManager
-            // 
-            this.buttonLotesManager.FlatAppearance.BorderSize = 0;
-            this.buttonLotesManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLotesManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonLotesManager.Location = new System.Drawing.Point(0, 53);
-            this.buttonLotesManager.Name = "buttonLotesManager";
-            this.buttonLotesManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonLotesManager.Size = new System.Drawing.Size(250, 40);
-            this.buttonLotesManager.TabIndex = 1;
-            this.buttonLotesManager.Text = "Gestionar Lotes";
-            this.buttonLotesManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonLotesManager.UseVisualStyleBackColor = true;
+            this.buttonManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonManagement.FlatAppearance.BorderSize = 0;
+            this.buttonManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonManagement.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonManagement.Location = new System.Drawing.Point(0, 362);
+            this.buttonManagement.Name = "buttonManagement";
+            this.buttonManagement.Size = new System.Drawing.Size(250, 45);
+            this.buttonManagement.TabIndex = 5;
+            this.buttonManagement.Text = "Gerencia";
+            this.buttonManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonManagement.UseVisualStyleBackColor = true;
+            this.buttonManagement.Click += new System.EventHandler(this.buttonManagement_Click);
             // 
             // usersPanel
             // 
@@ -220,80 +216,104 @@
             this.buttonUsersManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonUsersManager.UseVisualStyleBackColor = true;
             // 
-            // buttonManagement
+            // buttonUsers
             // 
-            this.buttonManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonManagement.FlatAppearance.BorderSize = 0;
-            this.buttonManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonManagement.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonManagement.Location = new System.Drawing.Point(0, 362);
-            this.buttonManagement.Name = "buttonManagement";
-            this.buttonManagement.Size = new System.Drawing.Size(250, 45);
-            this.buttonManagement.TabIndex = 5;
-            this.buttonManagement.Text = "Gerencia";
-            this.buttonManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonManagement.UseVisualStyleBackColor = true;
+            this.buttonUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonUsers.FlatAppearance.BorderSize = 0;
+            this.buttonUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUsers.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonUsers.Location = new System.Drawing.Point(0, 247);
+            this.buttonUsers.Name = "buttonUsers";
+            this.buttonUsers.Size = new System.Drawing.Size(250, 45);
+            this.buttonUsers.TabIndex = 3;
+            this.buttonUsers.Text = "Usuarios";
+            this.buttonUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUsers.UseVisualStyleBackColor = true;
+            this.buttonUsers.Click += new System.EventHandler(this.buttonUsers_Click);
             // 
-            // managementPanel
+            // productsAndLotsPanel
             // 
-            this.managementPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
-            this.managementPanel.Controls.Add(this.wareHouseButton);
-            this.managementPanel.Controls.Add(this.buttonTrucksManager);
-            this.managementPanel.Controls.Add(this.buttonShippingManager);
-            this.managementPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.managementPanel.Location = new System.Drawing.Point(0, 407);
-            this.managementPanel.Name = "managementPanel";
-            this.managementPanel.Size = new System.Drawing.Size(250, 152);
-            this.managementPanel.TabIndex = 6;
+            this.productsAndLotsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
+            this.productsAndLotsPanel.Controls.Add(this.buttonLotesManager);
+            this.productsAndLotsPanel.Controls.Add(this.buttonProductsManager);
+            this.productsAndLotsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.productsAndLotsPanel.Location = new System.Drawing.Point(0, 145);
+            this.productsAndLotsPanel.Name = "productsAndLotsPanel";
+            this.productsAndLotsPanel.Size = new System.Drawing.Size(250, 102);
+            this.productsAndLotsPanel.TabIndex = 2;
             // 
-            // buttonShippingManager
+            // buttonLotesManager
             // 
-            this.buttonShippingManager.FlatAppearance.BorderSize = 0;
-            this.buttonShippingManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonShippingManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonShippingManager.Location = new System.Drawing.Point(0, 7);
-            this.buttonShippingManager.Name = "buttonShippingManager";
-            this.buttonShippingManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonShippingManager.Size = new System.Drawing.Size(250, 40);
-            this.buttonShippingManager.TabIndex = 0;
-            this.buttonShippingManager.Text = "Gestionar Envios";
-            this.buttonShippingManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonShippingManager.UseVisualStyleBackColor = true;
+            this.buttonLotesManager.FlatAppearance.BorderSize = 0;
+            this.buttonLotesManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLotesManager.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonLotesManager.Location = new System.Drawing.Point(0, 53);
+            this.buttonLotesManager.Name = "buttonLotesManager";
+            this.buttonLotesManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonLotesManager.Size = new System.Drawing.Size(250, 40);
+            this.buttonLotesManager.TabIndex = 1;
+            this.buttonLotesManager.Text = "Gestionar Lotes";
+            this.buttonLotesManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonLotesManager.UseVisualStyleBackColor = true;
             // 
-            // buttonTrucksManager
+            // buttonProductsManager
             // 
-            this.buttonTrucksManager.FlatAppearance.BorderSize = 0;
-            this.buttonTrucksManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTrucksManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonTrucksManager.Location = new System.Drawing.Point(0, 53);
-            this.buttonTrucksManager.Name = "buttonTrucksManager";
-            this.buttonTrucksManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonTrucksManager.Size = new System.Drawing.Size(250, 40);
-            this.buttonTrucksManager.TabIndex = 0;
-            this.buttonTrucksManager.Text = "Gestionar Camiones";
-            this.buttonTrucksManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTrucksManager.UseVisualStyleBackColor = true;
+            this.buttonProductsManager.FlatAppearance.BorderSize = 0;
+            this.buttonProductsManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProductsManager.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonProductsManager.Location = new System.Drawing.Point(0, 7);
+            this.buttonProductsManager.Name = "buttonProductsManager";
+            this.buttonProductsManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonProductsManager.Size = new System.Drawing.Size(250, 40);
+            this.buttonProductsManager.TabIndex = 0;
+            this.buttonProductsManager.Text = "Gestionar Productos";
+            this.buttonProductsManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonProductsManager.UseVisualStyleBackColor = true;
             // 
-            // wareHouseButton
+            // buttonProducts
             // 
-            this.wareHouseButton.FlatAppearance.BorderSize = 0;
-            this.wareHouseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.wareHouseButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.wareHouseButton.Location = new System.Drawing.Point(0, 99);
-            this.wareHouseButton.Name = "wareHouseButton";
-            this.wareHouseButton.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.wareHouseButton.Size = new System.Drawing.Size(250, 40);
-            this.wareHouseButton.TabIndex = 2;
-            this.wareHouseButton.Text = "Gestionar Almacenes";
-            this.wareHouseButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.wareHouseButton.UseVisualStyleBackColor = true;
+            this.buttonProducts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonProducts.FlatAppearance.BorderSize = 0;
+            this.buttonProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProducts.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonProducts.Location = new System.Drawing.Point(0, 100);
+            this.buttonProducts.Name = "buttonProducts";
+            this.buttonProducts.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonProducts.Size = new System.Drawing.Size(250, 45);
+            this.buttonProducts.TabIndex = 1;
+            this.buttonProducts.Text = "Distribucion de productos y lotes";
+            this.buttonProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonProducts.UseVisualStyleBackColor = true;
+            this.buttonProducts.Click += new System.EventHandler(this.buttonProducts_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(250, 100);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.Location = new System.Drawing.Point(0, 56);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(250, 40);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Gestionar Almacenes";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // QuickCarry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-            this.ClientSize = new System.Drawing.Size(1037, 681);
+            this.ClientSize = new System.Drawing.Size(1037, 607);
             this.ControlBox = false;
             this.Controls.Add(this.leftPanelContainer);
             this.Controls.Add(this.SlidePanel);
@@ -303,9 +323,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SlidePanel.ResumeLayout(false);
             this.leftPanelContainer.ResumeLayout(false);
-            this.productsPanel.ResumeLayout(false);
-            this.usersPanel.ResumeLayout(false);
             this.managementPanel.ResumeLayout(false);
+            this.usersPanel.ResumeLayout(false);
+            this.productsAndLotsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -319,7 +339,7 @@
         private System.Windows.Forms.Panel leftPanelContainer;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button buttonProducts;
-        private System.Windows.Forms.Panel productsPanel;
+        private System.Windows.Forms.Panel productsAndLotsPanel;
         private System.Windows.Forms.Button buttonProductsManager;
         private System.Windows.Forms.Button buttonUsers;
         private System.Windows.Forms.Button buttonLotesManager;
@@ -330,6 +350,7 @@
         private System.Windows.Forms.Button buttonManagement;
         private System.Windows.Forms.Button buttonTrucksManager;
         private System.Windows.Forms.Button wareHouseButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

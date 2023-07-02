@@ -17,8 +17,7 @@ namespace BackOffice
         public QuickCarry()
         {
             InitializeComponent();
-            this.buttonMaximize.BackColor = Color.FromArgb(27, 107, 147);
-            this.buttonMinimize.BackColor = Color.FromArgb(27, 107, 147);
+            customMenus();
         }
 
         //Variables para controlar la posicion del slide
@@ -27,6 +26,42 @@ namespace BackOffice
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void customMenus()
+        {
+            managementPanel.Visible = false;
+            productsAndLotsPanel.Visible = false;
+            usersPanel.Visible = false;
+        }
+
+        private void hideMenus()
+        {
+            if (productsAndLotsPanel.Visible == true)
+            {
+                productsAndLotsPanel.Visible = false;
+            }
+            if (usersPanel.Visible == true)
+            {
+                usersPanel.Visible = false;
+            }
+            if (managementPanel.Visible == true)
+            {
+                managementPanel.Visible = false;
+            }
+        }
+
+        private void showMenus(Panel subMenu)
+        {
+            if(subMenu.Visible == false)
+            {
+                hideMenus();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -59,6 +94,21 @@ namespace BackOffice
                 this.WindowState = FormWindowState.Normal;
             }
 
+        }
+
+        private void buttonProducts_Click(object sender, EventArgs e)
+        {
+            showMenus(productsAndLotsPanel);
+        }
+
+        private void buttonUsers_Click(object sender, EventArgs e)
+        {
+            showMenus(usersPanel);
+        }
+
+        private void buttonManagement_Click(object sender, EventArgs e)
+        {
+            showMenus(managementPanel);
         }
 
         private void SlidePanel_MouseMove(object sender, MouseEventArgs e)
