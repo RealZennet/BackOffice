@@ -27,7 +27,7 @@ namespace BackOffice
         {
 
         }
-
+        #region generalMenu
         private void customMenus()
         {
             managementPanel.Visible = false;
@@ -63,7 +63,8 @@ namespace BackOffice
                 subMenu.Visible = false;
             }
         }
-
+        #endregion
+        #region topButtons
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -95,7 +96,8 @@ namespace BackOffice
             }
 
         }
-
+        #endregion
+        #region leftButtonsAndPanel
         private void buttonProducts_Click(object sender, EventArgs e)
         {
             showMenus(productsAndLotsPanel);
@@ -123,7 +125,7 @@ namespace BackOffice
         {
             m = 0;
         }
-
+        #endregion
 
     }
 }

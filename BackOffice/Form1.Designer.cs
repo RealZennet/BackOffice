@@ -185,6 +185,7 @@
             this.buttonManagement.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonManagement.Location = new System.Drawing.Point(0, 362);
             this.buttonManagement.Name = "buttonManagement";
+            this.buttonManagement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonManagement.Size = new System.Drawing.Size(250, 45);
             this.buttonManagement.TabIndex = 5;
             this.buttonManagement.Text = "Gerencia";
@@ -224,6 +225,7 @@
             this.buttonUsers.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonUsers.Location = new System.Drawing.Point(0, 247);
             this.buttonUsers.Name = "buttonUsers";
+            this.buttonUsers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonUsers.Size = new System.Drawing.Size(250, 45);
             this.buttonUsers.TabIndex = 3;
             this.buttonUsers.Text = "Usuarios";
