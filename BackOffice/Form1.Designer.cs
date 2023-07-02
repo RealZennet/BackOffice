@@ -49,12 +49,17 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelFormsLoader = new System.Windows.Forms.Panel();
             this.linkLabelZennet = new System.Windows.Forms.LinkLabel();
+            this.pictureBoxZennet = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SlidePanel.SuspendLayout();
             this.leftPanelContainer.SuspendLayout();
             this.managementPanel.SuspendLayout();
             this.usersPanel.SuspendLayout();
             this.productsAndLotsPanel.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.panelFormsLoader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZennet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // SlidePanel
@@ -74,7 +79,7 @@
             // 
             // buttonMaximize
             // 
-            this.buttonMaximize.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(107)))), ((int)(((byte)(147)))));
             this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMaximize.Location = new System.Drawing.Point(939, 3);
@@ -87,7 +92,7 @@
             // 
             // buttonMinimize
             // 
-            this.buttonMinimize.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(107)))), ((int)(((byte)(147)))));
             this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMinimize.Location = new System.Drawing.Point(888, 3);
@@ -100,7 +105,7 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(107)))), ((int)(((byte)(147)))));
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Location = new System.Drawing.Point(987, 3);
@@ -311,6 +316,7 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
@@ -319,6 +325,8 @@
             // 
             // panelFormsLoader
             // 
+            this.panelFormsLoader.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelFormsLoader.Controls.Add(this.pictureBoxZennet);
             this.panelFormsLoader.Controls.Add(this.linkLabelZennet);
             this.panelFormsLoader.Location = new System.Drawing.Point(256, 41);
             this.panelFormsLoader.Name = "panelFormsLoader";
@@ -332,12 +340,33 @@
             this.linkLabelZennet.AutoSize = true;
             this.linkLabelZennet.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelZennet.LinkColor = System.Drawing.Color.Maroon;
-            this.linkLabelZennet.Location = new System.Drawing.Point(400, 14);
+            this.linkLabelZennet.Location = new System.Drawing.Point(356, 16);
             this.linkLabelZennet.Name = "linkLabelZennet";
             this.linkLabelZennet.Size = new System.Drawing.Size(86, 29);
             this.linkLabelZennet.TabIndex = 0;
             this.linkLabelZennet.TabStop = true;
             this.linkLabelZennet.Text = "Zennet";
+            // 
+            // pictureBoxZennet
+            // 
+            this.pictureBoxZennet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxZennet.Image = global::BackOffice.Properties.Resources.logoAzulZennet;
+            this.pictureBoxZennet.Location = new System.Drawing.Point(196, 100);
+            this.pictureBoxZennet.Name = "pictureBoxZennet";
+            this.pictureBoxZennet.Size = new System.Drawing.Size(454, 302);
+            this.pictureBoxZennet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxZennet.TabIndex = 1;
+            this.pictureBoxZennet.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BackOffice.Properties.Resources.ZENNETLOGO;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(225, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // QuickCarry
             // 
@@ -358,8 +387,11 @@
             this.managementPanel.ResumeLayout(false);
             this.usersPanel.ResumeLayout(false);
             this.productsAndLotsPanel.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
             this.panelFormsLoader.ResumeLayout(false);
             this.panelFormsLoader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZennet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -387,6 +419,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelFormsLoader;
         private System.Windows.Forms.LinkLabel linkLabelZennet;
+        private System.Windows.Forms.PictureBox pictureBoxZennet;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

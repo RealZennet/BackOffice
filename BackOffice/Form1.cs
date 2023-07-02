@@ -86,7 +86,6 @@ namespace BackOffice
         private void buttonMaximize_Click(object sender, EventArgs e)
         {
 
-            //[BUG] - > No reescala items
             if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState = FormWindowState.Maximized;

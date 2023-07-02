@@ -112,6 +112,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserManagerForm.resx">
       <DependentUpon>UserManagerForm.cs</DependentUpon>
@@ -139,6 +140,15 @@
       <Project>{4e0f0dec-6907-4aaa-9910-c68911c55231}</Project>
       <Name>capa_logica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZENNETLOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoAzulZennet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja-carton-imagen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
