@@ -34,6 +34,7 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.leftPanelContainer = new System.Windows.Forms.Panel();
             this.managementPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.wareHouseButton = new System.Windows.Forms.Button();
             this.buttonTrucksManager = new System.Windows.Forms.Button();
             this.buttonShippingManager = new System.Windows.Forms.Button();
@@ -46,12 +47,14 @@
             this.buttonProductsManager = new System.Windows.Forms.Button();
             this.buttonProducts = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panelFormsLoader = new System.Windows.Forms.Panel();
+            this.linkLabelZennet = new System.Windows.Forms.LinkLabel();
             this.SlidePanel.SuspendLayout();
             this.leftPanelContainer.SuspendLayout();
             this.managementPanel.SuspendLayout();
             this.usersPanel.SuspendLayout();
             this.productsAndLotsPanel.SuspendLayout();
+            this.panelFormsLoader.SuspendLayout();
             this.SuspendLayout();
             // 
             // SlidePanel
@@ -71,6 +74,7 @@
             // 
             // buttonMaximize
             // 
+            this.buttonMaximize.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(107)))), ((int)(((byte)(147)))));
             this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMaximize.Location = new System.Drawing.Point(939, 3);
@@ -83,6 +87,7 @@
             // 
             // buttonMinimize
             // 
+            this.buttonMinimize.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(107)))), ((int)(((byte)(147)))));
             this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMinimize.Location = new System.Drawing.Point(888, 3);
@@ -95,6 +100,7 @@
             // 
             // buttonClose
             // 
+            this.buttonClose.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(107)))), ((int)(((byte)(147)))));
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Location = new System.Drawing.Point(987, 3);
@@ -134,6 +140,20 @@
             this.managementPanel.Name = "managementPanel";
             this.managementPanel.Size = new System.Drawing.Size(250, 152);
             this.managementPanel.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.Location = new System.Drawing.Point(0, 56);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(250, 40);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Gestionar Almacenes";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // wareHouseButton
             // 
@@ -296,19 +316,28 @@
             this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
             // 
-            // button1
+            // panelFormsLoader
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(0, 56);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(250, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Gestionar Almacenes";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.panelFormsLoader.Controls.Add(this.linkLabelZennet);
+            this.panelFormsLoader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFormsLoader.Location = new System.Drawing.Point(250, 41);
+            this.panelFormsLoader.Name = "panelFormsLoader";
+            this.panelFormsLoader.Size = new System.Drawing.Size(787, 566);
+            this.panelFormsLoader.TabIndex = 2;
+            // 
+            // linkLabelZennet
+            // 
+            this.linkLabelZennet.ActiveLinkColor = System.Drawing.Color.Indigo;
+            this.linkLabelZennet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linkLabelZennet.AutoSize = true;
+            this.linkLabelZennet.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelZennet.LinkColor = System.Drawing.Color.Maroon;
+            this.linkLabelZennet.Location = new System.Drawing.Point(407, 18);
+            this.linkLabelZennet.Name = "linkLabelZennet";
+            this.linkLabelZennet.Size = new System.Drawing.Size(86, 29);
+            this.linkLabelZennet.TabIndex = 0;
+            this.linkLabelZennet.TabStop = true;
+            this.linkLabelZennet.Text = "Zennet";
             // 
             // QuickCarry
             // 
@@ -317,6 +346,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(1037, 607);
             this.ControlBox = false;
+            this.Controls.Add(this.panelFormsLoader);
             this.Controls.Add(this.leftPanelContainer);
             this.Controls.Add(this.SlidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -328,6 +358,8 @@
             this.managementPanel.ResumeLayout(false);
             this.usersPanel.ResumeLayout(false);
             this.productsAndLotsPanel.ResumeLayout(false);
+            this.panelFormsLoader.ResumeLayout(false);
+            this.panelFormsLoader.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -353,6 +385,8 @@
         private System.Windows.Forms.Button buttonTrucksManager;
         private System.Windows.Forms.Button wareHouseButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelFormsLoader;
+        private System.Windows.Forms.LinkLabel linkLabelZennet;
     }
 }
 

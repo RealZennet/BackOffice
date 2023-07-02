@@ -22,6 +22,7 @@ namespace BackOffice
 
         //Variables para controlar la posicion del slide
         public int m, x, y;
+        private Form formIsActive = null;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -126,6 +127,22 @@ namespace BackOffice
             m = 0;
         }
         #endregion
-
+        #region loadFormsOnPanel
+        private void loadFormsOnPanel(Form childForm)
+        {
+            if(formIsActive != null)
+            {
+                formIsActive.Close();
+                formIsActive = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                panelFormsLoader.Controls.Add(childForm);
+                panelFormsLoader.Tag = childForm;
+                childForm.BringToFront();
+                childForm.Show();
+            }
+        }
+        #endregion
     }
 }
