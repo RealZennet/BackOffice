@@ -291,6 +291,7 @@
             this.buttonProductsManager.Text = "Gestionar Productos";
             this.buttonProductsManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonProductsManager.UseVisualStyleBackColor = true;
+            this.buttonProductsManager.Click += new System.EventHandler(this.buttonProductsManager_Click);
             // 
             // buttonProducts
             // 
@@ -319,10 +320,9 @@
             // panelFormsLoader
             // 
             this.panelFormsLoader.Controls.Add(this.linkLabelZennet);
-            this.panelFormsLoader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormsLoader.Location = new System.Drawing.Point(250, 41);
+            this.panelFormsLoader.Location = new System.Drawing.Point(256, 41);
             this.panelFormsLoader.Name = "panelFormsLoader";
-            this.panelFormsLoader.Size = new System.Drawing.Size(787, 566);
+            this.panelFormsLoader.Size = new System.Drawing.Size(773, 559);
             this.panelFormsLoader.TabIndex = 2;
             // 
             // linkLabelZennet
@@ -332,7 +332,7 @@
             this.linkLabelZennet.AutoSize = true;
             this.linkLabelZennet.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelZennet.LinkColor = System.Drawing.Color.Maroon;
-            this.linkLabelZennet.Location = new System.Drawing.Point(407, 18);
+            this.linkLabelZennet.Location = new System.Drawing.Point(400, 14);
             this.linkLabelZennet.Name = "linkLabelZennet";
             this.linkLabelZennet.Size = new System.Drawing.Size(86, 29);
             this.linkLabelZennet.TabIndex = 0;

@@ -22,7 +22,7 @@ namespace BackOffice
 
         //Variables para controlar la posicion del slide
         public int m, x, y;
-        private Form formIsActive = null;
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -121,28 +121,30 @@ namespace BackOffice
                 this.SetDesktopLocation(MousePosition.X - x, MousePosition.Y - y);
             }
         }
-
         private void SlidePanel_MouseUp(object sender, MouseEventArgs e)
         {
             m = 0;
         }
+
         #endregion
-        #region loadFormsOnPanel
-        private void loadFormsOnPanel(Form childForm)
+        private void buttonProductsManager_Click(object sender, EventArgs e)
         {
-            if(formIsActive != null)
-            {
-                formIsActive.Close();
-                formIsActive = childForm;
-                childForm.TopLevel = false;
-                childForm.FormBorderStyle = FormBorderStyle.None;
-                childForm.Dock = DockStyle.Fill;
-                panelFormsLoader.Controls.Add(childForm);
-                panelFormsLoader.Tag = childForm;
-                childForm.BringToFront();
-                childForm.Show();
-            }
+            showProductsForm();
+
         }
+        #region loadFormsOnPanel
+        private void showProductsForm()
+        {
+            ProductsForm formProductCtl = new ProductsForm();
+            formProductCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formProductCtl);
+            formProductCtl.FormBorderStyle = FormBorderStyle.None;
+            formProductCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formProductCtl;
+            formProductCtl.BringToFront();
+            formProductCtl.Show();
+        }
+
         #endregion
     }
 }
