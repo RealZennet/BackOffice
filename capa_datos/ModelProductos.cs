@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_datos
 {
-    class ModelProductos:DataBaseControl
+    public class ModelProductos:DataBaseControl
     {
         public int Id { get; set; }
         public string NombreProducto { get; set; }
