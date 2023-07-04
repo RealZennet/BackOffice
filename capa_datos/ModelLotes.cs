@@ -7,7 +7,7 @@ using MySqlConnector;
 
 namespace capa_datos
 {
-    class ModelLotes: DataBaseControl
+    public class ModelLotes: DataBaseControl
     {
         public int Id { get; set; }
         public DateTime FechaActual = DateTime.Now;

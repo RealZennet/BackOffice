@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewLots = new System.Windows.Forms.DataGridView();
             this.buttonBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,16 +36,16 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLots)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewLots
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(480, 503);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewLots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLots.Location = new System.Drawing.Point(12, 44);
+            this.dataGridViewLots.Name = "dataGridViewLots";
+            this.dataGridViewLots.Size = new System.Drawing.Size(480, 503);
+            this.dataGridViewLots.TabIndex = 0;
             // 
             // buttonBack
             // 
@@ -124,12 +124,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewLots);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LotsForm";
             this.Text = "LotsForm";
             this.Load += new System.EventHandler(this.LotsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLots)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,7 +137,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewLots;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
