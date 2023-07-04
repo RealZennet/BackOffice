@@ -16,5 +16,10 @@ namespace BackOffice
         {
             InitializeComponent();
         }
+        // [¡Un lote debe tener productos y se deben poder visualizar?!]
+        private void LotsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
