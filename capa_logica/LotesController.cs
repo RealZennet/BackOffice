@@ -38,7 +38,7 @@ namespace capa_logica
             }
             return table;
         }
-        public static void EliminarProducto(int id)
+        public static void EliminarLote(int id)
         {
             ModelLotes lote = new ModelLotes();
             lote.Id = id;

@@ -38,7 +38,7 @@ namespace capa_datos
         }
         public void Delete()
         {
-            this.Command.CommandText = $"DELETE FROM lote WHERE id_Prod = {this.Id}";
+            this.Command.CommandText = $"DELETE FROM lote WHERE id_Lote = {this.Id}";
             this.Command.ExecuteNonQuery();
         }
 

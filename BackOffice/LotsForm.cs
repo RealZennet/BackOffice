@@ -16,6 +16,7 @@ namespace BackOffice
         public LotsForm()
         {
             InitializeComponent();
+            RefreshTable();
         }
         // [¡Un lote debe tener productos y se deben poder visualizar?!]
         private void LotsForm_Load(object sender, EventArgs e)
@@ -56,7 +57,7 @@ namespace BackOffice
                 dataTableLots.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El lote fue eliminado!");
 
-                ProductosController.EliminarProducto(id);
+                LotesController.EliminarLote(id);
                 dataGridViewLots.DataSource = dataTableLots;
                 RefreshTable();
 
