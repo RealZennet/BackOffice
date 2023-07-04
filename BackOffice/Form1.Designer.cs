@@ -294,6 +294,7 @@
             this.buttonLotesManager.Text = "Gestionar Lotes";
             this.buttonLotesManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonLotesManager.UseVisualStyleBackColor = true;
+            this.buttonLotesManager.Click += new System.EventHandler(this.buttonLotesManager_Click);
             // 
             // buttonProductsManager
             // 

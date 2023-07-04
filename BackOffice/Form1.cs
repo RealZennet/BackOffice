@@ -126,6 +126,7 @@ namespace BackOffice
         }
 
         #endregion
+
         private void buttonProductsManager_Click(object sender, EventArgs e)
         {
             showProductsForm();
@@ -142,6 +143,24 @@ namespace BackOffice
             panelFormsLoader.Tag = formProductCtl;
             formProductCtl.BringToFront();
             formProductCtl.Show();
+        }
+        #endregion
+        #region LotsButton
+        private void buttonLotesManager_Click(object sender, EventArgs e)
+        {
+            showLotsForm();
+        }
+
+        private void showLotsForm()
+        {
+            LotsForm formLotsCtl = new LotsForm();
+            formLotsCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formLotsCtl);
+            formLotsCtl.FormBorderStyle = FormBorderStyle.None;
+            formLotsCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formLotsCtl;
+            formLotsCtl.BringToFront();
+            formLotsCtl.Show();
         }
 
         #endregion
