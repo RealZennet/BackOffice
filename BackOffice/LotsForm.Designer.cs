@@ -32,7 +32,7 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxLotsAmount = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
@@ -55,6 +55,7 @@
             this.buttonBack.TabIndex = 1;
             this.buttonBack.Text = "Volver";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // label1
             // 
@@ -77,12 +78,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Cantidad de productos";
             // 
-            // textBox1
+            // txtBoxLotsAmount
             // 
-            this.textBox1.Location = new System.Drawing.Point(530, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtBoxLotsAmount.Location = new System.Drawing.Point(530, 84);
+            this.txtBoxLotsAmount.Name = "txtBoxLotsAmount";
+            this.txtBoxLotsAmount.Size = new System.Drawing.Size(231, 20);
+            this.txtBoxLotsAmount.TabIndex = 4;
             // 
             // buttonAdd
             // 
@@ -92,6 +93,7 @@
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.Text = "Agregar";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonDelete
             // 
@@ -101,6 +103,7 @@
             this.buttonDelete.TabIndex = 6;
             this.buttonDelete.Text = "Eliminar";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonRefresh
             // 
@@ -110,6 +113,7 @@
             this.buttonRefresh.TabIndex = 7;
             this.buttonRefresh.Text = "Recargar";
             this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // LotsForm
             // 
@@ -120,7 +124,7 @@
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBoxLotsAmount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonBack);
@@ -141,7 +145,7 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxLotsAmount;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonRefresh;
