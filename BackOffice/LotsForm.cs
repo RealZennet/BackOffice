@@ -56,7 +56,6 @@ namespace BackOffice
                 DataTable dataTableLots = (DataTable)dataGridViewLots.DataSource;
                 dataTableLots.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El lote fue eliminado!");
-
                 LotesController.EliminarLote(id);
                 dataGridViewLots.DataSource = dataTableLots;
                 RefreshTable();
