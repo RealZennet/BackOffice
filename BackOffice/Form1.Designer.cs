@@ -35,12 +35,13 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.leftPanelContainer = new System.Windows.Forms.Panel();
             this.managementPanel = new System.Windows.Forms.Panel();
+            this.buttonUsersManager = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonTrucksManager = new System.Windows.Forms.Button();
             this.buttonShippingManager = new System.Windows.Forms.Button();
             this.buttonManagement = new System.Windows.Forms.Button();
-            this.buttonUsersManager = new System.Windows.Forms.Button();
             this.productsAndLotsPanel = new System.Windows.Forms.Panel();
+            this.buttonAssignProducts = new System.Windows.Forms.Button();
             this.buttonLotesManager = new System.Windows.Forms.Button();
             this.buttonProductsManager = new System.Windows.Forms.Button();
             this.buttonProducts = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFormsLoader = new System.Windows.Forms.Panel();
             this.linkLabelZennet = new System.Windows.Forms.LinkLabel();
-            this.buttonAssignProducts = new System.Windows.Forms.Button();
             this.SlidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZennet)).BeginInit();
             this.leftPanelContainer.SuspendLayout();
@@ -79,9 +79,9 @@
             // 
             this.pictureBoxZennet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxZennet.Image = global::BackOffice.Properties.Resources.logoAzulZennet;
-            this.pictureBoxZennet.Location = new System.Drawing.Point(3, 6);
+            this.pictureBoxZennet.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxZennet.Name = "pictureBoxZennet";
-            this.pictureBoxZennet.Size = new System.Drawing.Size(47, 32);
+            this.pictureBoxZennet.Size = new System.Drawing.Size(49, 35);
             this.pictureBoxZennet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxZennet.TabIndex = 1;
             this.pictureBoxZennet.TabStop = false;
@@ -153,6 +153,20 @@
             this.managementPanel.Size = new System.Drawing.Size(250, 207);
             this.managementPanel.TabIndex = 6;
             // 
+            // buttonUsersManager
+            // 
+            this.buttonUsersManager.FlatAppearance.BorderSize = 0;
+            this.buttonUsersManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUsersManager.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonUsersManager.Location = new System.Drawing.Point(3, 167);
+            this.buttonUsersManager.Name = "buttonUsersManager";
+            this.buttonUsersManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonUsersManager.Size = new System.Drawing.Size(250, 40);
+            this.buttonUsersManager.TabIndex = 0;
+            this.buttonUsersManager.Text = "Gestionar Usuarios";
+            this.buttonUsersManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUsersManager.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
@@ -211,20 +225,6 @@
             this.buttonManagement.UseVisualStyleBackColor = true;
             this.buttonManagement.Click += new System.EventHandler(this.buttonManagement_Click);
             // 
-            // buttonUsersManager
-            // 
-            this.buttonUsersManager.FlatAppearance.BorderSize = 0;
-            this.buttonUsersManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUsersManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonUsersManager.Location = new System.Drawing.Point(3, 167);
-            this.buttonUsersManager.Name = "buttonUsersManager";
-            this.buttonUsersManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonUsersManager.Size = new System.Drawing.Size(250, 40);
-            this.buttonUsersManager.TabIndex = 0;
-            this.buttonUsersManager.Text = "Gestionar Usuarios";
-            this.buttonUsersManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUsersManager.UseVisualStyleBackColor = true;
-            // 
             // productsAndLotsPanel
             // 
             this.productsAndLotsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
@@ -236,6 +236,21 @@
             this.productsAndLotsPanel.Name = "productsAndLotsPanel";
             this.productsAndLotsPanel.Size = new System.Drawing.Size(250, 141);
             this.productsAndLotsPanel.TabIndex = 2;
+            // 
+            // buttonAssignProducts
+            // 
+            this.buttonAssignProducts.FlatAppearance.BorderSize = 0;
+            this.buttonAssignProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAssignProducts.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonAssignProducts.Location = new System.Drawing.Point(3, 95);
+            this.buttonAssignProducts.Name = "buttonAssignProducts";
+            this.buttonAssignProducts.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonAssignProducts.Size = new System.Drawing.Size(250, 40);
+            this.buttonAssignProducts.TabIndex = 2;
+            this.buttonAssignProducts.Text = "Asignar Productos";
+            this.buttonAssignProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAssignProducts.UseVisualStyleBackColor = true;
+            this.buttonAssignProducts.Click += new System.EventHandler(this.buttonAssignProducts_Click);
             // 
             // buttonLotesManager
             // 
@@ -324,21 +339,6 @@
             this.linkLabelZennet.TabIndex = 0;
             this.linkLabelZennet.TabStop = true;
             this.linkLabelZennet.Text = "Zennet";
-            // 
-            // buttonAssignProducts
-            // 
-            this.buttonAssignProducts.FlatAppearance.BorderSize = 0;
-            this.buttonAssignProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAssignProducts.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonAssignProducts.Location = new System.Drawing.Point(3, 95);
-            this.buttonAssignProducts.Name = "buttonAssignProducts";
-            this.buttonAssignProducts.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonAssignProducts.Size = new System.Drawing.Size(250, 40);
-            this.buttonAssignProducts.TabIndex = 2;
-            this.buttonAssignProducts.Text = "Asignar Productos";
-            this.buttonAssignProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAssignProducts.UseVisualStyleBackColor = true;
-            this.buttonAssignProducts.Click += new System.EventHandler(this.buttonAssignProducts_Click);
             // 
             // QuickCarry
             // 

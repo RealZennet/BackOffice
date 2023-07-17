@@ -41,6 +41,8 @@
             // 
             // dataGridViewLots
             // 
+            this.dataGridViewLots.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.dataGridViewLots.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewLots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLots.Location = new System.Drawing.Point(12, 44);
             this.dataGridViewLots.Name = "dataGridViewLots";

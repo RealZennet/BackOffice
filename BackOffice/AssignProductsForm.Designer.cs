@@ -43,6 +43,8 @@
             // 
             // dataGridViewAssignedProducts
             // 
+            this.dataGridViewAssignedProducts.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.dataGridViewAssignedProducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewAssignedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAssignedProducts.Location = new System.Drawing.Point(12, 44);
             this.dataGridViewAssignedProducts.Name = "dataGridViewAssignedProducts";
@@ -53,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label1.Location = new System.Drawing.Point(374, 10);
+            this.label1.Location = new System.Drawing.Point(321, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 25);
             this.label1.TabIndex = 1;

@@ -50,7 +50,7 @@ namespace BackOffice
             if(!string.IsNullOrEmpty(txtBoxIDProduct.Text) && !string.IsNullOrEmpty(txtBoxIDLote.Text))
             { 
             AssignProductsController.Crear(Int32.Parse(txtBoxIDProduct.Text), Int32.Parse(txtBoxIDLote.Text));
-            MessageBox.Show("Lote Agregado");
+            MessageBox.Show("Producto Agregado al lote");
             RefreshTable();
             ClearTxtBoxes();
             }
