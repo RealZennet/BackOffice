@@ -140,7 +140,25 @@ namespace BackOffice
             formProductCtl.BringToFront();
             formProductCtl.Show();
         }
+
+        private void showAssignedProducts()
+        {
+            AssignProductsForm formAssignProductCtl = new AssignProductsForm();
+            formAssignProductCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formAssignProductCtl);
+            formAssignProductCtl.FormBorderStyle = FormBorderStyle.None;
+            formAssignProductCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formAssignProductCtl;
+            formAssignProductCtl.BringToFront();
+            formAssignProductCtl.Show();
+        }
+
+        private void buttonAssignProducts_Click(object sender, EventArgs e)
+        {
+            showAssignedProducts();
+        }
         #endregion
+
         #region LotsButton
         private void buttonLotesManager_Click(object sender, EventArgs e)
         {

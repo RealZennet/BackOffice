@@ -8,7 +8,7 @@ using capa_datos;
 
 namespace capa_logica
 {
-    class AssignProductsController
+    public class AssignProductsController
     {
         public static void Crear(int IdProduct, int IdLote)
         {

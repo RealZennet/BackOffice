@@ -338,6 +338,7 @@
             this.buttonAssignProducts.Text = "Asignar Productos";
             this.buttonAssignProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAssignProducts.UseVisualStyleBackColor = true;
+            this.buttonAssignProducts.Click += new System.EventHandler(this.buttonAssignProducts_Click);
             // 
             // QuickCarry
             // 
