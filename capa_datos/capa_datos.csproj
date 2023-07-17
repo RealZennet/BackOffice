@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssignProductsModel.cs" />
     <Compile Include="DataBaseControl.cs" />
     <Compile Include="ModelLotes.cs" />
     <Compile Include="ModelProductos.cs" />

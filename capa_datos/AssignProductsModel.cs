@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_datos
 {
-    class AssignProductsModel : DataBaseControl
+    public class AssignProductsModel : DataBaseControl
     {
         public int IDProduct { get; set; }
         public int IDLote { get; set; }
