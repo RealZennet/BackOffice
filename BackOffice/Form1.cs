@@ -33,7 +33,7 @@ namespace BackOffice
         {
             managementPanel.Visible = false;
             productsAndLotsPanel.Visible = false;
-            usersPanel.Visible = false;
+           
         }
 
         private void hideMenus()
@@ -41,10 +41,6 @@ namespace BackOffice
             if (productsAndLotsPanel.Visible == true)
             {
                 productsAndLotsPanel.Visible = false;
-            }
-            if (usersPanel.Visible == true)
-            {
-                usersPanel.Visible = false;
             }
             if (managementPanel.Visible == true)
             {
@@ -105,7 +101,7 @@ namespace BackOffice
 
         private void buttonUsers_Click(object sender, EventArgs e)
         {
-            showMenus(usersPanel);
+            
         }
 
         private void buttonManagement_Click(object sender, EventArgs e)

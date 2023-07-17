@@ -15,7 +15,7 @@ namespace capa_logica
             DateTime FechaCreacion = DateTime.Now;
             ModelLotes lote = new ModelLotes();
             lote.FechaActual = FechaCreacion; ; // - > Fecha de creacion del lote
-            lote.CantidadProductoLote = CantidadProductoLote;
+            lote.ProductsAmount = CantidadProductoLote;
             lote.Save();
         }
 
@@ -33,7 +33,7 @@ namespace capa_logica
                 DataRow row = table.NewRow();
                 row["id"] = lote.Id;
                 row["Fecha de creacion"] = lote.FechaActual;
-                row["Cantidad de productos en lote"] = lote.CantidadProductoLote;
+                row["Cantidad de productos en lote"] = lote.ProductsAmount;
                 table.Rows.Add(row);
             }
             return table;

@@ -36,13 +36,10 @@
             this.leftPanelContainer = new System.Windows.Forms.Panel();
             this.managementPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.wareHouseButton = new System.Windows.Forms.Button();
             this.buttonTrucksManager = new System.Windows.Forms.Button();
             this.buttonShippingManager = new System.Windows.Forms.Button();
             this.buttonManagement = new System.Windows.Forms.Button();
-            this.usersPanel = new System.Windows.Forms.Panel();
             this.buttonUsersManager = new System.Windows.Forms.Button();
-            this.buttonUsers = new System.Windows.Forms.Button();
             this.productsAndLotsPanel = new System.Windows.Forms.Panel();
             this.buttonLotesManager = new System.Windows.Forms.Button();
             this.buttonProductsManager = new System.Windows.Forms.Button();
@@ -51,11 +48,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFormsLoader = new System.Windows.Forms.Panel();
             this.linkLabelZennet = new System.Windows.Forms.LinkLabel();
+            this.buttonAssignProducts = new System.Windows.Forms.Button();
             this.SlidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZennet)).BeginInit();
             this.leftPanelContainer.SuspendLayout();
             this.managementPanel.SuspendLayout();
-            this.usersPanel.SuspendLayout();
             this.productsAndLotsPanel.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -134,8 +131,6 @@
             this.leftPanelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(96)))));
             this.leftPanelContainer.Controls.Add(this.managementPanel);
             this.leftPanelContainer.Controls.Add(this.buttonManagement);
-            this.leftPanelContainer.Controls.Add(this.usersPanel);
-            this.leftPanelContainer.Controls.Add(this.buttonUsers);
             this.leftPanelContainer.Controls.Add(this.productsAndLotsPanel);
             this.leftPanelContainer.Controls.Add(this.buttonProducts);
             this.leftPanelContainer.Controls.Add(this.panelLogo);
@@ -148,14 +143,14 @@
             // managementPanel
             // 
             this.managementPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
+            this.managementPanel.Controls.Add(this.buttonUsersManager);
             this.managementPanel.Controls.Add(this.button1);
-            this.managementPanel.Controls.Add(this.wareHouseButton);
             this.managementPanel.Controls.Add(this.buttonTrucksManager);
             this.managementPanel.Controls.Add(this.buttonShippingManager);
             this.managementPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.managementPanel.Location = new System.Drawing.Point(0, 407);
+            this.managementPanel.Location = new System.Drawing.Point(0, 331);
             this.managementPanel.Name = "managementPanel";
-            this.managementPanel.Size = new System.Drawing.Size(250, 152);
+            this.managementPanel.Size = new System.Drawing.Size(250, 207);
             this.managementPanel.TabIndex = 6;
             // 
             // button1
@@ -163,7 +158,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(0, 56);
+            this.button1.Location = new System.Drawing.Point(3, 75);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(250, 40);
@@ -172,26 +167,12 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // wareHouseButton
-            // 
-            this.wareHouseButton.FlatAppearance.BorderSize = 0;
-            this.wareHouseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.wareHouseButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.wareHouseButton.Location = new System.Drawing.Point(0, 99);
-            this.wareHouseButton.Name = "wareHouseButton";
-            this.wareHouseButton.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.wareHouseButton.Size = new System.Drawing.Size(250, 40);
-            this.wareHouseButton.TabIndex = 2;
-            this.wareHouseButton.Text = "Gestionar Almacenes";
-            this.wareHouseButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.wareHouseButton.UseVisualStyleBackColor = true;
-            // 
             // buttonTrucksManager
             // 
             this.buttonTrucksManager.FlatAppearance.BorderSize = 0;
             this.buttonTrucksManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTrucksManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonTrucksManager.Location = new System.Drawing.Point(0, 53);
+            this.buttonTrucksManager.Location = new System.Drawing.Point(3, 121);
             this.buttonTrucksManager.Name = "buttonTrucksManager";
             this.buttonTrucksManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.buttonTrucksManager.Size = new System.Drawing.Size(250, 40);
@@ -205,7 +186,7 @@
             this.buttonShippingManager.FlatAppearance.BorderSize = 0;
             this.buttonShippingManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShippingManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonShippingManager.Location = new System.Drawing.Point(0, 7);
+            this.buttonShippingManager.Location = new System.Drawing.Point(3, 29);
             this.buttonShippingManager.Name = "buttonShippingManager";
             this.buttonShippingManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.buttonShippingManager.Size = new System.Drawing.Size(250, 40);
@@ -220,7 +201,7 @@
             this.buttonManagement.FlatAppearance.BorderSize = 0;
             this.buttonManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonManagement.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonManagement.Location = new System.Drawing.Point(0, 362);
+            this.buttonManagement.Location = new System.Drawing.Point(0, 286);
             this.buttonManagement.Name = "buttonManagement";
             this.buttonManagement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonManagement.Size = new System.Drawing.Size(250, 45);
@@ -230,22 +211,12 @@
             this.buttonManagement.UseVisualStyleBackColor = true;
             this.buttonManagement.Click += new System.EventHandler(this.buttonManagement_Click);
             // 
-            // usersPanel
-            // 
-            this.usersPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
-            this.usersPanel.Controls.Add(this.buttonUsersManager);
-            this.usersPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.usersPanel.Location = new System.Drawing.Point(0, 292);
-            this.usersPanel.Name = "usersPanel";
-            this.usersPanel.Size = new System.Drawing.Size(250, 70);
-            this.usersPanel.TabIndex = 4;
-            // 
             // buttonUsersManager
             // 
             this.buttonUsersManager.FlatAppearance.BorderSize = 0;
             this.buttonUsersManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUsersManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonUsersManager.Location = new System.Drawing.Point(0, 7);
+            this.buttonUsersManager.Location = new System.Drawing.Point(3, 167);
             this.buttonUsersManager.Name = "buttonUsersManager";
             this.buttonUsersManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.buttonUsersManager.Size = new System.Drawing.Size(250, 40);
@@ -254,31 +225,16 @@
             this.buttonUsersManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonUsersManager.UseVisualStyleBackColor = true;
             // 
-            // buttonUsers
-            // 
-            this.buttonUsers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonUsers.FlatAppearance.BorderSize = 0;
-            this.buttonUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUsers.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonUsers.Location = new System.Drawing.Point(0, 247);
-            this.buttonUsers.Name = "buttonUsers";
-            this.buttonUsers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonUsers.Size = new System.Drawing.Size(250, 45);
-            this.buttonUsers.TabIndex = 3;
-            this.buttonUsers.Text = "Usuarios";
-            this.buttonUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUsers.UseVisualStyleBackColor = true;
-            this.buttonUsers.Click += new System.EventHandler(this.buttonUsers_Click);
-            // 
             // productsAndLotsPanel
             // 
             this.productsAndLotsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
+            this.productsAndLotsPanel.Controls.Add(this.buttonAssignProducts);
             this.productsAndLotsPanel.Controls.Add(this.buttonLotesManager);
             this.productsAndLotsPanel.Controls.Add(this.buttonProductsManager);
             this.productsAndLotsPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.productsAndLotsPanel.Location = new System.Drawing.Point(0, 145);
             this.productsAndLotsPanel.Name = "productsAndLotsPanel";
-            this.productsAndLotsPanel.Size = new System.Drawing.Size(250, 102);
+            this.productsAndLotsPanel.Size = new System.Drawing.Size(250, 141);
             this.productsAndLotsPanel.TabIndex = 2;
             // 
             // buttonLotesManager
@@ -369,6 +325,20 @@
             this.linkLabelZennet.TabStop = true;
             this.linkLabelZennet.Text = "Zennet";
             // 
+            // buttonAssignProducts
+            // 
+            this.buttonAssignProducts.FlatAppearance.BorderSize = 0;
+            this.buttonAssignProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAssignProducts.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonAssignProducts.Location = new System.Drawing.Point(3, 95);
+            this.buttonAssignProducts.Name = "buttonAssignProducts";
+            this.buttonAssignProducts.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonAssignProducts.Size = new System.Drawing.Size(250, 40);
+            this.buttonAssignProducts.TabIndex = 2;
+            this.buttonAssignProducts.Text = "Asignar Productos";
+            this.buttonAssignProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAssignProducts.UseVisualStyleBackColor = true;
+            // 
             // QuickCarry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,7 +357,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZennet)).EndInit();
             this.leftPanelContainer.ResumeLayout(false);
             this.managementPanel.ResumeLayout(false);
-            this.usersPanel.ResumeLayout(false);
             this.productsAndLotsPanel.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -408,20 +377,18 @@
         private System.Windows.Forms.Button buttonProducts;
         private System.Windows.Forms.Panel productsAndLotsPanel;
         private System.Windows.Forms.Button buttonProductsManager;
-        private System.Windows.Forms.Button buttonUsers;
         private System.Windows.Forms.Button buttonLotesManager;
-        private System.Windows.Forms.Panel usersPanel;
         private System.Windows.Forms.Button buttonUsersManager;
         private System.Windows.Forms.Panel managementPanel;
         private System.Windows.Forms.Button buttonShippingManager;
         private System.Windows.Forms.Button buttonManagement;
         private System.Windows.Forms.Button buttonTrucksManager;
-        private System.Windows.Forms.Button wareHouseButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelFormsLoader;
         private System.Windows.Forms.LinkLabel linkLabelZennet;
         private System.Windows.Forms.PictureBox pictureBoxZennet;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonAssignProducts;
     }
 }
 
