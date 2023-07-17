@@ -31,10 +31,10 @@
             this.dataGridViewAssignedProducts = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxIDProduct = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBoxIDLote = new System.Windows.Forms.TextBox();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
@@ -69,12 +69,12 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // textBox1
+            // txtBoxIDProduct
             // 
-            this.textBox1.Location = new System.Drawing.Point(524, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtBoxIDProduct.Location = new System.Drawing.Point(524, 84);
+            this.txtBoxIDProduct.Name = "txtBoxIDProduct";
+            this.txtBoxIDProduct.Size = new System.Drawing.Size(231, 20);
+            this.txtBoxIDProduct.TabIndex = 3;
             // 
             // label2
             // 
@@ -94,12 +94,12 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "ID del lote a asignar";
             // 
-            // textBox2
+            // txtBoxIDLote
             // 
-            this.textBox2.Location = new System.Drawing.Point(524, 151);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(231, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtBoxIDLote.Location = new System.Drawing.Point(524, 151);
+            this.txtBoxIDLote.Name = "txtBoxIDLote";
+            this.txtBoxIDLote.Size = new System.Drawing.Size(231, 20);
+            this.txtBoxIDLote.TabIndex = 5;
             // 
             // buttonRefresh
             // 
@@ -119,6 +119,7 @@
             this.buttonDelete.TabIndex = 9;
             this.buttonDelete.Text = "Eliminar";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonAdd
             // 
@@ -128,6 +129,7 @@
             this.buttonAdd.TabIndex = 8;
             this.buttonAdd.Text = "Agregar";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // AssignProductsForm
             // 
@@ -140,9 +142,9 @@
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtBoxIDLote);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBoxIDProduct);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewAssignedProducts);
@@ -161,10 +163,10 @@
         private System.Windows.Forms.DataGridView dataGridViewAssignedProducts;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxIDProduct;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBoxIDLote;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonAdd;

@@ -11,10 +11,17 @@ namespace capa_datos
         public int IDProduct { get; set; }
         public int IDLote { get; set; }
 
-        public void Save()
+        public void Save() //Un producto(IDProduct) no debe estar en mas de un lote a la vez(?)
         {
-            this.Command.CommandText = $"INSERT INTO pertenece (id_Prod, id_Lote) VALUES ({this.IDProduct}, {this.IDLote})";
-            this.Command.ExecuteNonQuery();
+            try
+            {
+                this.Command.CommandText = $"INSERT INTO pertenece (id_Prod, id_Lote) VALUES ({this.IDProduct}, {this.IDLote})";
+                this.Command.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                
+            }
         }
 
         public List<AssignProductsModel> TodosLosItems()
