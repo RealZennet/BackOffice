@@ -8,7 +8,7 @@ using capa_datos;
 
 namespace capa_logica
 {
-    public static class ProductosController
+    public static class ProductController
     {
         public static void Crear(string nombre,  int pesoproducto, int cantidadproducto, string descripcion)
         {

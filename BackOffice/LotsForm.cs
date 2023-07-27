@@ -30,7 +30,7 @@ namespace BackOffice
         }
         public void RefreshTable()
         {
-            DataTable dataTableLots = LotesController.Obtener();
+            DataTable dataTableLots = BatchController.Obtener();
             dataGridViewLots.DataSource = dataTableLots;
         }
 
@@ -41,7 +41,7 @@ namespace BackOffice
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            LotesController.Crear(Int32.Parse(txtBoxLotsAmount.Text));
+            BatchController.Crear(Int32.Parse(txtBoxLotsAmount.Text));
             MessageBox.Show("Lote Agregado");
             RefreshTable();
             ClearTxtBoxes();
@@ -56,7 +56,7 @@ namespace BackOffice
                 DataTable dataTableLots = (DataTable)dataGridViewLots.DataSource;
                 dataTableLots.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El lote fue eliminado!");
-                LotesController.EliminarLote(id);
+                BatchController.EliminarLote(id);
                 dataGridViewLots.DataSource = dataTableLots;
                 RefreshTable();
 

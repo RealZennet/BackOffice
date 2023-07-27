@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_datos
 {
-    public class UserModel : DataBaseControl
+    public class UsersModel : DataBaseControl
     {
         public int CI { get; set; }
         public string FirstName { get; set; }
@@ -27,15 +27,15 @@ namespace capa_datos
             this.Command.ExecuteNonQuery();
         }
 
-        public List<UserModel> GetAllUsers()
+        public List<UsersModel> GetAllUsers()
         {
             this.Command.CommandText = $"SELECT * FROM trabajador";
             this.Reader = this.Command.ExecuteReader();
 
-            List<UserModel> result = new List<UserModel>();
+            List<UsersModel> result = new List<UsersModel>();
             while (this.Reader.Read())
             {
-                UserModel user = new UserModel();
+                UsersModel user = new UsersModel();
                 user.CI = Int32.Parse(this.Reader["ci"].ToString());
                 user.FirstName = this.Reader["nom1"].ToString();
                 user.SecondName = this.Reader["nom2"].ToString();

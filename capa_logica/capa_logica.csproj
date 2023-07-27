@@ -65,9 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssignProductsController.cs" />
-    <Compile Include="LotesController.cs" />
-    <Compile Include="ProductosController.cs" />
+    <Compile Include="BatchController.cs" />
+    <Compile Include="ProductController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\capa_datos\capa_datos.csproj">

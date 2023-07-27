@@ -8,7 +8,7 @@ using capa_datos;
 
 namespace capa_logica
 {
-    public static class LotesController
+    public static class BatchController
     {
         public static void Crear(int CantidadProductoLote)
         {

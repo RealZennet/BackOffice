@@ -30,7 +30,7 @@ namespace BackOffice
         }
         public void RefreshTable()
         {
-            DataTable dataTableProducts = ProductosController.Obtener();
+            DataTable dataTableProducts = ProductController.Obtener();
             dataGridViewProducts.DataSource = dataTableProducts;
         }
 
@@ -49,7 +49,7 @@ namespace BackOffice
 
         private void buttonAddProduct_Click(object sender, EventArgs e)
         {
-            ProductosController.Crear(txtBoxName.Text, Int32.Parse(txtBoxAmount.Text), Int32.Parse(txtBoxAmount.Text), txtBoxDescription.Text);
+            ProductController.Crear(txtBoxName.Text, Int32.Parse(txtBoxAmount.Text), Int32.Parse(txtBoxAmount.Text), txtBoxDescription.Text);
             MessageBox.Show("Producto Agregado");
             RefreshTable();
             ClearTxtBoxes();
@@ -65,7 +65,7 @@ namespace BackOffice
                 dataTableProducts.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El producto fue eliminado!");
 
-                ProductosController.EliminarProducto(id);
+                ProductController.EliminarProducto(id);
                 dataGridViewProducts.DataSource = dataTableProducts;
                 RefreshTable();
 
