@@ -72,5 +72,9 @@ namespace BackOffice
             }
         }
 
+        private void dataGridViewProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

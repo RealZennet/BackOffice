@@ -12,7 +12,7 @@ namespace capa_logica
     {
         public static void Crear(string nombre,  int pesoproducto, int cantidadproducto, string descripcion)
         {
-            ModelProductos producto = new ModelProductos();
+            ModelProduct producto = new ModelProduct();
             producto.NombreProducto = nombre;
             producto.PesoProducto = pesoproducto;
             producto.CantidadProducto = cantidadproducto;
@@ -22,8 +22,8 @@ namespace capa_logica
 
         public static DataTable Obtener()
         {
-            ModelProductos ProductTableModel = new ModelProductos();
-            List<ModelProductos> productos = ProductTableModel.TodosLosItems();
+            ModelProduct ProductTableModel = new ModelProduct();
+            List<ModelProduct> productos = ProductTableModel.GetAllItems();
 
             DataTable table = new DataTable();
             table.Columns.Add("id", typeof(int));
@@ -32,7 +32,7 @@ namespace capa_logica
             table.Columns.Add("Peso producto", typeof(int));
             table.Columns.Add("Cantidad Producto", typeof(int));
 
-            foreach (ModelProductos producto in productos)
+            foreach (ModelProduct producto in productos)
             {
                 DataRow row = table.NewRow();
                 row["id"] = producto.Id;
@@ -46,7 +46,7 @@ namespace capa_logica
         }
         public static void EliminarProducto(int id)
         {
-            ModelProductos producto = new ModelProductos();
+            ModelProduct producto = new ModelProduct();
             producto.Id = id;
             producto.Delete();
         }

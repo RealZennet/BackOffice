@@ -12,15 +12,14 @@ namespace BackOffice
 {
     public partial class QuickCarry : Form
     {
-
-
+                            
         public QuickCarry()
         {
             InitializeComponent();
             customMenus();
         }
 
-        //Variables para controlar la posicion del slide
+        //Variables para controlar el slide de la ventana.
         public int m, x, y;
         
 
@@ -33,7 +32,6 @@ namespace BackOffice
         {
             managementPanel.Visible = false;
             productsAndLotsPanel.Visible = false;
-           
         }
 
         private void hideMenus()
@@ -153,9 +151,31 @@ namespace BackOffice
             formAssignProductCtl.Show();
         }
 
+        private void showUsers()
+        {
+            UsersForms formUsersCtl = new UsersForms();
+            formUsersCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formUsersCtl);
+            formUsersCtl.FormBorderStyle = FormBorderStyle.None;
+            formUsersCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formUsersCtl;
+            formUsersCtl.BringToFront();
+            formUsersCtl.Show();
+        }
+
         private void buttonAssignProducts_Click(object sender, EventArgs e)
         {
             showAssignedProducts();
+        }
+
+        private void panelFormsLoader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonUsersManager_Click(object sender, EventArgs e)
+        {
+            showUsers();
         }
         #endregion
 

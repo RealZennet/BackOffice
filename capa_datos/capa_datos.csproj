@@ -66,8 +66,8 @@
   <ItemGroup>
     <Compile Include="AssignProductsModel.cs" />
     <Compile Include="DataBaseControl.cs" />
-    <Compile Include="ModelLotes.cs" />
-    <Compile Include="ModelProductos.cs" />
+    <Compile Include="ModelBatch.cs" />
+    <Compile Include="ModelProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

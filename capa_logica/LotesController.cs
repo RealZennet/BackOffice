@@ -13,7 +13,7 @@ namespace capa_logica
         public static void Crear(int CantidadProductoLote)
         {
             DateTime FechaCreacion = DateTime.Now;
-            ModelLotes lote = new ModelLotes();
+            ModelBatch lote = new ModelBatch();
             lote.FechaActual = FechaCreacion; ; // - > Fecha de creacion del lote
             lote.ProductsAmount = CantidadProductoLote;
             lote.Save();
@@ -21,14 +21,14 @@ namespace capa_logica
 
         public static DataTable Obtener()
         {
-            ModelLotes LotsTableModel = new ModelLotes();
-            List<ModelLotes> lotes = LotsTableModel.TodosLosItems();
+            ModelBatch LotsTableModel = new ModelBatch();
+            List<ModelBatch> lotes = LotsTableModel.TodosLosItems();
             DataTable table = new DataTable();
             table.Columns.Add("id", typeof(int));
             table.Columns.Add("Fecha de creacion", typeof(string));
             table.Columns.Add("Cantidad de productos en lote", typeof(string));
 
-            foreach (ModelLotes lote in lotes)
+            foreach (ModelBatch lote in lotes)
             {
                 DataRow row = table.NewRow();
                 row["id"] = lote.Id;
@@ -40,7 +40,7 @@ namespace capa_logica
         }
         public static void EliminarLote(int id)
         {
-            ModelLotes lote = new ModelLotes();
+            ModelBatch lote = new ModelBatch();
             lote.Id = id;
             lote.Delete();
         }

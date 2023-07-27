@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.SlidePanel = new System.Windows.Forms.Panel();
-            this.pictureBoxZennet = new System.Windows.Forms.PictureBox();
             this.buttonMaximize = new System.Windows.Forms.Button();
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -46,17 +45,18 @@
             this.buttonProductsManager = new System.Windows.Forms.Button();
             this.buttonProducts = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFormsLoader = new System.Windows.Forms.Panel();
             this.linkLabelZennet = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxZennet = new System.Windows.Forms.PictureBox();
             this.SlidePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZennet)).BeginInit();
             this.leftPanelContainer.SuspendLayout();
             this.managementPanel.SuspendLayout();
             this.productsAndLotsPanel.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelFormsLoader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZennet)).BeginInit();
             this.SuspendLayout();
             // 
             // SlidePanel
@@ -74,17 +74,6 @@
             this.SlidePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SlidePanel_MouseDown);
             this.SlidePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SlidePanel_MouseMove);
             this.SlidePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SlidePanel_MouseUp);
-            // 
-            // pictureBoxZennet
-            // 
-            this.pictureBoxZennet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxZennet.Image = global::BackOffice.Properties.Resources.logoAzulZennet;
-            this.pictureBoxZennet.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxZennet.Name = "pictureBoxZennet";
-            this.pictureBoxZennet.Size = new System.Drawing.Size(49, 35);
-            this.pictureBoxZennet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxZennet.TabIndex = 1;
-            this.pictureBoxZennet.TabStop = false;
             // 
             // buttonMaximize
             // 
@@ -166,6 +155,7 @@
             this.buttonUsersManager.Text = "Gestionar Usuarios";
             this.buttonUsersManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonUsersManager.UseVisualStyleBackColor = true;
+            this.buttonUsersManager.Click += new System.EventHandler(this.buttonUsersManager_Click);
             // 
             // button1
             // 
@@ -307,16 +297,6 @@
             this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BackOffice.Properties.Resources.ZENNETLOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 69);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panelFormsLoader
             // 
             this.panelFormsLoader.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -325,6 +305,7 @@
             this.panelFormsLoader.Name = "panelFormsLoader";
             this.panelFormsLoader.Size = new System.Drawing.Size(773, 559);
             this.panelFormsLoader.TabIndex = 2;
+            this.panelFormsLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormsLoader_Paint);
             // 
             // linkLabelZennet
             // 
@@ -339,6 +320,27 @@
             this.linkLabelZennet.TabIndex = 0;
             this.linkLabelZennet.TabStop = true;
             this.linkLabelZennet.Text = "Zennet";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BackOffice.Properties.Resources.ZENNETLOGO;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(225, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBoxZennet
+            // 
+            this.pictureBoxZennet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxZennet.Image = global::BackOffice.Properties.Resources.logoAzulZennet;
+            this.pictureBoxZennet.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxZennet.Name = "pictureBoxZennet";
+            this.pictureBoxZennet.Size = new System.Drawing.Size(49, 35);
+            this.pictureBoxZennet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxZennet.TabIndex = 1;
+            this.pictureBoxZennet.TabStop = false;
             // 
             // QuickCarry
             // 
@@ -355,14 +357,14 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SlidePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZennet)).EndInit();
             this.leftPanelContainer.ResumeLayout(false);
             this.managementPanel.ResumeLayout(false);
             this.productsAndLotsPanel.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelFormsLoader.ResumeLayout(false);
             this.panelFormsLoader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZennet)).EndInit();
             this.ResumeLayout(false);
 
         }

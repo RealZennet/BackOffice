@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_datos
 {
-    public class ModelProductos:DataBaseControl
+    public class ModelProduct:DataBaseControl
     {
         public int Id { get; set; }
         public string NombreProducto { get; set; }
@@ -24,15 +24,15 @@ namespace capa_datos
             this.Command.ExecuteNonQuery();
         }
 
-        public List<ModelProductos> TodosLosItems()
+        public List<ModelProduct> GetAllItems()
         {
             this.Command.CommandText = "SELECT * FROM producto";
             this.Reader = this.Command.ExecuteReader();
 
-            List<ModelProductos> result = new List<ModelProductos>();
+            List<ModelProduct> result = new List<ModelProduct>();
             while (this.Reader.Read())
             {
-                ModelProductos producto = new ModelProductos();
+                ModelProduct producto = new ModelProduct();
                 producto.Id = Int32.Parse(this.Reader["id_Prod"].ToString());
                 producto.NombreProducto = this.Reader["nom_Prod"].ToString();
                 producto.PesoProducto = Int32.Parse(this.Reader["peso_Prod"].ToString());

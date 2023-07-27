@@ -7,7 +7,7 @@ using MySqlConnector;
 
 namespace capa_datos
 {
-    public class ModelLotes : DataBaseControl
+    public class ModelBatch : DataBaseControl
     {
         public int Id { get; set; } //id lote
        // public int IdProduct {get; set;}
@@ -18,19 +18,18 @@ namespace capa_datos
         {
             this.Command.CommandText = $"INSERT INTO lote (fech_Crea, cant_Prod_Lote) VALUES " +
                 $"('{this.FechaActual.ToString("yyyy-MM-dd HH:mm:ss")}', {this.ProductsAmount})";
-            //this.Command.CommandText = $"INSERT INTO pertenece (id_Prod, id_Lote) VALUES ({this.Id}, {this.IdProduct})"; //Se deberia crear el lote pero al asignar, se deberia usar otra tabla(pertenece)
             this.Command.ExecuteNonQuery();
         }
 
-        public List<ModelLotes> TodosLosItems()
+        public List<ModelBatch> TodosLosItems()
         {
             this.Command.CommandText = "SELECT * FROM lote"; 
             this.Reader = this.Command.ExecuteReader();
 
-            List<ModelLotes> result = new List<ModelLotes>();
+            List<ModelBatch> result = new List<ModelBatch>();
             while (this.Reader.Read())
             {
-                ModelLotes lote = new ModelLotes();
+                ModelBatch lote = new ModelBatch();
                 lote.Id = Int32.Parse(this.Reader["id_Lote"].ToString());
                 lote.FechaActual = DateTime.Parse(this.Reader["fech_Crea"].ToString());
                 lote.ProductsAmount = Int32.Parse(this.Reader["cant_Prod_Lote"].ToString());
