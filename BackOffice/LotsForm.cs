@@ -18,7 +18,7 @@ namespace BackOffice
             InitializeComponent();
             RefreshTable();
         }
-        // [¡Un lote debe tener productos y se deben poder visualizar?!]
+        
         private void LotsForm_Load(object sender, EventArgs e)
         {
 
@@ -39,8 +39,24 @@ namespace BackOffice
             txtBoxLotsAmount.Clear();
         }
 
+        private bool ValidateInputsUser()
+        {
+
+            if (string.IsNullOrWhiteSpace(txtBoxLotsAmount.Text))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            if (!ValidateInputsUser())
+            {
+                MessageBox.Show("Porfavor complete los datos correspondientes");
+                return;
+            }
             BatchController.Crear(Int32.Parse(txtBoxLotsAmount.Text));
             MessageBox.Show("Lote Agregado");
             RefreshTable();
@@ -48,6 +64,12 @@ namespace BackOffice
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            deleteBatch();
+            RefreshTable();
+        }
+
+        private void deleteBatch()
         {
             if (dataGridViewLots.SelectedRows.Count > 0)
             {
@@ -58,7 +80,7 @@ namespace BackOffice
                 MessageBox.Show("El lote fue eliminado!");
                 BatchController.EliminarLote(id);
                 dataGridViewLots.DataSource = dataTableLots;
-                RefreshTable();
+                
 
             }
         }
