@@ -43,6 +43,8 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.txtBoxCI = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,12 +176,30 @@
             this.buttonBack.Text = "Volver";
             this.buttonBack.UseVisualStyleBackColor = true;
             // 
+            // txtBoxCI
+            // 
+            this.txtBoxCI.Location = new System.Drawing.Point(498, 63);
+            this.txtBoxCI.Name = "txtBoxCI";
+            this.txtBoxCI.Size = new System.Drawing.Size(253, 20);
+            this.txtBoxCI.TabIndex = 30;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(499, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 13);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Cedula de identidad:";
+            // 
             // UsersForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(757, 520);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtBoxCI);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonDelete);
@@ -222,5 +242,7 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.TextBox txtBoxCI;
+        private System.Windows.Forms.Label label6;
     }
 }

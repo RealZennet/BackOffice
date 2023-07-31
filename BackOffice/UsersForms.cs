@@ -51,7 +51,7 @@ namespace BackOffice
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            UserController.Crear(txtBoxFirstName.Text, txtBoxSecondName.Text, txtBoxFirstLastName.Text, txtBoxSecondLastName.Text, Int32.Parse(txtBoxPhoneNumber.Text));
+            UserController.Crear(Int32.Parse(txtBoxCI.Text), txtBoxFirstName.Text, txtBoxSecondName.Text, txtBoxFirstLastName.Text, txtBoxSecondLastName.Text, Int32.Parse(txtBoxPhoneNumber.Text));
             MessageBox.Show("Usuario agregado Agregado");
             RefreshTable();
             ClearTxtBoxes();

@@ -10,9 +10,10 @@ namespace capa_logica
 {
     public static class UserController
     {
-        public static void Crear(string firstname, string secondname, string firstlastname, string secondlastname, int phonenumber)
+        public static void Crear(int ci, string firstname, string secondname, string firstlastname, string secondlastname, int phonenumber)
         {
             UsersModel user = new UsersModel();
+            user.CI = ci;
             user.FirstName = firstname;
             user.SecondName = secondname;
             user.FirstLastName = firstlastname;
