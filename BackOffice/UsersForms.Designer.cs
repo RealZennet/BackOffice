@@ -175,6 +175,7 @@
             this.buttonBack.TabIndex = 29;
             this.buttonBack.Text = "Volver";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click_1);
             // 
             // txtBoxCI
             // 
