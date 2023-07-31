@@ -47,7 +47,32 @@ namespace BackOffice
             RefreshTable();
         }
 
+        private bool ValidateInputsUser()
+        {
+
+            if (string.IsNullOrWhiteSpace(txtBoxName.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxWeight.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxDescription.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxAmount.Text))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+
         private void buttonAddProduct_Click(object sender, EventArgs e)
+        {
+            if (!ValidateInputsUser())
+            {
+                MessageBox.Show("Porfavor complete los campos correspondientes");
+                return;
+            }
+            addProduct();
+        }
+
+        private void addProduct()
         {
             ProductController.Crear(txtBoxName.Text, Int32.Parse(txtBoxAmount.Text), Int32.Parse(txtBoxAmount.Text), txtBoxDescription.Text);
             MessageBox.Show("Producto Agregado");
@@ -56,6 +81,11 @@ namespace BackOffice
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            deleteProduct();
+        }
+
+        private void deleteProduct()
         {
             if (dataGridViewProducts.SelectedRows.Count > 0)
             {
