@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BackOffice
 {
-    public partial class UserManagerForm : Form
+    public partial class TruckManagerForm : Form
     {
-        public UserManagerForm()
+        public TruckManagerForm()
         {
             InitializeComponent();
         }
