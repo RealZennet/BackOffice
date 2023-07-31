@@ -43,6 +43,21 @@ namespace BackOffice
             txtBoxSecondLastName.Clear();
             txtBoxPhoneNumber.Clear();
         }
+        private bool ValidateInputsUser()
+        {
+            
+            if (string.IsNullOrWhiteSpace(txtBoxCI.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxFirstName.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxSecondName.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxFirstLastName.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxSecondLastName.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxPhoneNumber.Text))
+            {
+                return false; 
+            }
+
+            return true; 
+        }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
@@ -51,13 +66,35 @@ namespace BackOffice
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            UserController.Crear(Int32.Parse(txtBoxCI.Text), txtBoxFirstName.Text, txtBoxSecondName.Text, txtBoxFirstLastName.Text, txtBoxSecondLastName.Text, Int32.Parse(txtBoxPhoneNumber.Text));
-            MessageBox.Show("Usuario agregado Agregado");
+            if (!ValidateInputsUser())
+            {
+                MessageBox.Show("Porfavor complete los campos correspondientes");
+                return;
+            }
+            createUser();
+        }
+
+        private void createUser()
+        {
+            UserController.Crear(
+                Int32.Parse(txtBoxCI.Text),
+                txtBoxFirstName.Text,
+                txtBoxSecondName.Text,
+                txtBoxFirstLastName.Text,
+                txtBoxSecondLastName.Text,
+                Int32.Parse(txtBoxPhoneNumber.Text)
+            );
+            MessageBox.Show("Usuario agregado");
             RefreshTable();
             ClearTxtBoxes();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            deleteUser();
+        }
+
+        private void deleteUser()
         {
             if (dataGridViewUsers.SelectedRows.Count > 0)
             {
@@ -72,5 +109,6 @@ namespace BackOffice
 
             }
         }
+
     }
 }
