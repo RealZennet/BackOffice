@@ -162,6 +162,18 @@ namespace BackOffice
             formUsersCtl.BringToFront();
             formUsersCtl.Show();
         }
+        private void showTruckManager()
+        {
+            TruckManagerForm formTruckCtl = new TruckManagerForm();
+            formTruckCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formTruckCtl);
+            formTruckCtl.FormBorderStyle = FormBorderStyle.None;
+            formTruckCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formTruckCtl;
+            formTruckCtl.BringToFront();
+            formTruckCtl.Show();
+
+        }
 
         private void buttonAssignProducts_Click(object sender, EventArgs e)
         {
@@ -176,6 +188,11 @@ namespace BackOffice
         private void buttonUsersManager_Click(object sender, EventArgs e)
         {
             showUsers();
+        }
+
+        private void buttonTrucksManager_Click(object sender, EventArgs e)
+        {
+            showTruckManager();
         }
         #endregion
 
