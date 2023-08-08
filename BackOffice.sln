@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.33529.398
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice", "BackOffice\BackOffice.csproj", "{BC803685-D7AA-409C-8793-792A2DD85432}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "capa_logica", "capa_logica\capa_logica.csproj", "{4E0F0DEC-6907-4AAA-9910-C68911C55231}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "capa_datos", "capa_logica\capa_datos.csproj", "{4E0F0DEC-6907-4AAA-9910-C68911C55231}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "capa_datos", "capa_datos\capa_datos.csproj", "{64FD0C0D-ED7B-420C-8E58-99BC18DAD43D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "capa_logica", "capa_datos\capa_logica.csproj", "{64FD0C0D-ED7B-420C-8E58-99BC18DAD43D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
