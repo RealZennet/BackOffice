@@ -17,6 +17,7 @@ namespace BackOffice
         {
             InitializeComponent();
             customMenus();
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
         }
 
         //Variables para controlar el slide de la ventana.
@@ -57,38 +58,6 @@ namespace BackOffice
             {
                 subMenu.Visible = false;
             }
-        }
-        #endregion
-        #region topButtons
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void SlidePanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            m = 1;
-            x = e.X;
-            y = e.Y;
-        }
-
-        private void buttonMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void buttonMaximize_Click(object sender, EventArgs e)
-        {
-
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-
         }
         #endregion
         #region leftButtonsAndPanel
