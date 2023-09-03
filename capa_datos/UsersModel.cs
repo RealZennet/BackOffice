@@ -14,15 +14,17 @@ namespace capa_datos
         public string FirstLastName { get; set; }
         public string SecondLastName { get; set; }
         public int PhoneNumber { get; set; }
+        public bool ActivedUser { get; set; }
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO trabajador (ci, nom1, nom2, ape1, ape2, tel) VALUES (" +
+            this.Command.CommandText = $"INSERT INTO trabajador (ci, nom1, nom2, ape1, ape2, bajalogica ,tel) VALUES (" +
                 $"'{this.CI}', " +
                 $"'{this.FirstName}'," +
                 $"'{this.SecondName}', " +
                 $"'{this.FirstLastName}', " +
                 $"'{this.SecondLastName}', " +
+                $"{this.ActivedUser}" +
                 $"'{this.PhoneNumber}')";
             this.Command.ExecuteNonQuery();
         }
@@ -41,6 +43,7 @@ namespace capa_datos
                 user.SecondName = this.Reader["nom2"].ToString();
                 user.FirstLastName = this.Reader["ape1"].ToString();
                 user.SecondLastName = this.Reader["ape2"].ToString();
+                user.ActivedUser = Convert.ToBoolean(this.Reader["bajalogica"].ToString());
                 user.PhoneNumber = Int32.Parse(this.Reader["tel"].ToString());
                 result.Add(user);
             }
@@ -55,10 +58,11 @@ namespace capa_datos
 
         public void EditUser()
         {
-            this.Command.CommandText = $"UPDATE trabajador SET nom1 = {this.FirstName}," +
+            this.Command.CommandText = $"UPDATE trabajador SET nom1 = {this.FirstName}," + // buscar por ci no por nombre.
                 $"nom2 = {this.SecondName}," +
                 $"ape1 = {this.FirstLastName}," +
                 $"ape2 = {this.SecondLastName}," +
+                $"bajalogica = {this.ActivedUser}" +
                 $"tel = {this.PhoneNumber}";
             this.Command.ExecuteNonQuery();
         }

@@ -9,18 +9,18 @@ namespace capa_datos
     public class ModelProduct:DataBaseControl
     {
         public int Id { get; set; }
-        public string NombreProducto { get; set; }
-        public int PesoProducto { get; set; }
-        public int CantidadProducto { get; set; }
-        public string DescripcionProducto { get; set; }
+        public string ProductName { get; set; }
+        public int ProductWeight { get; set; }
+        public string ProductDescription { get; set; }
+        public bool ActivedProduct { get; set; }
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO producto(nom_Prod, peso_Prod, cant_Prod, desc_Prod) VALUES(" +
-                $"'{this.NombreProducto}', " +
-                $"{this.PesoProducto}, " +
-                $"{this.CantidadProducto}, " +
-                $"'{this.DescripcionProducto}')";
+            this.Command.CommandText = $"INSERT INTO producto(nom_Prod, peso_Prod, desc_Prod , bajalogica) VALUES(" +
+                $"'{this.ProductName}', " +
+                $"{this.ProductWeight}, " +
+                $"'{this.ProductDescription}'" +
+                $"{this.ActivedProduct})";
             this.Command.ExecuteNonQuery();
         }
 
@@ -34,10 +34,10 @@ namespace capa_datos
             {
                 ModelProduct producto = new ModelProduct();
                 producto.Id = Int32.Parse(this.Reader["id_Prod"].ToString());
-                producto.NombreProducto = this.Reader["nom_Prod"].ToString();
-                producto.PesoProducto = Int32.Parse(this.Reader["peso_Prod"].ToString());
-                producto.CantidadProducto = Int32.Parse(this.Reader["cant_Prod"].ToString());
-                producto.DescripcionProducto = this.Reader["desc_Prod"].ToString();
+                producto.ProductName = this.Reader["nom_Prod"].ToString();
+                producto.ProductWeight = Int32.Parse(this.Reader["peso_Prod"].ToString());
+                producto.ProductDescription = this.Reader["desc_Prod"].ToString();
+                producto.ActivedProduct = Convert.ToBoolean(this.Reader["cant_Prod"].ToString());
                 result.Add(producto);
             }
             return result;

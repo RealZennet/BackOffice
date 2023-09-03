@@ -13,10 +13,10 @@ namespace capa_logica
         public static void Crear(string nombre,  int pesoproducto, int cantidadproducto, string descripcion)
         {
             ModelProduct producto = new ModelProduct();
-            producto.NombreProducto = nombre;
-            producto.PesoProducto = pesoproducto;
+            producto.ProductName = nombre;
+            producto.ProductWeight = pesoproducto;
             producto.CantidadProducto = cantidadproducto;
-            producto.DescripcionProducto = descripcion;
+            producto.ProductDescription = descripcion;
             producto.Save();
         }
 
@@ -36,9 +36,9 @@ namespace capa_logica
             {
                 DataRow row = table.NewRow();
                 row["id"] = producto.Id;
-                row["nombre"] = producto.NombreProducto;
-                row["Descripcion"] = producto.DescripcionProducto;
-                row["Peso producto"] = producto.PesoProducto;
+                row["nombre"] = producto.ProductName;
+                row["Descripcion"] = producto.ProductDescription;
+                row["Peso producto"] = producto.ProductWeight;
                 row["Cantidad producto"] = producto.CantidadProducto;
                 table.Rows.Add(row);
             }
