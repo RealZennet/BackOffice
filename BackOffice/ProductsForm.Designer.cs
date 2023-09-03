@@ -130,7 +130,7 @@
             // 
             this.txtBoxActive.Location = new System.Drawing.Point(508, 190);
             this.txtBoxActive.Name = "txtBoxActive";
-            this.txtBoxActive.Size = new System.Drawing.Size(253, 20);
+            this.txtBoxActive.Size = new System.Drawing.Size(37, 20);
             this.txtBoxActive.TabIndex = 7;
             // 
             // txtBoxDescription
@@ -163,9 +163,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(508, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 13);
+            this.label3.Size = new System.Drawing.Size(122, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Cantidad de producto:";
+            this.label3.Text = "Activo (1) - No activo (0)";
             // 
             // label4
             // 

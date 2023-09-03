@@ -34,10 +34,6 @@ namespace BackOffice
             dataGridViewLots.DataSource = dataTableLots;
         }
 
-        public void ClearTxtBoxes()
-        {
-            txtBoxLotsAmount.Clear();
-        }
 
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -45,7 +41,6 @@ namespace BackOffice
             BatchController.Crear(Convert.ToDateTime(dateTimePickerShippingDate.Text));
             MessageBox.Show("Lote Agregado");
             RefreshTable();
-            ClearTxtBoxes();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
