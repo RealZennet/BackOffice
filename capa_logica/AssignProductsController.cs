@@ -10,11 +10,11 @@ namespace capa_logica
 {
     public class AssignProductsController
     {
-        public static void Crear(int IdProduct, int IdLote)
+        public static void Crear(int IdProduct, int IdBatch)
         {
             AssignProductsModel assignedProduct = new AssignProductsModel();
             assignedProduct.IDProduct = IdProduct;
-            assignedProduct.IDLote = IdLote;
+            assignedProduct.IDBatch = IdBatch;
             assignedProduct.Save();
         }
 
@@ -29,7 +29,7 @@ namespace capa_logica
             foreach (AssignProductsModel AssignedProducts in lotes)
             {
                 DataRow row = table.NewRow();
-                row["Lote ID"] = AssignedProducts.IDLote;
+                row["Lote ID"] = AssignedProducts.IDBatch;
                 row["Producto ID"] = AssignedProducts.IDProduct;
                 table.Rows.Add(row);
             }
@@ -38,7 +38,7 @@ namespace capa_logica
         public static void DeleteAssignedProduct(int id)
         {
             AssignProductsModel AssignedProduct = new AssignProductsModel();
-            AssignedProduct.IDLote = id; //eliminar producto asignado o lote?
+            AssignedProduct.IDBatch = id; //eliminar producto asignado o lote?
             AssignedProduct.Delete();
         }
     }

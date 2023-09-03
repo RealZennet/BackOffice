@@ -37,7 +37,7 @@ namespace BackOffice
         public void ClearTxtBoxes()
         {
             txtBoxName.Clear();
-            txtBoxAmount.Clear();
+            txtBoxActive.Clear();
             txtBoxDescription.Clear();
             txtBoxWeight.Clear();
         }
@@ -53,7 +53,7 @@ namespace BackOffice
             if (string.IsNullOrWhiteSpace(txtBoxName.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxWeight.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxDescription.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxAmount.Text))
+                string.IsNullOrWhiteSpace(txtBoxActive.Text))
             {
                 return false;
             }
@@ -74,7 +74,7 @@ namespace BackOffice
 
         private void addProduct()
         {
-            ProductController.Crear(txtBoxName.Text, Int32.Parse(txtBoxAmount.Text), Int32.Parse(txtBoxAmount.Text), txtBoxDescription.Text);
+            ProductController.Crear(txtBoxName.Text, Int32.Parse(txtBoxWeight.Text), txtBoxDescription.Text, Convert.ToBoolean(Int32.Parse(txtBoxActive.Text)));
             MessageBox.Show("Producto Agregado");
             RefreshTable();
             ClearTxtBoxes();

@@ -10,13 +10,13 @@ namespace capa_logica
 {
     public static class ProductController
     {
-        public static void Crear(string nombre,  int pesoproducto, int cantidadproducto, string descripcion)
+        public static void Crear(string nombre,  int pesoproducto, string descripcion, bool activeproduct)
         {
             ModelProduct producto = new ModelProduct();
             producto.ProductName = nombre;
             producto.ProductWeight = pesoproducto;
-            producto.CantidadProducto = cantidadproducto;
             producto.ProductDescription = descripcion;
+            producto.ActivedProduct = activeproduct;
             producto.Save();
         }
 
@@ -30,7 +30,7 @@ namespace capa_logica
             table.Columns.Add("nombre", typeof(string));
             table.Columns.Add("Descripcion", typeof(string));
             table.Columns.Add("Peso producto", typeof(int));
-            table.Columns.Add("Cantidad Producto", typeof(int));
+            table.Columns.Add("Activo", typeof(bool));
 
             foreach (ModelProduct producto in productos)
             {
@@ -39,7 +39,7 @@ namespace capa_logica
                 row["nombre"] = producto.ProductName;
                 row["Descripcion"] = producto.ProductDescription;
                 row["Peso producto"] = producto.ProductWeight;
-                row["Cantidad producto"] = producto.CantidadProducto;
+                row["Activo"] = producto.ActivedProduct;
                 table.Rows.Add(row);
             }
             return table;

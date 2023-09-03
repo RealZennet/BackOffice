@@ -19,7 +19,7 @@ namespace capa_datos
             this.Command.CommandText = $"INSERT INTO producto(nom_Prod, peso_Prod, desc_Prod , bajalogica) VALUES(" +
                 $"'{this.ProductName}', " +
                 $"{this.ProductWeight}, " +
-                $"'{this.ProductDescription}'" +
+                $"'{this.ProductDescription}'," +
                 $"{this.ActivedProduct})";
             this.Command.ExecuteNonQuery();
         }
@@ -37,7 +37,7 @@ namespace capa_datos
                 producto.ProductName = this.Reader["nom_Prod"].ToString();
                 producto.ProductWeight = Int32.Parse(this.Reader["peso_Prod"].ToString());
                 producto.ProductDescription = this.Reader["desc_Prod"].ToString();
-                producto.ActivedProduct = Convert.ToBoolean(this.Reader["cant_Prod"].ToString());
+                producto.ActivedProduct = Convert.ToBoolean(this.Reader["bajalogica"].ToString());
                 result.Add(producto);
             }
             return result;

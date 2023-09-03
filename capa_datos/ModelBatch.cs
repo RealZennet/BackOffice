@@ -9,15 +9,14 @@ namespace capa_datos
 {
     public class ModelBatch : DataBaseControl
     {
-        public int Id { get; set; } //id lote
-       // public int IdProduct {get; set;}
-        public DateTime FechaActual { get; set; } = DateTime.Now;
-        public int ProductsAmount { get; set; }
+        public int Id { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
+        public DateTime ShippingDate { get; set; }
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO lote (fech_Crea, cant_Prod_Lote) VALUES " +
-                $"('{this.FechaActual.ToString("yyyy-MM-dd HH:mm:ss")}', {this.ProductsAmount})";
+            this.Command.CommandText = $"INSERT INTO lote (fech_Crea, fech_Entre) VALUES " +
+                $"('{this.CreatedDate.ToString("yyyy-MM-dd HH:mm:ss")}', {this.ShippingDate})";
             this.Command.ExecuteNonQuery();
         }
 
@@ -31,8 +30,8 @@ namespace capa_datos
             {
                 ModelBatch lote = new ModelBatch();
                 lote.Id = Int32.Parse(this.Reader["id_Lote"].ToString());
-                lote.FechaActual = DateTime.Parse(this.Reader["fech_Crea"].ToString());
-                lote.ProductsAmount = Int32.Parse(this.Reader["cant_Prod_Lote"].ToString());
+                lote.CreatedDate = DateTime.Parse(this.Reader["fech_Crea"].ToString());
+                lote.ShippingDate = DateTime.Parse(this.Reader["fech_Entre"].ToString());
                 result.Add(lote);
             }
             return result;

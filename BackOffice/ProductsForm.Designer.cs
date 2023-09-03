@@ -35,7 +35,7 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.txtBoxName = new System.Windows.Forms.TextBox();
             this.txtBoxWeight = new System.Windows.Forms.TextBox();
-            this.txtBoxAmount = new System.Windows.Forms.TextBox();
+            this.txtBoxActive = new System.Windows.Forms.TextBox();
             this.txtBoxDescription = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -126,12 +126,12 @@
             this.txtBoxWeight.Size = new System.Drawing.Size(253, 20);
             this.txtBoxWeight.TabIndex = 6;
             // 
-            // txtBoxAmount
+            // txtBoxActive
             // 
-            this.txtBoxAmount.Location = new System.Drawing.Point(508, 190);
-            this.txtBoxAmount.Name = "txtBoxAmount";
-            this.txtBoxAmount.Size = new System.Drawing.Size(253, 20);
-            this.txtBoxAmount.TabIndex = 7;
+            this.txtBoxActive.Location = new System.Drawing.Point(508, 190);
+            this.txtBoxActive.Name = "txtBoxActive";
+            this.txtBoxActive.Size = new System.Drawing.Size(253, 20);
+            this.txtBoxActive.TabIndex = 7;
             // 
             // txtBoxDescription
             // 
@@ -199,7 +199,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBoxDescription);
-            this.Controls.Add(this.txtBoxAmount);
+            this.Controls.Add(this.txtBoxActive);
             this.Controls.Add(this.txtBoxWeight);
             this.Controls.Add(this.txtBoxName);
             this.Controls.Add(this.buttonBack);
@@ -226,7 +226,7 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.TextBox txtBoxName;
         private System.Windows.Forms.TextBox txtBoxWeight;
-        private System.Windows.Forms.TextBox txtBoxAmount;
+        private System.Windows.Forms.TextBox txtBoxActive;
         private System.Windows.Forms.TextBox txtBoxDescription;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

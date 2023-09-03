@@ -10,12 +10,12 @@ namespace capa_logica
 {
     public static class BatchController
     {
-        public static void Crear(int CantidadProductoLote)
+        public static void Crear(DateTime ShippingDate)
         {
             DateTime FechaCreacion = DateTime.Now;
             ModelBatch lote = new ModelBatch();
-            lote.FechaActual = FechaCreacion; ; // - > Fecha de creacion del lote
-            lote.ProductsAmount = CantidadProductoLote;
+            lote.CreatedDate = FechaCreacion; ; // - > Fecha de creacion del lote
+            lote.ShippingDate = ShippingDate;
             lote.Save();
         }
 
@@ -32,8 +32,8 @@ namespace capa_logica
             {
                 DataRow row = table.NewRow();
                 row["id"] = lote.Id;
-                row["Fecha de creacion"] = lote.FechaActual;
-                row["Cantidad de productos en lote"] = lote.ProductsAmount;
+                row["Fecha de creacion"] = lote.CreatedDate;
+                row["Cantidad de productos en lote"] = lote.ShippingDate;
                 table.Rows.Add(row);
             }
             return table;

@@ -57,7 +57,7 @@ namespace BackOffice
                 MessageBox.Show("Porfavor complete los datos correspondientes");
                 return;
             }
-            BatchController.Crear(Int32.Parse(txtBoxLotsAmount.Text));
+            BatchController.Crear(Convert.ToDateTime(dateTimePickerShippingDate.Text));
             MessageBox.Show("Lote Agregado");
             RefreshTable();
             ClearTxtBoxes();

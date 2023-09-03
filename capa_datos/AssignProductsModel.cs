@@ -9,13 +9,13 @@ namespace capa_datos
     public class AssignProductsModel : DataBaseControl
     {
         public int IDProduct { get; set; }
-        public int IDLote { get; set; }
+        public int IDBatch { get; set; }
 
-        public void Save() //Un producto(IDProduct) no debe estar en mas de un lote a la vez(?)
+        public void Save()
         {
             try
             {
-                this.Command.CommandText = $"INSERT INTO pertenece (id_Prod, id_Lote) VALUES ({this.IDProduct}, {this.IDLote})";
+                this.Command.CommandText = $"INSERT INTO pertenece (id_Prod, id_Lote) VALUES ({this.IDProduct}, {this.IDBatch})";
                 this.Command.ExecuteNonQuery();
             }
             catch (Exception)
@@ -33,7 +33,7 @@ namespace capa_datos
             while (this.Reader.Read())
             {
                 AssignProductsModel assignedProduct = new AssignProductsModel();
-                assignedProduct.IDLote = Int32.Parse(this.Reader["id_Lote"].ToString());
+                assignedProduct.IDBatch = Int32.Parse(this.Reader["id_Lote"].ToString());
                 assignedProduct.IDProduct = Int32.Parse(this.Reader["id_Prod"].ToString());
                 result.Add(assignedProduct);
             }
@@ -42,7 +42,7 @@ namespace capa_datos
 
         public void Delete()
         {
-            this.Command.CommandText = $"DELETE FROM pertenece WHERE id_Lote = {this.IDLote}";
+            this.Command.CommandText = $"DELETE FROM pertenece WHERE id_Lote = {this.IDBatch}";
             this.Command.ExecuteNonQuery();
         }
 

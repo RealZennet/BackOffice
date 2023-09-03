@@ -36,6 +36,7 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
+            this.dateTimePickerShippingDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLots)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,12 +118,20 @@
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
+            // dateTimePickerShippingDate
+            // 
+            this.dateTimePickerShippingDate.Location = new System.Drawing.Point(549, 227);
+            this.dateTimePickerShippingDate.Name = "dateTimePickerShippingDate";
+            this.dateTimePickerShippingDate.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerShippingDate.TabIndex = 8;
+            // 
             // LotsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
+            this.Controls.Add(this.dateTimePickerShippingDate);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
@@ -151,5 +160,6 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.DateTimePicker dateTimePickerShippingDate;
     }
 }
