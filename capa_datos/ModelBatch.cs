@@ -15,8 +15,12 @@ namespace capa_datos
 
         public void Save()
         {
+            string createdDateFormatted = this.CreatedDate.ToString("yyyy-MM-dd HH:mm:ss");
+            string shippingDateFormatted = this.ShippingDate.ToString("yyyy-MM-dd");
+
             this.Command.CommandText = $"INSERT INTO lote (fech_Crea, fech_Entre) VALUES " +
-                $"('{this.CreatedDate.ToString("yyyy-MM-dd HH:mm:ss")}', {this.ShippingDate})";
+                $"('{createdDateFormatted}', " +
+                $"'{shippingDateFormatted}')";
             this.Command.ExecuteNonQuery();
         }
 

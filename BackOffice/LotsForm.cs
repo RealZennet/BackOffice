@@ -39,24 +39,9 @@ namespace BackOffice
             txtBoxLotsAmount.Clear();
         }
 
-        private bool ValidateInputsUser()
-        {
-
-            if (string.IsNullOrWhiteSpace(txtBoxLotsAmount.Text))
-            {
-                return false;
-            }
-
-            return true;
-        }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (!ValidateInputsUser())
-            {
-                MessageBox.Show("Porfavor complete los datos correspondientes");
-                return;
-            }
             BatchController.Crear(Convert.ToDateTime(dateTimePickerShippingDate.Text));
             MessageBox.Show("Lote Agregado");
             RefreshTable();

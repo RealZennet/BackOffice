@@ -32,7 +32,6 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtBoxLotsAmount = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
@@ -75,22 +74,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label2.Location = new System.Drawing.Point(527, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 13);
+            this.label2.Size = new System.Drawing.Size(181, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Cantidad de productos";
-            // 
-            // txtBoxLotsAmount
-            // 
-            this.txtBoxLotsAmount.Location = new System.Drawing.Point(530, 84);
-            this.txtBoxLotsAmount.Name = "txtBoxLotsAmount";
-            this.txtBoxLotsAmount.Size = new System.Drawing.Size(231, 20);
-            this.txtBoxLotsAmount.TabIndex = 4;
+            this.label2.Text = "Fecha estimada de entrega";
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(530, 141);
+            this.buttonAdd.Location = new System.Drawing.Point(530, 155);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(68, 26);
             this.buttonAdd.TabIndex = 5;
@@ -100,7 +93,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(604, 141);
+            this.buttonDelete.Location = new System.Drawing.Point(604, 155);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(68, 26);
             this.buttonDelete.TabIndex = 6;
@@ -110,7 +103,7 @@
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Location = new System.Drawing.Point(678, 141);
+            this.buttonRefresh.Location = new System.Drawing.Point(678, 155);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(68, 26);
             this.buttonRefresh.TabIndex = 7;
@@ -120,9 +113,9 @@
             // 
             // dateTimePickerShippingDate
             // 
-            this.dateTimePickerShippingDate.Location = new System.Drawing.Point(549, 227);
+            this.dateTimePickerShippingDate.Location = new System.Drawing.Point(530, 103);
             this.dateTimePickerShippingDate.Name = "dateTimePickerShippingDate";
-            this.dateTimePickerShippingDate.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerShippingDate.Size = new System.Drawing.Size(216, 20);
             this.dateTimePickerShippingDate.TabIndex = 8;
             // 
             // LotsForm
@@ -135,7 +128,6 @@
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.txtBoxLotsAmount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonBack);
@@ -156,7 +148,6 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBoxLotsAmount;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonRefresh;
