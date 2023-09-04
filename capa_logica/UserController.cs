@@ -21,19 +21,6 @@ namespace capa_logica
             user.Save();
         }
 
-        public static void AsignTypeTruck(string firstname)
-        {
-            UsersModel user = new UsersModel();
-            user.FirstName = firstname;
-            user.UserTypeTrucker();
-        }
-
-        public static void AsignTypeOperator(string firstname)
-        {
-            UsersModel user = new UsersModel();
-            user.FirstName = firstname;
-            user.UserTypeOperator();
-        }
 
         public static DataTable Obtener()
         {

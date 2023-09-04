@@ -43,6 +43,7 @@
             this.txtBoxPassword = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.comboBoxTypeUser = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,12 +178,24 @@
             this.label8.TabIndex = 35;
             this.label8.Text = "Contraseña:";
             // 
+            // comboBoxTypeUser
+            // 
+            this.comboBoxTypeUser.FormattingEnabled = true;
+            this.comboBoxTypeUser.Items.AddRange(new object[] {
+            "Operador",
+            "Camionero"});
+            this.comboBoxTypeUser.Location = new System.Drawing.Point(500, 322);
+            this.comboBoxTypeUser.Name = "comboBoxTypeUser";
+            this.comboBoxTypeUser.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTypeUser.TabIndex = 36;
+            // 
             // UsersForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(757, 520);
+            this.Controls.Add(this.comboBoxTypeUser);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtBoxPassword);
@@ -225,5 +238,6 @@
         private System.Windows.Forms.TextBox txtBoxPassword;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBoxTypeUser;
     }
 }
