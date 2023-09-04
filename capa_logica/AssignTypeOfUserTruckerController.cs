@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace capa_logica
 {
-    public static class AssignTypeOfUserController
+    public static class AssignTypeOfUserTruckerController
     {
 
         public static void Crear(string username)

@@ -144,6 +144,19 @@ namespace BackOffice
 
         }
 
+        private void showUserTypeAssign()
+        {
+            AssignTypeUser formTruckCtl = new AssignTypeUser();
+            formTruckCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formTruckCtl);
+            formTruckCtl.FormBorderStyle = FormBorderStyle.None;
+            formTruckCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formTruckCtl;
+            formTruckCtl.BringToFront();
+            formTruckCtl.Show();
+
+        }
+
         private void buttonAssignProducts_Click(object sender, EventArgs e)
         {
             showAssignedProducts();
@@ -162,6 +175,11 @@ namespace BackOffice
         private void buttonTrucksManager_Click(object sender, EventArgs e)
         {
             showTruckManager();
+        }
+
+        private void buttonUsersAssign_Click(object sender, EventArgs e)
+        {
+            showUserTypeAssign();
         }
         #endregion
 

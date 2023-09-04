@@ -43,6 +43,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFormsLoader = new System.Windows.Forms.Panel();
+            this.buttonUsersAssign = new System.Windows.Forms.Button();
             this.leftPanelContainer.SuspendLayout();
             this.managementPanel.SuspendLayout();
             this.productsAndLotsPanel.SuspendLayout();
@@ -68,6 +69,7 @@
             // managementPanel
             // 
             this.managementPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
+            this.managementPanel.Controls.Add(this.buttonUsersAssign);
             this.managementPanel.Controls.Add(this.buttonUsersManager);
             this.managementPanel.Controls.Add(this.button1);
             this.managementPanel.Controls.Add(this.buttonTrucksManager);
@@ -75,7 +77,7 @@
             this.managementPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.managementPanel.Location = new System.Drawing.Point(0, 331);
             this.managementPanel.Name = "managementPanel";
-            this.managementPanel.Size = new System.Drawing.Size(250, 207);
+            this.managementPanel.Size = new System.Drawing.Size(250, 249);
             this.managementPanel.TabIndex = 6;
             // 
             // buttonUsersManager
@@ -256,6 +258,21 @@
             this.panelFormsLoader.TabIndex = 2;
             this.panelFormsLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormsLoader_Paint);
             // 
+            // buttonUsersAssign
+            // 
+            this.buttonUsersAssign.FlatAppearance.BorderSize = 0;
+            this.buttonUsersAssign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUsersAssign.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonUsersAssign.Location = new System.Drawing.Point(3, 206);
+            this.buttonUsersAssign.Name = "buttonUsersAssign";
+            this.buttonUsersAssign.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonUsersAssign.Size = new System.Drawing.Size(250, 40);
+            this.buttonUsersAssign.TabIndex = 4;
+            this.buttonUsersAssign.Text = "Asignar Usuarios";
+            this.buttonUsersAssign.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUsersAssign.UseVisualStyleBackColor = true;
+            this.buttonUsersAssign.Click += new System.EventHandler(this.buttonUsersAssign_Click);
+            // 
             // QuickCarry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +310,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonAssignProducts;
         private System.Windows.Forms.Panel panelFormsLoader;
+        private System.Windows.Forms.Button buttonUsersAssign;
     }
 }
 
