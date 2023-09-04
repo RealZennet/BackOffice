@@ -10,7 +10,7 @@ namespace capa_logica
 {
     public static class UserController
     {
-        public static void Crear(string firstname, string secondname, string firstlastname, string secondlastname, int phonenumber, string username, string password)
+        public static void Crear(string firstname , string firstlastname, int phonenumber, string username, string password)
         {
             UsersModel user = new UsersModel();
             user.FirstName = firstname;
@@ -19,6 +19,20 @@ namespace capa_logica
             user.UserName = username;
             user.Password = password;
             user.Save();
+        }
+
+        public static void AsignTypeTruck(string firstname)
+        {
+            UsersModel user = new UsersModel();
+            user.FirstName = firstname;
+            user.UserTypeTrucker();
+        }
+
+        public static void AsignTypeOperator(string firstname)
+        {
+            UsersModel user = new UsersModel();
+            user.FirstName = firstname;
+            user.UserTypeOperator();
         }
 
         public static DataTable Obtener()

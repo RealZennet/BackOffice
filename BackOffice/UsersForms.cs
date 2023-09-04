@@ -38,9 +38,7 @@ namespace BackOffice
         public void ClearTxtBoxes()
         {
             txtBoxFirstName.Clear();
-            txtBoxSecondName.Clear();
             txtBoxFirstLastName.Clear();
-            txtBoxSecondLastName.Clear();
             txtBoxPhoneNumber.Clear();
             txtBoxPassword.Clear();
             txtBoxUsername.Clear();
@@ -81,9 +79,7 @@ namespace BackOffice
         {
             UserController.Crear(
                 txtBoxFirstName.Text,
-                txtBoxSecondName.Text,
                 txtBoxFirstLastName.Text,
-                txtBoxSecondLastName.Text,
                 Int32.Parse(txtBoxPhoneNumber.Text),
                 txtBoxUsername.Text,
                 txtBoxPassword.Text
@@ -117,6 +113,16 @@ namespace BackOffice
         private void buttonBack_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBoxFirstName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

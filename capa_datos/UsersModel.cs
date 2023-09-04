@@ -65,6 +65,19 @@ namespace capa_datos
             this.Command.ExecuteNonQuery();
         }
 
+        public void UserTypeTrucker()
+        {
+                this.Command.CommandText = $"INSERT INTO camionero (username) VALUES (" +
+                $"'{this.UserName}')";
+            this.Command.ExecuteNonQuery();
+        }
+
+        public void UserTypeOperator()
+        {
+            this.Command.CommandText = $"INSERT INTO operario (username) VALUES (" +
+            $"'{this.UserName}')";
+            this.Command.ExecuteNonQuery();
+        }
 
     }
 }
