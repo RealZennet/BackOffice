@@ -45,6 +45,10 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.txtBoxCI = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtBoxUsername = new System.Windows.Forms.TextBox();
+            this.txtBoxPassword = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,7 +143,7 @@
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Location = new System.Drawing.Point(677, 318);
+            this.buttonRefresh.Location = new System.Drawing.Point(677, 410);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(68, 26);
             this.buttonRefresh.TabIndex = 26;
@@ -149,7 +153,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(588, 318);
+            this.buttonDelete.Location = new System.Drawing.Point(588, 410);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(68, 26);
             this.buttonDelete.TabIndex = 27;
@@ -159,7 +163,7 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(498, 318);
+            this.buttonAdd.Location = new System.Drawing.Point(498, 410);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(68, 26);
             this.buttonAdd.TabIndex = 28;
@@ -193,12 +197,48 @@
             this.label6.TabIndex = 31;
             this.label6.Text = "Cedula de identidad:";
             // 
+            // txtBoxUsername
+            // 
+            this.txtBoxUsername.Location = new System.Drawing.Point(498, 314);
+            this.txtBoxUsername.Name = "txtBoxUsername";
+            this.txtBoxUsername.Size = new System.Drawing.Size(253, 20);
+            this.txtBoxUsername.TabIndex = 32;
+            // 
+            // txtBoxPassword
+            // 
+            this.txtBoxPassword.Location = new System.Drawing.Point(498, 353);
+            this.txtBoxPassword.Name = "txtBoxPassword";
+            this.txtBoxPassword.Size = new System.Drawing.Size(253, 20);
+            this.txtBoxPassword.TabIndex = 33;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(498, 298);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 13);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Nombre de usuario:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(498, 337);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 13);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Contraseña:";
+            // 
             // UsersForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(757, 520);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtBoxPassword);
+            this.Controls.Add(this.txtBoxUsername);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBoxCI);
             this.Controls.Add(this.buttonBack);
@@ -245,5 +285,9 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.TextBox txtBoxCI;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtBoxUsername;
+        private System.Windows.Forms.TextBox txtBoxPassword;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

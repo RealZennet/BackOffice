@@ -42,16 +42,19 @@ namespace BackOffice
             txtBoxFirstLastName.Clear();
             txtBoxSecondLastName.Clear();
             txtBoxPhoneNumber.Clear();
+            txtBoxPassword.Clear();
+            txtBoxUsername.Clear();
         }
         private bool ValidateInputsUser()
         {
             
-            if (string.IsNullOrWhiteSpace(txtBoxCI.Text) ||
+            if (
                 string.IsNullOrWhiteSpace(txtBoxFirstName.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxSecondName.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxFirstLastName.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxSecondLastName.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxPhoneNumber.Text))
+                string.IsNullOrWhiteSpace(txtBoxPhoneNumber.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxUsername.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxPassword.Text)
+                )
             {
                 return false; 
             }
@@ -77,12 +80,13 @@ namespace BackOffice
         private void createUser()
         {
             UserController.Crear(
-                Int32.Parse(txtBoxCI.Text),
                 txtBoxFirstName.Text,
                 txtBoxSecondName.Text,
                 txtBoxFirstLastName.Text,
                 txtBoxSecondLastName.Text,
-                Int32.Parse(txtBoxPhoneNumber.Text)
+                Int32.Parse(txtBoxPhoneNumber.Text),
+                txtBoxUsername.Text,
+                txtBoxPassword.Text
             );
             MessageBox.Show("Usuario agregado");
             RefreshTable();
@@ -99,11 +103,11 @@ namespace BackOffice
             if (dataGridViewUsers.SelectedRows.Count > 0)
             {
                 int selectedIndex = dataGridViewUsers.SelectedRows[0].Index;
-                int ci = (int)dataGridViewUsers.Rows[selectedIndex].Cells["ci"].Value;
+                string username = (string)dataGridViewUsers.Rows[selectedIndex].Cells["username"].Value;
                 DataTable dataTableUsers = (DataTable)dataGridViewUsers.DataSource;
                 dataTableUsers.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El usuario fue eliminado!");
-                UserController.DeleteUser(ci);
+                UserController.DeleteUser(username);
                 dataGridViewUsers.DataSource = dataTableUsers;
                 RefreshTable();
 

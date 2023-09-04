@@ -10,15 +10,14 @@ namespace capa_logica
 {
     public static class UserController
     {
-        public static void Crear(int ci, string firstname, string secondname, string firstlastname, string secondlastname, int phonenumber)
+        public static void Crear(string firstname, string secondname, string firstlastname, string secondlastname, int phonenumber, string username, string password)
         {
             UsersModel user = new UsersModel();
-            user.CI = ci;
             user.FirstName = firstname;
-            user.SecondName = secondname;
             user.FirstLastName = firstlastname;
-            user.SecondLastName = secondlastname;
             user.PhoneNumber = phonenumber;
+            user.UserName = username;
+            user.Password = password;
             user.Save();
         }
 
@@ -28,30 +27,27 @@ namespace capa_logica
             List<UsersModel> users = UserTableModel.GetAllUsers();
 
             DataTable table = new DataTable();
-            table.Columns.Add("CI", typeof(int));
             table.Columns.Add("Primer nombre", typeof(string));
-            table.Columns.Add("Segundo nombre", typeof(string));
             table.Columns.Add("Primer apellido", typeof(string));
-            table.Columns.Add("Segundo apellido", typeof(string));
             table.Columns.Add("Numero de telefono", typeof(int));
+            table.Columns.Add("Nombre de usuario", typeof(string));
+
 
             foreach (UsersModel user in users)
             {
                 DataRow row = table.NewRow();
-                row["CI"] = user.CI;
                 row["Primer nombre"] = user.FirstName;
-                row["Segundo nombre"] = user.SecondName;
                 row["Primer apellido"] = user.FirstLastName;
-                row["Segundo apellido"] = user.SecondLastName;
                 row["Numero de telefono"] = user.PhoneNumber;
+                row["Nombre de usuario"] = user.UserName;
                 table.Rows.Add(row);
             }
             return table;
         }
-        public static void DeleteUser(int ci)
+        public static void DeleteUser(string username)
         {
             UsersModel user = new UsersModel();
-            user.CI = ci;
+            user.UserName = username;
             user.DeleteUser();
         }
     }
