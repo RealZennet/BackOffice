@@ -16,6 +16,7 @@ namespace BackOffice
         public AssignTypeUser()
         {
             InitializeComponent();
+            RefreshTable();
         }
 
         private void AssignTypeUser_Load(object sender, EventArgs e)
@@ -57,6 +58,27 @@ namespace BackOffice
         {
             addUserTracker();
 
+        }
+
+        private void deleteUser()
+        {
+            if (dataGridViewUsers.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridViewUsers.SelectedRows[0].Index;
+                string username = (string)dataGridViewUsers.Rows[selectedIndex].Cells["Nombre de usuario"].Value;
+                DataTable dataTableUsers = (DataTable)dataGridViewUsers.DataSource;
+                dataTableUsers.Rows.RemoveAt(selectedIndex);
+                MessageBox.Show("El usuario fue eliminado!");
+                AssignTypeOfUserTruckerController.DeleteUser(username);
+                dataGridViewUsers.DataSource = dataTableUsers;
+                RefreshTable();
+
+            }
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            deleteUser();
         }
     }
 }

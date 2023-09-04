@@ -35,7 +35,7 @@ namespace capa_datos
 
         public void DeleteUser()
         {
-            this.Command.CommandText = $"DELETE FROM camionero where username = {this.UserName}";
+            this.Command.CommandText = $"DELETE FROM camionero where username = '{this.UserName}'";
             this.Command.ExecuteNonQuery();
         }
     }
