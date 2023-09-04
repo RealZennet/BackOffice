@@ -22,7 +22,7 @@ namespace capa_datos
                 $"'{this.FirstName}'," +
                 $"'{this.FirstLastName}', " +
                 $"{this.ActivedUser}," +
-                $"'{this.PhoneNumber}'," +
+                $"{this.PhoneNumber}," +
                 $"'{this.UserName}'," +
                 $"'{Hash.Content(this.Password)}')";
             this.Command.ExecuteNonQuery();

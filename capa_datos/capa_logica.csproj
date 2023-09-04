@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssignProductsModel.cs" />
+    <Compile Include="AssignTypeOfUserOperatorModel.cs" />
     <Compile Include="AssignTypeOfUserTruckerModel.cs" />
     <Compile Include="DataBaseControl.cs" />
     <Compile Include="ModelBatch.cs" />

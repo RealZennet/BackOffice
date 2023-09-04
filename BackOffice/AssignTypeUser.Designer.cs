@@ -35,15 +35,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxUsernameTrucker = new System.Windows.Forms.TextBox();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridViewOperators = new System.Windows.Forms.DataGridView();
+            this.buttonAddOperator = new System.Windows.Forms.Button();
+            this.buttonDeleteOperator = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxUsernameOperator = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOperators)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonBack
@@ -111,32 +111,34 @@
             this.dataGridViewUsers.Size = new System.Drawing.Size(233, 322);
             this.dataGridViewUsers.TabIndex = 30;
             // 
-            // dataGridView1
+            // dataGridViewOperators
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(461, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(241, 322);
-            this.dataGridView1.TabIndex = 37;
+            this.dataGridViewOperators.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.dataGridViewOperators.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOperators.Location = new System.Drawing.Point(461, 44);
+            this.dataGridViewOperators.Name = "dataGridViewOperators";
+            this.dataGridViewOperators.Size = new System.Drawing.Size(241, 322);
+            this.dataGridViewOperators.TabIndex = 37;
             // 
-            // button1
+            // buttonAddOperator
             // 
-            this.button1.Location = new System.Drawing.Point(461, 435);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 26);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAddOperator.Location = new System.Drawing.Point(461, 435);
+            this.buttonAddOperator.Name = "buttonAddOperator";
+            this.buttonAddOperator.Size = new System.Drawing.Size(71, 26);
+            this.buttonAddOperator.TabIndex = 41;
+            this.buttonAddOperator.Text = "Agregar";
+            this.buttonAddOperator.UseVisualStyleBackColor = true;
+            this.buttonAddOperator.Click += new System.EventHandler(this.buttonAddOperator_Click);
             // 
-            // button2
+            // buttonDeleteOperator
             // 
-            this.button2.Location = new System.Drawing.Point(556, 435);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 26);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonDeleteOperator.Location = new System.Drawing.Point(556, 435);
+            this.buttonDeleteOperator.Name = "buttonDeleteOperator";
+            this.buttonDeleteOperator.Size = new System.Drawing.Size(71, 26);
+            this.buttonDeleteOperator.TabIndex = 40;
+            this.buttonDeleteOperator.Text = "Eliminar";
+            this.buttonDeleteOperator.UseVisualStyleBackColor = true;
+            this.buttonDeleteOperator.Click += new System.EventHandler(this.buttonDeleteOperator_Click);
             // 
             // label2
             // 
@@ -182,11 +184,11 @@
             this.ClientSize = new System.Drawing.Size(773, 559);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonAddOperator);
+            this.Controls.Add(this.buttonDeleteOperator);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBoxUsernameOperator);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewOperators);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonAddTrucker);
             this.Controls.Add(this.buttonDelete);
@@ -199,7 +201,7 @@
             this.Text = "AssignTypeUser";
             this.Load += new System.EventHandler(this.AssignTypeUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOperators)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,9 +216,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxUsernameTrucker;
         private System.Windows.Forms.DataGridView dataGridViewUsers;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridViewOperators;
+        private System.Windows.Forms.Button buttonAddOperator;
+        private System.Windows.Forms.Button buttonDeleteOperator;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBoxUsernameOperator;
         private System.Windows.Forms.Label label3;

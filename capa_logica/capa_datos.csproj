@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssignProductsController.cs" />
+    <Compile Include="AssignTypeOfUserOperatorController.cs" />
     <Compile Include="AssignTypeOfUserTruckerController.cs" />
     <Compile Include="BatchController.cs" />
     <Compile Include="ProductController.cs" />

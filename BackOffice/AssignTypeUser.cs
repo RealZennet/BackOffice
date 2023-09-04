@@ -33,6 +33,9 @@ namespace BackOffice
         {
             DataTable dataTableUsersAssign = AssignTypeOfUserTruckerController.Obtener();
             dataGridViewUsers.DataSource = dataTableUsersAssign;
+
+            DataTable dataTableUsersAssignOperator = AssignTypeOfUserOperatorController.Obtener();
+            dataGridViewOperators.DataSource = dataTableUsersAssignOperator;
         }
 
         public void ClearTxtBoxes()
@@ -54,13 +57,21 @@ namespace BackOffice
             ClearTxtBoxes();
         }
 
+        private void addUserOperator()
+        {
+            AssignTypeOfUserOperatorController.Crear(txtBoxUsernameOperator.Text);
+            MessageBox.Show("Usuario asignado a operador");
+            RefreshTable();
+            ClearTxtBoxes();
+        }
+
         private void buttonAddTrucker_Click(object sender, EventArgs e)
         {
             addUserTracker();
 
         }
 
-        private void deleteUser()
+        private void deleteUserTrucker()
         {
             if (dataGridViewUsers.SelectedRows.Count > 0)
             {
@@ -76,9 +87,35 @@ namespace BackOffice
             }
         }
 
+        private void deleteUserOperator()
+        {
+            if (dataGridViewOperators.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridViewOperators.SelectedRows[0].Index;
+                string username = (string)dataGridViewOperators.Rows[selectedIndex].Cells["Nombre de usuario"].Value;
+                DataTable dataTableOperators = (DataTable)dataGridViewOperators.DataSource;
+                dataTableOperators.Rows.RemoveAt(selectedIndex);
+                MessageBox.Show("El usuario fue eliminado!");
+                AssignTypeOfUserOperatorController.DeleteUser(username);
+                dataGridViewOperators.DataSource = dataTableOperators;
+                RefreshTable();
+
+            }
+        }
+
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            deleteUser();
+            deleteUserTrucker();
+        }
+
+        private void buttonAddOperator_Click(object sender, EventArgs e)
+        {
+            addUserOperator();
+        }
+
+        private void buttonDeleteOperator_Click(object sender, EventArgs e)
+        {
+            deleteUserOperator();
         }
     }
 }
