@@ -15,7 +15,7 @@ namespace capa_datos
         {
             try
             {
-                this.Command.CommandText = $"INSERT INTO pertenece (id_Prod, id_Lote) VALUES ({this.IDProduct}, {this.IDBatch})";
+                this.Command.CommandText = $"INSERT INTO integra (id_prod, id_lote) VALUES ({this.IDProduct}, {this.IDBatch})";
                 this.Command.ExecuteNonQuery();
             }
             catch (Exception)
@@ -26,15 +26,15 @@ namespace capa_datos
 
         public List<AssignProductsModel> TodosLosItems()
         {
-            this.Command.CommandText = "SELECT * FROM pertenece";
+            this.Command.CommandText = "SELECT * FROM integra";
             this.Reader = this.Command.ExecuteReader();
 
             List<AssignProductsModel> result = new List<AssignProductsModel>();
             while (this.Reader.Read())
             {
                 AssignProductsModel assignedProduct = new AssignProductsModel();
-                assignedProduct.IDBatch = Int32.Parse(this.Reader["id_Lote"].ToString());
-                assignedProduct.IDProduct = Int32.Parse(this.Reader["id_Prod"].ToString());
+                assignedProduct.IDBatch = Int32.Parse(this.Reader["id_lote"].ToString());
+                assignedProduct.IDProduct = Int32.Parse(this.Reader["id_prod"].ToString());
                 result.Add(assignedProduct);
             }
             return result;
@@ -42,7 +42,7 @@ namespace capa_datos
 
         public void Delete()
         {
-            this.Command.CommandText = $"DELETE FROM pertenece WHERE id_Lote = {this.IDBatch}";
+            this.Command.CommandText = $"DELETE FROM integra WHERE id_lote = {this.IDBatch}";
             this.Command.ExecuteNonQuery();
         }
 
