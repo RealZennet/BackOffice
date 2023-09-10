@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonRefresh = new System.Windows.Forms.Button();
+            this.buttonAddTruck = new System.Windows.Forms.Button();
+            this.buttonDeleteTruck = new System.Windows.Forms.Button();
+            this.buttonRefreshTruck = new System.Windows.Forms.Button();
             this.dataGridViewAddTruck = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxWeightTruck = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txtBoxIDAssignedTruck = new System.Windows.Forms.TextBox();
+            this.dataGridViewAssignTruck = new System.Windows.Forms.DataGridView();
+            this.buttonRefreshAssignTrucker = new System.Windows.Forms.Button();
+            this.buttonDeleteAssignedTruck = new System.Windows.Forms.Button();
+            this.buttonAddAssignedTruck = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtBoxIDAssignedTrucker = new System.Windows.Forms.TextBox();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.txtBoxVolumeTruck = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtBoxActiveTruck = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTruck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAssignTruck)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,32 +64,32 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Gestion de camiones.";
             // 
-            // buttonAdd
+            // buttonAddTruck
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(499, 516);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(68, 26);
-            this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "Agregar";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAddTruck.Location = new System.Drawing.Point(499, 516);
+            this.buttonAddTruck.Name = "buttonAddTruck";
+            this.buttonAddTruck.Size = new System.Drawing.Size(68, 26);
+            this.buttonAddTruck.TabIndex = 1;
+            this.buttonAddTruck.Text = "Agregar";
+            this.buttonAddTruck.UseVisualStyleBackColor = true;
             // 
-            // buttonDelete
+            // buttonDeleteTruck
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(593, 516);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(68, 26);
-            this.buttonDelete.TabIndex = 2;
-            this.buttonDelete.Text = "Eliminar";
-            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDeleteTruck.Location = new System.Drawing.Point(593, 516);
+            this.buttonDeleteTruck.Name = "buttonDeleteTruck";
+            this.buttonDeleteTruck.Size = new System.Drawing.Size(68, 26);
+            this.buttonDeleteTruck.TabIndex = 2;
+            this.buttonDeleteTruck.Text = "Eliminar";
+            this.buttonDeleteTruck.UseVisualStyleBackColor = true;
             // 
-            // buttonRefresh
+            // buttonRefreshTruck
             // 
-            this.buttonRefresh.Location = new System.Drawing.Point(684, 516);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(68, 26);
-            this.buttonRefresh.TabIndex = 3;
-            this.buttonRefresh.Text = "Recargar";
-            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefreshTruck.Location = new System.Drawing.Point(684, 516);
+            this.buttonRefreshTruck.Name = "buttonRefreshTruck";
+            this.buttonRefreshTruck.Size = new System.Drawing.Size(68, 26);
+            this.buttonRefreshTruck.TabIndex = 3;
+            this.buttonRefreshTruck.Text = "Recargar";
+            this.buttonRefreshTruck.UseVisualStyleBackColor = true;
             // 
             // dataGridViewAddTruck
             // 
@@ -99,21 +99,21 @@
             this.dataGridViewAddTruck.Size = new System.Drawing.Size(253, 150);
             this.dataGridViewAddTruck.TabIndex = 4;
             // 
-            // textBox1
+            // txtBoxWeightTruck
             // 
-            this.textBox1.Location = new System.Drawing.Point(499, 479);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtBoxWeightTruck.Location = new System.Drawing.Point(499, 479);
+            this.txtBoxWeightTruck.Name = "txtBoxWeightTruck";
+            this.txtBoxWeightTruck.Size = new System.Drawing.Size(61, 20);
+            this.txtBoxWeightTruck.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(496, 450);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 13);
+            this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Capacidad de camion:";
+            this.label2.Text = "Peso de camion:";
             // 
             // label3
             // 
@@ -144,47 +144,47 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "ID Camion";
             // 
-            // textBox2
+            // txtBoxIDAssignedTruck
             // 
-            this.textBox2.Location = new System.Drawing.Point(26, 479);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(44, 20);
-            this.textBox2.TabIndex = 12;
+            this.txtBoxIDAssignedTruck.Location = new System.Drawing.Point(26, 479);
+            this.txtBoxIDAssignedTruck.Name = "txtBoxIDAssignedTruck";
+            this.txtBoxIDAssignedTruck.Size = new System.Drawing.Size(44, 20);
+            this.txtBoxIDAssignedTruck.TabIndex = 12;
             // 
-            // dataGridView1
+            // dataGridViewAssignTruck
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 297);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(253, 150);
-            this.dataGridView1.TabIndex = 11;
+            this.dataGridViewAssignTruck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAssignTruck.Location = new System.Drawing.Point(26, 297);
+            this.dataGridViewAssignTruck.Name = "dataGridViewAssignTruck";
+            this.dataGridViewAssignTruck.Size = new System.Drawing.Size(253, 150);
+            this.dataGridViewAssignTruck.TabIndex = 11;
             // 
-            // button1
+            // buttonRefreshAssignTrucker
             // 
-            this.button1.Location = new System.Drawing.Point(211, 516);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 26);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Recargar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonRefreshAssignTrucker.Location = new System.Drawing.Point(211, 516);
+            this.buttonRefreshAssignTrucker.Name = "buttonRefreshAssignTrucker";
+            this.buttonRefreshAssignTrucker.Size = new System.Drawing.Size(68, 26);
+            this.buttonRefreshAssignTrucker.TabIndex = 10;
+            this.buttonRefreshAssignTrucker.Text = "Recargar";
+            this.buttonRefreshAssignTrucker.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonDeleteAssignedTruck
             // 
-            this.button2.Location = new System.Drawing.Point(120, 516);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 26);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonDeleteAssignedTruck.Location = new System.Drawing.Point(120, 516);
+            this.buttonDeleteAssignedTruck.Name = "buttonDeleteAssignedTruck";
+            this.buttonDeleteAssignedTruck.Size = new System.Drawing.Size(68, 26);
+            this.buttonDeleteAssignedTruck.TabIndex = 9;
+            this.buttonDeleteAssignedTruck.Text = "Eliminar";
+            this.buttonDeleteAssignedTruck.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonAddAssignedTruck
             // 
-            this.button3.Location = new System.Drawing.Point(26, 516);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 26);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Agregar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonAddAssignedTruck.Location = new System.Drawing.Point(26, 516);
+            this.buttonAddAssignedTruck.Name = "buttonAddAssignedTruck";
+            this.buttonAddAssignedTruck.Size = new System.Drawing.Size(68, 26);
+            this.buttonAddAssignedTruck.TabIndex = 8;
+            this.buttonAddAssignedTruck.Text = "Agregar";
+            this.buttonAddAssignedTruck.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -195,44 +195,12 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "ID Chofer";
             // 
-            // label7
+            // txtBoxIDAssignedTrucker
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(158, 450);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Fecha inicio";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(228, 450);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Fecha fin";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(98, 479);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(44, 20);
-            this.textBox3.TabIndex = 18;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(166, 479);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(44, 20);
-            this.textBox4.TabIndex = 19;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(235, 479);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(44, 20);
-            this.textBox5.TabIndex = 20;
+            this.txtBoxIDAssignedTrucker.Location = new System.Drawing.Point(98, 479);
+            this.txtBoxIDAssignedTrucker.Name = "txtBoxIDAssignedTrucker";
+            this.txtBoxIDAssignedTrucker.Size = new System.Drawing.Size(44, 20);
+            this.txtBoxIDAssignedTrucker.TabIndex = 18;
             // 
             // buttonBack
             // 
@@ -247,40 +215,72 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // txtBoxVolumeTruck
+            // 
+            this.txtBoxVolumeTruck.Location = new System.Drawing.Point(593, 479);
+            this.txtBoxVolumeTruck.Name = "txtBoxVolumeTruck";
+            this.txtBoxVolumeTruck.Size = new System.Drawing.Size(61, 20);
+            this.txtBoxVolumeTruck.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(588, 450);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Volumen de camion:";
+            // 
+            // txtBoxActiveTruck
+            // 
+            this.txtBoxActiveTruck.Location = new System.Drawing.Point(709, 479);
+            this.txtBoxActiveTruck.Name = "txtBoxActiveTruck";
+            this.txtBoxActiveTruck.Size = new System.Drawing.Size(31, 20);
+            this.txtBoxActiveTruck.TabIndex = 24;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(697, 450);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Activo (1-0):";
+            // 
             // TruckManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
-            this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtBoxActiveTruck);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtBoxVolumeTruck);
+            this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.txtBoxIDAssignedTrucker);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.txtBoxIDAssignedTruck);
+            this.Controls.Add(this.dataGridViewAssignTruck);
+            this.Controls.Add(this.buttonRefreshAssignTrucker);
+            this.Controls.Add(this.buttonDeleteAssignedTruck);
+            this.Controls.Add(this.buttonAddAssignedTruck);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBoxWeightTruck);
             this.Controls.Add(this.dataGridViewAddTruck);
-            this.Controls.Add(this.buttonRefresh);
-            this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.buttonAdd);
+            this.Controls.Add(this.buttonRefreshTruck);
+            this.Controls.Add(this.buttonDeleteTruck);
+            this.Controls.Add(this.buttonAddTruck);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TruckManagerForm";
             this.Text = "UserManagerForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTruck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAssignTruck)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,26 +289,26 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.Button buttonAddTruck;
+        private System.Windows.Forms.Button buttonDeleteTruck;
+        private System.Windows.Forms.Button buttonRefreshTruck;
         private System.Windows.Forms.DataGridView dataGridViewAddTruck;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxWeightTruck;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtBoxIDAssignedTruck;
+        private System.Windows.Forms.DataGridView dataGridViewAssignTruck;
+        private System.Windows.Forms.Button buttonRefreshAssignTrucker;
+        private System.Windows.Forms.Button buttonDeleteAssignedTruck;
+        private System.Windows.Forms.Button buttonAddAssignedTruck;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtBoxIDAssignedTrucker;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.TextBox txtBoxVolumeTruck;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtBoxActiveTruck;
+        private System.Windows.Forms.Label label8;
     }
 }
