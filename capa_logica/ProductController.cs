@@ -10,36 +10,42 @@ namespace capa_logica
 {
     public static class ProductController
     {
-        public static void Crear(string nombre,  int pesoproducto, string descripcion, bool activeproduct)
+        public static void Crear(int productweight,  int productvolume, string street, int doornumber, string corner, string customer, bool activeproduct)
         {
-            ModelProduct producto = new ModelProduct();
-            producto.ProductName = nombre;
-            producto.ProductWeight = pesoproducto;
-            producto.ProductDescription = descripcion;
-            producto.ActivedProduct = activeproduct;
-            producto.Save();
+            ModelProduct product = new ModelProduct();
+            product.ProductWeight = productweight;
+            product.Volume = productvolume;
+            product.DoorNumber = doornumber;
+            product.Corner = corner;
+            product.Customer = customer;
+            product.ActivatedProduct = activeproduct;
+            product.Save();
         }
 
         public static DataTable Obtener()
         {
             ModelProduct ProductTableModel = new ModelProduct();
-            List<ModelProduct> productos = ProductTableModel.GetAllItems();
+            List<ModelProduct> products = ProductTableModel.GetAllProducts();
 
             DataTable table = new DataTable();
             table.Columns.Add("id", typeof(int));
-            table.Columns.Add("nombre", typeof(string));
-            table.Columns.Add("Descripcion", typeof(string));
-            table.Columns.Add("Peso producto", typeof(int));
+            table.Columns.Add("Peso", typeof(int));
+            table.Columns.Add("Volumen", typeof(int));
+            table.Columns.Add("Numero puerta", typeof(int));
+            table.Columns.Add("Esquina", typeof(string));
+            table.Columns.Add("Cliente", typeof(string));
             table.Columns.Add("Activo", typeof(bool));
 
-            foreach (ModelProduct producto in productos)
+            foreach (ModelProduct product in products)
             {
                 DataRow row = table.NewRow();
-                row["id"] = producto.Id;
-                row["nombre"] = producto.ProductName;
-                row["Descripcion"] = producto.ProductDescription;
-                row["Peso producto"] = producto.ProductWeight;
-                row["Activo"] = producto.ActivedProduct;
+                row["id"] = product.IDProduct;
+                row["Peso"] = product.ProductWeight;
+                row["Volumen"] = product.Volume;
+                row["Numero puerta"] = product.DoorNumber;
+                row["Esquina"] = product.Corner;
+                row["Cliente"] = product.Customer;
+                row["Activo"] = product.ActivatedProduct;
                 table.Rows.Add(row);
             }
             return table;
@@ -47,7 +53,7 @@ namespace capa_logica
         public static void EliminarProducto(int id)
         {
             ModelProduct producto = new ModelProduct();
-            producto.Id = id;
+            producto.IDProduct = id;
             producto.Delete();
         }
     }

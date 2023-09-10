@@ -8,23 +8,32 @@ namespace capa_datos
 {
     public class ModelProduct:DataBaseControl
     {
-        public int Id { get; set; }
-        public string ProductName { get; set; }
+        public int IDProduct { get; set; }
         public int ProductWeight { get; set; }
-        public string ProductDescription { get; set; }
-        public bool ActivedProduct { get; set; }
+        public bool ActivatedProduct { get; set; }
+        public int Volume { get; set; }
+        public string Street { get; set; }
+        public int DoorNumber { get; set; }
+        public string Corner { get; set; }
+        public string Customer { get; set; }
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO producto(nom_Prod, peso_Prod, desc_Prod , bajalogica) VALUES(" +
-                $"'{this.ProductName}', " +
-                $"{this.ProductWeight}, " +
-                $"'{this.ProductDescription}'," +
-                $"{this.ActivedProduct})";
+            this.Command.CommandText = $"INSERT INTO producto(peso_producto, bajalogica, volumen_producto, calle, num, esq, cliente) VALUES(" +
+               $"{this.ProductWeight}, " +
+               $"{this.ActivatedProduct}, " +
+               $"{this.Volume}," +
+               $"'{this.Street}'," +
+               $"{this.DoorNumber}," +
+               $"'{this.Corner}'," +
+               $"'{this.Customer}')";
             this.Command.ExecuteNonQuery();
+
+            this.Command.CommandText = "SELECT LAST_INSERT_ID()";
+            this.IDProduct = Convert.ToInt32(this.Command.ExecuteScalar());
         }
 
-        public List<ModelProduct> GetAllItems()
+        public List<ModelProduct> GetAllProducts()
         {
             this.Command.CommandText = "SELECT * FROM producto";
             this.Reader = this.Command.ExecuteReader();
@@ -32,19 +41,23 @@ namespace capa_datos
             List<ModelProduct> result = new List<ModelProduct>();
             while (this.Reader.Read())
             {
-                ModelProduct producto = new ModelProduct();
-                producto.Id = Int32.Parse(this.Reader["id_Prod"].ToString());
-                producto.ProductName = this.Reader["nom_Prod"].ToString();
-                producto.ProductWeight = Int32.Parse(this.Reader["peso_Prod"].ToString());
-                producto.ProductDescription = this.Reader["desc_Prod"].ToString();
-                producto.ActivedProduct = Convert.ToBoolean(this.Reader["bajalogica"].ToString());
-                result.Add(producto);
+                ModelProduct product = new ModelProduct();
+                product.IDProduct = Int32.Parse(this.Reader["id_prod"].ToString());
+                product.ProductWeight = Int32.Parse(this.Reader["peso_producto"].ToString());
+                product.ActivatedProduct = Convert.ToBoolean(this.Reader["bajalogica"].ToString());
+                product.Volume = Int32.Parse(this.Reader["volumen_producto"].ToString());
+                product.Street = this.Reader["calle"].ToString();
+                product.DoorNumber = Int32.Parse(this.Reader["num"].ToString());
+                product.Corner = this.Reader["esq"].ToString();
+                product.Customer = this.Reader["cliente"].ToString();
+                result.Add(product);
             }
+            this.Reader.Close();
             return result;
         }
         public void Delete()
         {
-            this.Command.CommandText = $"DELETE FROM producto WHERE id_Prod = {this.Id}";
+            this.Command.CommandText = $"DELETE FROM producto WHERE id_prod = {this.IDProduct}";
             this.Command.ExecuteNonQuery();
         }
 

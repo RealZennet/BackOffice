@@ -36,10 +36,13 @@ namespace BackOffice
 
         public void ClearTxtBoxes()
         {
-            txtBoxName.Clear();
             txtBoxActive.Clear();
-            txtBoxDescription.Clear();
+            txtBoxCustomer.Clear();
             txtBoxWeight.Clear();
+            txtBoxCorner.Clear();
+            txtBoxStreet.Clear();
+            txtBoxVolume.Clear();
+
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
@@ -50,10 +53,13 @@ namespace BackOffice
         private bool ValidateInputsUser()
         {
 
-            if (string.IsNullOrWhiteSpace(txtBoxName.Text) ||
+            if (string.IsNullOrWhiteSpace(txtBoxCustomer.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxWeight.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxDescription.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxActive.Text))
+                string.IsNullOrWhiteSpace(txtBoxCustomer.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxActive.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxCorner.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxStreet.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxVolume.Text))
             {
                 return false;
             }
@@ -74,7 +80,7 @@ namespace BackOffice
 
         private void addProduct()
         {
-            ProductController.Crear(txtBoxName.Text, Int32.Parse(txtBoxWeight.Text), txtBoxDescription.Text, Convert.ToBoolean(Int32.Parse(txtBoxActive.Text)));
+            ProductController.Crear(Int32.Parse(txtBoxWeight.Text), Int32.Parse(txtBoxVolume.Text), txtBoxStreet.Text, Int32.Parse(txtBoxDoorNumber.Text), txtBoxCorner.Text,txtBoxCustomer.Text, Convert.ToBoolean(Int32.Parse(txtBoxActive.Text)));
             MessageBox.Show("Producto Agregado");
             RefreshTable();
             ClearTxtBoxes();
