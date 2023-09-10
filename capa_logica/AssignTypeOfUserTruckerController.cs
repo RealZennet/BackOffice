@@ -11,10 +11,10 @@ namespace capa_logica
     public static class AssignTypeOfUserTruckerController
     {
 
-        public static void Crear(string username)
+        public static void Crear(int id)
         {
             AssignTypeOfUserTruckerModel user = new AssignTypeOfUserTruckerModel();
-            user.UserName = username;
+            user.IDTrucker = id;
             user.Save();
         }
 
@@ -30,15 +30,15 @@ namespace capa_logica
             foreach (AssignTypeOfUserTruckerModel user in users)
             {
                 DataRow row = table.NewRow();
-                row["Nombre de usuario"] = user.UserName;
+                row["Nombre de usuario"] = user.IDTrucker;
                 table.Rows.Add(row);
             }
             return table;
         }
-        public static void DeleteUser(string username)
+        public static void DeleteUser(int id)
         {
             AssignTypeOfUserTruckerModel user = new AssignTypeOfUserTruckerModel();
-            user.UserName = username;
+            user.IDTrucker = id;
             user.DeleteUser();
         }
 

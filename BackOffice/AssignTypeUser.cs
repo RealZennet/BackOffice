@@ -51,7 +51,7 @@ namespace BackOffice
 
         private void addUserTracker()
         {
-            AssignTypeOfUserTruckerController.Crear(txtBoxUsernameTrucker.Text);
+            AssignTypeOfUserTruckerController.Crear(Int32.Parse(txtBoxUsernameTrucker.Text));
             MessageBox.Show("Usuario asignado a camionero");
             RefreshTable();
             ClearTxtBoxes();
@@ -76,11 +76,11 @@ namespace BackOffice
             if (dataGridViewUsers.SelectedRows.Count > 0)
             {
                 int selectedIndex = dataGridViewUsers.SelectedRows[0].Index;
-                string username = (string)dataGridViewUsers.Rows[selectedIndex].Cells["Nombre de usuario"].Value;
+                int id = (int)dataGridViewUsers.Rows[selectedIndex].Cells["ID"].Value;
                 DataTable dataTableUsers = (DataTable)dataGridViewUsers.DataSource;
                 dataTableUsers.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El usuario fue eliminado!");
-                AssignTypeOfUserTruckerController.DeleteUser(username);
+                AssignTypeOfUserTruckerController.DeleteUser(id);
                 dataGridViewUsers.DataSource = dataTableUsers;
                 RefreshTable();
 

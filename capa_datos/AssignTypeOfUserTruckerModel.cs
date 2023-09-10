@@ -8,12 +8,12 @@ namespace capa_datos
 {
     public class AssignTypeOfUserTruckerModel : DataBaseControl
     {
-        public string UserName { get; set; }
+        public int IDTrucker { get; set; }
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO camionero (username) VALUES (" +
-                $"'{this.UserName}')";
+            this.Command.CommandText = $"INSERT INTO camionero (id_camionero) VALUES (" +
+                $"{this.IDTrucker})";
             this.Command.ExecuteNonQuery();
         }
 
@@ -26,7 +26,7 @@ namespace capa_datos
             while (this.Reader.Read())
             {
                 AssignTypeOfUserTruckerModel user = new AssignTypeOfUserTruckerModel();
-                user.UserName = this.Reader["username"].ToString();
+                user.IDTrucker = Int32.Parse(this.Reader["id_camionero"].ToString());
                 result.Add(user);
             }
             return result;
@@ -35,7 +35,7 @@ namespace capa_datos
 
         public void DeleteUser()
         {
-            this.Command.CommandText = $"DELETE FROM camionero where username = '{this.UserName}'";
+            this.Command.CommandText = $"DELETE FROM camionero where id_camionero = '{this.IDTrucker}'";
             this.Command.ExecuteNonQuery();
         }
     }
