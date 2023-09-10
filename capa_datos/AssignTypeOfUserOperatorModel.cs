@@ -9,12 +9,12 @@ namespace capa_datos
     public class AssignTypeOfUserOperatorModel : DataBaseControl
     {
 
-        public string UserName { get; set; }
+        public int IDOperator { get; set; }
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO operario (username) VALUES (" +
-                $"'{this.UserName}')";
+            this.Command.CommandText = $"INSERT INTO operario (id_operario) VALUES (" +
+                $"'{this.IDOperator}')";
             this.Command.ExecuteNonQuery();
         }
 
@@ -27,7 +27,7 @@ namespace capa_datos
             while (this.Reader.Read())
             {
                 AssignTypeOfUserOperatorModel user = new AssignTypeOfUserOperatorModel();
-                user.UserName = this.Reader["username"].ToString();
+                user.IDOperator = Int32.Parse(this.Reader["id_operario"].ToString());
                 result.Add(user);
             }
             return result;
@@ -36,7 +36,7 @@ namespace capa_datos
 
         public void DeleteUser()
         {
-            this.Command.CommandText = $"DELETE FROM operario where username = '{this.UserName}'";
+            this.Command.CommandText = $"DELETE FROM operario where id_operario = '{this.IDOperator}'";
             this.Command.ExecuteNonQuery();
         }
     }

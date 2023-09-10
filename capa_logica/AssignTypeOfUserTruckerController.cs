@@ -24,13 +24,13 @@ namespace capa_logica
             List<AssignTypeOfUserTruckerModel> users = UserTableModel.GetAllTruckersUsers();
 
             DataTable table = new DataTable();
-            table.Columns.Add("Nombre de usuario", typeof(string));
+            table.Columns.Add("ID", typeof(int));
 
 
             foreach (AssignTypeOfUserTruckerModel user in users)
             {
                 DataRow row = table.NewRow();
-                row["Nombre de usuario"] = user.IDTrucker;
+                row["ID"] = user.IDTrucker;
                 table.Rows.Add(row);
             }
             return table;

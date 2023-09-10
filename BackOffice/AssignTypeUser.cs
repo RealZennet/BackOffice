@@ -59,7 +59,7 @@ namespace BackOffice
 
         private void addUserOperator()
         {
-            AssignTypeOfUserOperatorController.Crear(txtBoxUsernameOperator.Text);
+            AssignTypeOfUserOperatorController.Crear(Int32.Parse(txtBoxUsernameOperator.Text));
             MessageBox.Show("Usuario asignado a operador");
             RefreshTable();
             ClearTxtBoxes();
@@ -92,11 +92,11 @@ namespace BackOffice
             if (dataGridViewOperators.SelectedRows.Count > 0)
             {
                 int selectedIndex = dataGridViewOperators.SelectedRows[0].Index;
-                string username = (string)dataGridViewOperators.Rows[selectedIndex].Cells["Nombre de usuario"].Value;
+                int id = (int)dataGridViewOperators.Rows[selectedIndex].Cells["Nombre de usuario"].Value;
                 DataTable dataTableOperators = (DataTable)dataGridViewOperators.DataSource;
                 dataTableOperators.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El usuario fue eliminado!");
-                AssignTypeOfUserOperatorController.DeleteUser(username);
+                AssignTypeOfUserOperatorController.DeleteUser(id);
                 dataGridViewOperators.DataSource = dataTableOperators;
                 RefreshTable();
 

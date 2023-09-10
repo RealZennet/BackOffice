@@ -11,10 +11,10 @@ namespace capa_logica
     public static class AssignTypeOfUserOperatorController
     {
 
-        public static void Crear(string username)
+        public static void Crear(int id)
         {
             AssignTypeOfUserOperatorModel user = new AssignTypeOfUserOperatorModel();
-            user.UserName = username;
+            user.IDOperator = id;
             user.Save();
         }
 
@@ -24,21 +24,21 @@ namespace capa_logica
             List<AssignTypeOfUserOperatorModel> users = UserTableModel.GetAllOperatorsUsers();
 
             DataTable table = new DataTable();
-            table.Columns.Add("Nombre de usuario", typeof(string));
+            table.Columns.Add("ID", typeof(int));
 
 
             foreach (AssignTypeOfUserOperatorModel user in users)
             {
                 DataRow row = table.NewRow();
-                row["Nombre de usuario"] = user.UserName;
+                row["ID"] = user.IDOperator;
                 table.Rows.Add(row);
             }
             return table;
         }
-        public static void DeleteUser(string username)
+        public static void DeleteUser(int id)
         {
             AssignTypeOfUserOperatorModel user = new AssignTypeOfUserOperatorModel();
-            user.UserName = username;
+            user.IDOperator = id;
             user.DeleteUser();
         }
     }
