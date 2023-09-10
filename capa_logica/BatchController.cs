@@ -10,30 +10,36 @@ namespace capa_logica
 {
     public static class BatchController
     {
-        public static void Crear(DateTime ShippingDate)
+        public static void Crear(DateTime ShippingDate, int idshipp, bool activedbatch)
         {
-            DateTime FechaCreacion = DateTime.Now;
+            DateTime DateCreation = DateTime.Now;
             ModelBatch lote = new ModelBatch();
-            lote.CreatedDate = FechaCreacion; ; // - > Fecha de creacion del lote
             lote.ShippingDate = ShippingDate;
+            lote.DateOfCreation = DateCreation;
+            lote.IDShipp = idshipp;
+            lote.ActivedBatch = activedbatch;
             lote.Save();
         }
 
         public static DataTable Obtener()
         {
             ModelBatch LotsTableModel = new ModelBatch();
-            List<ModelBatch> lotes = LotsTableModel.TodosLosItems();
+            List<ModelBatch> lotes = LotsTableModel.GetAllLots();
             DataTable table = new DataTable();
             table.Columns.Add("id", typeof(int));
-            table.Columns.Add("Fecha de creacion", typeof(string));
-            table.Columns.Add("Cantidad de productos en lote", typeof(string));
+            table.Columns.Add("Fecha de creacion", typeof(DateTime));
+            table.Columns.Add("Fecha de envio", typeof(DateTime));
+            table.Columns.Add("ID Envio", typeof(int));
+            table.Columns.Add("Activo", typeof(bool));
 
             foreach (ModelBatch lote in lotes)
             {
                 DataRow row = table.NewRow();
-                row["id"] = lote.Id;
-                row["Fecha de creacion"] = lote.CreatedDate;
-                row["Cantidad de productos en lote"] = lote.ShippingDate;
+                row["id"] = lote.IDBatch;
+                row["Fecha de creacion"] = lote.DateOfCreation;
+                row["Fecha de envio"] = lote.ShippingDate;
+                row["ID Envio"] = lote.IDShipp;
+                row["Activo"] = lote.ActivedBatch;
                 table.Rows.Add(row);
             }
             return table;
@@ -41,8 +47,8 @@ namespace capa_logica
         public static void EliminarLote(int id)
         {
             ModelBatch lote = new ModelBatch();
-            lote.Id = id;
-            lote.Delete();
+            lote.IDBatch = id;
+            lote.DeleteLots();
         }
     }
 }

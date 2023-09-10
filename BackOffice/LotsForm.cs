@@ -38,7 +38,7 @@ namespace BackOffice
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            BatchController.Crear(Convert.ToDateTime(dateTimePickerShippingDate.Text));
+            BatchController.Crear(Convert.ToDateTime(dateTimePickerShippingDate.Text), Int32.Parse(txtBoxIDShipp.Text), Convert.ToBoolean(txtBoxActivedBatch.Text));
             MessageBox.Show("Lote Agregado");
             RefreshTable();
         }
