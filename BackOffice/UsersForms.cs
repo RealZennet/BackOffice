@@ -80,7 +80,7 @@ namespace BackOffice
             UserController.Crear(
                 txtBoxFirstName.Text,
                 txtBoxFirstLastName.Text,
-                Int32.Parse(txtBoxPhoneNumber.Text),
+                txtBoxPhoneNumber.Text,
                 txtBoxUsername.Text,
                 txtBoxPassword.Text
             );
@@ -99,11 +99,11 @@ namespace BackOffice
             if (dataGridViewUsers.SelectedRows.Count > 0)
             {
                 int selectedIndex = dataGridViewUsers.SelectedRows[0].Index;
-                string username = (string)dataGridViewUsers.Rows[selectedIndex].Cells["username"].Value;
+                int id = (int)dataGridViewUsers.Rows[selectedIndex].Cells["id"].Value;
                 DataTable dataTableUsers = (DataTable)dataGridViewUsers.DataSource;
                 dataTableUsers.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El usuario fue eliminado!");
-                UserController.DeleteUser(username);
+                UserController.DeleteUser(id);
                 dataGridViewUsers.DataSource = dataTableUsers;
                 RefreshTable();
 

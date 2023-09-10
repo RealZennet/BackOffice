@@ -9,16 +9,17 @@ namespace capa_datos
 {
     public class UsersModel : DataBaseControl
     {
+        public int UserID { get; set; }
         public string FirstName { get; set; }
         public string FirstLastName { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public bool ActivedUser { get; set; }
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO trabajador (nom1, ape1, bajalogica ,tel, username, pass) VALUES (" +
+            this.Command.CommandText = $"INSERT INTO trabajador (nom, ape, bajalogica, tel, username, pass) VALUES (" +
                 $"'{this.FirstName}'," +
                 $"'{this.FirstLastName}', " +
                 $"{this.ActivedUser}," +
@@ -37,10 +38,11 @@ namespace capa_datos
             while (this.Reader.Read())
             {
                 UsersModel user = new UsersModel();
-                user.FirstName = this.Reader["nom1"].ToString();
-                user.FirstLastName = this.Reader["ape1"].ToString();
+                user.UserID = Int32.Parse(this.Reader["id"].ToString());
+                user.FirstName = this.Reader["nom"].ToString();
+                user.FirstLastName = this.Reader["ape"].ToString();
                 user.ActivedUser = Convert.ToBoolean(this.Reader["bajalogica"].ToString());
-                user.PhoneNumber = Int32.Parse(this.Reader["tel"].ToString());
+                user.PhoneNumber = (this.Reader["tel"].ToString());
                 user.UserName = this.Reader["username"].ToString();
                 result.Add(user);
             }
@@ -49,18 +51,19 @@ namespace capa_datos
 
         public void DeleteUser()
         {
-            this.Command.CommandText = $"DELETE FROM trabajador where ci = {this.UserName}";
+            this.Command.CommandText = $"DELETE FROM trabajador where id = {this.UserID}";
             this.Command.ExecuteNonQuery();
         }
 
         public void EditUser()
         {
             this.Command.CommandText = $"UPDATE trabajador SET " +
+                $"username = '{this.UserName}', " +
                 $"nom1 = '{this.FirstName}', " +
                 $"ape1 = '{this.FirstLastName}', " +
                 $"bajalogica = {this.ActivedUser}, " +
                 $"tel = '{this.PhoneNumber}' " +
-                $"WHERE username = '{this.UserName}'";
+                $"WHERE id = '{this.UserID}'";
 
             this.Command.ExecuteNonQuery();
         }

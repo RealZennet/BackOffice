@@ -10,7 +10,7 @@ namespace capa_logica
 {
     public static class UserController
     {
-        public static void Crear(string firstname , string firstlastname, int phonenumber, string username, string password)
+        public static void Crear(string firstname , string firstlastname, string phonenumber, string username, string password)
         {
             UsersModel user = new UsersModel();
             user.FirstName = firstname;
@@ -28,6 +28,7 @@ namespace capa_logica
             List<UsersModel> users = UserTableModel.GetAllUsers();
 
             DataTable table = new DataTable();
+            table.Columns.Add("ID", typeof(int));
             table.Columns.Add("Primer nombre", typeof(string));
             table.Columns.Add("Primer apellido", typeof(string));
             table.Columns.Add("Numero de telefono", typeof(int));
@@ -37,6 +38,7 @@ namespace capa_logica
             foreach (UsersModel user in users)
             {
                 DataRow row = table.NewRow();
+                row["ID"] = user.UserID;
                 row["Primer nombre"] = user.FirstName;
                 row["Primer apellido"] = user.FirstLastName;
                 row["Numero de telefono"] = user.PhoneNumber;
@@ -45,10 +47,10 @@ namespace capa_logica
             }
             return table;
         }
-        public static void DeleteUser(string username)
+        public static void DeleteUser(int id)
         {
             UsersModel user = new UsersModel();
-            user.UserName = username;
+            user.UserID = id;
             user.DeleteUser();
         }
     }
