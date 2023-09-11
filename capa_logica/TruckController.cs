@@ -10,7 +10,7 @@ namespace capa_logica
 {
     public class TruckController
     {
-        public static void Create(int truckweight, int truckvolume, int activedtruck)
+        public static void Create(int truckweight, int truckvolume, bool activedtruck)
         {
             TruckModel truck = new TruckModel();
             truck.TruckWeight = truckweight;
@@ -27,7 +27,7 @@ namespace capa_logica
             table.Columns.Add("Camion ID", typeof(int));
             table.Columns.Add("Peso camion", typeof(int));
             table.Columns.Add("Volumen camion", typeof(int));
-            table.Columns.Add("Activo", typeof(int));
+            table.Columns.Add("Activo", typeof(bool));
 
             foreach (TruckModel truck in trucks)
             {

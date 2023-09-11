@@ -11,7 +11,7 @@ namespace capa_datos
         public int IDTruck { get; set; }
         public int TruckWeight { get; set; }
         public int TruckVolume { get; set; }
-        public int ActivedTruck { get; set; }
+        public bool ActivedTruck { get; set; }
 
         public void Save()
         {
@@ -34,7 +34,7 @@ namespace capa_datos
                 truck.IDTruck = Int32.Parse(this.Reader["id_camion"].ToString());
                 truck.TruckWeight = Int32.Parse(this.Reader["peso_camion"].ToString());
                 truck.TruckVolume = Int32.Parse(this.Reader["volumen_camion"].ToString());
-                truck.ActivedTruck = Int32.Parse(this.Reader["bajalogica"].ToString());
+                truck.ActivedTruck = Convert.ToBoolean(this.Reader["bajalogica"].ToString());
                 result.Add(truck);
             }
             return result;

@@ -69,7 +69,7 @@ namespace BackOffice
                 !string.IsNullOrEmpty(txtBoxVolumeTruck.Text) && 
                 !string.IsNullOrEmpty(txtBoxActiveTruck.Text))
             {
-                TruckController.Create(Int32.Parse(txtBoxWeightTruck.Text), Int32.Parse(txtBoxVolumeTruck.Text), Int32.Parse(txtBoxActiveTruck.Text));
+                TruckController.Create(Int32.Parse(txtBoxWeightTruck.Text), Int32.Parse(txtBoxVolumeTruck.Text), Convert.ToBoolean(txtBoxActiveTruck.Text));
                 MessageBox.Show("Camion Agregado");
                 RefreshTableTruck();
                 ClearTxtBoxesTruck();
