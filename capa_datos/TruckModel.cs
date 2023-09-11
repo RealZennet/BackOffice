@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_datos
 {
-    public class TruckModels : DataBaseControl
+    public class TruckModel : DataBaseControl
     {
         public int IDTruck { get; set; }
         public int TruckWeight { get; set; }
@@ -23,14 +23,14 @@ namespace capa_datos
             this.Command.ExecuteNonQuery();
         }
 
-        public List<TruckModels> getAllTrucks()
+        public List<TruckModel> getAllTrucks()
         {
             this.Command.CommandText = $"SELECT * FROM camion";
             this.Reader = this.Command.ExecuteReader();
-            List<TruckModels> result = new List<TruckModels>();
+            List<TruckModel> result = new List<TruckModel>();
             while (this.Reader.Read())
             {
-                TruckModels truck = new TruckModels();
+                TruckModel truck = new TruckModel();
                 truck.IDTruck = Int32.Parse(this.Reader["id_camion"].ToString());
                 truck.TruckWeight = Int32.Parse(this.Reader["peso_camion"].ToString());
                 truck.TruckVolume = Int32.Parse(this.Reader["volumen_camion"].ToString());

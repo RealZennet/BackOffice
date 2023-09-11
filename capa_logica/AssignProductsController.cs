@@ -38,7 +38,7 @@ namespace capa_logica
         public static void DeleteAssignedProduct(int id)
         {
             AssignProductsModel AssignedProduct = new AssignProductsModel();
-            AssignedProduct.IDBatch = id; //eliminar producto asignado o lote?
+            AssignedProduct.IDBatch = id; 
             AssignedProduct.Delete();
         }
     }
