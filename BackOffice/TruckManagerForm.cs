@@ -62,5 +62,38 @@ namespace BackOffice
         {
             RefreshTableTruck();
         }
+
+        private void buttonAddTruck_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtBoxWeightTruck.Text) && 
+                !string.IsNullOrEmpty(txtBoxVolumeTruck.Text) && 
+                !string.IsNullOrEmpty(txtBoxActiveTruck.Text))
+            {
+                TruckController.Create(Int32.Parse(txtBoxWeightTruck.Text), Int32.Parse(txtBoxVolumeTruck.Text), Int32.Parse(txtBoxActiveTruck.Text));
+                MessageBox.Show("Camion Agregado");
+                RefreshTableTruck();
+                ClearTxtBoxesTruck();
+            }
+            else
+            {
+                MessageBox.Show("No pueden existir parametros vacios!");
+            }
+        }
+
+        private void buttonDeleteTruck_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewAddTruck.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridViewAddTruck.SelectedRows[0].Index;
+                int id = (int)dataGridViewAddTruck.Rows[selectedIndex].Cells["Lote ID"].Value;
+                DataTable dataTableTruckSelected = (DataTable)dataGridViewAddTruck.DataSource;
+                dataTableTruckSelected.Rows.RemoveAt(selectedIndex);
+                MessageBox.Show("El camion fue eliminado!");
+                AssignProductsController.DeleteAssignedProduct(id);
+                dataGridViewAddTruck.DataSource = dataTableTruckSelected;
+                RefreshTableTruck();
+
+            }
+        }
     }
 }

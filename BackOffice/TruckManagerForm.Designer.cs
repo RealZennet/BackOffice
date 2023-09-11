@@ -72,6 +72,7 @@
             this.buttonAddTruck.TabIndex = 1;
             this.buttonAddTruck.Text = "Agregar";
             this.buttonAddTruck.UseVisualStyleBackColor = true;
+            this.buttonAddTruck.Click += new System.EventHandler(this.buttonAddTruck_Click);
             // 
             // buttonDeleteTruck
             // 
@@ -81,6 +82,7 @@
             this.buttonDeleteTruck.TabIndex = 2;
             this.buttonDeleteTruck.Text = "Eliminar";
             this.buttonDeleteTruck.UseVisualStyleBackColor = true;
+            this.buttonDeleteTruck.Click += new System.EventHandler(this.buttonDeleteTruck_Click);
             // 
             // buttonRefreshTruck
             // 
