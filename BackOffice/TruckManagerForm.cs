@@ -118,10 +118,17 @@ namespace BackOffice
             if (!string.IsNullOrEmpty(txtBoxIDAssignedTruck.Text) ||
                 !string.IsNullOrEmpty(txtBoxIDAssignedTrucker.Text))
             {
-                TruckerController.Create(Int32.Parse(txtBoxIDAssignedTruck.Text), Int32.Parse(txtBoxIDAssignedTrucker.Text));
-                MessageBox.Show("Camion asignado");
-                RefreshTableTrucker();
-                ClearTxtBoxesTrucker();
+                try
+                {
+                    TruckerController.Create(Int32.Parse(txtBoxIDAssignedTruck.Text), Int32.Parse(txtBoxIDAssignedTrucker.Text));
+                    MessageBox.Show("Camion asignado");
+                    RefreshTableTrucker();
+                    ClearTxtBoxesTrucker();
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
             }
             else
             {

@@ -13,12 +13,33 @@ namespace capa_datos
 
         public void Save()
         {
+            if (!DoesTruckerExist(IDTrucker))
+            {
+                throw new Exception("El conductor no existe.");
+            }
             this.Command.CommandText = $"INSERT INTO conduce(id_camion, id_camionero) VALUES(" +
                 $"{this.IDTruck}," +
                 $"{this.IDTrucker})";
 
             this.Command.ExecuteNonQuery();
         }
+
+        private bool DoesTruckerExist(int idTrucker)
+        {
+            this.Command.CommandText = $"SELECT COUNT(*) FROM camionero WHERE id_camionero = {idTrucker}";
+            object result = this.Command.ExecuteScalar();
+
+            if (result != null && result != DBNull.Value)
+            {
+                if (int.TryParse(result.ToString(), out int rowCount))
+                {
+                    return rowCount > 0;
+                }
+            }
+
+            return false;
+        }
+
 
         public List<TruckerModel> getAllTruckers()
         {
