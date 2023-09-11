@@ -90,6 +90,7 @@
             this.buttonRefreshTruck.TabIndex = 3;
             this.buttonRefreshTruck.Text = "Recargar";
             this.buttonRefreshTruck.UseVisualStyleBackColor = true;
+            this.buttonRefreshTruck.Click += new System.EventHandler(this.buttonRefreshTruck_Click);
             // 
             // dataGridViewAddTruck
             // 
@@ -167,6 +168,7 @@
             this.buttonRefreshAssignTrucker.TabIndex = 10;
             this.buttonRefreshAssignTrucker.Text = "Recargar";
             this.buttonRefreshAssignTrucker.UseVisualStyleBackColor = true;
+            this.buttonRefreshAssignTrucker.Click += new System.EventHandler(this.buttonRefreshAssignTrucker_Click);
             // 
             // buttonDeleteAssignedTruck
             // 
@@ -279,6 +281,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TruckManagerForm";
             this.Text = "UserManagerForm";
+            this.Load += new System.EventHandler(this.TruckManagerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTruck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAssignTruck)).EndInit();
             this.ResumeLayout(false);
