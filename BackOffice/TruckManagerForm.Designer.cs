@@ -50,6 +50,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtBoxActiveTruck = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.txtBoxTruckID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTruck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAssignTruck)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +69,7 @@
             // 
             // buttonAddTruck
             // 
-            this.buttonAddTruck.Location = new System.Drawing.Point(499, 516);
+            this.buttonAddTruck.Location = new System.Drawing.Point(425, 516);
             this.buttonAddTruck.Name = "buttonAddTruck";
             this.buttonAddTruck.Size = new System.Drawing.Size(68, 26);
             this.buttonAddTruck.TabIndex = 1;
@@ -97,9 +100,9 @@
             // dataGridViewAddTruck
             // 
             this.dataGridViewAddTruck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAddTruck.Location = new System.Drawing.Point(499, 297);
+            this.dataGridViewAddTruck.Location = new System.Drawing.Point(425, 297);
             this.dataGridViewAddTruck.Name = "dataGridViewAddTruck";
-            this.dataGridViewAddTruck.Size = new System.Drawing.Size(253, 150);
+            this.dataGridViewAddTruck.Size = new System.Drawing.Size(327, 150);
             this.dataGridViewAddTruck.TabIndex = 4;
             // 
             // txtBoxWeightTruck
@@ -159,7 +162,7 @@
             this.dataGridViewAssignTruck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAssignTruck.Location = new System.Drawing.Point(26, 297);
             this.dataGridViewAssignTruck.Name = "dataGridViewAssignTruck";
-            this.dataGridViewAssignTruck.Size = new System.Drawing.Size(253, 150);
+            this.dataGridViewAssignTruck.Size = new System.Drawing.Size(297, 150);
             this.dataGridViewAssignTruck.TabIndex = 11;
             // 
             // buttonRefreshAssignTrucker
@@ -251,12 +254,41 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "Activo (1-0):";
             // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Location = new System.Drawing.Point(499, 516);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(68, 26);
+            this.buttonEdit.TabIndex = 26;
+            this.buttonEdit.Text = "Editar";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            // 
+            // txtBoxTruckID
+            // 
+            this.txtBoxTruckID.Location = new System.Drawing.Point(425, 479);
+            this.txtBoxTruckID.Name = "txtBoxTruckID";
+            this.txtBoxTruckID.Size = new System.Drawing.Size(31, 20);
+            this.txtBoxTruckID.TabIndex = 27;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(422, 450);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 13);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "ID de camion:";
+            // 
             // TruckManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtBoxTruckID);
+            this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtBoxActiveTruck);
             this.Controls.Add(this.label7);
@@ -315,5 +347,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBoxActiveTruck;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.TextBox txtBoxTruckID;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -72,7 +72,7 @@ namespace capa_datos
                 this.Command.CommandText = $"UPDATE camion SET " +
                     $"peso_camion = {this.TruckWeight}, " +
                     $"volumen_camion = {this.TruckVolume}, " +
-                    $"bajalogica = {this.ActivedTruck}, " +
+                    $"bajalogica = {this.ActivedTruck} " +
                     $"WHERE id_camion = {this.IDTruck}";
                 this.Command.ExecuteNonQuery();
             }

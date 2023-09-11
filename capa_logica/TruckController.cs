@@ -47,5 +47,24 @@ namespace capa_logica
             truck.IDTruck = id; 
             truck.Delete();
         }
+
+        public static void EditTruck(int id, int truckweight, int truckvolume, bool activedtruck)
+        {
+            TruckModel truck = new TruckModel();
+            truck.IDTruck = id;
+
+            
+            if (truck.CheckIfTruckExists(id))
+            {
+                truck.TruckWeight = truckweight;
+                truck.TruckVolume = truckvolume;
+                truck.ActivedTruck = activedtruck;
+                truck.Edit();
+            }
+            else
+            {
+                throw new Exception($"El camión con ID {id} no existe en la base de datos.");
+            }
+        }
     }
 }
