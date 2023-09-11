@@ -183,6 +183,7 @@
             this.buttonDeleteAssignedTruck.TabIndex = 9;
             this.buttonDeleteAssignedTruck.Text = "Eliminar";
             this.buttonDeleteAssignedTruck.UseVisualStyleBackColor = true;
+            this.buttonDeleteAssignedTruck.Click += new System.EventHandler(this.buttonDeleteAssignedTruck_Click);
             // 
             // buttonAddAssignedTruck
             // 
@@ -192,6 +193,7 @@
             this.buttonAddAssignedTruck.TabIndex = 8;
             this.buttonAddAssignedTruck.Text = "Agregar";
             this.buttonAddAssignedTruck.UseVisualStyleBackColor = true;
+            this.buttonAddAssignedTruck.Click += new System.EventHandler(this.buttonAddAssignedTruck_Click);
             // 
             // label6
             // 

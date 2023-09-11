@@ -71,6 +71,7 @@
     <Compile Include="ProductController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TruckController.cs" />
+    <Compile Include="TruckerController.cs" />
     <Compile Include="UserController.cs" />
   </ItemGroup>
   <ItemGroup>

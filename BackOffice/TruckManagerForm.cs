@@ -17,6 +17,7 @@ namespace BackOffice
         {
             InitializeComponent();
             RefreshTableTruck();
+            RefreshTableTrucker();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -36,26 +37,10 @@ namespace BackOffice
             txtBoxWeightTruck.Clear();
         }
 
-        public void ClearTxtBoxesTrucker()
-        {
-            txtBoxIDAssignedTruck.Clear();
-            txtBoxIDAssignedTrucker.Clear();
-        }
-
         public void RefreshTableTruck()
         {
             DataTable dataTableTruck = TruckController.GetAllTrucks();
             dataGridViewAddTruck.DataSource = dataTableTruck;
-        }
-
-        public void RefreshTableTrucker()
-        {
-            //Logica para asignacion de camioneros
-        }
-
-        private void buttonRefreshAssignTrucker_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonRefreshTruck_Click(object sender, EventArgs e)
@@ -89,13 +74,12 @@ namespace BackOffice
                 DataTable dataTableTruckSelected = (DataTable)dataGridViewAddTruck.DataSource;
                 dataTableTruckSelected.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El camion fue eliminado!");
-                AssignProductsController.DeleteAssignedProduct(id);
+                TruckController.DeleteTruck(id);
                 dataGridViewAddTruck.DataSource = dataTableTruckSelected;
                 RefreshTableTruck();
 
             }
         }
-
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
@@ -108,5 +92,59 @@ namespace BackOffice
             RefreshTableTruck();
             MessageBox.Show("Modificado");
         }
+
+        #region trucker
+        public void RefreshTableTrucker()
+        {
+            DataTable dataTableTrucker = TruckerController.GetAllTruckers();
+            dataGridViewAssignTruck.DataSource = dataTableTrucker;
+        }
+
+        private void buttonRefreshAssignTrucker_Click(object sender, EventArgs e)
+        {
+            RefreshTableTrucker();
+        }
+
+        public void ClearTxtBoxesTrucker()
+        {
+            txtBoxIDAssignedTruck.Clear();
+            txtBoxIDAssignedTrucker.Clear();
+        }
+
+        
+
+        private void buttonAddAssignedTruck_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtBoxIDAssignedTruck.Text) ||
+                !string.IsNullOrEmpty(txtBoxIDAssignedTrucker.Text))
+            {
+                TruckerController.Create(Int32.Parse(txtBoxIDAssignedTruck.Text), Int32.Parse(txtBoxIDAssignedTrucker.Text));
+                MessageBox.Show("Camion asignado");
+                RefreshTableTrucker();
+                ClearTxtBoxesTrucker();
+            }
+            else
+            {
+                MessageBox.Show("No pueden existir parametros vacios!");
+            }
+        }
+
+        private void buttonDeleteAssignedTruck_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewAssignTruck.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridViewAssignTruck.SelectedRows[0].Index;
+                int id = (int)dataGridViewAssignTruck.Rows[selectedIndex].Cells["Conductor ID"].Value;
+                DataTable dataTableTruckerSelected = (DataTable)dataGridViewAssignTruck.DataSource;
+                dataTableTruckerSelected.Rows.RemoveAt(selectedIndex);
+                MessageBox.Show("La asignacion fue eliminada!");
+                TruckerController.DeleteTrucker(id);
+                dataGridViewAssignTruck.DataSource = dataTableTruckerSelected;
+                RefreshTableTrucker();
+
+            }
+        }
+
+        #endregion trucker
     }
 }

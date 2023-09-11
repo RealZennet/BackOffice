@@ -39,7 +39,7 @@ namespace capa_logica
         public static void DeleteTrucker(int id)
         {
             TruckerModel truck = new TruckerModel();
-            truck.IDTruck = id;
+            truck.IDTrucker = id;
             truck.Delete();
         }
 
