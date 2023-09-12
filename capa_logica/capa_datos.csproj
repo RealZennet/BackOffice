@@ -69,6 +69,7 @@
     <Compile Include="AssignTypeOfUserOperatorController.cs" />
     <Compile Include="AssignTypeOfUserTruckerController.cs" />
     <Compile Include="BatchController.cs" />
+    <Compile Include="CarryShippmentController.cs" />
     <Compile Include="ProductController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShippingManagementController.cs" />

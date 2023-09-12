@@ -11,13 +11,13 @@ namespace capa_logica
 {
     public abstract class CarryShippmentController
     {
-        public static void Create(int idtruck, int idbatch, int iddestination, ShippingStatus status)
+        public static void Create(int idtruck, int idbatch, int iddestination, string status)
         {
             CarryShippmentModel carry = new CarryShippmentModel();
             carry.IDTruck = idtruck;
             carry.IDBatch = idbatch;
             carry.IDDestination = iddestination;
-            carry.Status = status;
+            carry.ShippingStatus = status;
             carry.Save();
         }
 
@@ -30,7 +30,7 @@ namespace capa_logica
             table.Columns.Add("ID Camion", typeof(int));
             table.Columns.Add("ID Lote", typeof(int));
             table.Columns.Add("ID Destino", typeof(int));
-            table.Columns.Add("Status", typeof(ShippingStatus));
+            table.Columns.Add("Status", typeof(string));
 
 
             foreach (CarryShippmentModel carry in carries)
@@ -39,7 +39,7 @@ namespace capa_logica
                 row["ID Camion"] = carry.IDTruck;
                 row["ID Lote"] = carry.IDBatch;
                 row["ID Destino"] = carry.IDDestination;
-                row["Status"] = carry.Status.ToString(); 
+                row["Status"] = carry.ShippingStatus; 
                 table.Rows.Add(row);
             }
             return table;
@@ -50,5 +50,7 @@ namespace capa_logica
             Carry.IDTruck = id;
             Carry.Delete();
         }
+
+
     }
 }

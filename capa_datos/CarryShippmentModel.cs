@@ -11,27 +11,17 @@ namespace capa_datos
         public int IDTruck { get; set; }
         public int IDBatch { get; set; }
         public int IDDestination { get; set; }
-        public enum ShippingStatus
-        {
-            Entregado,
-            EnCamino,
-            Retrasado,
-            NoEnviado
-        }
-        public ShippingStatus Status { get; set; }
-
+        public string ShippingStatus { get; set; }
 
         public void Save()
         {
-            string statusAsString = Enum.GetName(typeof(ShippingStatus), this.Status);
             this.Command.CommandText = $"INSERT INTO transporta(id_camion, id_lote, id_des, estatus) VALUES(" +
                $"{this.IDTruck}, " +
                $"{this.IDBatch}, " +
                $"{this.IDDestination}," +
-               $"'{statusAsString}')";
+               $"'{this.ShippingStatus}')";
             this.Command.ExecuteNonQuery();
         }
-
 
         public List<CarryShippmentModel> GetAllDestinations()
         {
@@ -45,20 +35,13 @@ namespace capa_datos
                 destinations.IDTruck = Int32.Parse(this.Reader["id_camion"].ToString());
                 destinations.IDBatch = Int32.Parse(this.Reader["id_lote"].ToString());
                 destinations.IDDestination = Int32.Parse(this.Reader["fech_sal"].ToString());
-                string statusAsString = this.Reader["estatus"].ToString();
-                if (Enum.TryParse(statusAsString, out ShippingStatus status))
-                {
-                    destinations.Status = status;
-                }
-                else
-                {
-                    destinations.Status = ShippingStatus.NoEnviado;
-                }
+                destinations.ShippingStatus = this.Reader["estatus"].ToString();
                 result.Add(destinations);
             }
             this.Reader.Close();
             return result;
         }
+
         public void Delete()
         {
             this.Command.CommandText = $"DELETE FROM transporta WHERE id_camion = {this.IDTruck}";
@@ -66,4 +49,3 @@ namespace capa_datos
         }
     }
 }
-

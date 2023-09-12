@@ -40,10 +40,21 @@
             this.buttonDeleteShipp = new System.Windows.Forms.Button();
             this.buttonAddShipp = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCarry = new System.Windows.Forms.DataGridView();
             this.dateTimePickerShippManagement = new System.Windows.Forms.DateTimePicker();
+            this.buttonRefreshCarry = new System.Windows.Forms.Button();
+            this.buttonDeleteCarry = new System.Windows.Forms.Button();
+            this.buttonAddCarry = new System.Windows.Forms.Button();
+            this.buttonEditCarry = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBoxIDBatchCarrie = new System.Windows.Forms.TextBox();
+            this.txtBoxIDTruckCarrie = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtBoxIDDestinationCarrie = new System.Windows.Forms.TextBox();
+            this.checkedListBoxCarriesStatus = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShippingManagement)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarry)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -158,13 +169,13 @@
             this.label1.TabIndex = 65;
             this.label1.Text = "Asignar ruta";
             // 
-            // dataGridView1
+            // dataGridViewCarry
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(455, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(290, 228);
-            this.dataGridView1.TabIndex = 64;
+            this.dataGridViewCarry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCarry.Location = new System.Drawing.Point(455, 69);
+            this.dataGridViewCarry.Name = "dataGridViewCarry";
+            this.dataGridViewCarry.Size = new System.Drawing.Size(290, 228);
+            this.dataGridViewCarry.TabIndex = 64;
             // 
             // dateTimePickerShippManagement
             // 
@@ -173,15 +184,126 @@
             this.dateTimePickerShippManagement.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerShippManagement.TabIndex = 66;
             // 
+            // buttonRefreshCarry
+            // 
+            this.buttonRefreshCarry.Location = new System.Drawing.Point(625, 500);
+            this.buttonRefreshCarry.Name = "buttonRefreshCarry";
+            this.buttonRefreshCarry.Size = new System.Drawing.Size(68, 26);
+            this.buttonRefreshCarry.TabIndex = 69;
+            this.buttonRefreshCarry.Text = "Recargar";
+            this.buttonRefreshCarry.UseVisualStyleBackColor = true;
+            this.buttonRefreshCarry.Click += new System.EventHandler(this.buttonRefreshCarry_Click);
+            // 
+            // buttonDeleteCarry
+            // 
+            this.buttonDeleteCarry.Location = new System.Drawing.Point(551, 500);
+            this.buttonDeleteCarry.Name = "buttonDeleteCarry";
+            this.buttonDeleteCarry.Size = new System.Drawing.Size(68, 26);
+            this.buttonDeleteCarry.TabIndex = 68;
+            this.buttonDeleteCarry.Text = "Eliminar";
+            this.buttonDeleteCarry.UseVisualStyleBackColor = true;
+            this.buttonDeleteCarry.Click += new System.EventHandler(this.buttonDeleteCarry_Click);
+            // 
+            // buttonAddCarry
+            // 
+            this.buttonAddCarry.Location = new System.Drawing.Point(477, 500);
+            this.buttonAddCarry.Name = "buttonAddCarry";
+            this.buttonAddCarry.Size = new System.Drawing.Size(68, 26);
+            this.buttonAddCarry.TabIndex = 67;
+            this.buttonAddCarry.Text = "Agregar";
+            this.buttonAddCarry.UseVisualStyleBackColor = true;
+            this.buttonAddCarry.Click += new System.EventHandler(this.buttonAddCarry_Click);
+            // 
+            // buttonEditCarry
+            // 
+            this.buttonEditCarry.Location = new System.Drawing.Point(699, 500);
+            this.buttonEditCarry.Name = "buttonEditCarry";
+            this.buttonEditCarry.Size = new System.Drawing.Size(68, 26);
+            this.buttonEditCarry.TabIndex = 70;
+            this.buttonEditCarry.Text = "Editar";
+            this.buttonEditCarry.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(476, 361);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 74;
+            this.label3.Text = "ID Lote";
+            // 
+            // txtBoxIDBatchCarrie
+            // 
+            this.txtBoxIDBatchCarrie.Location = new System.Drawing.Point(477, 377);
+            this.txtBoxIDBatchCarrie.Name = "txtBoxIDBatchCarrie";
+            this.txtBoxIDBatchCarrie.Size = new System.Drawing.Size(41, 20);
+            this.txtBoxIDBatchCarrie.TabIndex = 73;
+            // 
+            // txtBoxIDTruckCarrie
+            // 
+            this.txtBoxIDTruckCarrie.Location = new System.Drawing.Point(477, 332);
+            this.txtBoxIDTruckCarrie.Name = "txtBoxIDTruckCarrie";
+            this.txtBoxIDTruckCarrie.Size = new System.Drawing.Size(41, 20);
+            this.txtBoxIDTruckCarrie.TabIndex = 72;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(476, 316);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.TabIndex = 71;
+            this.label7.Text = "ID Camion";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(478, 405);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.TabIndex = 76;
+            this.label8.Text = "ID Destino";
+            // 
+            // txtBoxIDDestinationCarrie
+            // 
+            this.txtBoxIDDestinationCarrie.Location = new System.Drawing.Point(479, 421);
+            this.txtBoxIDDestinationCarrie.Name = "txtBoxIDDestinationCarrie";
+            this.txtBoxIDDestinationCarrie.Size = new System.Drawing.Size(41, 20);
+            this.txtBoxIDDestinationCarrie.TabIndex = 75;
+            // 
+            // checkedListBoxCarriesStatus
+            // 
+            this.checkedListBoxCarriesStatus.FormattingEnabled = true;
+            this.checkedListBoxCarriesStatus.Items.AddRange(new object[] {
+            "Entregado",
+            "EnCamino",
+            "Retrasado",
+            "NoEnviado"});
+            this.checkedListBoxCarriesStatus.Location = new System.Drawing.Point(588, 332);
+            this.checkedListBoxCarriesStatus.Name = "checkedListBoxCarriesStatus";
+            this.checkedListBoxCarriesStatus.Size = new System.Drawing.Size(120, 94);
+            this.checkedListBoxCarriesStatus.TabIndex = 77;
+            // 
             // ShippingManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
+            this.Controls.Add(this.checkedListBoxCarriesStatus);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtBoxIDDestinationCarrie);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtBoxIDBatchCarrie);
+            this.Controls.Add(this.txtBoxIDTruckCarrie);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.buttonEditCarry);
+            this.Controls.Add(this.buttonRefreshCarry);
+            this.Controls.Add(this.buttonDeleteCarry);
+            this.Controls.Add(this.buttonAddCarry);
             this.Controls.Add(this.dateTimePickerShippManagement);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewCarry);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtBoxIDBatchShippManagement);
@@ -196,8 +318,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ShippingManagementForm";
             this.Text = "ShippingManagementForm";
+            this.Load += new System.EventHandler(this.ShippingManagementForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShippingManagement)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarry)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,7 +340,18 @@
         private System.Windows.Forms.Button buttonDeleteShipp;
         private System.Windows.Forms.Button buttonAddShipp;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewCarry;
         private System.Windows.Forms.DateTimePicker dateTimePickerShippManagement;
+        private System.Windows.Forms.Button buttonRefreshCarry;
+        private System.Windows.Forms.Button buttonDeleteCarry;
+        private System.Windows.Forms.Button buttonAddCarry;
+        private System.Windows.Forms.Button buttonEditCarry;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtBoxIDBatchCarrie;
+        private System.Windows.Forms.TextBox txtBoxIDTruckCarrie;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtBoxIDDestinationCarrie;
+        private System.Windows.Forms.CheckedListBox checkedListBoxCarriesStatus;
     }
 }
