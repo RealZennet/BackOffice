@@ -163,7 +163,5 @@ namespace BackOffice
             RefreshTableAssignOperatorToStoreHouse();
         }
         #endregion AssignOperatorToStoreHouse
-
-
     }
 }
