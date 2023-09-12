@@ -42,13 +42,21 @@
             this.buttonAddOperatorToStoreHouse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBoxStoreHouseStreet = new System.Windows.Forms.TextBox();
+            this.txtBoxStoreHouseDoorNumber = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBoxStoreHouseCorner = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBoxStoreHouseActived = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStoreHouses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddOperatorStoreHouse)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonEditStoreHouse
             // 
-            this.buttonEditStoreHouse.Location = new System.Drawing.Point(234, 407);
+            this.buttonEditStoreHouse.Location = new System.Drawing.Point(234, 504);
             this.buttonEditStoreHouse.Name = "buttonEditStoreHouse";
             this.buttonEditStoreHouse.Size = new System.Drawing.Size(68, 26);
             this.buttonEditStoreHouse.TabIndex = 32;
@@ -70,16 +78,17 @@
             // 
             // buttonRefreshStoreHouse
             // 
-            this.buttonRefreshStoreHouse.Location = new System.Drawing.Point(160, 407);
+            this.buttonRefreshStoreHouse.Location = new System.Drawing.Point(160, 504);
             this.buttonRefreshStoreHouse.Name = "buttonRefreshStoreHouse";
             this.buttonRefreshStoreHouse.Size = new System.Drawing.Size(68, 26);
             this.buttonRefreshStoreHouse.TabIndex = 30;
             this.buttonRefreshStoreHouse.Text = "Recargar";
             this.buttonRefreshStoreHouse.UseVisualStyleBackColor = true;
+            this.buttonRefreshStoreHouse.Click += new System.EventHandler(this.buttonRefreshStoreHouse_Click);
             // 
             // buttonDeleteStoreHouse
             // 
-            this.buttonDeleteStoreHouse.Location = new System.Drawing.Point(86, 407);
+            this.buttonDeleteStoreHouse.Location = new System.Drawing.Point(86, 504);
             this.buttonDeleteStoreHouse.Name = "buttonDeleteStoreHouse";
             this.buttonDeleteStoreHouse.Size = new System.Drawing.Size(68, 26);
             this.buttonDeleteStoreHouse.TabIndex = 29;
@@ -88,12 +97,13 @@
             // 
             // buttonAddStoreHouse
             // 
-            this.buttonAddStoreHouse.Location = new System.Drawing.Point(12, 407);
+            this.buttonAddStoreHouse.Location = new System.Drawing.Point(12, 504);
             this.buttonAddStoreHouse.Name = "buttonAddStoreHouse";
             this.buttonAddStoreHouse.Size = new System.Drawing.Size(68, 26);
             this.buttonAddStoreHouse.TabIndex = 28;
             this.buttonAddStoreHouse.Text = "Agregar";
             this.buttonAddStoreHouse.UseVisualStyleBackColor = true;
+            this.buttonAddStoreHouse.Click += new System.EventHandler(this.buttonAddStoreHouse_Click);
             // 
             // label1
             // 
@@ -110,7 +120,7 @@
             this.dataGridViewStoreHouses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStoreHouses.Location = new System.Drawing.Point(12, 73);
             this.dataGridViewStoreHouses.Name = "dataGridViewStoreHouses";
-            this.dataGridViewStoreHouses.Size = new System.Drawing.Size(290, 297);
+            this.dataGridViewStoreHouses.Size = new System.Drawing.Size(290, 228);
             this.dataGridViewStoreHouses.TabIndex = 33;
             // 
             // dataGridViewAddOperatorStoreHouse
@@ -118,12 +128,12 @@
             this.dataGridViewAddOperatorStoreHouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAddOperatorStoreHouse.Location = new System.Drawing.Point(457, 73);
             this.dataGridViewAddOperatorStoreHouse.Name = "dataGridViewAddOperatorStoreHouse";
-            this.dataGridViewAddOperatorStoreHouse.Size = new System.Drawing.Size(290, 297);
+            this.dataGridViewAddOperatorStoreHouse.Size = new System.Drawing.Size(290, 228);
             this.dataGridViewAddOperatorStoreHouse.TabIndex = 38;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(679, 407);
+            this.button1.Location = new System.Drawing.Point(679, 504);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 26);
             this.button1.TabIndex = 37;
@@ -132,7 +142,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(605, 407);
+            this.button2.Location = new System.Drawing.Point(605, 504);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(68, 26);
             this.button2.TabIndex = 36;
@@ -141,7 +151,7 @@
             // 
             // buttonDeleteOperatorFromStoreHouse
             // 
-            this.buttonDeleteOperatorFromStoreHouse.Location = new System.Drawing.Point(531, 407);
+            this.buttonDeleteOperatorFromStoreHouse.Location = new System.Drawing.Point(531, 504);
             this.buttonDeleteOperatorFromStoreHouse.Name = "buttonDeleteOperatorFromStoreHouse";
             this.buttonDeleteOperatorFromStoreHouse.Size = new System.Drawing.Size(68, 26);
             this.buttonDeleteOperatorFromStoreHouse.TabIndex = 35;
@@ -151,7 +161,7 @@
             // 
             // buttonAddOperatorToStoreHouse
             // 
-            this.buttonAddOperatorToStoreHouse.Location = new System.Drawing.Point(457, 407);
+            this.buttonAddOperatorToStoreHouse.Location = new System.Drawing.Point(457, 504);
             this.buttonAddOperatorToStoreHouse.Name = "buttonAddOperatorToStoreHouse";
             this.buttonAddOperatorToStoreHouse.Size = new System.Drawing.Size(68, 26);
             this.buttonAddOperatorToStoreHouse.TabIndex = 34;
@@ -178,6 +188,70 @@
             this.label3.TabIndex = 40;
             this.label3.Text = "Añadir operario a un almacen.";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 320);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "Calle";
+            // 
+            // txtBoxStoreHouseStreet
+            // 
+            this.txtBoxStoreHouseStreet.Location = new System.Drawing.Point(13, 336);
+            this.txtBoxStoreHouseStreet.Name = "txtBoxStoreHouseStreet";
+            this.txtBoxStoreHouseStreet.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxStoreHouseStreet.TabIndex = 42;
+            // 
+            // txtBoxStoreHouseDoorNumber
+            // 
+            this.txtBoxStoreHouseDoorNumber.Location = new System.Drawing.Point(13, 381);
+            this.txtBoxStoreHouseDoorNumber.Name = "txtBoxStoreHouseDoorNumber";
+            this.txtBoxStoreHouseDoorNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxStoreHouseDoorNumber.TabIndex = 43;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 365);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Numero";
+            // 
+            // txtBoxStoreHouseCorner
+            // 
+            this.txtBoxStoreHouseCorner.Location = new System.Drawing.Point(12, 422);
+            this.txtBoxStoreHouseCorner.Name = "txtBoxStoreHouseCorner";
+            this.txtBoxStoreHouseCorner.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxStoreHouseCorner.TabIndex = 45;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 407);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 13);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "Esquina";
+            // 
+            // txtBoxStoreHouseActived
+            // 
+            this.txtBoxStoreHouseActived.Location = new System.Drawing.Point(13, 464);
+            this.txtBoxStoreHouseActived.Name = "txtBoxStoreHouseActived";
+            this.txtBoxStoreHouseActived.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxStoreHouseActived.TabIndex = 47;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 448);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.TabIndex = 48;
+            this.label7.Text = "Activo";
+            // 
             // StoreHouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,6 +259,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
             this.ControlBox = false;
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtBoxStoreHouseActived);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtBoxStoreHouseCorner);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtBoxStoreHouseDoorNumber);
+            this.Controls.Add(this.txtBoxStoreHouseStreet);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewAddOperatorStoreHouse);
@@ -225,5 +307,13 @@
         private System.Windows.Forms.Button buttonAddOperatorToStoreHouse;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtBoxStoreHouseStreet;
+        private System.Windows.Forms.TextBox txtBoxStoreHouseDoorNumber;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtBoxStoreHouseCorner;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtBoxStoreHouseActived;
+        private System.Windows.Forms.Label label7;
     }
 }

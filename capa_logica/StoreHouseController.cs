@@ -26,7 +26,7 @@ namespace capa_logica
             List<StoreHouseModel> storehouses = StoreHouseTableModel.GetAllStoreHouse();
 
             DataTable table = new DataTable();
-            table.Columns.Add("ID", typeof(int));
+            table.Columns.Add("id", typeof(int));
             table.Columns.Add("Calle", typeof(string));
             table.Columns.Add("Numero", typeof(int));
             table.Columns.Add("Esquina", typeof(string));
@@ -35,7 +35,7 @@ namespace capa_logica
             foreach (StoreHouseModel storehouse in storehouses)
             {
                 DataRow row = table.NewRow();
-                row["ID"] = storehouse.IDStoreHouse;
+                row["id"] = storehouse.IDStoreHouse;
                 row["Calle"] = storehouse.Street;
                 row["Numero"] = storehouse.DoorNumber;
                 row["Esquina"] = storehouse.Corner;
@@ -44,7 +44,7 @@ namespace capa_logica
             }
             return table;
         }
-        public static void EliminarStoreHouse(int id)
+        public static void DeleteStoreHouse(int id)
         {
             StoreHouseModel storehouse = new StoreHouseModel();
             storehouse.IDStoreHouse = id;

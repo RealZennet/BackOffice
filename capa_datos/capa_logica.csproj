@@ -74,6 +74,7 @@
     <Compile Include="ModelBatch.cs" />
     <Compile Include="ModelProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoreHouseModel.cs" />
     <Compile Include="TruckerModel.cs" />
     <Compile Include="TruckModel.cs" />
     <Compile Include="UsersModel.cs" />
