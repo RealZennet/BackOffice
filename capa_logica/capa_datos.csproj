@@ -71,6 +71,7 @@
     <Compile Include="BatchController.cs" />
     <Compile Include="ProductController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShippingManagementController.cs" />
     <Compile Include="StoreHouseController.cs" />
     <Compile Include="TruckController.cs" />
     <Compile Include="TruckerController.cs" />

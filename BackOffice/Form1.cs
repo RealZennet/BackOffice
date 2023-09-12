@@ -215,5 +215,22 @@ namespace BackOffice
         }
 
         #endregion
+
+        private void showShippingManagerForm()
+        {
+            ShippingManagementForm formShippingManagerCtl = new ShippingManagementForm();
+            formShippingManagerCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formShippingManagerCtl);
+            formShippingManagerCtl.FormBorderStyle = FormBorderStyle.None;
+            formShippingManagerCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formShippingManagerCtl;
+            formShippingManagerCtl.BringToFront();
+            formShippingManagerCtl.Show();
+        }
+
+        private void buttonShippingManager_Click(object sender, EventArgs e)
+        {
+            showShippingManagerForm();
+        }
     }
 }

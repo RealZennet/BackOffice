@@ -153,6 +153,7 @@
             this.buttonShippingManager.Text = "Gestionar Envios";
             this.buttonShippingManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonShippingManager.UseVisualStyleBackColor = true;
+            this.buttonShippingManager.Click += new System.EventHandler(this.buttonShippingManager_Click);
             // 
             // buttonManagement
             // 

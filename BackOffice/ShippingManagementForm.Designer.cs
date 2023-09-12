@@ -34,7 +34,7 @@
             this.txtBoxIDTruckShippManagement = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridViewStoreHouses = new System.Windows.Forms.DataGridView();
+            this.dataGridViewShippingManagement = new System.Windows.Forms.DataGridView();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonRefreshShipps = new System.Windows.Forms.Button();
             this.buttonDeleteShipp = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dateTimePickerShippManagement = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStoreHouses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShippingManagement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,13 +97,13 @@
             this.label2.TabIndex = 55;
             this.label2.Text = "Gestionar envio";
             // 
-            // dataGridViewStoreHouses
+            // dataGridViewShippingManagement
             // 
-            this.dataGridViewStoreHouses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStoreHouses.Location = new System.Drawing.Point(12, 69);
-            this.dataGridViewStoreHouses.Name = "dataGridViewStoreHouses";
-            this.dataGridViewStoreHouses.Size = new System.Drawing.Size(290, 228);
-            this.dataGridViewStoreHouses.TabIndex = 54;
+            this.dataGridViewShippingManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewShippingManagement.Location = new System.Drawing.Point(12, 69);
+            this.dataGridViewShippingManagement.Name = "dataGridViewShippingManagement";
+            this.dataGridViewShippingManagement.Size = new System.Drawing.Size(290, 228);
+            this.dataGridViewShippingManagement.TabIndex = 54;
             // 
             // buttonBack
             // 
@@ -126,6 +126,7 @@
             this.buttonRefreshShipps.TabIndex = 51;
             this.buttonRefreshShipps.Text = "Recargar";
             this.buttonRefreshShipps.UseVisualStyleBackColor = true;
+            this.buttonRefreshShipps.Click += new System.EventHandler(this.buttonRefreshShipps_Click);
             // 
             // buttonDeleteShipp
             // 
@@ -135,6 +136,7 @@
             this.buttonDeleteShipp.TabIndex = 50;
             this.buttonDeleteShipp.Text = "Eliminar";
             this.buttonDeleteShipp.UseVisualStyleBackColor = true;
+            this.buttonDeleteShipp.Click += new System.EventHandler(this.buttonDeleteShipp_Click);
             // 
             // buttonAddShipp
             // 
@@ -144,6 +146,7 @@
             this.buttonAddShipp.TabIndex = 49;
             this.buttonAddShipp.Text = "Agregar";
             this.buttonAddShipp.UseVisualStyleBackColor = true;
+            this.buttonAddShipp.Click += new System.EventHandler(this.buttonAddShipp_Click);
             // 
             // label1
             // 
@@ -185,7 +188,7 @@
             this.Controls.Add(this.txtBoxIDTruckShippManagement);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridViewStoreHouses);
+            this.Controls.Add(this.dataGridViewShippingManagement);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonRefreshShipps);
             this.Controls.Add(this.buttonDeleteShipp);
@@ -193,7 +196,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ShippingManagementForm";
             this.Text = "ShippingManagementForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStoreHouses)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShippingManagement)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -208,7 +211,7 @@
         private System.Windows.Forms.TextBox txtBoxIDTruckShippManagement;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridViewStoreHouses;
+        private System.Windows.Forms.DataGridView dataGridViewShippingManagement;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonRefreshShipps;
         private System.Windows.Forms.Button buttonDeleteShipp;
