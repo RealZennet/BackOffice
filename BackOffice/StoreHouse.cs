@@ -17,17 +17,16 @@ namespace BackOffice
         {
             InitializeComponent();
             RefreshTableAddStoreHouse();
+            RefreshTableAssignOperatorToStoreHouse();
         }
 
-        private void buttonDeleteOperatorFromStoreHouse_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        #region AddStoreHouse
 
         public void RefreshTableAddStoreHouse()
         {
@@ -57,7 +56,7 @@ namespace BackOffice
             return true;
         }
 
-        private void addProduct()
+        private void addStoreHouse()
         {
             if (bool.TryParse(txtBoxStoreHouseActived.Text, out bool isActivated))
             {
@@ -74,7 +73,7 @@ namespace BackOffice
 
         private void buttonAddStoreHouse_Click(object sender, EventArgs e)
         {
-            addProduct();
+            addStoreHouse();
         }
 
         private void deleteStoreHouse()
@@ -97,5 +96,74 @@ namespace BackOffice
         {
             RefreshTableAddStoreHouse();
         }
+        #endregion AddStoreHouse
+
+        #region AssignOperatorToStoreHouse
+
+        public void RefreshTableAssignOperatorToStoreHouse()
+        {
+            DataTable dataTableAddOperatorToStoreHouse = AssignOperatorToStoreHouseController.GetAllOperatorsAssignedToStoreHouses();
+            dataGridViewAddOperatorStoreHouse.DataSource = dataTableAddOperatorToStoreHouse;
+        }
+
+        public void ClearTxtBoxesAssignOperatorToStoreHouse()
+        {
+            txtBoxIDOperator.Clear();
+            txtBoxIDAddOperatorToStoreHouse.Clear();
+        }
+
+        private bool ValidateAssignOperatorToStoreHouseInputsUser()
+        {
+
+            if (string.IsNullOrWhiteSpace(txtBoxIDAddOperatorToStoreHouse.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxIDOperator.Text))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private void assignOperatorToStoreHouse()
+        {
+            AssignOperatorToStoreHouseController.Create(Int32.Parse(txtBoxIDOperator.Text), Int32.Parse(txtBoxIDAddOperatorToStoreHouse.Text));
+            MessageBox.Show($"Operario {Int32.Parse(txtBoxIDOperator.Text)} agregado al almacen {Int32.Parse(txtBoxIDAddOperatorToStoreHouse.Text)}");
+            RefreshTableAssignOperatorToStoreHouse();
+            ClearTxtBoxesAssignOperatorToStoreHouse();
+        }
+
+        private void deleteAssignedOperatorToStoreHouse()
+        {
+            if (dataGridViewAddOperatorStoreHouse.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridViewAddOperatorStoreHouse.SelectedRows[0].Index;
+                int id = (int)dataGridViewAddOperatorStoreHouse.Rows[selectedIndex].Cells["ID Operario"].Value;
+                DataTable dataTableAssignedOperators = (DataTable)dataGridViewAddOperatorStoreHouse.DataSource;
+                dataTableAssignedOperators.Rows.RemoveAt(selectedIndex);
+                MessageBox.Show("El operario fue removido del almacen!");
+                AssignOperatorToStoreHouseController.DeleteAssignedOperator(id);
+                dataGridViewAddOperatorStoreHouse.DataSource = dataTableAssignedOperators;
+                RefreshTableAddStoreHouse();
+
+            }
+        }
+
+        private void buttonAddOperatorToStoreHouse_Click(object sender, EventArgs e)
+        {
+            assignOperatorToStoreHouse();
+        }
+
+        private void buttonDeleteOperatorFromStoreHouse_Click(object sender, EventArgs e)
+        {
+            deleteAssignedOperatorToStoreHouse();
+        }
+
+        private void buttonRefreshAddOperatorStoreHouses_Click(object sender, EventArgs e)
+        {
+            RefreshTableAssignOperatorToStoreHouse();
+        }
+        #endregion AssignOperatorToStoreHouse
+
+
     }
 }

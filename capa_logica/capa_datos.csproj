@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssignOperatorToStoreHouseController.cs" />
     <Compile Include="AssignProductsController.cs" />
     <Compile Include="AssignTypeOfUserOperatorController.cs" />
     <Compile Include="AssignTypeOfUserTruckerController.cs" />

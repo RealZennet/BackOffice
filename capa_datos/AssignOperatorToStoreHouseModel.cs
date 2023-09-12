@@ -37,7 +37,7 @@ namespace capa_datos
         }
         public void Delete()
         {
-            this.Command.CommandText = $"DELETE FROM almacen WHERE id_operario = {this.IDOperator}";
+            this.Command.CommandText = $"DELETE FROM gestiona WHERE id_operario = {this.IDOperator}";
             this.Command.ExecuteNonQuery();
         }
     }

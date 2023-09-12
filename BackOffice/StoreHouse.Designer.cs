@@ -36,8 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewStoreHouses = new System.Windows.Forms.DataGridView();
             this.dataGridViewAddOperatorStoreHouse = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonRefreshAddOperatorStoreHouses = new System.Windows.Forms.Button();
             this.buttonDeleteOperatorFromStoreHouse = new System.Windows.Forms.Button();
             this.buttonAddOperatorToStoreHouse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +49,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtBoxStoreHouseActived = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtBoxIDOperator = new System.Windows.Forms.TextBox();
+            this.txtBoxIDAddOperatorToStoreHouse = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStoreHouses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddOperatorStoreHouse)).BeginInit();
             this.SuspendLayout();
@@ -131,23 +134,15 @@
             this.dataGridViewAddOperatorStoreHouse.Size = new System.Drawing.Size(290, 228);
             this.dataGridViewAddOperatorStoreHouse.TabIndex = 38;
             // 
-            // button1
+            // buttonRefreshAddOperatorStoreHouses
             // 
-            this.button1.Location = new System.Drawing.Point(679, 504);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 26);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(605, 504);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 26);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Recargar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonRefreshAddOperatorStoreHouses.Location = new System.Drawing.Point(605, 504);
+            this.buttonRefreshAddOperatorStoreHouses.Name = "buttonRefreshAddOperatorStoreHouses";
+            this.buttonRefreshAddOperatorStoreHouses.Size = new System.Drawing.Size(68, 26);
+            this.buttonRefreshAddOperatorStoreHouses.TabIndex = 36;
+            this.buttonRefreshAddOperatorStoreHouses.Text = "Recargar";
+            this.buttonRefreshAddOperatorStoreHouses.UseVisualStyleBackColor = true;
+            this.buttonRefreshAddOperatorStoreHouses.Click += new System.EventHandler(this.buttonRefreshAddOperatorStoreHouses_Click);
             // 
             // buttonDeleteOperatorFromStoreHouse
             // 
@@ -167,6 +162,7 @@
             this.buttonAddOperatorToStoreHouse.TabIndex = 34;
             this.buttonAddOperatorToStoreHouse.Text = "Agregar";
             this.buttonAddOperatorToStoreHouse.UseVisualStyleBackColor = true;
+            this.buttonAddOperatorToStoreHouse.Click += new System.EventHandler(this.buttonAddOperatorToStoreHouse_Click);
             // 
             // label2
             // 
@@ -252,6 +248,38 @@
             this.label7.TabIndex = 48;
             this.label7.Text = "Activo";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(454, 381);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 13);
+            this.label8.TabIndex = 52;
+            this.label8.Text = "ID Operario";
+            // 
+            // txtBoxIDOperator
+            // 
+            this.txtBoxIDOperator.Location = new System.Drawing.Point(455, 397);
+            this.txtBoxIDOperator.Name = "txtBoxIDOperator";
+            this.txtBoxIDOperator.Size = new System.Drawing.Size(43, 20);
+            this.txtBoxIDOperator.TabIndex = 51;
+            // 
+            // txtBoxIDAddOperatorToStoreHouse
+            // 
+            this.txtBoxIDAddOperatorToStoreHouse.Location = new System.Drawing.Point(455, 352);
+            this.txtBoxIDAddOperatorToStoreHouse.Name = "txtBoxIDAddOperatorToStoreHouse";
+            this.txtBoxIDAddOperatorToStoreHouse.Size = new System.Drawing.Size(43, 20);
+            this.txtBoxIDAddOperatorToStoreHouse.TabIndex = 50;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(454, 336);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 13);
+            this.label9.TabIndex = 49;
+            this.label9.Text = "ID Almacen";
+            // 
             // StoreHouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +287,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
             this.ControlBox = false;
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtBoxIDOperator);
+            this.Controls.Add(this.txtBoxIDAddOperatorToStoreHouse);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtBoxStoreHouseActived);
             this.Controls.Add(this.label6);
@@ -270,8 +302,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewAddOperatorStoreHouse);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonRefreshAddOperatorStoreHouses);
             this.Controls.Add(this.buttonDeleteOperatorFromStoreHouse);
             this.Controls.Add(this.buttonAddOperatorToStoreHouse);
             this.Controls.Add(this.dataGridViewStoreHouses);
@@ -301,8 +332,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewStoreHouses;
         private System.Windows.Forms.DataGridView dataGridViewAddOperatorStoreHouse;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonRefreshAddOperatorStoreHouses;
         private System.Windows.Forms.Button buttonDeleteOperatorFromStoreHouse;
         private System.Windows.Forms.Button buttonAddOperatorToStoreHouse;
         private System.Windows.Forms.Label label2;
@@ -315,5 +345,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBoxStoreHouseActived;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtBoxIDOperator;
+        private System.Windows.Forms.TextBox txtBoxIDAddOperatorToStoreHouse;
+        private System.Windows.Forms.Label label9;
     }
 }
