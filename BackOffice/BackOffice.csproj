@@ -101,6 +101,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoreHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreHouse.Designer.cs">
+      <DependentUpon>StoreHouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="TruckManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StoreHouse.resx">
+      <DependentUpon>StoreHouse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TruckManagerForm.resx">
       <DependentUpon>TruckManagerForm.cs</DependentUpon>
     </EmbeddedResource>

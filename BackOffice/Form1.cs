@@ -66,11 +66,6 @@ namespace BackOffice
             showMenus(productsAndLotsPanel);
         }
 
-        private void buttonUsers_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void buttonManagement_Click(object sender, EventArgs e)
         {
             showMenus(managementPanel);
@@ -181,6 +176,24 @@ namespace BackOffice
         {
             showUserTypeAssign();
         }
+
+        private void ButtonStoreHouseManagement_Click(object sender, EventArgs e)
+        {
+            showStoreHouseManagementForm();
+        }
+
+        private void showStoreHouseManagementForm()
+        {
+            StoreHouse formStoreHouseCtl = new StoreHouse();
+            formStoreHouseCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formStoreHouseCtl);
+            formStoreHouseCtl.FormBorderStyle = FormBorderStyle.None;
+            formStoreHouseCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formStoreHouseCtl;
+            formStoreHouseCtl.BringToFront();
+            formStoreHouseCtl.Show();
+        }
+
         #endregion
 
         #region LotsButton

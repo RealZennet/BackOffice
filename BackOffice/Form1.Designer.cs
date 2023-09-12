@@ -30,8 +30,9 @@
         {
             this.leftPanelContainer = new System.Windows.Forms.Panel();
             this.managementPanel = new System.Windows.Forms.Panel();
+            this.buttonUsersAssign = new System.Windows.Forms.Button();
             this.buttonUsersManager = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ButtonStoreHouseManagement = new System.Windows.Forms.Button();
             this.buttonTrucksManager = new System.Windows.Forms.Button();
             this.buttonShippingManager = new System.Windows.Forms.Button();
             this.buttonManagement = new System.Windows.Forms.Button();
@@ -41,9 +42,8 @@
             this.buttonProductsManager = new System.Windows.Forms.Button();
             this.buttonProducts = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFormsLoader = new System.Windows.Forms.Panel();
-            this.buttonUsersAssign = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.leftPanelContainer.SuspendLayout();
             this.managementPanel.SuspendLayout();
             this.productsAndLotsPanel.SuspendLayout();
@@ -71,7 +71,7 @@
             this.managementPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
             this.managementPanel.Controls.Add(this.buttonUsersAssign);
             this.managementPanel.Controls.Add(this.buttonUsersManager);
-            this.managementPanel.Controls.Add(this.button1);
+            this.managementPanel.Controls.Add(this.ButtonStoreHouseManagement);
             this.managementPanel.Controls.Add(this.buttonTrucksManager);
             this.managementPanel.Controls.Add(this.buttonShippingManager);
             this.managementPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -79,6 +79,21 @@
             this.managementPanel.Name = "managementPanel";
             this.managementPanel.Size = new System.Drawing.Size(250, 249);
             this.managementPanel.TabIndex = 6;
+            // 
+            // buttonUsersAssign
+            // 
+            this.buttonUsersAssign.FlatAppearance.BorderSize = 0;
+            this.buttonUsersAssign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUsersAssign.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonUsersAssign.Location = new System.Drawing.Point(3, 206);
+            this.buttonUsersAssign.Name = "buttonUsersAssign";
+            this.buttonUsersAssign.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonUsersAssign.Size = new System.Drawing.Size(250, 40);
+            this.buttonUsersAssign.TabIndex = 4;
+            this.buttonUsersAssign.Text = "Asignar Usuarios";
+            this.buttonUsersAssign.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUsersAssign.UseVisualStyleBackColor = true;
+            this.buttonUsersAssign.Click += new System.EventHandler(this.buttonUsersAssign_Click);
             // 
             // buttonUsersManager
             // 
@@ -95,19 +110,20 @@
             this.buttonUsersManager.UseVisualStyleBackColor = true;
             this.buttonUsersManager.Click += new System.EventHandler(this.buttonUsersManager_Click);
             // 
-            // button1
+            // ButtonStoreHouseManagement
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(3, 75);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(250, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Gestionar Almacenes";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.ButtonStoreHouseManagement.FlatAppearance.BorderSize = 0;
+            this.ButtonStoreHouseManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonStoreHouseManagement.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ButtonStoreHouseManagement.Location = new System.Drawing.Point(3, 75);
+            this.ButtonStoreHouseManagement.Name = "ButtonStoreHouseManagement";
+            this.ButtonStoreHouseManagement.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.ButtonStoreHouseManagement.Size = new System.Drawing.Size(250, 40);
+            this.ButtonStoreHouseManagement.TabIndex = 3;
+            this.ButtonStoreHouseManagement.Text = "Gestionar Almacenes";
+            this.ButtonStoreHouseManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonStoreHouseManagement.UseVisualStyleBackColor = true;
+            this.ButtonStoreHouseManagement.Click += new System.EventHandler(this.ButtonStoreHouseManagement_Click);
             // 
             // buttonTrucksManager
             // 
@@ -238,16 +254,6 @@
             this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BackOffice.Properties.Resources.ZENNETLOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 69);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panelFormsLoader
             // 
             this.panelFormsLoader.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -258,20 +264,15 @@
             this.panelFormsLoader.TabIndex = 2;
             this.panelFormsLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormsLoader_Paint);
             // 
-            // buttonUsersAssign
+            // pictureBox1
             // 
-            this.buttonUsersAssign.FlatAppearance.BorderSize = 0;
-            this.buttonUsersAssign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUsersAssign.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonUsersAssign.Location = new System.Drawing.Point(3, 206);
-            this.buttonUsersAssign.Name = "buttonUsersAssign";
-            this.buttonUsersAssign.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonUsersAssign.Size = new System.Drawing.Size(250, 40);
-            this.buttonUsersAssign.TabIndex = 4;
-            this.buttonUsersAssign.Text = "Asignar Usuarios";
-            this.buttonUsersAssign.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUsersAssign.UseVisualStyleBackColor = true;
-            this.buttonUsersAssign.Click += new System.EventHandler(this.buttonUsersAssign_Click);
+            this.pictureBox1.Image = global::BackOffice.Properties.Resources.ZENNETLOGO;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(225, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // QuickCarry
             // 
@@ -306,7 +307,7 @@
         private System.Windows.Forms.Button buttonShippingManager;
         private System.Windows.Forms.Button buttonManagement;
         private System.Windows.Forms.Button buttonTrucksManager;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ButtonStoreHouseManagement;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonAssignProducts;
         private System.Windows.Forms.Panel panelFormsLoader;

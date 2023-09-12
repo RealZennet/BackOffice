@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAddTruck = new System.Windows.Forms.Button();
-            this.buttonDeleteTruck = new System.Windows.Forms.Button();
             this.buttonRefreshTruck = new System.Windows.Forms.Button();
             this.dataGridViewAddTruck = new System.Windows.Forms.DataGridView();
             this.txtBoxWeightTruck = new System.Windows.Forms.TextBox();
@@ -53,6 +52,7 @@
             this.buttonEdit = new System.Windows.Forms.Button();
             this.txtBoxTruckID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.buttonDeleteTruck = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTruck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAssignTruck)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label1.Location = new System.Drawing.Point(340, 9);
+            this.label1.Location = new System.Drawing.Point(291, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(220, 25);
             this.label1.TabIndex = 0;
@@ -76,16 +76,6 @@
             this.buttonAddTruck.Text = "Agregar";
             this.buttonAddTruck.UseVisualStyleBackColor = true;
             this.buttonAddTruck.Click += new System.EventHandler(this.buttonAddTruck_Click);
-            // 
-            // buttonDeleteTruck
-            // 
-            this.buttonDeleteTruck.Location = new System.Drawing.Point(593, 516);
-            this.buttonDeleteTruck.Name = "buttonDeleteTruck";
-            this.buttonDeleteTruck.Size = new System.Drawing.Size(68, 26);
-            this.buttonDeleteTruck.TabIndex = 2;
-            this.buttonDeleteTruck.Text = "Eliminar";
-            this.buttonDeleteTruck.UseVisualStyleBackColor = true;
-            this.buttonDeleteTruck.Click += new System.EventHandler(this.buttonDeleteTruck_Click);
             // 
             // buttonRefreshTruck
             // 
@@ -125,7 +115,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.label3.Location = new System.Drawing.Point(558, 251);
+            this.label3.Location = new System.Drawing.Point(534, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 20);
             this.label3.TabIndex = 7;
@@ -135,7 +125,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.label4.Location = new System.Drawing.Point(85, 251);
+            this.label4.Location = new System.Drawing.Point(94, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 20);
             this.label4.TabIndex = 14;
@@ -282,6 +272,16 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "ID de camion:";
             // 
+            // buttonDeleteTruck
+            // 
+            this.buttonDeleteTruck.Location = new System.Drawing.Point(593, 516);
+            this.buttonDeleteTruck.Name = "buttonDeleteTruck";
+            this.buttonDeleteTruck.Size = new System.Drawing.Size(68, 26);
+            this.buttonDeleteTruck.TabIndex = 2;
+            this.buttonDeleteTruck.Text = "Eliminar";
+            this.buttonDeleteTruck.UseVisualStyleBackColor = true;
+            this.buttonDeleteTruck.Click += new System.EventHandler(this.buttonDeleteTruck_Click);
+            // 
             // TruckManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,7 +329,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonAddTruck;
-        private System.Windows.Forms.Button buttonDeleteTruck;
         private System.Windows.Forms.Button buttonRefreshTruck;
         private System.Windows.Forms.DataGridView dataGridViewAddTruck;
         private System.Windows.Forms.TextBox txtBoxWeightTruck;
@@ -352,5 +351,6 @@
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.TextBox txtBoxTruckID;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button buttonDeleteTruck;
     }
 }
