@@ -42,8 +42,9 @@
             this.buttonProductsManager = new System.Windows.Forms.Button();
             this.buttonProducts = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelFormsLoader = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelFormsLoader = new System.Windows.Forms.Panel();
+            this.buttonDestinationManager = new System.Windows.Forms.Button();
             this.leftPanelContainer.SuspendLayout();
             this.managementPanel.SuspendLayout();
             this.productsAndLotsPanel.SuspendLayout();
@@ -69,6 +70,7 @@
             // managementPanel
             // 
             this.managementPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
+            this.managementPanel.Controls.Add(this.buttonDestinationManager);
             this.managementPanel.Controls.Add(this.buttonUsersAssign);
             this.managementPanel.Controls.Add(this.buttonUsersManager);
             this.managementPanel.Controls.Add(this.ButtonStoreHouseManagement);
@@ -85,10 +87,10 @@
             this.buttonUsersAssign.FlatAppearance.BorderSize = 0;
             this.buttonUsersAssign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUsersAssign.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonUsersAssign.Location = new System.Drawing.Point(3, 206);
+            this.buttonUsersAssign.Location = new System.Drawing.Point(3, 214);
             this.buttonUsersAssign.Name = "buttonUsersAssign";
             this.buttonUsersAssign.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonUsersAssign.Size = new System.Drawing.Size(250, 40);
+            this.buttonUsersAssign.Size = new System.Drawing.Size(250, 32);
             this.buttonUsersAssign.TabIndex = 4;
             this.buttonUsersAssign.Text = "Asignar Usuarios";
             this.buttonUsersAssign.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -100,10 +102,10 @@
             this.buttonUsersManager.FlatAppearance.BorderSize = 0;
             this.buttonUsersManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUsersManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonUsersManager.Location = new System.Drawing.Point(3, 167);
+            this.buttonUsersManager.Location = new System.Drawing.Point(3, 175);
             this.buttonUsersManager.Name = "buttonUsersManager";
             this.buttonUsersManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonUsersManager.Size = new System.Drawing.Size(250, 40);
+            this.buttonUsersManager.Size = new System.Drawing.Size(250, 32);
             this.buttonUsersManager.TabIndex = 0;
             this.buttonUsersManager.Text = "Gestionar Usuarios";
             this.buttonUsersManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,10 +117,10 @@
             this.ButtonStoreHouseManagement.FlatAppearance.BorderSize = 0;
             this.ButtonStoreHouseManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonStoreHouseManagement.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonStoreHouseManagement.Location = new System.Drawing.Point(3, 75);
+            this.ButtonStoreHouseManagement.Location = new System.Drawing.Point(3, 83);
             this.ButtonStoreHouseManagement.Name = "ButtonStoreHouseManagement";
             this.ButtonStoreHouseManagement.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.ButtonStoreHouseManagement.Size = new System.Drawing.Size(250, 40);
+            this.ButtonStoreHouseManagement.Size = new System.Drawing.Size(250, 32);
             this.ButtonStoreHouseManagement.TabIndex = 3;
             this.ButtonStoreHouseManagement.Text = "Gestionar Almacenes";
             this.ButtonStoreHouseManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -130,10 +132,10 @@
             this.buttonTrucksManager.FlatAppearance.BorderSize = 0;
             this.buttonTrucksManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTrucksManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonTrucksManager.Location = new System.Drawing.Point(3, 121);
+            this.buttonTrucksManager.Location = new System.Drawing.Point(3, 129);
             this.buttonTrucksManager.Name = "buttonTrucksManager";
             this.buttonTrucksManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonTrucksManager.Size = new System.Drawing.Size(250, 40);
+            this.buttonTrucksManager.Size = new System.Drawing.Size(250, 32);
             this.buttonTrucksManager.TabIndex = 0;
             this.buttonTrucksManager.Text = "Gestionar Camiones";
             this.buttonTrucksManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,10 +147,10 @@
             this.buttonShippingManager.FlatAppearance.BorderSize = 0;
             this.buttonShippingManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShippingManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonShippingManager.Location = new System.Drawing.Point(3, 29);
+            this.buttonShippingManager.Location = new System.Drawing.Point(3, 37);
             this.buttonShippingManager.Name = "buttonShippingManager";
             this.buttonShippingManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonShippingManager.Size = new System.Drawing.Size(250, 40);
+            this.buttonShippingManager.Size = new System.Drawing.Size(250, 32);
             this.buttonShippingManager.TabIndex = 0;
             this.buttonShippingManager.Text = "Gestionar Envios";
             this.buttonShippingManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -255,6 +257,16 @@
             this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BackOffice.Properties.Resources.ZENNETLOGO;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(225, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panelFormsLoader
             // 
             this.panelFormsLoader.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -265,15 +277,19 @@
             this.panelFormsLoader.TabIndex = 2;
             this.panelFormsLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormsLoader_Paint);
             // 
-            // pictureBox1
+            // buttonDestinationManager
             // 
-            this.pictureBox1.Image = global::BackOffice.Properties.Resources.ZENNETLOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 69);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.buttonDestinationManager.FlatAppearance.BorderSize = 0;
+            this.buttonDestinationManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDestinationManager.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonDestinationManager.Location = new System.Drawing.Point(3, -1);
+            this.buttonDestinationManager.Name = "buttonDestinationManager";
+            this.buttonDestinationManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonDestinationManager.Size = new System.Drawing.Size(250, 32);
+            this.buttonDestinationManager.TabIndex = 5;
+            this.buttonDestinationManager.Text = "Gestionar Destinos";
+            this.buttonDestinationManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDestinationManager.UseVisualStyleBackColor = true;
             // 
             // QuickCarry
             // 
@@ -313,6 +329,7 @@
         private System.Windows.Forms.Button buttonAssignProducts;
         private System.Windows.Forms.Panel panelFormsLoader;
         private System.Windows.Forms.Button buttonUsersAssign;
+        private System.Windows.Forms.Button buttonDestinationManager;
     }
 }
 

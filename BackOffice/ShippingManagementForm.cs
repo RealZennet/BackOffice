@@ -159,11 +159,6 @@ namespace BackOffice
             }
         }
 
-
-
-
-
-
         private void deleteCarrie()
         {
             if (dataGridViewCarry.SelectedRows.Count > 0)
