@@ -44,6 +44,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxTypeUser = new System.Windows.Forms.ComboBox();
+            this.txtBoxUserID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonEditUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,12 +192,41 @@
             this.comboBoxTypeUser.Size = new System.Drawing.Size(121, 21);
             this.comboBoxTypeUser.TabIndex = 36;
             // 
+            // txtBoxUserID
+            // 
+            this.txtBoxUserID.Location = new System.Drawing.Point(689, 323);
+            this.txtBoxUserID.Name = "txtBoxUserID";
+            this.txtBoxUserID.Size = new System.Drawing.Size(56, 20);
+            this.txtBoxUserID.TabIndex = 37;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(687, 307);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "ID:";
+            // 
+            // buttonEditUser
+            // 
+            this.buttonEditUser.Location = new System.Drawing.Point(690, 349);
+            this.buttonEditUser.Name = "buttonEditUser";
+            this.buttonEditUser.Size = new System.Drawing.Size(55, 26);
+            this.buttonEditUser.TabIndex = 39;
+            this.buttonEditUser.Text = "Editar";
+            this.buttonEditUser.UseVisualStyleBackColor = true;
+            this.buttonEditUser.Click += new System.EventHandler(this.buttonEditUser_Click);
+            // 
             // UsersForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(757, 520);
+            this.Controls.Add(this.buttonEditUser);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtBoxUserID);
             this.Controls.Add(this.comboBoxTypeUser);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -239,5 +271,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBoxTypeUser;
+        private System.Windows.Forms.TextBox txtBoxUserID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonEditUser;
     }
 }

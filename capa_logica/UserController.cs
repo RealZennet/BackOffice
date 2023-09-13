@@ -53,5 +53,34 @@ namespace capa_logica
             user.UserID = id;
             user.DeleteUser();
         }
+
+        public static bool UserExists(int id)
+        {
+            UsersModel user = new UsersModel();
+            user.UserID = id;
+            return user.CheckIfUserExists(id);
+        }
+
+
+        public static void Edit(int id, string firstname, string firstlastname, string phonenumber, string username, string password)
+        {
+            if (UserExists(id))
+            {
+                UsersModel usuario = new UsersModel();
+                usuario.UserID = id;
+                usuario.FirstName = firstname;
+                usuario.FirstLastName = firstlastname;
+                usuario.PhoneNumber = phonenumber;
+                usuario.UserName = username;
+                usuario.Password = password;
+
+                usuario.EditUser();
+            }
+            else
+            {
+                throw new Exception($"El usuario con ID {id} no existe en la base de datos.");
+            }
+        }
+
     }
 }
