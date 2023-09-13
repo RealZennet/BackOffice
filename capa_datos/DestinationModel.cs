@@ -25,7 +25,7 @@ namespace capa_datos
             this.Command.ExecuteNonQuery();
         }
 
-        public List<DestinationModel> getAllTrucks()
+        public List<DestinationModel> getAllDestinations()
         {
             this.Command.CommandText = $"SELECT * FROM destino";
             this.Reader = this.Command.ExecuteReader();

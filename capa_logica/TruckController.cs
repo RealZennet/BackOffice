@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace capa_logica
 {
-    public class TruckController
+    public abstract class TruckController
     {
         public static void Create(int truckweight, int truckvolume, bool activedtruck)
         {
