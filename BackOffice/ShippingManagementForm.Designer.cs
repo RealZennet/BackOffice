@@ -52,7 +52,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtBoxIDDestinationCarrie = new System.Windows.Forms.TextBox();
-            this.checkedListBoxCarriesStatus = new System.Windows.Forms.CheckedListBox();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShippingManagement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarry)).BeginInit();
             this.SuspendLayout();
@@ -271,18 +271,13 @@
             this.txtBoxIDDestinationCarrie.Size = new System.Drawing.Size(41, 20);
             this.txtBoxIDDestinationCarrie.TabIndex = 75;
             // 
-            // checkedListBoxCarriesStatus
+            // comboBoxStatus
             // 
-            this.checkedListBoxCarriesStatus.FormattingEnabled = true;
-            this.checkedListBoxCarriesStatus.Items.AddRange(new object[] {
-            "Entregado",
-            "EnCamino",
-            "Retrasado",
-            "NoEnviado"});
-            this.checkedListBoxCarriesStatus.Location = new System.Drawing.Point(588, 332);
-            this.checkedListBoxCarriesStatus.Name = "checkedListBoxCarriesStatus";
-            this.checkedListBoxCarriesStatus.Size = new System.Drawing.Size(120, 94);
-            this.checkedListBoxCarriesStatus.TabIndex = 77;
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Location = new System.Drawing.Point(477, 460);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxStatus.TabIndex = 79;
             // 
             // ShippingManagementForm
             // 
@@ -290,7 +285,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
-            this.Controls.Add(this.checkedListBoxCarriesStatus);
+            this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtBoxIDDestinationCarrie);
             this.Controls.Add(this.label3);
@@ -352,6 +347,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtBoxIDDestinationCarrie;
-        private System.Windows.Forms.CheckedListBox checkedListBoxCarriesStatus;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
     }
 }

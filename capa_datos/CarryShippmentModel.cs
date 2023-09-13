@@ -34,7 +34,7 @@ namespace capa_datos
                 CarryShippmentModel destinations = new CarryShippmentModel();
                 destinations.IDTruck = Int32.Parse(this.Reader["id_camion"].ToString());
                 destinations.IDBatch = Int32.Parse(this.Reader["id_lote"].ToString());
-                destinations.IDDestination = Int32.Parse(this.Reader["fech_sal"].ToString());
+                destinations.IDDestination = Int32.Parse(this.Reader["id_des"].ToString());
                 destinations.ShippingStatus = this.Reader["estatus"].ToString();
                 result.Add(destinations);
             }

@@ -18,11 +18,18 @@ namespace BackOffice
         {
             InitializeComponent();
             RefreshTableShippManagement();
+            RefreshTableCarrieManagement();
         }
 
         private void ShippingManagementForm_Load(object sender, EventArgs e)
         {
+            comboBoxStatus.Items.Add("Entregado");
+            comboBoxStatus.Items.Add("En Camino");
+            comboBoxStatus.Items.Add("Retrasado");
+            comboBoxStatus.Items.Add("No Enviado");
 
+            
+            comboBoxStatus.SelectedIndex = 3;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -118,40 +125,43 @@ namespace BackOffice
 
         private bool ValidateCarrieManagementInputsUser()
         {
-
             if (string.IsNullOrWhiteSpace(txtBoxIDBatchCarrie.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxIDTruckCarrie.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxIDDestinationCarrie.Text) ||
-                string.IsNullOrWhiteSpace(checkedListBoxCarriesStatus.Text))
+                string.IsNullOrWhiteSpace(txtBoxIDDestinationCarrie.Text))
             {
                 return false;
             }
-
             return true;
         }
 
         private void addCarrie()
         {
-            string selectedStatusText = checkedListBoxCarriesStatus.SelectedItem?.ToString();
-
-            if (!string.IsNullOrEmpty(selectedStatusText))
+            string selectedStatus = comboBoxStatus.SelectedItem as string;
+            if (ValidateCarrieManagementInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
             {
                 CarryShippmentController.Create(
-                    Int32.Parse(txtBoxIDTruckShippManagement.Text),
-                    Int32.Parse(txtBoxIDBatchShippManagement.Text),
+                    Int32.Parse(txtBoxIDTruckCarrie.Text),
+                    Int32.Parse(txtBoxIDBatchCarrie.Text),
                     Int32.Parse(txtBoxIDDestinationCarrie.Text),
-                    checkedListBoxCarriesStatus.Text
+                    selectedStatus.ToString()
                 );
-
                 MessageBox.Show("Cargamento programado");
                 RefreshTableCarrieManagement();
                 ClearTxtBoxesCarrieManagement();
             }
+            else if (string.IsNullOrWhiteSpace(selectedStatus))
+            {
+                MessageBox.Show("Selecciona un estado.");
+            }
             else
             {
-                MessageBox.Show("Por favor, seleccione un estado de envío.");
+                MessageBox.Show("Completa todos los campos.");
             }
         }
+
+
+
+
 
 
         private void deleteCarrie()
@@ -159,7 +169,7 @@ namespace BackOffice
             if (dataGridViewCarry.SelectedRows.Count > 0)
             {
                 int selectedIndex = dataGridViewCarry.SelectedRows[0].Index;
-                int id = (int)dataGridViewCarry.Rows[selectedIndex].Cells["id_camion"].Value;
+                int id = (int)dataGridViewCarry.Rows[selectedIndex].Cells["ID Camion"].Value;
                 DataTable dataTableCarries = (DataTable)dataGridViewCarry.DataSource;
                 dataTableCarries.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El cargamento fue eliminado!");
