@@ -76,6 +76,7 @@
     <Compile Include="AssignTypeOfUserTruckerModel.cs" />
     <Compile Include="CarryShippmentModel.cs" />
     <Compile Include="DataBaseControl.cs" />
+    <Compile Include="DestinationModel.cs" />
     <Compile Include="ModelBatch.cs" />
     <Compile Include="ModelProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

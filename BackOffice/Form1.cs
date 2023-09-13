@@ -19,8 +19,6 @@ namespace BackOffice
             customMenus();
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
         }
-
-        //Variables para controlar el slide de la ventana.
         public int m, x, y;
         
 
@@ -232,5 +230,26 @@ namespace BackOffice
         {
             showShippingManagerForm();
         }
+
+        #region destinationmanager
+
+        private void showDestinationManagerForm()
+        {
+            DestinationForm forDestinationManagerCtl = new DestinationForm();
+            forDestinationManagerCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(forDestinationManagerCtl);
+            forDestinationManagerCtl.FormBorderStyle = FormBorderStyle.None;
+            forDestinationManagerCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = forDestinationManagerCtl;
+            forDestinationManagerCtl.BringToFront();
+            forDestinationManagerCtl.Show();
+        }
+
+        private void buttonDestinationManager_Click(object sender, EventArgs e)
+        {
+            showDestinationManagerForm();
+        }
+
+        #endregion destinationmanagaer
     }
 }

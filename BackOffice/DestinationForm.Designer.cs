@@ -37,7 +37,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewStoreHouses = new System.Windows.Forms.DataGridView();
             this.buttonEditDestination = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
             this.buttonRefreshDestination = new System.Windows.Forms.Button();
             this.buttonDeleteDestination = new System.Windows.Forms.Button();
             this.buttonAddDestination = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.txtBoxDestinationDoorNumber = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStoreHouses)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,18 +122,6 @@
             this.buttonEditDestination.Text = "Editar";
             this.buttonEditDestination.UseVisualStyleBackColor = true;
             // 
-            // buttonBack
-            // 
-            this.buttonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBack.Location = new System.Drawing.Point(12, 11);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(96, 26);
-            this.buttonBack.TabIndex = 53;
-            this.buttonBack.Text = "Volver";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            // 
             // buttonRefreshDestination
             // 
             this.buttonRefreshDestination.Location = new System.Drawing.Point(160, 485);
@@ -194,6 +182,16 @@
             this.label2.TabIndex = 65;
             this.label2.Text = "ID";
             // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(15, 10);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(86, 23);
+            this.buttonBack.TabIndex = 67;
+            this.buttonBack.Text = "Volver";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
             // DestinationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,6 +199,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(757, 520);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBoxDestinationDoorNumber);
@@ -213,7 +212,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridViewStoreHouses);
             this.Controls.Add(this.buttonEditDestination);
-            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonRefreshDestination);
             this.Controls.Add(this.buttonDeleteDestination);
             this.Controls.Add(this.buttonAddDestination);
@@ -238,7 +236,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridViewStoreHouses;
         private System.Windows.Forms.Button buttonEditDestination;
-        private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonRefreshDestination;
         private System.Windows.Forms.Button buttonDeleteDestination;
         private System.Windows.Forms.Button buttonAddDestination;
@@ -246,5 +243,6 @@
         private System.Windows.Forms.TextBox txtBoxDestinationDoorNumber;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonBack;
     }
 }
