@@ -114,6 +114,7 @@
             this.buttonEditDestination.TabIndex = 54;
             this.buttonEditDestination.Text = "Editar";
             this.buttonEditDestination.UseVisualStyleBackColor = true;
+            this.buttonEditDestination.Click += new System.EventHandler(this.buttonEditDestination_Click);
             // 
             // buttonRefreshDestination
             // 

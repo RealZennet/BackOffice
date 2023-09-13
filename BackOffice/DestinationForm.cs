@@ -79,8 +79,6 @@ namespace BackOffice
             }
         }
 
-
-
         private void deleteDestination()
         {
             if (dataGridViewDestinations.SelectedRows.Count > 0)
@@ -90,7 +88,7 @@ namespace BackOffice
                 DataTable dataTableDestinations = (DataTable)dataGridViewDestinations.DataSource;
                 dataTableDestinations.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El destino fue eliminado!");
-                StoreHouseController.DeleteStoreHouse(id);
+                DestinationController.DeleteDestination(id);
                 dataGridViewDestinations.DataSource = dataTableDestinations;
                 RefreshTable();
 
@@ -114,7 +112,26 @@ namespace BackOffice
             deleteDestination();
         }
 
+        private void edit()
+        {
+            string selectedStatus = comboBoxStatus.SelectedItem as string;
+            if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
+            {
+                int statusValue = selectedStatus == "true" ? 1 : 0;
+                DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, Int32.Parse(txtBoxDestinationDoorNumber.Text), txtBoxDestinationCorner.Text, Convert.ToBoolean(statusValue));
+                MessageBox.Show("Datos actualizados.");
+            }
+            else
+            {
+                MessageBox.Show("Completa todos los campos antes de guardar.");
+            }
+        }
+
         #endregion Destination
 
+        private void buttonEditDestination_Click(object sender, EventArgs e)
+        {
+            edit();
+        }
     }
 }
