@@ -114,16 +114,23 @@ namespace BackOffice
 
         private void edit()
         {
-            string selectedStatus = comboBoxStatus.SelectedItem as string;
-            if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
+            try
             {
-                int statusValue = selectedStatus == "true" ? 1 : 0;
-                DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, Int32.Parse(txtBoxDestinationDoorNumber.Text), txtBoxDestinationCorner.Text, Convert.ToBoolean(statusValue));
-                MessageBox.Show("Datos actualizados.");
+                string selectedStatus = comboBoxStatus.SelectedItem as string;
+                if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
+                {
+                    int statusValue = selectedStatus == "true" ? 1 : 0;
+                    DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, Int32.Parse(txtBoxDestinationDoorNumber.Text), txtBoxDestinationCorner.Text, Convert.ToBoolean(statusValue));
+                    MessageBox.Show("Datos actualizados.");
+                }
+                else
+                {
+                    MessageBox.Show("Completa todos los campos antes de guardar.");
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Completa todos los campos antes de guardar.");
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
