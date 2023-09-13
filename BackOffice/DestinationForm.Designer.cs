@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
-            this.txtBoxDestinationActived = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBoxDestinationCorner = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtBoxDestinationStreet = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridViewStoreHouses = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDestinations = new System.Windows.Forms.DataGridView();
             this.buttonEditDestination = new System.Windows.Forms.Button();
             this.buttonRefreshDestination = new System.Windows.Forms.Button();
             this.buttonDeleteDestination = new System.Windows.Forms.Button();
             this.buttonAddDestination = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxDestinationDoorNumber = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBoxIDDestination = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStoreHouses)).BeginInit();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDestinations)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -56,13 +56,6 @@
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 63;
             this.label7.Text = "Activo";
-            // 
-            // txtBoxDestinationActived
-            // 
-            this.txtBoxDestinationActived.Location = new System.Drawing.Point(13, 459);
-            this.txtBoxDestinationActived.Name = "txtBoxDestinationActived";
-            this.txtBoxDestinationActived.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxDestinationActived.TabIndex = 62;
             // 
             // label6
             // 
@@ -105,13 +98,13 @@
             this.label4.TabIndex = 57;
             this.label4.Text = "Calle";
             // 
-            // dataGridViewStoreHouses
+            // dataGridViewDestinations
             // 
-            this.dataGridViewStoreHouses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStoreHouses.Location = new System.Drawing.Point(12, 68);
-            this.dataGridViewStoreHouses.Name = "dataGridViewStoreHouses";
-            this.dataGridViewStoreHouses.Size = new System.Drawing.Size(733, 228);
-            this.dataGridViewStoreHouses.TabIndex = 55;
+            this.dataGridViewDestinations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDestinations.Location = new System.Drawing.Point(12, 68);
+            this.dataGridViewDestinations.Name = "dataGridViewDestinations";
+            this.dataGridViewDestinations.Size = new System.Drawing.Size(733, 228);
+            this.dataGridViewDestinations.TabIndex = 55;
             // 
             // buttonEditDestination
             // 
@@ -130,6 +123,7 @@
             this.buttonRefreshDestination.TabIndex = 52;
             this.buttonRefreshDestination.Text = "Recargar";
             this.buttonRefreshDestination.UseVisualStyleBackColor = true;
+            this.buttonRefreshDestination.Click += new System.EventHandler(this.buttonRefreshDestination_Click);
             // 
             // buttonDeleteDestination
             // 
@@ -139,6 +133,7 @@
             this.buttonDeleteDestination.TabIndex = 51;
             this.buttonDeleteDestination.Text = "Eliminar";
             this.buttonDeleteDestination.UseVisualStyleBackColor = true;
+            this.buttonDeleteDestination.Click += new System.EventHandler(this.buttonDeleteDestination_Click);
             // 
             // buttonAddDestination
             // 
@@ -148,6 +143,7 @@
             this.buttonAddDestination.TabIndex = 50;
             this.buttonAddDestination.Text = "Agregar";
             this.buttonAddDestination.UseVisualStyleBackColor = true;
+            this.buttonAddDestination.Click += new System.EventHandler(this.buttonAddDestination_Click);
             // 
             // label1
             // 
@@ -166,12 +162,12 @@
             this.txtBoxDestinationDoorNumber.Size = new System.Drawing.Size(100, 20);
             this.txtBoxDestinationDoorNumber.TabIndex = 64;
             // 
-            // textBox2
+            // txtBoxIDDestination
             // 
-            this.textBox2.Location = new System.Drawing.Point(160, 331);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(46, 20);
-            this.textBox2.TabIndex = 66;
+            this.txtBoxIDDestination.Location = new System.Drawing.Point(160, 331);
+            this.txtBoxIDDestination.Name = "txtBoxIDDestination";
+            this.txtBoxIDDestination.Size = new System.Drawing.Size(46, 20);
+            this.txtBoxIDDestination.TabIndex = 66;
             // 
             // label2
             // 
@@ -192,6 +188,14 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // comboBoxStatus
+            // 
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Location = new System.Drawing.Point(12, 459);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxStatus.TabIndex = 68;
+            // 
             // DestinationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,18 +203,18 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(757, 520);
             this.ControlBox = false;
+            this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtBoxIDDestination);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBoxDestinationDoorNumber);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtBoxDestinationActived);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBoxDestinationCorner);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtBoxDestinationStreet);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridViewStoreHouses);
+            this.Controls.Add(this.dataGridViewDestinations);
             this.Controls.Add(this.buttonEditDestination);
             this.Controls.Add(this.buttonRefreshDestination);
             this.Controls.Add(this.buttonDeleteDestination);
@@ -219,7 +223,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DestinationForm";
             this.Text = "DestinationForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStoreHouses)).EndInit();
+            this.Load += new System.EventHandler(this.DestinationForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDestinations)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,21 +233,21 @@
         #endregion
 
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtBoxDestinationActived;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBoxDestinationCorner;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtBoxDestinationStreet;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridViewStoreHouses;
+        private System.Windows.Forms.DataGridView dataGridViewDestinations;
         private System.Windows.Forms.Button buttonEditDestination;
         private System.Windows.Forms.Button buttonRefreshDestination;
         private System.Windows.Forms.Button buttonDeleteDestination;
         private System.Windows.Forms.Button buttonAddDestination;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxDestinationDoorNumber;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBoxIDDestination;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
     }
 }

@@ -315,6 +315,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StoreHouse";
             this.Text = "StoreHouse";
+            this.Load += new System.EventHandler(this.StoreHouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStoreHouses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddOperatorStoreHouse)).EndInit();
             this.ResumeLayout(false);

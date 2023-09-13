@@ -20,6 +20,10 @@ namespace BackOffice
             RefreshTableAssignOperatorToStoreHouse();
         }
 
+        private void StoreHouse_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
@@ -163,5 +167,7 @@ namespace BackOffice
             RefreshTableAssignOperatorToStoreHouse();
         }
         #endregion AssignOperatorToStoreHouse
+
+
     }
 }

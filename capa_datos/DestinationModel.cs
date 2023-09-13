@@ -16,7 +16,7 @@ namespace capa_datos
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO destino(calle, num, esqu,bajalogica) VALUES(" +
+            this.Command.CommandText = $"INSERT INTO destino(calle, num, esq, bajalogica) VALUES(" +
                 $"'{this.StreetDestination}'," +
                 $"{this.DoorNumber}," +
                 $"'{this.CornerDestination}'," +
@@ -76,7 +76,7 @@ namespace capa_datos
                     $"calle = '{this.StreetDestination}', " +
                     $"num = {this.DoorNumber}, " +
                     $"esquina = '{this.CornerDestination}', " +
-                    $"bajalogica = {this.ActivedDestination} " +
+                    $"bajalogica = {this.ActivedDestination}" +
                     $"WHERE id_des = {this.IDDestination}";
                 this.Command.ExecuteNonQuery();
             }
