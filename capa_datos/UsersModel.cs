@@ -55,18 +55,45 @@ namespace capa_datos
             this.Command.ExecuteNonQuery();
         }
 
+        public bool CheckIfUserExists(int userId)
+        {
+            this.Command.CommandText = $"SELECT COUNT(*) FROM trabajador WHERE id = {userId}";
+            object result = this.Command.ExecuteScalar();
+
+            if (result != null && result != DBNull.Value)
+            {
+                if (int.TryParse(result.ToString(), out int rowCount))
+                {
+                    return rowCount > 0;
+                }
+            }
+
+            return false;
+        }
+
+
         public void EditUser()
         {
-            this.Command.CommandText = $"UPDATE trabajador SET " +
-                $"username = '{this.UserName}', " +
-                $"nom1 = '{this.FirstName}', " +
-                $"ape1 = '{this.FirstLastName}', " +
-                $"bajalogica = {this.ActivedUser}, " +
-                $"tel = '{this.PhoneNumber}' " +
-                $"WHERE id = '{this.UserID}'";
+            bool userExists = CheckIfUserExists(this.UserID);
 
-            this.Command.ExecuteNonQuery();
+            if (userExists)
+            {
+                this.Command.CommandText = $"UPDATE trabajador SET " +
+                    $"username = '{this.UserName}', " +
+                    $"nom = '{this.FirstName}', " +
+                    $"ape = '{this.FirstLastName}', " +
+                    $"bajalogica = {this.ActivedUser}, " +
+                    $"tel = '{this.PhoneNumber}' " +
+                    $"WHERE id = {this.UserID}";
+
+                this.Command.ExecuteNonQuery();
+            }
+            else
+            {
+                throw new Exception($"El usuario con ID {this.UserID} no existe en la base de datos.");
+            }
         }
+
 
     }
 }
