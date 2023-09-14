@@ -120,6 +120,7 @@
             // 
             // dataGridViewStoreHouses
             // 
+            this.dataGridViewStoreHouses.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewStoreHouses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStoreHouses.Location = new System.Drawing.Point(12, 73);
             this.dataGridViewStoreHouses.Name = "dataGridViewStoreHouses";
@@ -128,6 +129,7 @@
             // 
             // dataGridViewAddOperatorStoreHouse
             // 
+            this.dataGridViewAddOperatorStoreHouse.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewAddOperatorStoreHouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAddOperatorStoreHouse.Location = new System.Drawing.Point(457, 73);
             this.dataGridViewAddOperatorStoreHouse.Name = "dataGridViewAddOperatorStoreHouse";
@@ -284,7 +286,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
             this.ControlBox = false;
             this.Controls.Add(this.label8);

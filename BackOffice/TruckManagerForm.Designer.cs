@@ -89,7 +89,9 @@
             // 
             // dataGridViewAddTruck
             // 
+            this.dataGridViewAddTruck.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewAddTruck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAddTruck.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridViewAddTruck.Location = new System.Drawing.Point(425, 297);
             this.dataGridViewAddTruck.Name = "dataGridViewAddTruck";
             this.dataGridViewAddTruck.Size = new System.Drawing.Size(327, 150);
@@ -149,6 +151,7 @@
             // 
             // dataGridViewAssignTruck
             // 
+            this.dataGridViewAssignTruck.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewAssignTruck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAssignTruck.Location = new System.Drawing.Point(26, 297);
             this.dataGridViewAssignTruck.Name = "dataGridViewAssignTruck";
@@ -286,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtBoxTruckID);

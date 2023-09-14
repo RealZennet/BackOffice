@@ -110,6 +110,7 @@
             // 
             // dataGridViewShippingManagement
             // 
+            this.dataGridViewShippingManagement.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewShippingManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewShippingManagement.Location = new System.Drawing.Point(12, 69);
             this.dataGridViewShippingManagement.Name = "dataGridViewShippingManagement";
@@ -171,6 +172,7 @@
             // 
             // dataGridViewCarry
             // 
+            this.dataGridViewCarry.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewCarry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCarry.Location = new System.Drawing.Point(455, 69);
             this.dataGridViewCarry.Name = "dataGridViewCarry";
@@ -283,7 +285,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.label8);
