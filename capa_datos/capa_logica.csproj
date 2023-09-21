@@ -82,6 +82,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShippingManagementModel.cs" />
     <Compile Include="StoreHouseModel.cs" />
+    <Compile Include="TravelModel.cs" />
     <Compile Include="TruckerModel.cs" />
     <Compile Include="TruckModel.cs" />
     <Compile Include="UsersModel.cs" />

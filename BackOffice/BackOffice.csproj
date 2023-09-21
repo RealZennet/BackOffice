@@ -119,6 +119,12 @@
     <Compile Include="StoreHouse.Designer.cs">
       <DependentUpon>StoreHouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="TravelManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravelManagerForm.Designer.cs">
+      <DependentUpon>TravelManagerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TruckManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StoreHouse.resx">
       <DependentUpon>StoreHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TravelManagerForm.resx">
+      <DependentUpon>TravelManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TruckManagerForm.resx">
       <DependentUpon>TruckManagerForm.cs</DependentUpon>

@@ -30,6 +30,7 @@
         {
             this.leftPanelContainer = new System.Windows.Forms.Panel();
             this.managementPanel = new System.Windows.Forms.Panel();
+            this.buttonDestinationManager = new System.Windows.Forms.Button();
             this.buttonUsersAssign = new System.Windows.Forms.Button();
             this.buttonUsersManager = new System.Windows.Forms.Button();
             this.ButtonStoreHouseManagement = new System.Windows.Forms.Button();
@@ -42,9 +43,9 @@
             this.buttonProductsManager = new System.Windows.Forms.Button();
             this.buttonProducts = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelFormsLoader = new System.Windows.Forms.Panel();
-            this.buttonDestinationManager = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelFormsLoader = new System.Windows.Forms.Panel();
+            this.buttonTravelManager = new System.Windows.Forms.Button();
             this.leftPanelContainer.SuspendLayout();
             this.managementPanel.SuspendLayout();
             this.productsAndLotsPanel.SuspendLayout();
@@ -70,6 +71,7 @@
             // managementPanel
             // 
             this.managementPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
+            this.managementPanel.Controls.Add(this.buttonTravelManager);
             this.managementPanel.Controls.Add(this.buttonDestinationManager);
             this.managementPanel.Controls.Add(this.buttonUsersAssign);
             this.managementPanel.Controls.Add(this.buttonUsersManager);
@@ -77,17 +79,32 @@
             this.managementPanel.Controls.Add(this.buttonTrucksManager);
             this.managementPanel.Controls.Add(this.buttonShippingManager);
             this.managementPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.managementPanel.Location = new System.Drawing.Point(0, 331);
+            this.managementPanel.Location = new System.Drawing.Point(0, 299);
             this.managementPanel.Name = "managementPanel";
             this.managementPanel.Size = new System.Drawing.Size(250, 249);
             this.managementPanel.TabIndex = 6;
+            // 
+            // buttonDestinationManager
+            // 
+            this.buttonDestinationManager.FlatAppearance.BorderSize = 0;
+            this.buttonDestinationManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDestinationManager.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonDestinationManager.Location = new System.Drawing.Point(3, -1);
+            this.buttonDestinationManager.Name = "buttonDestinationManager";
+            this.buttonDestinationManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonDestinationManager.Size = new System.Drawing.Size(250, 32);
+            this.buttonDestinationManager.TabIndex = 5;
+            this.buttonDestinationManager.Text = "Gestionar Destinos";
+            this.buttonDestinationManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDestinationManager.UseVisualStyleBackColor = true;
+            this.buttonDestinationManager.Click += new System.EventHandler(this.buttonDestinationManager_Click);
             // 
             // buttonUsersAssign
             // 
             this.buttonUsersAssign.FlatAppearance.BorderSize = 0;
             this.buttonUsersAssign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUsersAssign.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonUsersAssign.Location = new System.Drawing.Point(3, 214);
+            this.buttonUsersAssign.Location = new System.Drawing.Point(3, 170);
             this.buttonUsersAssign.Name = "buttonUsersAssign";
             this.buttonUsersAssign.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.buttonUsersAssign.Size = new System.Drawing.Size(250, 32);
@@ -102,10 +119,10 @@
             this.buttonUsersManager.FlatAppearance.BorderSize = 0;
             this.buttonUsersManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUsersManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonUsersManager.Location = new System.Drawing.Point(3, 175);
+            this.buttonUsersManager.Location = new System.Drawing.Point(3, 131);
             this.buttonUsersManager.Name = "buttonUsersManager";
             this.buttonUsersManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonUsersManager.Size = new System.Drawing.Size(250, 32);
+            this.buttonUsersManager.Size = new System.Drawing.Size(250, 33);
             this.buttonUsersManager.TabIndex = 0;
             this.buttonUsersManager.Text = "Gestionar Usuarios";
             this.buttonUsersManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,10 +134,10 @@
             this.ButtonStoreHouseManagement.FlatAppearance.BorderSize = 0;
             this.ButtonStoreHouseManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonStoreHouseManagement.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ButtonStoreHouseManagement.Location = new System.Drawing.Point(3, 83);
+            this.ButtonStoreHouseManagement.Location = new System.Drawing.Point(3, 70);
             this.ButtonStoreHouseManagement.Name = "ButtonStoreHouseManagement";
             this.ButtonStoreHouseManagement.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.ButtonStoreHouseManagement.Size = new System.Drawing.Size(250, 32);
+            this.ButtonStoreHouseManagement.Size = new System.Drawing.Size(250, 26);
             this.ButtonStoreHouseManagement.TabIndex = 3;
             this.ButtonStoreHouseManagement.Text = "Gestionar Almacenes";
             this.ButtonStoreHouseManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,10 +149,10 @@
             this.buttonTrucksManager.FlatAppearance.BorderSize = 0;
             this.buttonTrucksManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTrucksManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonTrucksManager.Location = new System.Drawing.Point(3, 129);
+            this.buttonTrucksManager.Location = new System.Drawing.Point(3, 102);
             this.buttonTrucksManager.Name = "buttonTrucksManager";
             this.buttonTrucksManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonTrucksManager.Size = new System.Drawing.Size(250, 32);
+            this.buttonTrucksManager.Size = new System.Drawing.Size(250, 23);
             this.buttonTrucksManager.TabIndex = 0;
             this.buttonTrucksManager.Text = "Gestionar Camiones";
             this.buttonTrucksManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,7 +167,7 @@
             this.buttonShippingManager.Location = new System.Drawing.Point(3, 37);
             this.buttonShippingManager.Name = "buttonShippingManager";
             this.buttonShippingManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonShippingManager.Size = new System.Drawing.Size(250, 32);
+            this.buttonShippingManager.Size = new System.Drawing.Size(250, 27);
             this.buttonShippingManager.TabIndex = 0;
             this.buttonShippingManager.Text = "Gestionar Envios";
             this.buttonShippingManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -164,7 +181,7 @@
             this.buttonManagement.FlatAppearance.BorderSize = 0;
             this.buttonManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonManagement.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonManagement.Location = new System.Drawing.Point(0, 286);
+            this.buttonManagement.Location = new System.Drawing.Point(0, 254);
             this.buttonManagement.Name = "buttonManagement";
             this.buttonManagement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonManagement.Size = new System.Drawing.Size(250, 45);
@@ -183,7 +200,7 @@
             this.productsAndLotsPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.productsAndLotsPanel.Location = new System.Drawing.Point(0, 145);
             this.productsAndLotsPanel.Name = "productsAndLotsPanel";
-            this.productsAndLotsPanel.Size = new System.Drawing.Size(250, 141);
+            this.productsAndLotsPanel.Size = new System.Drawing.Size(250, 109);
             this.productsAndLotsPanel.TabIndex = 2;
             // 
             // buttonAssignProducts
@@ -191,10 +208,10 @@
             this.buttonAssignProducts.FlatAppearance.BorderSize = 0;
             this.buttonAssignProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAssignProducts.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonAssignProducts.Location = new System.Drawing.Point(3, 95);
+            this.buttonAssignProducts.Location = new System.Drawing.Point(0, 74);
             this.buttonAssignProducts.Name = "buttonAssignProducts";
             this.buttonAssignProducts.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonAssignProducts.Size = new System.Drawing.Size(250, 40);
+            this.buttonAssignProducts.Size = new System.Drawing.Size(250, 26);
             this.buttonAssignProducts.TabIndex = 2;
             this.buttonAssignProducts.Text = "Asignar Productos";
             this.buttonAssignProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,10 +223,10 @@
             this.buttonLotesManager.FlatAppearance.BorderSize = 0;
             this.buttonLotesManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLotesManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonLotesManager.Location = new System.Drawing.Point(0, 53);
+            this.buttonLotesManager.Location = new System.Drawing.Point(0, 42);
             this.buttonLotesManager.Name = "buttonLotesManager";
             this.buttonLotesManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonLotesManager.Size = new System.Drawing.Size(250, 40);
+            this.buttonLotesManager.Size = new System.Drawing.Size(250, 26);
             this.buttonLotesManager.TabIndex = 1;
             this.buttonLotesManager.Text = "Gestionar Lotes";
             this.buttonLotesManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -224,7 +241,7 @@
             this.buttonProductsManager.Location = new System.Drawing.Point(0, 7);
             this.buttonProductsManager.Name = "buttonProductsManager";
             this.buttonProductsManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonProductsManager.Size = new System.Drawing.Size(250, 40);
+            this.buttonProductsManager.Size = new System.Drawing.Size(250, 29);
             this.buttonProductsManager.TabIndex = 0;
             this.buttonProductsManager.Text = "Gestionar Productos";
             this.buttonProductsManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -257,6 +274,16 @@
             this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BackOffice.Properties.Resources.ZENNETLOGO;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(225, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panelFormsLoader
             // 
             this.panelFormsLoader.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -267,30 +294,20 @@
             this.panelFormsLoader.TabIndex = 2;
             this.panelFormsLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormsLoader_Paint);
             // 
-            // buttonDestinationManager
+            // buttonTravelManager
             // 
-            this.buttonDestinationManager.FlatAppearance.BorderSize = 0;
-            this.buttonDestinationManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDestinationManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonDestinationManager.Location = new System.Drawing.Point(3, -1);
-            this.buttonDestinationManager.Name = "buttonDestinationManager";
-            this.buttonDestinationManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonDestinationManager.Size = new System.Drawing.Size(250, 32);
-            this.buttonDestinationManager.TabIndex = 5;
-            this.buttonDestinationManager.Text = "Gestionar Destinos";
-            this.buttonDestinationManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDestinationManager.UseVisualStyleBackColor = true;
-            this.buttonDestinationManager.Click += new System.EventHandler(this.buttonDestinationManager_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BackOffice.Properties.Resources.ZENNETLOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 69);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.buttonTravelManager.FlatAppearance.BorderSize = 0;
+            this.buttonTravelManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTravelManager.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonTravelManager.Location = new System.Drawing.Point(3, 208);
+            this.buttonTravelManager.Name = "buttonTravelManager";
+            this.buttonTravelManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonTravelManager.Size = new System.Drawing.Size(250, 32);
+            this.buttonTravelManager.TabIndex = 6;
+            this.buttonTravelManager.Text = "Gestionar Recorridos";
+            this.buttonTravelManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTravelManager.UseVisualStyleBackColor = true;
+            this.buttonTravelManager.Click += new System.EventHandler(this.buttonTravelManager_Click);
             // 
             // QuickCarry
             // 
@@ -331,6 +348,7 @@
         private System.Windows.Forms.Panel panelFormsLoader;
         private System.Windows.Forms.Button buttonUsersAssign;
         private System.Windows.Forms.Button buttonDestinationManager;
+        private System.Windows.Forms.Button buttonTravelManager;
     }
 }
 

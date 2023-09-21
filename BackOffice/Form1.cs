@@ -231,6 +231,23 @@ namespace BackOffice
             showShippingManagerForm();
         }
 
+        private void showTravelManagerForm()
+        {
+            TravelManagerForm formTravelManagerCtl = new TravelManagerForm();
+            formTravelManagerCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formTravelManagerCtl);
+            formTravelManagerCtl.FormBorderStyle = FormBorderStyle.None;
+            formTravelManagerCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formTravelManagerCtl;
+            formTravelManagerCtl.BringToFront();
+            formTravelManagerCtl.Show();
+        }
+
+        private void buttonTravelManager_Click(object sender, EventArgs e)
+        {
+            showTravelManagerForm();
+        }
+
         #region destinationmanager
 
         private void showDestinationManagerForm()
