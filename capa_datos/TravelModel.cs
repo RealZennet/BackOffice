@@ -62,6 +62,25 @@ namespace capa_datos
             return false;
         }
 
+        public List<TravelModel> GetAllTravels()
+        {
+            this.Command.CommandText = $"SELECT * FROM recorrido";
+            this.Reader = this.Command.ExecuteReader();
+
+            List<TravelModel> result = new List<TravelModel>();
+            while (this.Reader.Read())
+            {
+                TravelModel travel = new TravelModel();
+                travel.IDStoreHouse= Int32.Parse(this.Reader["id_alma"].ToString());
+                travel.IDDestination = Int32.Parse(this.Reader["id_des"].ToString());
+                travel.TypeTravel = this.Reader["tipo_trayecto"].ToString();
+                travel.ShippmentDate = Convert.ToDateTime(this.Reader["fech_trayecto"].ToString());
+                result.Add(travel);
+            }
+            this.Reader.Close();
+            return result;
+        }
+
         public List<TravelModel> GetTravelsByStoreHouse(int storeHouseId)
         {
             List<TravelModel> travels = new List<TravelModel>();
