@@ -24,7 +24,7 @@ namespace capa_datos
             this.Command.CommandText = $"INSERT INTO recorrido(id_alma, id_des, tipo_trayecto, fech_trayecto) VALUES(" +
                 $"{this.IDStoreHouse}, " +
                 $"{this.IDDestination}, " +
-                $"'{this.TypeTravel}' " +
+                $"'{this.TypeTravel}', " +
                 $"'{this.ShippmentDate.ToString("yyyy-MM-dd")}')";
 
             this.Command.ExecuteNonQuery();
@@ -124,6 +124,12 @@ namespace capa_datos
             }
 
             return travels;
+        }
+
+        public void Delete()
+        {
+            this.Command.CommandText = $"DELETE FROM recorrido WHERE id_alma = {this.IDStoreHouse} AND id_des = {this.IDDestination}";
+            this.Command.ExecuteNonQuery();
         }
     }
 }
