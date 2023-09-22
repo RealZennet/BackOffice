@@ -42,11 +42,10 @@ namespace capa_logica
             return table;
         }
 
-        public static void DeleteTravel(int idstorehouse, int iddestination)
+        public static void DeleteTravel(int idstorehouse)
         {
             TravelModel travel = new TravelModel();
             travel.IDStoreHouse = idstorehouse;
-            travel.IDDestination = iddestination;
             travel.Delete();
         }
     }

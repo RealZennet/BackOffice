@@ -21,13 +21,19 @@ namespace capa_datos
             {
                 throw new Exception("Datos incorrectos.");
             }
+            try
+            {
+
             this.Command.CommandText = $"INSERT INTO recorrido(id_alma, id_des, tipo_trayecto, fech_trayecto) VALUES(" +
                 $"{this.IDStoreHouse}, " +
                 $"{this.IDDestination}, " +
                 $"'{this.TypeTravel}', " +
-                $"'{this.ShippmentDate.ToString("yyyy-MM-dd")}')";
-
+                $"'{this.ShippmentDate.ToString("yyyy-MM-dd HH:mm:ss")}')";
             this.Command.ExecuteNonQuery();
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         private bool DoesStoreHouseExists(int idStoreHouse)
@@ -147,7 +153,7 @@ namespace capa_datos
 
         public void Delete()
         {
-            this.Command.CommandText = $"DELETE FROM recorrido WHERE id_alma = {this.IDStoreHouse} AND id_des = {this.IDDestination}";
+            this.Command.CommandText = $"DELETE FROM recorrido WHERE id_alma = {this.IDStoreHouse}";
             this.Command.ExecuteNonQuery();
         }
     }

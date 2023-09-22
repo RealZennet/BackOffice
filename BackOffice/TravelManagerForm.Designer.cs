@@ -42,35 +42,39 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePickerShippmentDate = new System.Windows.Forms.DateTimePicker();
             this.comboBoxTypeTravel = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerShippmentDateTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTravels)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Location = new System.Drawing.Point(661, 300);
+            this.buttonRefresh.Location = new System.Drawing.Point(661, 345);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(68, 26);
             this.buttonRefresh.TabIndex = 20;
             this.buttonRefresh.Text = "Recargar";
             this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(587, 300);
+            this.buttonDelete.Location = new System.Drawing.Point(587, 345);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(68, 26);
             this.buttonDelete.TabIndex = 19;
             this.buttonDelete.Text = "Eliminar";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(513, 300);
+            this.buttonAdd.Location = new System.Drawing.Point(513, 345);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(68, 26);
             this.buttonAdd.TabIndex = 18;
             this.buttonAdd.Text = "Agregar";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label3
             // 
@@ -120,9 +124,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.Location = new System.Drawing.Point(316, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 25);
+            this.label1.Size = new System.Drawing.Size(105, 25);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Asignar Productos";
+            this.label1.Text = "Recorrido";
             // 
             // dataGridViewTravels
             // 
@@ -167,12 +171,21 @@
             this.comboBoxTypeTravel.Size = new System.Drawing.Size(210, 21);
             this.comboBoxTypeTravel.TabIndex = 26;
             // 
+            // dateTimePickerShippmentDateTime
+            // 
+            this.dateTimePickerShippmentDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerShippmentDateTime.Location = new System.Drawing.Point(513, 300);
+            this.dateTimePickerShippmentDateTime.Name = "dateTimePickerShippmentDateTime";
+            this.dateTimePickerShippmentDateTime.Size = new System.Drawing.Size(210, 20);
+            this.dateTimePickerShippmentDateTime.TabIndex = 27;
+            // 
             // TravelManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(741, 481);
+            this.Controls.Add(this.dateTimePickerShippmentDateTime);
             this.Controls.Add(this.comboBoxTypeTravel);
             this.Controls.Add(this.dateTimePickerShippmentDate);
             this.Controls.Add(this.label5);
@@ -190,6 +203,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TravelManagerForm";
             this.Text = "TravelManagerForm";
+            this.Load += new System.EventHandler(this.TravelManagerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTravels)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,5 +226,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePickerShippmentDate;
         private System.Windows.Forms.ComboBox comboBoxTypeTravel;
+        private System.Windows.Forms.DateTimePicker dateTimePickerShippmentDateTime;
     }
 }
