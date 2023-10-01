@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,23 @@ namespace capa_datos
                 this.Command.CommandText = $"INSERT INTO integra (id_prod, id_lote) VALUES ({this.IDProduct}, {this.IDBatch})";
                 this.Command.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (MySqlException ex)
             {
-                
+                if (ex.Number == 1062)
+                {
+                    throw new InvalidOperationException("No se puede insertar un registro duplicado.");
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
             }
         }
+
 
         public List<AssignProductsModel> TodosLosItems()
         {

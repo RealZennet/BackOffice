@@ -34,13 +34,31 @@ namespace BackOffice
             dataGridViewLots.DataSource = dataTableLots;
         }
 
-
+        private bool validateUsersInputs()
+        {
+            if (string.IsNullOrWhiteSpace(txtBoxActivedBatch.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxIDShipp.Text))
+            {
+                return false;
+            }
+            return true;
+        }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            try
+            {
+            if (validateUsersInputs()) {
             BatchController.Crear(Convert.ToDateTime(dateTimePickerShippingDate.Text), Int32.Parse(txtBoxIDShipp.Text), Convert.ToBoolean(txtBoxActivedBatch.Text));
             MessageBox.Show("Lote Agregado");
             RefreshTable();
+            }
+            MessageBox.Show("Completa los campos");
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)

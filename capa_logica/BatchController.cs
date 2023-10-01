@@ -12,6 +12,9 @@ namespace capa_logica
     {
         public static void Crear(DateTime ShippingDate, int idshipp, bool activedbatch)
         {
+            try
+            {
+
             DateTime DateCreation = DateTime.Now;
             ModelBatch lote = new ModelBatch();
             lote.ShippingDate = ShippingDate;
@@ -19,6 +22,11 @@ namespace capa_logica
             lote.IDShipp = idshipp;
             lote.ActivedBatch = activedbatch;
             lote.Save();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Error");
+            }
         }
 
         public static DataTable Obtener()

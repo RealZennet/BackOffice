@@ -17,6 +17,7 @@ namespace capa_datos
 
         public void Save()
         {
+            try {
             this.Command.CommandText = $"INSERT INTO lote (fech_Crea, fech_Entre, id_Des, bajalogica) VALUES " +
                 $"('{this.DateOfCreation.ToString("yyyy-MM-dd")}', " +
                 $"'{this.ShippingDate.ToString("yyyy-MM-dd")}'," +
@@ -26,6 +27,10 @@ namespace capa_datos
 
             this.Command.CommandText = "SELECT last_insert_id()";
             this.IDBatch = Convert.ToInt32(this.Command.ExecuteScalar());
+            }catch(Exception ex)
+            {
+                throw new Exception("Revisa los datos ingresados.");
+            }
         }
 
         public List<ModelBatch> GetAllLots()

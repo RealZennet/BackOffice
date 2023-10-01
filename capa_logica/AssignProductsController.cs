@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using capa_datos;
+using MySqlConnector;
 
 namespace capa_logica
 {
@@ -12,11 +13,23 @@ namespace capa_logica
     {
         public static void Crear(int IdProduct, int IdBatch)
         {
-            AssignProductsModel assignedProduct = new AssignProductsModel();
-            assignedProduct.IDProduct = IdProduct;
-            assignedProduct.IDBatch = IdBatch;
-            assignedProduct.Save();
+            try
+            {
+                AssignProductsModel assignedProduct = new AssignProductsModel();
+                assignedProduct.IDProduct = IdProduct;
+                assignedProduct.IDBatch = IdBatch;
+                assignedProduct.Save();
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception("Error al crear el producto asignado: " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error desconocido al crear el producto asignado: " + ex.Message, ex);
+            }
         }
+
 
         public static DataTable Obtener()
         {

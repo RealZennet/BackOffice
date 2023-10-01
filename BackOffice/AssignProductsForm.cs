@@ -44,21 +44,41 @@ namespace BackOffice
         {
             RefreshTable();
         }
+       
+        private bool validateInputsUsers()
+        {
+            if(!string.IsNullOrEmpty(txtBoxIDProduct.Text) ||
+                !string.IsNullOrEmpty(txtBoxIDLote.Text))
+            {
+                return true;
+            }
+            return false;
+        }
+        
+        private void assignProduct()
+        {
+            try
+            {
+                if (validateInputsUsers())
+                {
+                    AssignProductsController.Crear(Int32.Parse(txtBoxIDProduct.Text), Int32.Parse(txtBoxIDLote.Text));
+                    MessageBox.Show("Producto Agregado al lote");
+                    RefreshTable();
+                    ClearTxtBoxes();
+                }
+                else
+                {
+                    MessageBox.Show("No pueden existir parametros vacios!");
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error!" + ex.Message);
+            }
+        }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(txtBoxIDProduct.Text) && !string.IsNullOrEmpty(txtBoxIDLote.Text))
-            { 
-            AssignProductsController.Crear(Int32.Parse(txtBoxIDProduct.Text), Int32.Parse(txtBoxIDLote.Text));
-            MessageBox.Show("Producto Agregado al lote");
-            RefreshTable();
-            ClearTxtBoxes();
-            }
-            else
-            {
-                MessageBox.Show("No pueden existir parametros vacios!");
-            }
-
+            assignProduct();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
