@@ -12,11 +12,19 @@ namespace capa_logica
     {
         public static void Create(int idtruck, int idbatch, DateTime dateofshipping)
         {
+            try
+            {
+
             ShippingManagementModel Shippings = new ShippingManagementModel();
             Shippings.IDTruck = idtruck;
             Shippings.IDBatch = idbatch;
             Shippings.DateShipping = dateofshipping;
             Shippings.Save();
+            }catch (Exception ex)
+            {
+                throw new Exception("Error");
+            }
+
         }
 
         public static DataTable GetAllShippings()

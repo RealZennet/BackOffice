@@ -64,10 +64,17 @@ namespace BackOffice
 
         private void addShippment()
         {
+            try
+            {
             ShippingManagementController.Create(Int32.Parse(txtBoxIDTruckShippManagement.Text), Int32.Parse(txtBoxIDBatchShippManagement.Text), Convert.ToDateTime(dateTimePickerShippManagement.Text));
             MessageBox.Show("Envio programado");
             RefreshTableShippManagement();
             ClearTxtBoxesShippingManagement();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void deleteShippment()
@@ -75,7 +82,7 @@ namespace BackOffice
             if (dataGridViewShippingManagement.SelectedRows.Count > 0)
             {
                 int selectedIndex = dataGridViewShippingManagement.SelectedRows[0].Index;
-                int id = (int)dataGridViewShippingManagement.Rows[selectedIndex].Cells["id_lote"].Value;
+                int id = (int)dataGridViewShippingManagement.Rows[selectedIndex].Cells["ID Camion"].Value;
                 DataTable dataTableShippings = (DataTable)dataGridViewShippingManagement.DataSource;
                 dataTableShippings.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El envio fue eliminado!");
@@ -136,6 +143,8 @@ namespace BackOffice
 
         private void addCarrie()
         {
+            try
+            {
             string selectedStatus = comboBoxStatus.SelectedItem as string;
             if (ValidateCarrieManagementInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
             {
@@ -156,6 +165,10 @@ namespace BackOffice
             else
             {
                 MessageBox.Show("Completa todos los campos.");
+            }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

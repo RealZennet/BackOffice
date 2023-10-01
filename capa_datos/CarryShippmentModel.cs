@@ -15,12 +15,19 @@ namespace capa_datos
 
         public void Save()
         {
+            try
+            {
             this.Command.CommandText = $"INSERT INTO transporta(id_camion, id_lote, id_des, estatus) VALUES(" +
                $"{this.IDTruck}, " +
                $"{this.IDBatch}, " +
                $"{this.IDDestination}," +
                $"'{this.ShippingStatus}')";
             this.Command.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Error");
+            }
         }
 
         public List<CarryShippmentModel> GetAllDestinations()

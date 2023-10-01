@@ -14,12 +14,19 @@ namespace capa_datos
 
         public void Save()
         {
+            try
+            {
             this.Command.CommandText = $"INSERT INTO llevan(id_camion, id_lote, fech_sal) VALUES(" +
                $"{this.IDTruck}, " +
                $"{this.IDBatch}," +
                $"'{this.DateShipping.ToString("yyyy-MM-dd")}')";
             this.Command.ExecuteNonQuery();
+            }catch(Exception ex)
+            {
+                throw new Exception("Error");
+            }
         }
+
 
         public List<ShippingManagementModel> GetAllShippings()
         {

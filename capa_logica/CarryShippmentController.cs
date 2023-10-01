@@ -13,12 +13,19 @@ namespace capa_logica
     {
         public static void Create(int idtruck, int idbatch, int iddestination, string status)
         {
+            try
+            {
             CarryShippmentModel carry = new CarryShippmentModel();
             carry.IDTruck = idtruck;
             carry.IDBatch = idbatch;
             carry.IDDestination = iddestination;
             carry.ShippingStatus = status;
             carry.Save();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Error");
+            }
         }
 
 
