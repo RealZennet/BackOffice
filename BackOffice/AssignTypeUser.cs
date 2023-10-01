@@ -51,24 +51,38 @@ namespace BackOffice
 
         private void addUserTracker()
         {
-            AssignTypeOfUserTruckerController.Crear(Int32.Parse(txtBoxUsernameTrucker.Text));
-            MessageBox.Show("Usuario asignado a camionero");
-            RefreshTable();
-            ClearTxtBoxes();
+            if (int.TryParse(txtBoxUsernameTrucker.Text, out int userId))
+            {
+                AssignTypeOfUserTruckerController.Crear(userId);
+                MessageBox.Show("Usuario asignado a camionero");
+                RefreshTable();
+                ClearTxtBoxes();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un numero entero valido en el campo de usuario.");
+            }
         }
 
         private void addUserOperator()
         {
-            AssignTypeOfUserOperatorController.Crear(Int32.Parse(txtBoxUsernameOperator.Text));
-            MessageBox.Show("Usuario asignado a operador");
-            RefreshTable();
-            ClearTxtBoxes();
+            if (int.TryParse(txtBoxUsernameOperator.Text, out int userId))
+            {
+                AssignTypeOfUserOperatorController.Crear(userId);
+                MessageBox.Show("Usuario asignado a operador");
+                RefreshTable();
+                ClearTxtBoxes();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un numero entero valido en el campo de usuario.");
+            }
         }
+
 
         private void buttonAddTrucker_Click(object sender, EventArgs e)
         {
             addUserTracker();
-
         }
 
         private void deleteUserTrucker()
@@ -83,7 +97,6 @@ namespace BackOffice
                 AssignTypeOfUserTruckerController.DeleteUser(id);
                 dataGridViewUsers.DataSource = dataTableUsers;
                 RefreshTable();
-
             }
         }
 
