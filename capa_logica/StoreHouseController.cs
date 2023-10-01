@@ -10,7 +10,7 @@ namespace capa_logica
 {
     public static class StoreHouseController
     {
-        public static void Create(string street, int doornumber, string corner, bool activedstorehouse)
+        public static void Create(string street, string doornumber, string corner, bool activedstorehouse)
         {
             StoreHouseModel storehouse = new StoreHouseModel();
             storehouse.Street = street;
@@ -28,7 +28,7 @@ namespace capa_logica
             DataTable table = new DataTable();
             table.Columns.Add("id", typeof(int));
             table.Columns.Add("Calle", typeof(string));
-            table.Columns.Add("Numero", typeof(int));
+            table.Columns.Add("Numero", typeof(string));
             table.Columns.Add("Esquina", typeof(string));
             table.Columns.Add("Activo", typeof(bool));
 

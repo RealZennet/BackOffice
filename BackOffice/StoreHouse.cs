@@ -64,7 +64,7 @@ namespace BackOffice
         {
             if (bool.TryParse(txtBoxStoreHouseActived.Text, out bool isActivated))
             {
-                StoreHouseController.Create(txtBoxStoreHouseStreet.Text, Int32.Parse(txtBoxStoreHouseDoorNumber.Text), txtBoxStoreHouseCorner.Text, isActivated);
+                StoreHouseController.Create(txtBoxStoreHouseStreet.Text, txtBoxStoreHouseDoorNumber.Text, txtBoxStoreHouseCorner.Text, isActivated);
                 MessageBox.Show("Almacén agregado");
                 RefreshTableAddStoreHouse();
                 ClearTxtBoxesAddStoreHouse();

@@ -11,7 +11,7 @@ namespace capa_datos
         public int IDStoreHouse { get; set; }
         public bool ActivatedStoreHouse { get; set; }
         public string Street { get; set; }
-        public int DoorNumber { get; set; }
+        public string DoorNumber { get; set; }
         public string Corner { get; set; }
 
         public void Save()
@@ -19,7 +19,7 @@ namespace capa_datos
             int activatedValue = this.ActivatedStoreHouse ? 1 : 0;
             this.Command.CommandText = $"INSERT INTO almacen(calle, num, esq, bajalogica) VALUES(" +
                $"'{this.Street}', " +
-               $"{this.DoorNumber}, " +
+               $"'{this.DoorNumber}', " +
                $"'{this.Corner}'," +
                $"{activatedValue})";
             this.Command.ExecuteNonQuery();
@@ -36,7 +36,7 @@ namespace capa_datos
                 StoreHouseModel storehouse = new StoreHouseModel();
                 storehouse.IDStoreHouse = Int32.Parse(this.Reader["id_alma"].ToString());
                 storehouse.Street = this.Reader["calle"].ToString();
-                storehouse.DoorNumber = Int32.Parse(this.Reader["num"].ToString());
+                storehouse.DoorNumber = this.Reader["num"].ToString();
                 storehouse.Corner = this.Reader["esq"].ToString();
                 storehouse.ActivatedStoreHouse = this.Reader.GetBoolean("bajalogica");
                 result.Add(storehouse);
