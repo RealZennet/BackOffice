@@ -50,9 +50,9 @@
             this.txtBoxActiveTruck = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonEdit = new System.Windows.Forms.Button();
-            this.txtBoxTruckID = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.buttonDeleteTruck = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtBoxTruckID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTruck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAssignTruck)).BeginInit();
             this.SuspendLayout();
@@ -259,12 +259,15 @@
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
-            // txtBoxTruckID
+            // buttonDeleteTruck
             // 
-            this.txtBoxTruckID.Location = new System.Drawing.Point(425, 479);
-            this.txtBoxTruckID.Name = "txtBoxTruckID";
-            this.txtBoxTruckID.Size = new System.Drawing.Size(31, 20);
-            this.txtBoxTruckID.TabIndex = 27;
+            this.buttonDeleteTruck.Location = new System.Drawing.Point(593, 516);
+            this.buttonDeleteTruck.Name = "buttonDeleteTruck";
+            this.buttonDeleteTruck.Size = new System.Drawing.Size(68, 26);
+            this.buttonDeleteTruck.TabIndex = 2;
+            this.buttonDeleteTruck.Text = "Eliminar";
+            this.buttonDeleteTruck.UseVisualStyleBackColor = true;
+            this.buttonDeleteTruck.Click += new System.EventHandler(this.buttonDeleteTruck_Click);
             // 
             // label9
             // 
@@ -275,15 +278,12 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "ID de camion:";
             // 
-            // buttonDeleteTruck
+            // txtBoxTruckID
             // 
-            this.buttonDeleteTruck.Location = new System.Drawing.Point(593, 516);
-            this.buttonDeleteTruck.Name = "buttonDeleteTruck";
-            this.buttonDeleteTruck.Size = new System.Drawing.Size(68, 26);
-            this.buttonDeleteTruck.TabIndex = 2;
-            this.buttonDeleteTruck.Text = "Eliminar";
-            this.buttonDeleteTruck.UseVisualStyleBackColor = true;
-            this.buttonDeleteTruck.Click += new System.EventHandler(this.buttonDeleteTruck_Click);
+            this.txtBoxTruckID.Location = new System.Drawing.Point(425, 479);
+            this.txtBoxTruckID.Name = "txtBoxTruckID";
+            this.txtBoxTruckID.Size = new System.Drawing.Size(31, 20);
+            this.txtBoxTruckID.TabIndex = 27;
             // 
             // TruckManagerForm
             // 
@@ -352,8 +352,8 @@
         private System.Windows.Forms.TextBox txtBoxActiveTruck;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button buttonEdit;
-        private System.Windows.Forms.TextBox txtBoxTruckID;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonDeleteTruck;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtBoxTruckID;
     }
 }

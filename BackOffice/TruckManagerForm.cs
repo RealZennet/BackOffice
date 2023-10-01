@@ -50,19 +50,21 @@ namespace BackOffice
 
         private void buttonAddTruck_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtBoxWeightTruck.Text) && 
-                !string.IsNullOrEmpty(txtBoxVolumeTruck.Text) && 
-                !string.IsNullOrEmpty(txtBoxActiveTruck.Text))
+            if (string.IsNullOrWhiteSpace(txtBoxWeightTruck.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxVolumeTruck.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxActiveTruck.Text) ||
+                !int.TryParse(txtBoxWeightTruck.Text, out int weight) ||
+                !int.TryParse(txtBoxVolumeTruck.Text, out int volume) ||
+                !bool.TryParse(txtBoxActiveTruck.Text, out bool isActive))
             {
-                TruckController.Create(Int32.Parse(txtBoxWeightTruck.Text), Int32.Parse(txtBoxVolumeTruck.Text), Convert.ToBoolean(txtBoxActiveTruck.Text));
-                MessageBox.Show("Camion Agregado");
-                RefreshTableTruck();
-                ClearTxtBoxesTruck();
+                MessageBox.Show("Por favor, ingrese valores validos en todos los campos.");
+                return;
             }
-            else
-            {
-                MessageBox.Show("No pueden existir parametros vacios!");
-            }
+
+            TruckController.Create(weight, volume, isActive);
+            MessageBox.Show("Camion Agregado");
+            RefreshTableTruck();
+            ClearTxtBoxesTruck();
         }
 
         private void buttonDeleteTruck_Click(object sender, EventArgs e)
@@ -70,14 +72,25 @@ namespace BackOffice
             if (dataGridViewAddTruck.SelectedRows.Count > 0)
             {
                 int selectedIndex = dataGridViewAddTruck.SelectedRows[0].Index;
-                int id = (int)dataGridViewAddTruck.Rows[selectedIndex].Cells["Lote ID"].Value;
-                DataTable dataTableTruckSelected = (DataTable)dataGridViewAddTruck.DataSource;
-                dataTableTruckSelected.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show("El camion fue eliminado!");
-                TruckController.DeleteTruck(id);
-                dataGridViewAddTruck.DataSource = dataTableTruckSelected;
-                RefreshTableTruck();
+                int id = (int)dataGridViewAddTruck.Rows[selectedIndex].Cells["Camion ID"].Value;
 
+                if (id > 0)
+                {
+                    DataTable dataTableTruckSelected = (DataTable)dataGridViewAddTruck.DataSource;
+                    dataTableTruckSelected.Rows.RemoveAt(selectedIndex);
+                    MessageBox.Show("El camion fue eliminado!");
+                    TruckController.DeleteTruck(id);
+                    dataGridViewAddTruck.DataSource = dataTableTruckSelected;
+                    RefreshTableTruck();
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado un camion válido para eliminar.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado un camion para eliminar.");
             }
         }
 
@@ -111,30 +124,30 @@ namespace BackOffice
             txtBoxIDAssignedTrucker.Clear();
         }
 
-        
-
         private void buttonAddAssignedTruck_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtBoxIDAssignedTruck.Text) ||
-                !string.IsNullOrEmpty(txtBoxIDAssignedTrucker.Text))
+            if (string.IsNullOrWhiteSpace(txtBoxIDAssignedTruck.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxIDAssignedTrucker.Text) ||
+                !int.TryParse(txtBoxIDAssignedTruck.Text, out int truckId) ||
+                !int.TryParse(txtBoxIDAssignedTrucker.Text, out int truckerId))
             {
-                try
-                {
-                    TruckerController.Create(Int32.Parse(txtBoxIDAssignedTruck.Text), Int32.Parse(txtBoxIDAssignedTrucker.Text));
-                    MessageBox.Show("Camion asignado");
-                    RefreshTableTrucker();
-                    ClearTxtBoxesTrucker();
-                }catch(Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-
+                MessageBox.Show("Por favor, ingrese valores válidos en todos los campos.");
+                return;
             }
-            else
+
+            try
             {
-                MessageBox.Show("No pueden existir parametros vacios!");
+                TruckerController.Create(truckId, truckerId);
+                MessageBox.Show("Camion asignado");
+                RefreshTableTrucker();
+                ClearTxtBoxesTrucker();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
+
 
         private void buttonDeleteAssignedTruck_Click(object sender, EventArgs e)
         {
@@ -142,13 +155,24 @@ namespace BackOffice
             {
                 int selectedIndex = dataGridViewAssignTruck.SelectedRows[0].Index;
                 int id = (int)dataGridViewAssignTruck.Rows[selectedIndex].Cells["Conductor ID"].Value;
-                DataTable dataTableTruckerSelected = (DataTable)dataGridViewAssignTruck.DataSource;
-                dataTableTruckerSelected.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show("La asignacion fue eliminada!");
-                TruckerController.DeleteTrucker(id);
-                dataGridViewAssignTruck.DataSource = dataTableTruckerSelected;
-                RefreshTableTrucker();
 
+                if (id > 0)
+                {
+                    DataTable dataTableTruckerSelected = (DataTable)dataGridViewAssignTruck.DataSource;
+                    dataTableTruckerSelected.Rows.RemoveAt(selectedIndex);
+                    MessageBox.Show("La asignacion fue eliminada!");
+                    TruckerController.DeleteTrucker(id);
+                    dataGridViewAssignTruck.DataSource = dataTableTruckerSelected;
+                    RefreshTableTrucker();
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado una asignación válida para eliminar.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado una asignación para eliminar.");
             }
         }
 
