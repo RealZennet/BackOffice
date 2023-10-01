@@ -19,6 +19,8 @@ namespace capa_datos
 
         public void Save()
         {
+            try
+            {
             this.Command.CommandText = $"INSERT INTO producto(peso_producto, bajalogica, volumen_producto, calle, num, esq, cliente) VALUES(" +
                $"{this.ProductWeight}, " +
                $"{this.ActivatedProduct}, " +
@@ -31,6 +33,11 @@ namespace capa_datos
 
             this.Command.CommandText = "SELECT LAST_INSERT_ID()";
             this.IDProduct = Convert.ToInt32(this.Command.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error.");
+            }
         }
 
         public List<ModelProduct> GetAllProducts()

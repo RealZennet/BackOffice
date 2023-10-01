@@ -12,6 +12,9 @@ namespace capa_logica
     {
         public static void Crear(int productweight,  int productvolume, string street, int doornumber, string corner, string customer, bool activeproduct)
         {
+            try
+            {
+
             ModelProduct product = new ModelProduct();
             product.ProductWeight = productweight;
             product.Volume = productvolume;
@@ -20,6 +23,11 @@ namespace capa_logica
             product.Customer = customer;
             product.ActivatedProduct = activeproduct;
             product.Save();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Error");
+            }
         }
 
         public static DataTable Obtener()

@@ -80,10 +80,17 @@ namespace BackOffice
 
         private void addProduct()
         {
+            try
+            {
             ProductController.Crear(Int32.Parse(txtBoxWeight.Text), Int32.Parse(txtBoxVolume.Text), txtBoxStreet.Text, Int32.Parse(txtBoxDoorNumber.Text), txtBoxCorner.Text,txtBoxCustomer.Text, Convert.ToBoolean(Int32.Parse(txtBoxActive.Text)));
             MessageBox.Show("Producto Agregado");
             RefreshTable();
             ClearTxtBoxes();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
