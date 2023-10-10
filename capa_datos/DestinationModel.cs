@@ -10,7 +10,7 @@ namespace capa_datos
     {
         public int IDDestination { get; set; }
         public string StreetDestination { get; set; }
-        public int DoorNumber { get; set; }
+        public string DoorNumber { get; set; }
         public string CornerDestination { get; set; }
         public bool ActivedDestination { get; set; }
 
@@ -18,7 +18,7 @@ namespace capa_datos
         {
             this.Command.CommandText = $"INSERT INTO destino(calle, num, esq, bajalogica) VALUES(" +
                 $"'{this.StreetDestination}'," +
-                $"{this.DoorNumber}," +
+                $"'{this.DoorNumber}'," +
                 $"'{this.CornerDestination}'," +
                 $"{this.ActivedDestination})";
 
@@ -35,7 +35,7 @@ namespace capa_datos
                 DestinationModel destination = new DestinationModel();
                 destination.IDDestination = Int32.Parse(this.Reader["id_des"].ToString());
                 destination.StreetDestination = this.Reader["calle"].ToString();
-                destination.DoorNumber = Int32.Parse(this.Reader["num"].ToString());
+                destination.DoorNumber = this.Reader["num"].ToString();
                 destination.CornerDestination = this.Reader["esq"].ToString();
                 destination.ActivedDestination = Convert.ToBoolean(this.Reader["bajalogica"].ToString());
                 result.Add(destination);

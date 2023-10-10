@@ -11,7 +11,7 @@ namespace capa_logica
     public abstract class DestinationController
     {
 
-        public static void Create(string street, int doornumber, string corner, bool activeddestination)
+        public static void Create(string street, string doornumber, string corner, bool activeddestination)
         {
             DestinationModel destination = new DestinationModel();
             destination.StreetDestination = street;
@@ -28,7 +28,7 @@ namespace capa_logica
             DataTable table = new DataTable();
             table.Columns.Add("ID", typeof(int));
             table.Columns.Add("Calle", typeof(string));
-            table.Columns.Add("Numero Destino", typeof(int));
+            table.Columns.Add("Numero Destino", typeof(string));
             table.Columns.Add("Esquina Destino", typeof(string));
             table.Columns.Add("Activo", typeof(bool));
 
@@ -52,7 +52,7 @@ namespace capa_logica
             destination.Delete();
         }
 
-        public static void EditDestination(int id, string street, int doornumber, string corner, bool activeddestination)
+        public static void EditDestination(int id, string street, string doornumber, string corner, bool activeddestination)
         {
             DestinationModel destination = new DestinationModel();
             destination.IDDestination = id;

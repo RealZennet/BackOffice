@@ -104,7 +104,7 @@
             this.dataGridViewDestinations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDestinations.Location = new System.Drawing.Point(12, 68);
             this.dataGridViewDestinations.Name = "dataGridViewDestinations";
-            this.dataGridViewDestinations.Size = new System.Drawing.Size(733, 228);
+            this.dataGridViewDestinations.Size = new System.Drawing.Size(638, 228);
             this.dataGridViewDestinations.TabIndex = 55;
             // 
             // buttonEditDestination

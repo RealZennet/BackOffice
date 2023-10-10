@@ -65,7 +65,7 @@ namespace BackOffice
             if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
             {
                 int statusValue = selectedStatus == "true" ? 1 : 0;
-                DestinationController.Create(txtBoxDestinationStreet.Text, Int32.Parse(txtBoxDestinationDoorNumber.Text), txtBoxDestinationCorner.Text, Convert.ToBoolean(statusValue));
+                DestinationController.Create(txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, Convert.ToBoolean(statusValue));
                 MessageBox.Show("Destino agregado");
                 RefreshTable();
             }
@@ -120,7 +120,7 @@ namespace BackOffice
                 if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
                 {
                     int statusValue = selectedStatus == "true" ? 1 : 0;
-                    DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, Int32.Parse(txtBoxDestinationDoorNumber.Text), txtBoxDestinationCorner.Text, Convert.ToBoolean(statusValue));
+                    DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, Convert.ToBoolean(statusValue));
                     MessageBox.Show("Datos actualizados.");
                 }
                 else

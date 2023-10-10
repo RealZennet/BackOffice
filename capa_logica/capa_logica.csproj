@@ -81,9 +81,9 @@
     <Compile Include="UserController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\capa_datos\capa_logica.csproj">
+    <ProjectReference Include="..\capa_datos\capa_datos.csproj">
       <Project>{64fd0c0d-ed7b-420c-8e58-99bc18dad43d}</Project>
-      <Name>capa_logica</Name>
+      <Name>capa_datos</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

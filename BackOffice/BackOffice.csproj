@@ -195,13 +195,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\capa_datos\capa_logica.csproj">
+    <ProjectReference Include="..\capa_datos\capa_datos.csproj">
       <Project>{64fd0c0d-ed7b-420c-8e58-99bc18dad43d}</Project>
-      <Name>capa_logica</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\capa_logica\capa_datos.csproj">
-      <Project>{4e0f0dec-6907-4aaa-9910-c68911c55231}</Project>
       <Name>capa_datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\capa_logica\capa_logica.csproj">
+      <Project>{4e0f0dec-6907-4aaa-9910-c68911c55231}</Project>
+      <Name>capa_logica</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
