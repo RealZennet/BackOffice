@@ -13,9 +13,15 @@ namespace capa_datos
 
         public void Save()
         {
+            try
+            {
             this.Command.CommandText = $"INSERT INTO operario (id_operario) VALUES (" +
                 $"'{this.IDOperator}')";
             this.Command.ExecuteNonQuery();
+            }catch(Exception ex)
+            {
+                throw new Exception("Error al guardar");
+            }
         }
 
         public List<AssignTypeOfUserOperatorModel> GetAllOperatorsUsers()
@@ -31,6 +37,7 @@ namespace capa_datos
                 result.Add(user);
             }
             return result;
+            
         }
 
 

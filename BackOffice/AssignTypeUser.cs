@@ -51,32 +51,47 @@ namespace BackOffice
 
         private void addUserTracker()
         {
-            if (int.TryParse(txtBoxUsernameTrucker.Text, out int userId))
+            try
             {
-                AssignTypeOfUserTruckerController.Crear(userId);
-                MessageBox.Show("Usuario asignado a camionero");
-                RefreshTable();
-                ClearTxtBoxes();
-            }
-            else
+
+                if (int.TryParse(txtBoxUsernameTrucker.Text, out int userId))
+                {
+                    AssignTypeOfUserTruckerController.Crear(userId);
+                    MessageBox.Show("Usuario asignado a camionero");
+                    RefreshTable();
+                    ClearTxtBoxes();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese un numero entero valido en el campo de usuario.");
+                }
+            }catch(Exception ex)
             {
-                MessageBox.Show("Por favor, ingrese un numero entero valido en el campo de usuario.");
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void addUserOperator()
         {
-            if (int.TryParse(txtBoxUsernameOperator.Text, out int userId))
+            try
             {
-                AssignTypeOfUserOperatorController.Crear(userId);
-                MessageBox.Show("Usuario asignado a operador");
-                RefreshTable();
-                ClearTxtBoxes();
-            }
-            else
+
+                if (int.TryParse(txtBoxUsernameOperator.Text, out int userId))
+                {
+                    AssignTypeOfUserOperatorController.Crear(userId);
+                    MessageBox.Show("Usuario asignado a operador");
+                    RefreshTable();
+                    ClearTxtBoxes();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese un numero entero valido en el campo de usuario.");
+                }
+            }catch(Exception ex)
             {
-                MessageBox.Show("Por favor, ingrese un numero entero valido en el campo de usuario.");
+                MessageBox.Show(ex.Message);
             }
+
         }
 
 

@@ -13,9 +13,16 @@ namespace capa_logica
 
         public static void Crear(int id)
         {
+            try
+            {
+
             AssignTypeOfUserOperatorModel user = new AssignTypeOfUserOperatorModel();
             user.IDOperator = id;
             user.Save();
+            }catch(Exception ex)
+            {
+                throw new Exception("Error");
+            }
         }
 
         public static DataTable Obtener()
