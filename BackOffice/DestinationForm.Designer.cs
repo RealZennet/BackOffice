@@ -45,6 +45,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerDestinationManagementTime = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerDestinationManagement = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDestinations)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,6 +201,30 @@
             this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
             this.comboBoxStatus.TabIndex = 68;
             // 
+            // dateTimePickerDestinationManagementTime
+            // 
+            this.dateTimePickerDestinationManagementTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerDestinationManagementTime.Location = new System.Drawing.Point(162, 456);
+            this.dateTimePickerDestinationManagementTime.Name = "dateTimePickerDestinationManagementTime";
+            this.dateTimePickerDestinationManagementTime.Size = new System.Drawing.Size(196, 20);
+            this.dateTimePickerDestinationManagementTime.TabIndex = 83;
+            // 
+            // dateTimePickerDestinationManagement
+            // 
+            this.dateTimePickerDestinationManagement.Location = new System.Drawing.Point(160, 427);
+            this.dateTimePickerDestinationManagement.Name = "dateTimePickerDestinationManagement";
+            this.dateTimePickerDestinationManagement.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDestinationManagement.TabIndex = 82;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(159, 399);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.TabIndex = 81;
+            this.label3.Text = "Fecha de salida";
+            // 
             // DestinationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,6 +232,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(757, 520);
             this.ControlBox = false;
+            this.Controls.Add(this.dateTimePickerDestinationManagementTime);
+            this.Controls.Add(this.dateTimePickerDestinationManagement);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.txtBoxIDDestination);
@@ -251,5 +281,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.ComboBox comboBoxStatus;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDestinationManagementTime;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDestinationManagement;
+        private System.Windows.Forms.Label label3;
     }
 }

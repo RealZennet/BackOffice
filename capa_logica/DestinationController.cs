@@ -11,12 +11,13 @@ namespace capa_logica
     public abstract class DestinationController
     {
 
-        public static void Create(string street, string doornumber, string corner, bool activeddestination)
+        public static void Create(string street, string doornumber, string corner, DateTime estimateddate,bool activeddestination)
         {
             DestinationModel destination = new DestinationModel();
             destination.StreetDestination = street;
             destination.DoorNumber= doornumber;
             destination.CornerDestination = corner;
+            destination.EstimatedDate = estimateddate;
             destination.ActivedDestination = activeddestination;
             destination.Save();
         }
@@ -30,6 +31,7 @@ namespace capa_logica
             table.Columns.Add("Calle", typeof(string));
             table.Columns.Add("Numero Destino", typeof(string));
             table.Columns.Add("Esquina Destino", typeof(string));
+            table.Columns.Add("Fecha estimada", typeof(DateTime));
             table.Columns.Add("Activo", typeof(bool));
 
             foreach (DestinationModel destination in destinations)
@@ -39,6 +41,7 @@ namespace capa_logica
                 row["Calle"] = destination.StreetDestination;
                 row["Numero Destino"] = destination.DoorNumber;
                 row["Esquina Destino"] = destination.CornerDestination;
+                row["Fecha estimada"] = destination.EstimatedDate;
                 row["Activo"] = destination.ActivedDestination;
                 table.Rows.Add(row);
             }
@@ -52,7 +55,7 @@ namespace capa_logica
             destination.Delete();
         }
 
-        public static void EditDestination(int id, string street, string doornumber, string corner, bool activeddestination)
+        public static void EditDestination(int id, string street, string doornumber, string corner, DateTime newDateTime,bool activeddestination)
         {
             DestinationModel destination = new DestinationModel();
             destination.IDDestination = id;
@@ -63,6 +66,7 @@ namespace capa_logica
                 destination.StreetDestination = street;
                 destination.DoorNumber = doornumber;
                 destination.CornerDestination = corner;
+                destination.EstimatedDate = newDateTime;
                 destination.ActivedDestination = activeddestination;
                 destination.Edit();
             }

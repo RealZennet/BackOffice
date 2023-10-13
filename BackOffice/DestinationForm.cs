@@ -61,11 +61,14 @@ namespace BackOffice
 
         private void addDestination()
         {
+            DateTime separateddate = dateTimePickerDestinationManagement.Value.Date;
+            DateTime separatedtime = dateTimePickerDestinationManagementTime.Value;
+            DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
             string selectedStatus = comboBoxStatus.SelectedItem as string;
             if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
             {
                 int statusValue = selectedStatus == "true" ? 1 : 0;
-                DestinationController.Create(txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, Convert.ToBoolean(statusValue));
+                DestinationController.Create(txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, dateandtime,Convert.ToBoolean(statusValue));
                 MessageBox.Show("Destino agregado");
                 RefreshTable();
             }
@@ -116,11 +119,14 @@ namespace BackOffice
         {
             try
             {
+                DateTime separateddate = dateTimePickerDestinationManagement.Value.Date;
+                DateTime separatedtime = dateTimePickerDestinationManagementTime.Value;
+                DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
                 string selectedStatus = comboBoxStatus.SelectedItem as string;
                 if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
                 {
                     int statusValue = selectedStatus == "true" ? 1 : 0;
-                    DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, Convert.ToBoolean(statusValue));
+                    DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, dateandtime,Convert.ToBoolean(statusValue));
                     MessageBox.Show("Datos actualizados.");
                 }
                 else
