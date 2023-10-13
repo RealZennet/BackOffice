@@ -18,7 +18,7 @@ namespace BackOffice
             InitializeComponent();
             RefreshTable();
         }
-        // [¡Un lote debe tener productos y se deben poder visualizar?!]
+        
         private void LotsForm_Load(object sender, EventArgs e)
         {
 
@@ -30,24 +30,44 @@ namespace BackOffice
         }
         public void RefreshTable()
         {
-            DataTable dataTableLots = LotesController.Obtener();
+            DataTable dataTableLots = BatchController.Obtener();
             dataGridViewLots.DataSource = dataTableLots;
         }
 
-        public void ClearTxtBoxes()
+        private bool validateUsersInputs()
         {
-            txtBoxLotsAmount.Clear();
+            if (string.IsNullOrWhiteSpace(txtBoxActivedBatch.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxIDShipp.Text))
+            {
+                return false;
+            }
+            return true;
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            LotesController.Crear(Int32.Parse(txtBoxLotsAmount.Text));
+            try
+            {
+            if (validateUsersInputs()) {
+            BatchController.Crear(Convert.ToDateTime(dateTimePickerShippingDate.Text), Int32.Parse(txtBoxIDShipp.Text), Convert.ToBoolean(txtBoxActivedBatch.Text));
             MessageBox.Show("Lote Agregado");
             RefreshTable();
-            ClearTxtBoxes();
+            }
+            MessageBox.Show("Completa los campos");
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            deleteBatch();
+            RefreshTable();
+        }
+
+        private void deleteBatch()
         {
             if (dataGridViewLots.SelectedRows.Count > 0)
             {
@@ -56,9 +76,9 @@ namespace BackOffice
                 DataTable dataTableLots = (DataTable)dataGridViewLots.DataSource;
                 dataTableLots.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El lote fue eliminado!");
-                LotesController.EliminarLote(id);
+                BatchController.EliminarLote(id);
                 dataGridViewLots.DataSource = dataTableLots;
-                RefreshTable();
+                
 
             }
         }

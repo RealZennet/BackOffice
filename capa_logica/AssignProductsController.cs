@@ -5,18 +5,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using capa_datos;
+using MySqlConnector;
 
 namespace capa_logica
 {
     public class AssignProductsController
     {
-        public static void Crear(int IdProduct, int IdLote)
+        public static void Crear(int IdProduct, int IdBatch)
         {
-            AssignProductsModel assignedProduct = new AssignProductsModel();
-            assignedProduct.IDProduct = IdProduct;
-            assignedProduct.IDLote = IdLote;
-            assignedProduct.Save();
+            try
+            {
+                AssignProductsModel assignedProduct = new AssignProductsModel();
+                assignedProduct.IDProduct = IdProduct;
+                assignedProduct.IDBatch = IdBatch;
+                assignedProduct.Save();
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception("Error al crear el producto asignado: " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error desconocido al crear el producto asignado: " + ex.Message, ex);
+            }
         }
+
 
         public static DataTable Obtener()
         {
@@ -29,7 +42,7 @@ namespace capa_logica
             foreach (AssignProductsModel AssignedProducts in lotes)
             {
                 DataRow row = table.NewRow();
-                row["Lote ID"] = AssignedProducts.IDLote;
+                row["Lote ID"] = AssignedProducts.IDBatch;
                 row["Producto ID"] = AssignedProducts.IDProduct;
                 table.Rows.Add(row);
             }
@@ -38,7 +51,7 @@ namespace capa_logica
         public static void DeleteAssignedProduct(int id)
         {
             AssignProductsModel AssignedProduct = new AssignProductsModel();
-            AssignedProduct.IDLote = id; //eliminar producto asignado o lote?
+            AssignedProduct.IDBatch = id; 
             AssignedProduct.Delete();
         }
     }

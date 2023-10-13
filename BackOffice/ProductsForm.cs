@@ -30,16 +30,19 @@ namespace BackOffice
         }
         public void RefreshTable()
         {
-            DataTable dataTableProducts = ProductosController.Obtener();
+            DataTable dataTableProducts = ProductController.Obtener();
             dataGridViewProducts.DataSource = dataTableProducts;
         }
 
         public void ClearTxtBoxes()
         {
-            txtBoxName.Clear();
-            txtBoxAmount.Clear();
-            txtBoxDescription.Clear();
+            txtBoxActive.Clear();
+            txtBoxCustomer.Clear();
             txtBoxWeight.Clear();
+            txtBoxCorner.Clear();
+            txtBoxStreet.Clear();
+            txtBoxVolume.Clear();
+
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
@@ -47,15 +50,55 @@ namespace BackOffice
             RefreshTable();
         }
 
+        private bool ValidateInputsUser()
+        {
+
+            if (string.IsNullOrWhiteSpace(txtBoxCustomer.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxWeight.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxCustomer.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxActive.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxCorner.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxStreet.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxVolume.Text))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+
         private void buttonAddProduct_Click(object sender, EventArgs e)
         {
-            ProductosController.Crear(txtBoxName.Text, Int32.Parse(txtBoxAmount.Text), Int32.Parse(txtBoxAmount.Text), txtBoxDescription.Text);
+            if (!ValidateInputsUser())
+            {
+                MessageBox.Show("Porfavor complete los campos correspondientes");
+                return;
+            }
+            addProduct();
+        }
+
+        private void addProduct()
+        {
+            try
+            {
+            ProductController.Crear(Int32.Parse(txtBoxWeight.Text), Int32.Parse(txtBoxVolume.Text), txtBoxStreet.Text, Int32.Parse(txtBoxDoorNumber.Text), txtBoxCorner.Text,txtBoxCustomer.Text, Convert.ToBoolean(Int32.Parse(txtBoxActive.Text)));
             MessageBox.Show("Producto Agregado");
             RefreshTable();
             ClearTxtBoxes();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            deleteProduct();
+        }
+
+        private void deleteProduct()
         {
             if (dataGridViewProducts.SelectedRows.Count > 0)
             {
@@ -65,11 +108,16 @@ namespace BackOffice
                 dataTableProducts.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show("El producto fue eliminado!");
 
-                ProductosController.EliminarProducto(id);
+                ProductController.EliminarProducto(id);
                 dataGridViewProducts.DataSource = dataTableProducts;
                 RefreshTable();
 
             }
+        }
+
+        private void dataGridViewProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

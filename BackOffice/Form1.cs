@@ -12,15 +12,13 @@ namespace BackOffice
 {
     public partial class QuickCarry : Form
     {
-
-
+                            
         public QuickCarry()
         {
             InitializeComponent();
             customMenus();
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
         }
-
-        //Variables para controlar la posicion del slide
         public int m, x, y;
         
 
@@ -33,7 +31,6 @@ namespace BackOffice
         {
             managementPanel.Visible = false;
             productsAndLotsPanel.Visible = false;
-           
         }
 
         private void hideMenus()
@@ -61,47 +58,10 @@ namespace BackOffice
             }
         }
         #endregion
-        #region topButtons
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void SlidePanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            m = 1;
-            x = e.X;
-            y = e.Y;
-        }
-
-        private void buttonMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void buttonMaximize_Click(object sender, EventArgs e)
-        {
-
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-
-        }
-        #endregion
         #region leftButtonsAndPanel
         private void buttonProducts_Click(object sender, EventArgs e)
         {
             showMenus(productsAndLotsPanel);
-        }
-
-        private void buttonUsers_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void buttonManagement_Click(object sender, EventArgs e)
@@ -153,10 +113,85 @@ namespace BackOffice
             formAssignProductCtl.Show();
         }
 
+        private void showUsers()
+        {
+            UsersForms formUsersCtl = new UsersForms();
+            formUsersCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formUsersCtl);
+            formUsersCtl.FormBorderStyle = FormBorderStyle.None;
+            formUsersCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formUsersCtl;
+            formUsersCtl.BringToFront();
+            formUsersCtl.Show();
+        }
+        private void showTruckManager()
+        {
+            TruckManagerForm formTruckCtl = new TruckManagerForm();
+            formTruckCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formTruckCtl);
+            formTruckCtl.FormBorderStyle = FormBorderStyle.None;
+            formTruckCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formTruckCtl;
+            formTruckCtl.BringToFront();
+            formTruckCtl.Show();
+
+        }
+
+        private void showUserTypeAssign()
+        {
+            AssignTypeUser formTruckCtl = new AssignTypeUser();
+            formTruckCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formTruckCtl);
+            formTruckCtl.FormBorderStyle = FormBorderStyle.None;
+            formTruckCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formTruckCtl;
+            formTruckCtl.BringToFront();
+            formTruckCtl.Show();
+
+        }
+
         private void buttonAssignProducts_Click(object sender, EventArgs e)
         {
             showAssignedProducts();
         }
+
+        private void panelFormsLoader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonUsersManager_Click(object sender, EventArgs e)
+        {
+            showUsers();
+        }
+
+        private void buttonTrucksManager_Click(object sender, EventArgs e)
+        {
+            showTruckManager();
+        }
+
+        private void buttonUsersAssign_Click(object sender, EventArgs e)
+        {
+            showUserTypeAssign();
+        }
+
+        private void ButtonStoreHouseManagement_Click(object sender, EventArgs e)
+        {
+            showStoreHouseManagementForm();
+        }
+
+        private void showStoreHouseManagementForm()
+        {
+            StoreHouse formStoreHouseCtl = new StoreHouse();
+            formStoreHouseCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formStoreHouseCtl);
+            formStoreHouseCtl.FormBorderStyle = FormBorderStyle.None;
+            formStoreHouseCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formStoreHouseCtl;
+            formStoreHouseCtl.BringToFront();
+            formStoreHouseCtl.Show();
+        }
+
         #endregion
 
         #region LotsButton
@@ -178,5 +213,60 @@ namespace BackOffice
         }
 
         #endregion
+
+        private void showShippingManagerForm()
+        {
+            ShippingManagementForm formShippingManagerCtl = new ShippingManagementForm();
+            formShippingManagerCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formShippingManagerCtl);
+            formShippingManagerCtl.FormBorderStyle = FormBorderStyle.None;
+            formShippingManagerCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formShippingManagerCtl;
+            formShippingManagerCtl.BringToFront();
+            formShippingManagerCtl.Show();
+        }
+
+        private void buttonShippingManager_Click(object sender, EventArgs e)
+        {
+            showShippingManagerForm();
+        }
+
+        private void showTravelManagerForm()
+        {
+            TravelManagerForm formTravelManagerCtl = new TravelManagerForm();
+            formTravelManagerCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formTravelManagerCtl);
+            formTravelManagerCtl.FormBorderStyle = FormBorderStyle.None;
+            formTravelManagerCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formTravelManagerCtl;
+            formTravelManagerCtl.BringToFront();
+            formTravelManagerCtl.Show();
+        }
+
+        private void buttonTravelManager_Click(object sender, EventArgs e)
+        {
+            showTravelManagerForm();
+        }
+
+        #region destinationmanager
+
+        private void showDestinationManagerForm()
+        {
+            DestinationForm forDestinationManagerCtl = new DestinationForm();
+            forDestinationManagerCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(forDestinationManagerCtl);
+            forDestinationManagerCtl.FormBorderStyle = FormBorderStyle.None;
+            forDestinationManagerCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = forDestinationManagerCtl;
+            forDestinationManagerCtl.BringToFront();
+            forDestinationManagerCtl.Show();
+        }
+
+        private void buttonDestinationManager_Click(object sender, EventArgs e)
+        {
+            showDestinationManagerForm();
+        }
+
+        #endregion destinationmanagaer
     }
 }

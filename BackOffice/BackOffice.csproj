@@ -75,6 +75,18 @@
     <Compile Include="AssignProductsForm.Designer.cs">
       <DependentUpon>AssignProductsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssignTypeUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignTypeUser.Designer.cs">
+      <DependentUpon>AssignTypeUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DestinationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DestinationForm.Designer.cs">
+      <DependentUpon>DestinationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,14 +107,44 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserManagerForm.cs">
+    <Compile Include="ShippingManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserManagerForm.Designer.cs">
-      <DependentUpon>UserManagerForm.cs</DependentUpon>
+    <Compile Include="ShippingManagementForm.Designer.cs">
+      <DependentUpon>ShippingManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreHouse.Designer.cs">
+      <DependentUpon>StoreHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TravelManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravelManagerForm.Designer.cs">
+      <DependentUpon>TravelManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruckManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruckManagerForm.Designer.cs">
+      <DependentUpon>TruckManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersForms.Designer.cs">
+      <DependentUpon>UsersForms.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AssignProductsForm.resx">
       <DependentUpon>AssignProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignTypeUser.resx">
+      <DependentUpon>AssignTypeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DestinationForm.resx">
+      <DependentUpon>DestinationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -123,8 +165,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserManagerForm.resx">
-      <DependentUpon>UserManagerForm.cs</DependentUpon>
+    <EmbeddedResource Include="ShippingManagementForm.resx">
+      <DependentUpon>ShippingManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreHouse.resx">
+      <DependentUpon>StoreHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TravelManagerForm.resx">
+      <DependentUpon>TravelManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruckManagerForm.resx">
+      <DependentUpon>TruckManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersForms.resx">
+      <DependentUpon>UsersForms.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

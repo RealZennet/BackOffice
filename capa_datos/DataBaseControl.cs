@@ -24,7 +24,7 @@ namespace capa_datos
             this.dbip = "localhost";
             this.dbUser = "root";
             this.dbPassword = "zackquack";
-            this.dbDatabaseName = "quickcarry";
+            this.dbDatabaseName = "quickcarryapitesting";
 
             this.Connection = new MySqlConnection(
                 $"server={this.dbip};" +
