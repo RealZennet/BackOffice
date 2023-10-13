@@ -10,13 +10,14 @@ namespace capa_logica
 {
     public static class BatchController
     {
-        public static void Crear(DateTime ShippingDate, int idshipp, bool activedbatch)
+        public static void Crear(string email, DateTime ShippingDate, int idshipp, bool activedbatch)
         {
             try
             {
 
             DateTime DateCreation = DateTime.Now;
             ModelBatch lote = new ModelBatch();
+            lote.Email = email;
             lote.ShippingDate = ShippingDate;
             lote.DateOfCreation = DateCreation;
             lote.IDShipp = idshipp;
@@ -25,7 +26,7 @@ namespace capa_logica
             }
             catch(Exception ex)
             {
-                throw new Exception("Error");
+                throw new Exception(ex.Message);
             }
         }
 
@@ -35,6 +36,7 @@ namespace capa_logica
             List<ModelBatch> lotes = LotsTableModel.GetAllLots();
             DataTable table = new DataTable();
             table.Columns.Add("id", typeof(int));
+            table.Columns.Add("Email", typeof(string));
             table.Columns.Add("Fecha de creacion", typeof(DateTime));
             table.Columns.Add("Fecha de envio", typeof(DateTime));
             table.Columns.Add("ID Envio", typeof(int));
@@ -44,6 +46,7 @@ namespace capa_logica
             {
                 DataRow row = table.NewRow();
                 row["id"] = lote.IDBatch;
+                row["Email"] = lote.Email;
                 row["Fecha de creacion"] = lote.DateOfCreation;
                 row["Fecha de envio"] = lote.ShippingDate;
                 row["ID Envio"] = lote.IDShipp;
