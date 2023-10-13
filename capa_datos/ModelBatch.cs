@@ -20,7 +20,7 @@ namespace capa_datos
             try {
             this.Command.CommandText = $"INSERT INTO lote (fech_Crea, fech_Entre, id_Des, bajalogica) VALUES " +
                 $"('{this.DateOfCreation.ToString("yyyy-MM-dd")}', " +
-                $"'{this.ShippingDate.ToString("yyyy-MM-dd")}'," +
+                $"'{this.ShippingDate.ToString("yyyy-MM-dd HH:mm:ss")}'," +
                 $"{this.IDShipp}," +
                 $"{this.ActivedBatch})";
             this.Command.ExecuteNonQuery();

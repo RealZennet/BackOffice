@@ -9,7 +9,6 @@ namespace capa_datos
 {
     public abstract class DataBaseControl
     {
-        //Conexion DB - > Para mas seguridad pasar a json y deserializar ese json en esta clase para despues conectar la db
         public string dbip;
         public string dbUser;
         public string dbPassword;
@@ -24,7 +23,7 @@ namespace capa_datos
             this.dbip = "localhost";
             this.dbUser = "root";
             this.dbPassword = "zackquack";
-            this.dbDatabaseName = "quickcarryapitesting";
+            this.dbDatabaseName = "quickCarryDB";
 
             this.Connection = new MySqlConnection(
                 $"server={this.dbip};" +

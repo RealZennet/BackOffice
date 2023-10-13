@@ -53,6 +53,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtBoxIDDestinationCarrie = new System.Windows.Forms.TextBox();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerShippManagementTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShippingManagement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarry)).BeginInit();
             this.SuspendLayout();
@@ -281,12 +282,21 @@
             this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
             this.comboBoxStatus.TabIndex = 79;
             // 
+            // dateTimePickerShippManagementTime
+            // 
+            this.dateTimePickerShippManagementTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerShippManagementTime.Location = new System.Drawing.Point(15, 460);
+            this.dateTimePickerShippManagementTime.Name = "dateTimePickerShippManagementTime";
+            this.dateTimePickerShippManagementTime.Size = new System.Drawing.Size(196, 20);
+            this.dateTimePickerShippManagementTime.TabIndex = 80;
+            // 
             // ShippingManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
+            this.Controls.Add(this.dateTimePickerShippManagementTime);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtBoxIDDestinationCarrie);
@@ -350,5 +360,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtBoxIDDestinationCarrie;
         private System.Windows.Forms.ComboBox comboBoxStatus;
+        private System.Windows.Forms.DateTimePicker dateTimePickerShippManagementTime;
     }
 }
