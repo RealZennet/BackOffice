@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBoxActivedBatch = new System.Windows.Forms.TextBox();
+            this.dateTimePickerBatchManagementTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLots)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,12 +159,21 @@
             this.txtBoxActivedBatch.Size = new System.Drawing.Size(50, 20);
             this.txtBoxActivedBatch.TabIndex = 11;
             // 
+            // dateTimePickerBatchManagementTime
+            // 
+            this.dateTimePickerBatchManagementTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerBatchManagementTime.Location = new System.Drawing.Point(530, 126);
+            this.dateTimePickerBatchManagementTime.Name = "dateTimePickerBatchManagementTime";
+            this.dateTimePickerBatchManagementTime.Size = new System.Drawing.Size(196, 20);
+            this.dateTimePickerBatchManagementTime.TabIndex = 84;
+            // 
             // LotsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
+            this.Controls.Add(this.dateTimePickerBatchManagementTime);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBoxActivedBatch);
             this.Controls.Add(this.label3);
@@ -200,5 +210,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBoxActivedBatch;
+        private System.Windows.Forms.DateTimePicker dateTimePickerBatchManagementTime;
     }
 }
