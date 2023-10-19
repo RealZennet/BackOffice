@@ -9,18 +9,14 @@ namespace capa_datos
     public class DestinationModel : DataBaseControl
     {
         public int IDDestination { get; set; }
-        public string StreetDestination { get; set; }
-        public string DoorNumber { get; set; }
-        public string CornerDestination { get; set; }
+        public string DestinationLink { get; set; }
         public DateTime EstimatedDate { get; set; }
         public bool ActivedDestination { get; set; }
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO destino(calle, num, esq, fech_esti,bajalogica) VALUES(" +
-                $"'{this.StreetDestination}'," +
-                $"'{this.DoorNumber}'," +
-                $"'{this.CornerDestination}'," +
+            this.Command.CommandText = $"INSERT INTO destino(link_des, num, esq, fech_esti,bajalogica) VALUES(" +
+                $"'{this.DestinationLink}'," +
                 $"'{this.EstimatedDate.ToString("yyyy-MM-dd HH:mm:ss")}'," +
                 $"{this.ActivedDestination})";
 
@@ -36,9 +32,7 @@ namespace capa_datos
             {
                 DestinationModel destination = new DestinationModel();
                 destination.IDDestination = Int32.Parse(this.Reader["id_des"].ToString());
-                destination.StreetDestination = this.Reader["calle"].ToString();
-                destination.DoorNumber = this.Reader["num"].ToString();
-                destination.CornerDestination = this.Reader["esq"].ToString();
+                destination.DestinationLink = this.Reader["link_des"].ToString();
                 destination.EstimatedDate = Convert.ToDateTime(this.Reader["fech_esti"].ToString());
                 destination.ActivedDestination = Convert.ToBoolean(this.Reader["bajalogica"].ToString());
                 result.Add(destination);
@@ -76,9 +70,7 @@ namespace capa_datos
             if (destinationExists == true)
             {
                 this.Command.CommandText = $"UPDATE destino SET " +
-                    $"calle = '{this.StreetDestination}', " +
-                    $"num = {this.DoorNumber}," +
-                    $"esq = '{this.CornerDestination}'," +
+                    $"link_des = '{this.DestinationLink}', " +
                     $"bajalogica = {this.ActivedDestination} " +
                     $"fech_esti = '{this.EstimatedDate}' " +
                     $"WHERE id_des = {this.IDDestination}";
