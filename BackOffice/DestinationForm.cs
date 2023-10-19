@@ -40,18 +40,14 @@ namespace BackOffice
 
         public void AddStoreHouse()
         {
-            txtBoxDestinationStreet.Clear();
-            txtBoxDestinationDoorNumber.Clear();
-            txtBoxDestinationCorner.Clear();
+            txtBoxDestination.Clear();
             txtBoxIDDestination.Clear();
         }
 
         private bool ValidateInputsUser()
         {
 
-            if (string.IsNullOrWhiteSpace(txtBoxDestinationStreet.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxDestinationDoorNumber.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxDestinationCorner.Text))
+            if (string.IsNullOrWhiteSpace(txtBoxDestination.Text))
             {
                 return false;
             }
@@ -68,7 +64,7 @@ namespace BackOffice
             if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
             {
                 int statusValue = selectedStatus == "true" ? 1 : 0;
-                DestinationController.Create(txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, dateandtime,Convert.ToBoolean(statusValue));
+                DestinationController.Create(txtBoxDestination.Text, dateandtime,Convert.ToBoolean(statusValue));
                 MessageBox.Show("Destino agregado");
                 RefreshTable();
             }
@@ -126,7 +122,7 @@ namespace BackOffice
                 if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
                 {
                     int statusValue = selectedStatus == "true" ? 1 : 0;
-                    DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, dateandtime,Convert.ToBoolean(statusValue));
+                    DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestination.Text, dateandtime,Convert.ToBoolean(statusValue));
                     MessageBox.Show("Datos actualizados.");
                 }
                 else
