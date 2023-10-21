@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
-            this.txtBoxDestination = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewDestinations = new System.Windows.Forms.DataGridView();
             this.buttonEditDestination = new System.Windows.Forms.Button();
             this.buttonRefreshDestination = new System.Windows.Forms.Button();
@@ -44,7 +42,13 @@
             this.dateTimePickerDestinationManagementTime = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDestinationManagement = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.webBrowserDestination = new System.Windows.Forms.WebBrowser();
+            this.webBrowser = new System.Windows.Forms.WebBrowser();
+            this.txtBoxDestinationStreet = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBoxDestinationCorner = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBoxDestinationDoorNumber = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDestinations)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,22 +61,6 @@
             this.label7.TabIndex = 63;
             this.label7.Text = "Activo";
             // 
-            // txtBoxDestination
-            // 
-            this.txtBoxDestination.Location = new System.Drawing.Point(13, 331);
-            this.txtBoxDestination.Name = "txtBoxDestination";
-            this.txtBoxDestination.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxDestination.TabIndex = 58;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 315);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
-            this.label4.TabIndex = 57;
-            this.label4.Text = "Url Destino";
-            // 
             // dataGridViewDestinations
             // 
             this.dataGridViewDestinations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
@@ -81,6 +69,8 @@
             this.dataGridViewDestinations.Name = "dataGridViewDestinations";
             this.dataGridViewDestinations.Size = new System.Drawing.Size(408, 228);
             this.dataGridViewDestinations.TabIndex = 55;
+            this.dataGridViewDestinations.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDestinations_CellClick);
+            this.dataGridViewDestinations.SelectionChanged += new System.EventHandler(this.dataGridViewDestinations_SelectionChanged);
             // 
             // buttonEditDestination
             // 
@@ -169,14 +159,14 @@
             // dateTimePickerDestinationManagementTime
             // 
             this.dateTimePickerDestinationManagementTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerDestinationManagementTime.Location = new System.Drawing.Point(15, 420);
+            this.dateTimePickerDestinationManagementTime.Location = new System.Drawing.Point(206, 365);
             this.dateTimePickerDestinationManagementTime.Name = "dateTimePickerDestinationManagementTime";
             this.dateTimePickerDestinationManagementTime.Size = new System.Drawing.Size(196, 20);
             this.dateTimePickerDestinationManagementTime.TabIndex = 83;
             // 
             // dateTimePickerDestinationManagement
             // 
-            this.dateTimePickerDestinationManagement.Location = new System.Drawing.Point(13, 391);
+            this.dateTimePickerDestinationManagement.Location = new System.Drawing.Point(204, 336);
             this.dateTimePickerDestinationManagement.Name = "dateTimePickerDestinationManagement";
             this.dateTimePickerDestinationManagement.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerDestinationManagement.TabIndex = 82;
@@ -184,20 +174,68 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 363);
+            this.label3.Location = new System.Drawing.Point(203, 308);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 81;
             this.label3.Text = "Fecha de salida";
             // 
-            // webBrowserDestination
+            // webBrowser
             // 
-            this.webBrowserDestination.Location = new System.Drawing.Point(427, 68);
-            this.webBrowserDestination.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowserDestination.Name = "webBrowserDestination";
-            this.webBrowserDestination.Size = new System.Drawing.Size(318, 228);
-            this.webBrowserDestination.TabIndex = 84;
-            this.webBrowserDestination.Url = new System.Uri("https://www.openstreetmap.org", System.UriKind.Absolute);
+            this.webBrowser.Location = new System.Drawing.Point(427, 68);
+            this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser.Name = "webBrowser";
+            this.webBrowser.Size = new System.Drawing.Size(318, 228);
+            this.webBrowser.TabIndex = 84;
+            this.webBrowser.Url = new System.Uri("https://www.bing.com/maps", System.UriKind.Absolute);
+            // 
+            // txtBoxDestinationStreet
+            // 
+            this.txtBoxDestinationStreet.Location = new System.Drawing.Point(13, 331);
+            this.txtBoxDestinationStreet.Name = "txtBoxDestinationStreet";
+            this.txtBoxDestinationStreet.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxDestinationStreet.TabIndex = 58;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 315);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "Calle";
+            // 
+            // txtBoxDestinationCorner
+            // 
+            this.txtBoxDestinationCorner.Location = new System.Drawing.Point(12, 368);
+            this.txtBoxDestinationCorner.Name = "txtBoxDestinationCorner";
+            this.txtBoxDestinationCorner.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxDestinationCorner.TabIndex = 86;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 352);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 85;
+            this.label5.Text = "Esquina";
+            // 
+            // txtBoxDestinationDoorNumber
+            // 
+            this.txtBoxDestinationDoorNumber.Location = new System.Drawing.Point(12, 410);
+            this.txtBoxDestinationDoorNumber.Name = "txtBoxDestinationDoorNumber";
+            this.txtBoxDestinationDoorNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxDestinationDoorNumber.TabIndex = 88;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(11, 394);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 87;
+            this.label6.Text = "Numero";
             // 
             // DestinationForm
             // 
@@ -206,7 +244,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(757, 520);
             this.ControlBox = false;
-            this.Controls.Add(this.webBrowserDestination);
+            this.Controls.Add(this.txtBoxDestinationDoorNumber);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtBoxDestinationCorner);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.webBrowser);
             this.Controls.Add(this.dateTimePickerDestinationManagementTime);
             this.Controls.Add(this.dateTimePickerDestinationManagement);
             this.Controls.Add(this.label3);
@@ -215,7 +257,7 @@
             this.Controls.Add(this.txtBoxIDDestination);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtBoxDestination);
+            this.Controls.Add(this.txtBoxDestinationStreet);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridViewDestinations);
             this.Controls.Add(this.buttonEditDestination);
@@ -236,8 +278,6 @@
         #endregion
 
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtBoxDestination;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridViewDestinations;
         private System.Windows.Forms.Button buttonEditDestination;
         private System.Windows.Forms.Button buttonRefreshDestination;
@@ -251,6 +291,12 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerDestinationManagementTime;
         private System.Windows.Forms.DateTimePicker dateTimePickerDestinationManagement;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.WebBrowser webBrowserDestination;
+        private System.Windows.Forms.WebBrowser webBrowser;
+        private System.Windows.Forms.TextBox txtBoxDestinationStreet;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtBoxDestinationCorner;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtBoxDestinationDoorNumber;
+        private System.Windows.Forms.Label label6;
     }
 }

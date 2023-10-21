@@ -1,18 +1,13 @@
 ﻿using capa_logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BackOffice
 {
     public partial class DestinationForm : Form
     {
+
         public DestinationForm()
         {
             InitializeComponent();
@@ -40,14 +35,14 @@ namespace BackOffice
 
         public void AddStoreHouse()
         {
-            txtBoxDestination.Clear();
+            txtBoxDestinationStreet.Clear();
             txtBoxIDDestination.Clear();
         }
 
         private bool ValidateInputsUser()
         {
 
-            if (string.IsNullOrWhiteSpace(txtBoxDestination.Text))
+            if (string.IsNullOrWhiteSpace(txtBoxDestinationStreet.Text))
             {
                 return false;
             }
@@ -64,7 +59,7 @@ namespace BackOffice
             if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
             {
                 int statusValue = selectedStatus == "true" ? 1 : 0;
-                DestinationController.Create(txtBoxDestination.Text, dateandtime,Convert.ToBoolean(statusValue));
+                DestinationController.Create(txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, dateandtime, Convert.ToBoolean(statusValue));
                 MessageBox.Show("Destino agregado");
                 RefreshTable();
             }
@@ -122,7 +117,7 @@ namespace BackOffice
                 if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
                 {
                     int statusValue = selectedStatus == "true" ? 1 : 0;
-                    DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestination.Text, dateandtime,Convert.ToBoolean(statusValue));
+                    DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, dateandtime, Convert.ToBoolean(statusValue));
                     MessageBox.Show("Datos actualizados.");
                 }
                 else
@@ -142,5 +137,16 @@ namespace BackOffice
         {
             edit();
         }
+
+        private void dataGridViewDestinations_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewDestinations_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
