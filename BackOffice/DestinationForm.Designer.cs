@@ -42,13 +42,13 @@
             this.dateTimePickerDestinationManagementTime = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDestinationManagement = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.txtBoxDestinationStreet = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBoxDestinationCorner = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtBoxDestinationDoorNumber = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.buttonShowMap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDestinations)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +67,7 @@
             this.dataGridViewDestinations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDestinations.Location = new System.Drawing.Point(12, 68);
             this.dataGridViewDestinations.Name = "dataGridViewDestinations";
-            this.dataGridViewDestinations.Size = new System.Drawing.Size(408, 228);
+            this.dataGridViewDestinations.Size = new System.Drawing.Size(722, 228);
             this.dataGridViewDestinations.TabIndex = 55;
             this.dataGridViewDestinations.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDestinations_CellClick);
             this.dataGridViewDestinations.SelectionChanged += new System.EventHandler(this.dataGridViewDestinations_SelectionChanged);
@@ -180,15 +180,6 @@
             this.label3.TabIndex = 81;
             this.label3.Text = "Fecha de salida";
             // 
-            // webBrowser
-            // 
-            this.webBrowser.Location = new System.Drawing.Point(427, 68);
-            this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(318, 228);
-            this.webBrowser.TabIndex = 84;
-            this.webBrowser.Url = new System.Uri("https://www.bing.com/maps", System.UriKind.Absolute);
-            // 
             // txtBoxDestinationStreet
             // 
             this.txtBoxDestinationStreet.Location = new System.Drawing.Point(13, 331);
@@ -237,6 +228,16 @@
             this.label6.TabIndex = 87;
             this.label6.Text = "Numero";
             // 
+            // buttonShowMap
+            // 
+            this.buttonShowMap.Location = new System.Drawing.Point(234, 485);
+            this.buttonShowMap.Name = "buttonShowMap";
+            this.buttonShowMap.Size = new System.Drawing.Size(68, 26);
+            this.buttonShowMap.TabIndex = 89;
+            this.buttonShowMap.Text = "Ver Mapa";
+            this.buttonShowMap.UseVisualStyleBackColor = true;
+            this.buttonShowMap.Click += new System.EventHandler(this.buttonShowMap_Click);
+            // 
             // DestinationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,11 +245,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(757, 520);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonShowMap);
             this.Controls.Add(this.txtBoxDestinationDoorNumber);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBoxDestinationCorner);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.webBrowser);
             this.Controls.Add(this.dateTimePickerDestinationManagementTime);
             this.Controls.Add(this.dateTimePickerDestinationManagement);
             this.Controls.Add(this.label3);
@@ -291,12 +292,12 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerDestinationManagementTime;
         private System.Windows.Forms.DateTimePicker dateTimePickerDestinationManagement;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.WebBrowser webBrowser;
         private System.Windows.Forms.TextBox txtBoxDestinationStreet;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBoxDestinationCorner;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtBoxDestinationDoorNumber;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonShowMap;
     }
 }

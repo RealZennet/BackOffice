@@ -127,6 +127,12 @@
     <Compile Include="LotsForm.Designer.cs">
       <DependentUpon>LotsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapForm.Designer.cs">
+      <DependentUpon>MapForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LotsForm.resx">
       <DependentUpon>LotsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapForm.resx">
+      <DependentUpon>MapForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductsForm.resx">
       <DependentUpon>ProductsForm.cs</DependentUpon>

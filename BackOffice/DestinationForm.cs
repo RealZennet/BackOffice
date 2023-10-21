@@ -148,5 +148,10 @@ namespace BackOffice
 
         }
 
+        private void buttonShowMap_Click(object sender, EventArgs e)
+        {
+            MapForm viewMap = new MapForm();
+            viewMap.Show();
+        }
     }
 }
