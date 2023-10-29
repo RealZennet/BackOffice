@@ -37,7 +37,8 @@ namespace BackOffice
         private bool validateUsersInputs()
         {
             if (string.IsNullOrWhiteSpace(txtBoxActivedBatch.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxIDShipp.Text))
+                string.IsNullOrWhiteSpace(txtBoxIDShipp.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxEmail.Text))
             {
                 return false;
             }
@@ -49,11 +50,18 @@ namespace BackOffice
             try
             {
             if (validateUsersInputs()) {
-            BatchController.Crear(Convert.ToDateTime(dateTimePickerShippingDate.Text), Int32.Parse(txtBoxIDShipp.Text), Convert.ToBoolean(txtBoxActivedBatch.Text));
-            MessageBox.Show("Lote Agregado");
-            RefreshTable();
-            }
-            MessageBox.Show("Completa los campos");
+                DateTime separateddate = dateTimePickerShippingDate.Value.Date;
+                DateTime separatedtime = dateTimePickerBatchManagementTime.Value;
+                DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
+                BatchController.Crear(txtBoxEmail.Text.ToString(), dateandtime, Int32.Parse(txtBoxIDShipp.Text), Convert.ToBoolean(txtBoxActivedBatch.Text));
+                MessageBox.Show("Lote Agregado");
+                RefreshTable();
+                }
+                else
+                {
+                    MessageBox.Show("Completa los campos");
+                }
+            
             }catch(Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);

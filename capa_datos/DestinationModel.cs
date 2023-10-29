@@ -12,15 +12,17 @@ namespace capa_datos
         public string StreetDestination { get; set; }
         public string DoorNumber { get; set; }
         public string CornerDestination { get; set; }
+        public DateTime EstimatedDate { get; set; }
         public bool ActivedDestination { get; set; }
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO destino(calle, num, esq, bajalogica) VALUES(" +
-                $"'{this.StreetDestination}'," +
-                $"'{this.DoorNumber}'," +
-                $"'{this.CornerDestination}'," +
-                $"{this.ActivedDestination})";
+            this.Command.CommandText = $"INSERT INTO destino(calle, num, esq, fech_esti,bajalogica) VALUES(" +
+                 $"'{this.StreetDestination}'," +
+                 $"'{this.DoorNumber}'," +
+                 $"'{this.CornerDestination}'," +
+                 $"'{this.EstimatedDate.ToString("yyyy-MM-dd HH:mm:ss")}'," +
+                 $"{this.ActivedDestination})";
 
             this.Command.ExecuteNonQuery();
         }
@@ -37,6 +39,7 @@ namespace capa_datos
                 destination.StreetDestination = this.Reader["calle"].ToString();
                 destination.DoorNumber = this.Reader["num"].ToString();
                 destination.CornerDestination = this.Reader["esq"].ToString();
+                destination.EstimatedDate = Convert.ToDateTime(this.Reader["fech_esti"].ToString());
                 destination.ActivedDestination = Convert.ToBoolean(this.Reader["bajalogica"].ToString());
                 result.Add(destination);
             }
@@ -77,6 +80,7 @@ namespace capa_datos
                     $"num = {this.DoorNumber}," +
                     $"esq = '{this.CornerDestination}'," +
                     $"bajalogica = {this.ActivedDestination} " +
+                    $"fech_esti = '{this.EstimatedDate}' " +
                     $"WHERE id_des = {this.IDDestination}";
                 this.Command.ExecuteNonQuery();
             }

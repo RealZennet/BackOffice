@@ -1,18 +1,13 @@
 ﻿using capa_logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BackOffice
 {
     public partial class DestinationForm : Form
     {
+
         public DestinationForm()
         {
             InitializeComponent();
@@ -41,17 +36,13 @@ namespace BackOffice
         public void AddStoreHouse()
         {
             txtBoxDestinationStreet.Clear();
-            txtBoxDestinationDoorNumber.Clear();
-            txtBoxDestinationCorner.Clear();
             txtBoxIDDestination.Clear();
         }
 
         private bool ValidateInputsUser()
         {
 
-            if (string.IsNullOrWhiteSpace(txtBoxDestinationStreet.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxDestinationDoorNumber.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxDestinationCorner.Text))
+            if (string.IsNullOrWhiteSpace(txtBoxDestinationStreet.Text))
             {
                 return false;
             }
@@ -61,11 +52,14 @@ namespace BackOffice
 
         private void addDestination()
         {
+            DateTime separateddate = dateTimePickerDestinationManagement.Value.Date;
+            DateTime separatedtime = dateTimePickerDestinationManagementTime.Value;
+            DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
             string selectedStatus = comboBoxStatus.SelectedItem as string;
             if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
             {
                 int statusValue = selectedStatus == "true" ? 1 : 0;
-                DestinationController.Create(txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, Convert.ToBoolean(statusValue));
+                DestinationController.Create(txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, dateandtime, Convert.ToBoolean(statusValue));
                 MessageBox.Show("Destino agregado");
                 RefreshTable();
             }
@@ -116,11 +110,14 @@ namespace BackOffice
         {
             try
             {
+                DateTime separateddate = dateTimePickerDestinationManagement.Value.Date;
+                DateTime separatedtime = dateTimePickerDestinationManagementTime.Value;
+                DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
                 string selectedStatus = comboBoxStatus.SelectedItem as string;
                 if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
                 {
                     int statusValue = selectedStatus == "true" ? 1 : 0;
-                    DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, Convert.ToBoolean(statusValue));
+                    DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, dateandtime, Convert.ToBoolean(statusValue));
                     MessageBox.Show("Datos actualizados.");
                 }
                 else
@@ -139,6 +136,22 @@ namespace BackOffice
         private void buttonEditDestination_Click(object sender, EventArgs e)
         {
             edit();
+        }
+
+        private void dataGridViewDestinations_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewDestinations_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonShowMap_Click(object sender, EventArgs e)
+        {
+            MapForm viewMap = new MapForm();
+            viewMap.Show();
         }
     }
 }

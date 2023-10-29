@@ -10,6 +10,7 @@ namespace capa_datos
     public class ModelBatch : DataBaseControl
     {
         public int IDBatch { get; set; }
+        public string Email { get; set; }
         public DateTime DateOfCreation { get; set; }
         public DateTime ShippingDate { get; set; }
         public int IDShipp { get; set; }
@@ -18,9 +19,10 @@ namespace capa_datos
         public void Save()
         {
             try {
-            this.Command.CommandText = $"INSERT INTO lote (fech_Crea, fech_Entre, id_Des, bajalogica) VALUES " +
-                $"('{this.DateOfCreation.ToString("yyyy-MM-dd")}', " +
-                $"'{this.ShippingDate.ToString("yyyy-MM-dd")}'," +
+            this.Command.CommandText = $"INSERT INTO lote (email, fech_Crea, fech_Entre, id_Des, bajalogica) VALUES " +
+                $"('{this.Email.ToString()}', " +
+                $"'{this.DateOfCreation.ToString("yyyy-MM-dd HH:mm:ss")}', " +
+                $"'{this.ShippingDate.ToString("yyyy-MM-dd HH:mm:ss")}'," +
                 $"{this.IDShipp}," +
                 $"{this.ActivedBatch})";
             this.Command.ExecuteNonQuery();
@@ -29,7 +31,7 @@ namespace capa_datos
             this.IDBatch = Convert.ToInt32(this.Command.ExecuteScalar());
             }catch(Exception ex)
             {
-                throw new Exception("Revisa los datos ingresados.");
+                throw new Exception(ex.Message);
             }
         }
 
@@ -43,6 +45,7 @@ namespace capa_datos
             {
                 ModelBatch lote = new ModelBatch();
                 lote.IDBatch = Int32.Parse(this.Reader["id_Lote"].ToString());
+                lote.Email = this.Reader["email"].ToString();
                 lote.DateOfCreation = DateTime.Parse(this.Reader["fech_Crea"].ToString());
                 lote.ShippingDate = DateTime.Parse(this.Reader["fech_Entre"].ToString());
                 lote.IDShipp = Int32.Parse(this.Reader["id_Des"].ToString());

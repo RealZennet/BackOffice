@@ -248,6 +248,23 @@ namespace BackOffice
             showTravelManagerForm();
         }
 
+        private void showGmailForm()
+        {
+            GmailsForm formGmailFormCtl = new GmailsForm();
+            formGmailFormCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formGmailFormCtl);
+            formGmailFormCtl.FormBorderStyle = FormBorderStyle.None;
+            formGmailFormCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formGmailFormCtl;
+            formGmailFormCtl.BringToFront();
+            formGmailFormCtl.Show();
+        }
+
+        private void buttonGmail_Click(object sender, EventArgs e)
+        {
+            showGmailForm();
+        }
+
         #region destinationmanager
 
         private void showDestinationManagerForm()

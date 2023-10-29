@@ -30,6 +30,7 @@
         {
             this.leftPanelContainer = new System.Windows.Forms.Panel();
             this.managementPanel = new System.Windows.Forms.Panel();
+            this.buttonTravelManager = new System.Windows.Forms.Button();
             this.buttonDestinationManager = new System.Windows.Forms.Button();
             this.buttonUsersAssign = new System.Windows.Forms.Button();
             this.buttonUsersManager = new System.Windows.Forms.Button();
@@ -45,7 +46,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFormsLoader = new System.Windows.Forms.Panel();
-            this.buttonTravelManager = new System.Windows.Forms.Button();
+            this.buttonGmail = new System.Windows.Forms.Button();
             this.leftPanelContainer.SuspendLayout();
             this.managementPanel.SuspendLayout();
             this.productsAndLotsPanel.SuspendLayout();
@@ -71,6 +72,7 @@
             // managementPanel
             // 
             this.managementPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(85)))), ((int)(((byte)(96)))));
+            this.managementPanel.Controls.Add(this.buttonGmail);
             this.managementPanel.Controls.Add(this.buttonTravelManager);
             this.managementPanel.Controls.Add(this.buttonDestinationManager);
             this.managementPanel.Controls.Add(this.buttonUsersAssign);
@@ -81,8 +83,23 @@
             this.managementPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.managementPanel.Location = new System.Drawing.Point(0, 299);
             this.managementPanel.Name = "managementPanel";
-            this.managementPanel.Size = new System.Drawing.Size(250, 249);
+            this.managementPanel.Size = new System.Drawing.Size(250, 274);
             this.managementPanel.TabIndex = 6;
+            // 
+            // buttonTravelManager
+            // 
+            this.buttonTravelManager.FlatAppearance.BorderSize = 0;
+            this.buttonTravelManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTravelManager.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonTravelManager.Location = new System.Drawing.Point(3, 208);
+            this.buttonTravelManager.Name = "buttonTravelManager";
+            this.buttonTravelManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonTravelManager.Size = new System.Drawing.Size(250, 32);
+            this.buttonTravelManager.TabIndex = 6;
+            this.buttonTravelManager.Text = "Gestionar Recorridos";
+            this.buttonTravelManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTravelManager.UseVisualStyleBackColor = true;
+            this.buttonTravelManager.Click += new System.EventHandler(this.buttonTravelManager_Click);
             // 
             // buttonDestinationManager
             // 
@@ -294,20 +311,20 @@
             this.panelFormsLoader.TabIndex = 2;
             this.panelFormsLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormsLoader_Paint);
             // 
-            // buttonTravelManager
+            // buttonGmail
             // 
-            this.buttonTravelManager.FlatAppearance.BorderSize = 0;
-            this.buttonTravelManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTravelManager.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonTravelManager.Location = new System.Drawing.Point(3, 208);
-            this.buttonTravelManager.Name = "buttonTravelManager";
-            this.buttonTravelManager.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonTravelManager.Size = new System.Drawing.Size(250, 32);
-            this.buttonTravelManager.TabIndex = 6;
-            this.buttonTravelManager.Text = "Gestionar Recorridos";
-            this.buttonTravelManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTravelManager.UseVisualStyleBackColor = true;
-            this.buttonTravelManager.Click += new System.EventHandler(this.buttonTravelManager_Click);
+            this.buttonGmail.FlatAppearance.BorderSize = 0;
+            this.buttonGmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGmail.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonGmail.Location = new System.Drawing.Point(3, 239);
+            this.buttonGmail.Name = "buttonGmail";
+            this.buttonGmail.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonGmail.Size = new System.Drawing.Size(250, 32);
+            this.buttonGmail.TabIndex = 7;
+            this.buttonGmail.Text = "Correos";
+            this.buttonGmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGmail.UseVisualStyleBackColor = true;
+            this.buttonGmail.Click += new System.EventHandler(this.buttonGmail_Click);
             // 
             // QuickCarry
             // 
@@ -349,6 +366,7 @@
         private System.Windows.Forms.Button buttonUsersAssign;
         private System.Windows.Forms.Button buttonDestinationManager;
         private System.Windows.Forms.Button buttonTravelManager;
+        private System.Windows.Forms.Button buttonGmail;
     }
 }
 

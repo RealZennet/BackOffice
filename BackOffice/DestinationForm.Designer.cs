@@ -29,22 +29,26 @@
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtBoxDestinationCorner = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtBoxDestinationStreet = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewDestinations = new System.Windows.Forms.DataGridView();
             this.buttonEditDestination = new System.Windows.Forms.Button();
             this.buttonRefreshDestination = new System.Windows.Forms.Button();
             this.buttonDeleteDestination = new System.Windows.Forms.Button();
             this.buttonAddDestination = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtBoxDestinationDoorNumber = new System.Windows.Forms.TextBox();
             this.txtBoxIDDestination = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerDestinationManagementTime = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerDestinationManagement = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBoxDestinationStreet = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBoxDestinationCorner = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBoxDestinationDoorNumber = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonShowMap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDestinations)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,59 +61,20 @@
             this.label7.TabIndex = 63;
             this.label7.Text = "Activo";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 402);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 13);
-            this.label6.TabIndex = 61;
-            this.label6.Text = "Esquina";
-            // 
-            // txtBoxDestinationCorner
-            // 
-            this.txtBoxDestinationCorner.Location = new System.Drawing.Point(12, 417);
-            this.txtBoxDestinationCorner.Name = "txtBoxDestinationCorner";
-            this.txtBoxDestinationCorner.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxDestinationCorner.TabIndex = 60;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 360);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 59;
-            this.label5.Text = "Numero";
-            // 
-            // txtBoxDestinationStreet
-            // 
-            this.txtBoxDestinationStreet.Location = new System.Drawing.Point(13, 331);
-            this.txtBoxDestinationStreet.Name = "txtBoxDestinationStreet";
-            this.txtBoxDestinationStreet.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxDestinationStreet.TabIndex = 58;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 315);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 57;
-            this.label4.Text = "Calle";
-            // 
             // dataGridViewDestinations
             // 
             this.dataGridViewDestinations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewDestinations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDestinations.Location = new System.Drawing.Point(12, 68);
             this.dataGridViewDestinations.Name = "dataGridViewDestinations";
-            this.dataGridViewDestinations.Size = new System.Drawing.Size(638, 228);
+            this.dataGridViewDestinations.Size = new System.Drawing.Size(722, 228);
             this.dataGridViewDestinations.TabIndex = 55;
+            this.dataGridViewDestinations.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDestinations_CellClick);
+            this.dataGridViewDestinations.SelectionChanged += new System.EventHandler(this.dataGridViewDestinations_SelectionChanged);
             // 
             // buttonEditDestination
             // 
-            this.buttonEditDestination.Location = new System.Drawing.Point(160, 360);
+            this.buttonEditDestination.Location = new System.Drawing.Point(142, 359);
             this.buttonEditDestination.Name = "buttonEditDestination";
             this.buttonEditDestination.Size = new System.Drawing.Size(46, 26);
             this.buttonEditDestination.TabIndex = 54;
@@ -157,16 +122,9 @@
             this.label1.TabIndex = 49;
             this.label1.Text = "Gestion de destinos.";
             // 
-            // txtBoxDestinationDoorNumber
-            // 
-            this.txtBoxDestinationDoorNumber.Location = new System.Drawing.Point(15, 379);
-            this.txtBoxDestinationDoorNumber.Name = "txtBoxDestinationDoorNumber";
-            this.txtBoxDestinationDoorNumber.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxDestinationDoorNumber.TabIndex = 64;
-            // 
             // txtBoxIDDestination
             // 
-            this.txtBoxIDDestination.Location = new System.Drawing.Point(160, 331);
+            this.txtBoxIDDestination.Location = new System.Drawing.Point(142, 334);
             this.txtBoxIDDestination.Name = "txtBoxIDDestination";
             this.txtBoxIDDestination.Size = new System.Drawing.Size(46, 20);
             this.txtBoxIDDestination.TabIndex = 66;
@@ -174,7 +132,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(159, 315);
+            this.label2.Location = new System.Drawing.Point(139, 315);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(18, 13);
             this.label2.TabIndex = 65;
@@ -198,6 +156,88 @@
             this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
             this.comboBoxStatus.TabIndex = 68;
             // 
+            // dateTimePickerDestinationManagementTime
+            // 
+            this.dateTimePickerDestinationManagementTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerDestinationManagementTime.Location = new System.Drawing.Point(206, 365);
+            this.dateTimePickerDestinationManagementTime.Name = "dateTimePickerDestinationManagementTime";
+            this.dateTimePickerDestinationManagementTime.Size = new System.Drawing.Size(196, 20);
+            this.dateTimePickerDestinationManagementTime.TabIndex = 83;
+            // 
+            // dateTimePickerDestinationManagement
+            // 
+            this.dateTimePickerDestinationManagement.Location = new System.Drawing.Point(204, 336);
+            this.dateTimePickerDestinationManagement.Name = "dateTimePickerDestinationManagement";
+            this.dateTimePickerDestinationManagement.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDestinationManagement.TabIndex = 82;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(203, 308);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.TabIndex = 81;
+            this.label3.Text = "Fecha de salida";
+            // 
+            // txtBoxDestinationStreet
+            // 
+            this.txtBoxDestinationStreet.Location = new System.Drawing.Point(13, 331);
+            this.txtBoxDestinationStreet.Name = "txtBoxDestinationStreet";
+            this.txtBoxDestinationStreet.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxDestinationStreet.TabIndex = 58;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 315);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "Calle";
+            // 
+            // txtBoxDestinationCorner
+            // 
+            this.txtBoxDestinationCorner.Location = new System.Drawing.Point(12, 368);
+            this.txtBoxDestinationCorner.Name = "txtBoxDestinationCorner";
+            this.txtBoxDestinationCorner.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxDestinationCorner.TabIndex = 86;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 352);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 85;
+            this.label5.Text = "Esquina";
+            // 
+            // txtBoxDestinationDoorNumber
+            // 
+            this.txtBoxDestinationDoorNumber.Location = new System.Drawing.Point(12, 410);
+            this.txtBoxDestinationDoorNumber.Name = "txtBoxDestinationDoorNumber";
+            this.txtBoxDestinationDoorNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxDestinationDoorNumber.TabIndex = 88;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(11, 394);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 87;
+            this.label6.Text = "Numero";
+            // 
+            // buttonShowMap
+            // 
+            this.buttonShowMap.Location = new System.Drawing.Point(234, 485);
+            this.buttonShowMap.Name = "buttonShowMap";
+            this.buttonShowMap.Size = new System.Drawing.Size(68, 26);
+            this.buttonShowMap.TabIndex = 89;
+            this.buttonShowMap.Text = "Ver Mapa";
+            this.buttonShowMap.UseVisualStyleBackColor = true;
+            this.buttonShowMap.Click += new System.EventHandler(this.buttonShowMap_Click);
+            // 
             // DestinationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,15 +245,19 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(757, 520);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonShowMap);
+            this.Controls.Add(this.txtBoxDestinationDoorNumber);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtBoxDestinationCorner);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dateTimePickerDestinationManagementTime);
+            this.Controls.Add(this.dateTimePickerDestinationManagement);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.txtBoxIDDestination);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtBoxDestinationDoorNumber);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtBoxDestinationCorner);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtBoxDestinationStreet);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridViewDestinations);
@@ -235,21 +279,25 @@
         #endregion
 
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtBoxDestinationCorner;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtBoxDestinationStreet;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridViewDestinations;
         private System.Windows.Forms.Button buttonEditDestination;
         private System.Windows.Forms.Button buttonRefreshDestination;
         private System.Windows.Forms.Button buttonDeleteDestination;
         private System.Windows.Forms.Button buttonAddDestination;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtBoxDestinationDoorNumber;
         private System.Windows.Forms.TextBox txtBoxIDDestination;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.ComboBox comboBoxStatus;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDestinationManagementTime;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDestinationManagement;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtBoxDestinationStreet;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtBoxDestinationCorner;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtBoxDestinationDoorNumber;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonShowMap;
     }
 }

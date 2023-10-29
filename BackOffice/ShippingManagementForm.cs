@@ -66,7 +66,10 @@ namespace BackOffice
         {
             try
             {
-            ShippingManagementController.Create(Int32.Parse(txtBoxIDTruckShippManagement.Text), Int32.Parse(txtBoxIDBatchShippManagement.Text), Convert.ToDateTime(dateTimePickerShippManagement.Text));
+            DateTime separateddate = dateTimePickerShippManagement.Value.Date;
+            DateTime separatedtime = dateTimePickerShippManagementTime.Value;
+            DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
+            ShippingManagementController.Create(Int32.Parse(txtBoxIDTruckShippManagement.Text), Int32.Parse(txtBoxIDBatchShippManagement.Text), dateandtime);
             MessageBox.Show("Envio programado");
             RefreshTableShippManagement();
             ClearTxtBoxesShippingManagement();
