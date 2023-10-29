@@ -324,6 +324,7 @@
             this.buttonGmail.Text = "Correos";
             this.buttonGmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonGmail.UseVisualStyleBackColor = true;
+            this.buttonGmail.Click += new System.EventHandler(this.buttonGmail_Click);
             // 
             // QuickCarry
             // 

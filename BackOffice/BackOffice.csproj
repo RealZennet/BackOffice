@@ -121,6 +121,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GmailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GmailsForm.Designer.cs">
+      <DependentUpon>GmailsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LotsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GmailsForm.resx">
+      <DependentUpon>GmailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LotsForm.resx">
       <DependentUpon>LotsForm.cs</DependentUpon>
