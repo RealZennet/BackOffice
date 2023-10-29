@@ -25,10 +25,21 @@ namespace BackOffice
             this.Close();
         }
 
+        private bool checkInputs()
+        {
+            if (string.IsNullOrEmpty(textBoxDestination.Text) || string.IsNullOrEmpty(textBoxSubject.Text))
+            {
+                return false;
+            }
+            return true;
+        }
+
         private void buttonSendEmail_Click(object sender, EventArgs e)
         {
             try
             {
+                if (checkInputs())
+                {
                 MailMessage mm = new MailMessage();
                 SmtpClient sc = new SmtpClient("smtp.gmail.com");
                 mm.From = new MailAddress(email);
@@ -41,6 +52,11 @@ namespace BackOffice
                 sc.EnableSsl = true;
                 sc.Send(mm);
                 MessageBox.Show("Email has been sent.");
+                }
+                else
+                {
+                    MessageBox.Show("Campo/s vacio/s");
+                }
             }
             catch (Exception ex)
             {
