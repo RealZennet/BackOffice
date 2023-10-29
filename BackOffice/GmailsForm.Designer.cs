@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.buttonBack = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBoxDestination = new System.Windows.Forms.TextBox();
+            this.textBoxSubject = new System.Windows.Forms.TextBox();
+            this.richTextBoxContent = new System.Windows.Forms.RichTextBox();
             this.buttonSendEmail = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,27 +47,27 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // textBox1
+            // textBoxDestination
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 69;
+            this.textBoxDestination.Location = new System.Drawing.Point(26, 116);
+            this.textBoxDestination.Name = "textBoxDestination";
+            this.textBoxDestination.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDestination.TabIndex = 69;
             // 
-            // textBox2
+            // textBoxSubject
             // 
-            this.textBox2.Location = new System.Drawing.Point(26, 155);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 70;
+            this.textBoxSubject.Location = new System.Drawing.Point(26, 155);
+            this.textBoxSubject.Name = "textBoxSubject";
+            this.textBoxSubject.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSubject.TabIndex = 70;
             // 
-            // richTextBox1
+            // richTextBoxContent
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(26, 184);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(469, 268);
-            this.richTextBox1.TabIndex = 71;
-            this.richTextBox1.Text = "";
+            this.richTextBoxContent.Location = new System.Drawing.Point(26, 184);
+            this.richTextBoxContent.Name = "richTextBoxContent";
+            this.richTextBoxContent.Size = new System.Drawing.Size(469, 268);
+            this.richTextBoxContent.TabIndex = 71;
+            this.richTextBoxContent.Text = "";
             // 
             // buttonSendEmail
             // 
@@ -77,6 +77,7 @@
             this.buttonSendEmail.TabIndex = 72;
             this.buttonSendEmail.Text = "Enviar";
             this.buttonSendEmail.UseVisualStyleBackColor = true;
+            this.buttonSendEmail.Click += new System.EventHandler(this.buttonSendEmail_Click);
             // 
             // label1
             // 
@@ -105,9 +106,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSendEmail);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.richTextBoxContent);
+            this.Controls.Add(this.textBoxSubject);
+            this.Controls.Add(this.textBoxDestination);
             this.Controls.Add(this.buttonBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GmailsForm";
@@ -120,9 +121,9 @@
         #endregion
 
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBoxDestination;
+        private System.Windows.Forms.TextBox textBoxSubject;
+        private System.Windows.Forms.RichTextBox richTextBoxContent;
         private System.Windows.Forms.Button buttonSendEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
