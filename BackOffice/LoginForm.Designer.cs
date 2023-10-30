@@ -79,7 +79,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label2.Location = new System.Drawing.Point(70, 225);
+            this.label2.Location = new System.Drawing.Point(71, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 65;
@@ -90,7 +90,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(70, 160);
+            this.label1.Location = new System.Drawing.Point(71, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 13);
             this.label1.TabIndex = 64;
@@ -99,7 +99,7 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxPassword.Location = new System.Drawing.Point(73, 254);
+            this.textBoxPassword.Location = new System.Drawing.Point(74, 254);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(159, 20);
@@ -108,7 +108,7 @@
             // textBoxUsername
             // 
             this.textBoxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxUsername.Location = new System.Drawing.Point(73, 192);
+            this.textBoxUsername.Location = new System.Drawing.Point(74, 192);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(159, 20);
             this.textBoxUsername.TabIndex = 62;
@@ -120,9 +120,9 @@
             this.buttonLogin.FlatAppearance.BorderSize = 0;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogin.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(73, 292);
+            this.buttonLogin.Location = new System.Drawing.Point(74, 292);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(159, 28);
+            this.buttonLogin.Size = new System.Drawing.Size(159, 31);
             this.buttonLogin.TabIndex = 61;
             this.buttonLogin.Text = "Iniciar sesion";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -132,9 +132,9 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox1.Image = global::BackOffice.Properties.Resources.logoAzulZennet;
-            this.pictureBox1.Location = new System.Drawing.Point(73, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(74, 46);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(159, 103);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 66;
             this.pictureBox1.TabStop = false;
@@ -144,7 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            this.ClientSize = new System.Drawing.Size(310, 343);
+            this.ClientSize = new System.Drawing.Size(312, 346);
             this.Controls.Add(this.buttonMinimize);
             this.Controls.Add(this.buttonCloseMainMenu);
             this.Controls.Add(this.panelSlidePanelLoginForm);
