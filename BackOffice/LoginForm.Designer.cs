@@ -126,6 +126,7 @@
             this.buttonLogin.TabIndex = 61;
             this.buttonLogin.Text = "Iniciar sesion";
             this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // pictureBox1
             // 

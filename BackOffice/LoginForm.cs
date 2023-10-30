@@ -58,6 +58,25 @@ namespace BackOffice
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void openPrincipalForm()
+        {
+            QuickCarry mainForm = new QuickCarry();
+            mainForm.Show();
+            this.Hide();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            if(textBoxUsername.Text == "admin" && textBoxPassword.Text == "admin")
+            {
+                openPrincipalForm();
+            }
+            else
+            {
+                MessageBox.Show("Credenciales no validas");
+            }
+        }
+
         private void panelSlidePanelLoginForm_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1)
