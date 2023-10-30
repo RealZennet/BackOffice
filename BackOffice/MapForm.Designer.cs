@@ -30,6 +30,7 @@
         {
             this.buttonClose = new System.Windows.Forms.Button();
             this.webBrowser = new System.Windows.Forms.WebBrowser();
+            this.panelSlide = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // buttonClose
@@ -51,12 +52,23 @@
             this.webBrowser.TabIndex = 85;
             this.webBrowser.Url = new System.Uri("https://www.bing.com/maps", System.UriKind.Absolute);
             // 
+            // panelSlide
+            // 
+            this.panelSlide.Location = new System.Drawing.Point(12, 2);
+            this.panelSlide.Name = "panelSlide";
+            this.panelSlide.Size = new System.Drawing.Size(662, 27);
+            this.panelSlide.TabIndex = 86;
+            this.panelSlide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSlide_MouseDown);
+            this.panelSlide.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelSlide_MouseMove);
+            this.panelSlide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelSlide_MouseUp);
+            // 
             // MapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(722, 313);
+            this.Controls.Add(this.panelSlide);
             this.Controls.Add(this.webBrowser);
             this.Controls.Add(this.buttonClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -70,5 +82,6 @@
 
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.WebBrowser webBrowser;
+        private System.Windows.Forms.Panel panelSlide;
     }
 }
