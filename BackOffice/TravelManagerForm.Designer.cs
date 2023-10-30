@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
@@ -38,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxIDStoreHouse = new System.Windows.Forms.TextBox();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewTravels = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -119,30 +118,21 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label1.Location = new System.Drawing.Point(316, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 25);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Recorrido";
+            // 
             // dataGridViewTravels
             // 
             this.dataGridViewTravels.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewTravels.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewTravels.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTravels.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTravels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTravels.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTravels.EnableHeadersVisualStyles = false;
-            this.dataGridViewTravels.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewTravels.Location = new System.Drawing.Point(7, 41);
             this.dataGridViewTravels.Name = "dataGridViewTravels";
             this.dataGridViewTravels.Size = new System.Drawing.Size(480, 475);
@@ -208,6 +198,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBoxIDStoreHouse);
             this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewTravels);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TravelManagerForm";
@@ -229,6 +220,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBoxIDStoreHouse;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewTravels;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

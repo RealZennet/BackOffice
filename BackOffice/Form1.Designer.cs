@@ -30,7 +30,6 @@
         {
             this.leftPanelContainer = new System.Windows.Forms.Panel();
             this.managementPanel = new System.Windows.Forms.Panel();
-            this.buttonGmail = new System.Windows.Forms.Button();
             this.buttonTravelManager = new System.Windows.Forms.Button();
             this.buttonDestinationManager = new System.Windows.Forms.Button();
             this.buttonUsersAssign = new System.Windows.Forms.Button();
@@ -45,11 +44,9 @@
             this.buttonProductsManager = new System.Windows.Forms.Button();
             this.buttonProducts = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelFormsLoader = new System.Windows.Forms.Panel();
-            this.SlidePanel = new System.Windows.Forms.Panel();
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.buttonMinimize = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelFormsLoader = new System.Windows.Forms.Panel();
+            this.buttonGmail = new System.Windows.Forms.Button();
             this.leftPanelContainer.SuspendLayout();
             this.managementPanel.SuspendLayout();
             this.productsAndLotsPanel.SuspendLayout();
@@ -88,21 +85,6 @@
             this.managementPanel.Name = "managementPanel";
             this.managementPanel.Size = new System.Drawing.Size(250, 274);
             this.managementPanel.TabIndex = 6;
-            // 
-            // buttonGmail
-            // 
-            this.buttonGmail.FlatAppearance.BorderSize = 0;
-            this.buttonGmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGmail.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonGmail.Location = new System.Drawing.Point(3, 239);
-            this.buttonGmail.Name = "buttonGmail";
-            this.buttonGmail.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonGmail.Size = new System.Drawing.Size(250, 32);
-            this.buttonGmail.TabIndex = 7;
-            this.buttonGmail.Text = "Correos";
-            this.buttonGmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGmail.UseVisualStyleBackColor = true;
-            this.buttonGmail.Click += new System.EventHandler(this.buttonGmail_Click);
             // 
             // buttonTravelManager
             // 
@@ -309,51 +291,6 @@
             this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
             // 
-            // panelFormsLoader
-            // 
-            this.panelFormsLoader.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelFormsLoader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
-            this.panelFormsLoader.Location = new System.Drawing.Point(256, 41);
-            this.panelFormsLoader.Name = "panelFormsLoader";
-            this.panelFormsLoader.Size = new System.Drawing.Size(773, 559);
-            this.panelFormsLoader.TabIndex = 2;
-            this.panelFormsLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormsLoader_Paint);
-            // 
-            // SlidePanel
-            // 
-            this.SlidePanel.Location = new System.Drawing.Point(256, 0);
-            this.SlidePanel.Name = "SlidePanel";
-            this.SlidePanel.Size = new System.Drawing.Size(712, 35);
-            this.SlidePanel.TabIndex = 3;
-            this.SlidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSlider_Paint);
-            this.SlidePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SlidePanel_MouseDown);
-            this.SlidePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SlidePanel_MouseMove);
-            this.SlidePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SlidePanel_MouseUp);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.ForeColor = System.Drawing.Color.Orange;
-            this.buttonClose.Location = new System.Drawing.Point(974, 9);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(23, 23);
-            this.buttonClose.TabIndex = 4;
-            this.buttonClose.Text = "X";
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
-            // buttonMinimize
-            // 
-            this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinimize.ForeColor = System.Drawing.Color.Orange;
-            this.buttonMinimize.Location = new System.Drawing.Point(1002, 9);
-            this.buttonMinimize.Name = "buttonMinimize";
-            this.buttonMinimize.Size = new System.Drawing.Size(23, 23);
-            this.buttonMinimize.TabIndex = 5;
-            this.buttonMinimize.Text = "_";
-            this.buttonMinimize.UseVisualStyleBackColor = true;
-            this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BackOffice.Properties.Resources.ZENNETLOGO;
@@ -364,15 +301,37 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panelFormsLoader
+            // 
+            this.panelFormsLoader.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelFormsLoader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
+            this.panelFormsLoader.Location = new System.Drawing.Point(256, 41);
+            this.panelFormsLoader.Name = "panelFormsLoader";
+            this.panelFormsLoader.Size = new System.Drawing.Size(773, 559);
+            this.panelFormsLoader.TabIndex = 2;
+            this.panelFormsLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormsLoader_Paint);
+            // 
+            // buttonGmail
+            // 
+            this.buttonGmail.FlatAppearance.BorderSize = 0;
+            this.buttonGmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGmail.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonGmail.Location = new System.Drawing.Point(3, 239);
+            this.buttonGmail.Name = "buttonGmail";
+            this.buttonGmail.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonGmail.Size = new System.Drawing.Size(250, 32);
+            this.buttonGmail.TabIndex = 7;
+            this.buttonGmail.Text = "Correos";
+            this.buttonGmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGmail.UseVisualStyleBackColor = true;
+            this.buttonGmail.Click += new System.EventHandler(this.buttonGmail_Click);
+            // 
             // QuickCarry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1037, 607);
-            this.Controls.Add(this.buttonMinimize);
-            this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.SlidePanel);
             this.Controls.Add(this.panelFormsLoader);
             this.Controls.Add(this.leftPanelContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -408,9 +367,6 @@
         private System.Windows.Forms.Button buttonDestinationManager;
         private System.Windows.Forms.Button buttonTravelManager;
         private System.Windows.Forms.Button buttonGmail;
-        private System.Windows.Forms.Panel SlidePanel;
-        private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Button buttonMinimize;
     }
 }
 
