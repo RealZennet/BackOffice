@@ -34,7 +34,6 @@
             this.buttonRefreshDestination = new System.Windows.Forms.Button();
             this.buttonDeleteDestination = new System.Windows.Forms.Button();
             this.buttonAddDestination = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtBoxIDDestination = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
@@ -111,16 +110,6 @@
             this.buttonAddDestination.Text = "Agregar";
             this.buttonAddDestination.UseVisualStyleBackColor = true;
             this.buttonAddDestination.Click += new System.EventHandler(this.buttonAddDestination_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label1.Location = new System.Drawing.Point(284, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 25);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Gestion de destinos.";
             // 
             // txtBoxIDDestination
             // 
@@ -265,7 +254,6 @@
             this.Controls.Add(this.buttonRefreshDestination);
             this.Controls.Add(this.buttonDeleteDestination);
             this.Controls.Add(this.buttonAddDestination);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DestinationForm";
             this.Text = "DestinationForm";
@@ -284,7 +272,6 @@
         private System.Windows.Forms.Button buttonRefreshDestination;
         private System.Windows.Forms.Button buttonDeleteDestination;
         private System.Windows.Forms.Button buttonAddDestination;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxIDDestination;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBack;

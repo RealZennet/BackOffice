@@ -33,7 +33,6 @@
             this.buttonRefreshStoreHouse = new System.Windows.Forms.Button();
             this.buttonDeleteStoreHouse = new System.Windows.Forms.Button();
             this.buttonAddStoreHouse = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewStoreHouses = new System.Windows.Forms.DataGridView();
             this.dataGridViewAddOperatorStoreHouse = new System.Windows.Forms.DataGridView();
             this.buttonRefreshAddOperatorStoreHouses = new System.Windows.Forms.Button();
@@ -107,16 +106,6 @@
             this.buttonAddStoreHouse.Text = "Agregar";
             this.buttonAddStoreHouse.UseVisualStyleBackColor = true;
             this.buttonAddStoreHouse.Click += new System.EventHandler(this.buttonAddStoreHouse_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label1.Location = new System.Drawing.Point(284, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 25);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Gestion de almacenes.";
             // 
             // dataGridViewStoreHouses
             // 
@@ -313,7 +302,6 @@
             this.Controls.Add(this.buttonRefreshStoreHouse);
             this.Controls.Add(this.buttonDeleteStoreHouse);
             this.Controls.Add(this.buttonAddStoreHouse);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StoreHouse";
             this.Text = "StoreHouse";
@@ -332,7 +320,6 @@
         private System.Windows.Forms.Button buttonRefreshStoreHouse;
         private System.Windows.Forms.Button buttonDeleteStoreHouse;
         private System.Windows.Forms.Button buttonAddStoreHouse;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewStoreHouses;
         private System.Windows.Forms.DataGridView dataGridViewAddOperatorStoreHouse;
         private System.Windows.Forms.Button buttonRefreshAddOperatorStoreHouses;
