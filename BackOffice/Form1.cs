@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,20 +13,36 @@ namespace BackOffice
 {
     public partial class QuickCarry : Form
     {
-                            
+        public int m, x, y;
+
         public QuickCarry()
         {
             InitializeComponent();
             customMenus();
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            roundedCircleForm();
         }
-        public int m, x, y;
         
-
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
+
+        private void roundedCircleForm()
+        {
+            int radiusBorder = 25;
+
+            Rectangle rectangleBorder = new Rectangle(0, 0, this.Width, this.Height);
+
+            GraphicsPath graphicBorder = new GraphicsPath();
+            graphicBorder.AddArc(rectangleBorder.X, rectangleBorder.Y, radiusBorder, radiusBorder, 180, 90);
+            graphicBorder.AddArc(rectangleBorder.Right - radiusBorder, rectangleBorder.Y, radiusBorder, radiusBorder, 270, 90);
+            graphicBorder.AddArc(rectangleBorder.Right - radiusBorder, rectangleBorder.Bottom - radiusBorder, radiusBorder, radiusBorder, 0, 90);
+            graphicBorder.AddArc(rectangleBorder.X, rectangleBorder.Bottom - radiusBorder, radiusBorder, radiusBorder, 90, 90);
+            graphicBorder.CloseAllFigures();
+
+            this.Region = new Region(graphicBorder);
+        }
+
         #region generalMenu
         private void customMenus()
         {
@@ -67,18 +84,6 @@ namespace BackOffice
         private void buttonManagement_Click(object sender, EventArgs e)
         {
             showMenus(managementPanel);
-        }
-
-        private void SlidePanel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (m == 1)
-            {
-                this.SetDesktopLocation(MousePosition.X - x, MousePosition.Y - y);
-            }
-        }
-        private void SlidePanel_MouseUp(object sender, MouseEventArgs e)
-        {
-            m = 0;
         }
 
         #endregion
@@ -246,6 +251,61 @@ namespace BackOffice
         private void buttonTravelManager_Click(object sender, EventArgs e)
         {
             showTravelManagerForm();
+        }
+
+        private void showGmailForm()
+        {
+            GmailsForm formGmailFormCtl = new GmailsForm();
+            formGmailFormCtl.TopLevel = false;
+            panelFormsLoader.Controls.Add(formGmailFormCtl);
+            formGmailFormCtl.FormBorderStyle = FormBorderStyle.None;
+            formGmailFormCtl.Dock = DockStyle.Fill;
+            panelFormsLoader.Tag = formGmailFormCtl;
+            formGmailFormCtl.BringToFront();
+            formGmailFormCtl.Show();
+        }
+
+        private void buttonGmail_Click(object sender, EventArgs e)
+        {
+            showGmailForm();
+        }
+
+        private void panelSlider_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void SlidePanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+        }
+
+        private void SlidePanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                m = 1;
+                x = e.X;
+                y = e.Y;
+            }
+        }
+
+        private void SlidePanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - x, MousePosition.Y - y);
+            }
+        }
+
+        private void buttonMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         #region destinationmanager
