@@ -318,4 +318,7 @@
   <data name="IDOperator" xml:space="preserve">
     <value>ID Operario</value>
   </data>
+  <data name="IDTrucker" xml:space="preserve">
+    <value>ID Camionero</value>
+  </data>
 </root>

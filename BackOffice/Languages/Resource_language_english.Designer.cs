@@ -277,6 +277,15 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a ID Trucker.
+        /// </summary>
+        internal static string IDTrucker {
+            get {
+                return ResourceManager.GetString("IDTrucker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Invalid ID.
         /// </summary>
         internal static string InvalidID {
