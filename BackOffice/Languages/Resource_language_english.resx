@@ -291,4 +291,22 @@
   <data name="Weight" xml:space="preserve">
     <value>Weight</value>
   </data>
+  <data name="AssignUser" xml:space="preserve">
+    <value>Assign User Role</value>
+  </data>
+  <data name="DestinationManager" xml:space="preserve">
+    <value>Destination Manager</value>
+  </data>
+  <data name="ManageStoreHouse" xml:space="preserve">
+    <value>Manage Storehouse</value>
+  </data>
+  <data name="ManageTravels" xml:space="preserve">
+    <value>Manage Travels</value>
+  </data>
+  <data name="ManageTrucks" xml:space="preserve">
+    <value>Manage Trucks</value>
+  </data>
+  <data name="ManageUsers" xml:space="preserve">
+    <value>Manage Users</value>
+  </data>
 </root>

@@ -106,6 +106,15 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Asignar rol de usuario.
+        /// </summary>
+        internal static string AssignUser {
+            get {
+                return ResourceManager.GetString("AssignUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Volver.
         /// </summary>
         internal static string Back {
@@ -183,6 +192,15 @@ namespace BackOffice.Languages {
         internal static string DestinationID {
             get {
                 return ResourceManager.GetString("DestinationID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestion de destinos.
+        /// </summary>
+        internal static string DestinationManager {
+            get {
+                return ResourceManager.GetString("DestinationManager", resourceCulture);
             }
         }
         
@@ -336,6 +354,42 @@ namespace BackOffice.Languages {
         internal static string ManageShipments {
             get {
                 return ResourceManager.GetString("ManageShipments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestionar Almacenes.
+        /// </summary>
+        internal static string ManageStoreHouse {
+            get {
+                return ResourceManager.GetString("ManageStoreHouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestionar recorrido.
+        /// </summary>
+        internal static string ManageTravels {
+            get {
+                return ResourceManager.GetString("ManageTravels", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestionar Camiones.
+        /// </summary>
+        internal static string ManageTrucks {
+            get {
+                return ResourceManager.GetString("ManageTrucks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestionar Usuarios.
+        /// </summary>
+        internal static string ManageUsers {
+            get {
+                return ResourceManager.GetString("ManageUsers", resourceCulture);
             }
         }
         

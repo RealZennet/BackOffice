@@ -24,5 +24,11 @@ namespace BackOffice.Languages
         public static string ViewMap => LanguageManager.GetString("ViewMap");
         public static string Job => LanguageManager.GetString("Job");
         public static string Name => LanguageManager.GetString("Name");
+        public static string DestinationManager => LanguageManager.GetString("DestinationManager");
+        public static string ManageShipments => LanguageManager.GetString("ManageShipments");
+        public static string ManageTrucks => LanguageManager.GetString("ManageTrucks");
+        public static string ManageUsers => LanguageManager.GetString("ManageUsers");
+        public static string AssignUser => LanguageManager.GetString("AssignUser");
+        public static string TravelManager => LanguageManager.GetString("TravelManager");
     }
 }

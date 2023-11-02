@@ -294,4 +294,22 @@
   <data name="Weight" xml:space="preserve">
     <value>Peso</value>
   </data>
+  <data name="AssignUser" xml:space="preserve">
+    <value>Asignar rol de usuario</value>
+  </data>
+  <data name="DestinationManager" xml:space="preserve">
+    <value>Gestion de destinos</value>
+  </data>
+  <data name="ManageStoreHouse" xml:space="preserve">
+    <value>Gestionar Almacenes</value>
+  </data>
+  <data name="ManageTravels" xml:space="preserve">
+    <value>Gestionar recorrido</value>
+  </data>
+  <data name="ManageTrucks" xml:space="preserve">
+    <value>Gestionar Camiones</value>
+  </data>
+  <data name="ManageUsers" xml:space="preserve">
+    <value>Gestionar Usuarios</value>
+  </data>
 </root>

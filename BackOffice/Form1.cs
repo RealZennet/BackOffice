@@ -14,6 +14,7 @@ namespace BackOffice
     public partial class QuickCarry : Form
     {
         public int m, x, y;
+        public event Action LanguageChanged;
 
         public QuickCarry()
         {
@@ -25,6 +26,21 @@ namespace BackOffice
         private void Form1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void UpdateUI()
+        {
+            buttonProducts.Text = LanguageManager.GetString("ProductAndLotDistribution");
+            buttonAssignProducts.Text = LanguageManager.GetString("AssignProducts");
+            buttonProductsManager.Text = LanguageManager.GetString("ManageProducts");
+            buttonLotesManager.Text = LanguageManager.GetString("ManageLots");
+            buttonDestinationManager.Text = LanguageManager.GetString("DestinationManager");
+            buttonShippingManager.Text = LanguageManager.GetString("ManageShipments");
+            ButtonStoreHouseManagement.Text = LanguageManager.GetString("ManageStoreHouse");
+            buttonTrucksManager.Text = LanguageManager.GetString("ManageTrucks");
+            buttonUsersManager.Text = LanguageManager.GetString("ManageUsers");
+            buttonUsersAssign.Text = LanguageManager.GetString("AssignUser");
+            buttonTravelManager.Text = LanguageManager.GetString("TravelManager");
         }
 
         private void roundedCircleForm()
