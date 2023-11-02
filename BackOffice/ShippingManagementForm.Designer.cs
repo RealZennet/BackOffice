@@ -37,13 +37,11 @@
             this.txtBoxIDBatchShippManagement = new System.Windows.Forms.TextBox();
             this.txtBoxIDTruckShippManagement = new System.Windows.Forms.TextBox();
             this.labelIDTruck = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewShippingManagement = new System.Windows.Forms.DataGridView();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonRefreshShipps = new System.Windows.Forms.Button();
             this.buttonDeleteShipp = new System.Windows.Forms.Button();
             this.buttonAddShipp = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewCarry = new System.Windows.Forms.DataGridView();
             this.dateTimePickerShippManagement = new System.Windows.Forms.DateTimePicker();
             this.buttonRefreshCarry = new System.Windows.Forms.Button();
@@ -103,16 +101,6 @@
             this.labelIDTruck.Size = new System.Drawing.Size(56, 13);
             this.labelIDTruck.TabIndex = 56;
             this.labelIDTruck.Text = "ID Camion";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label2.Location = new System.Drawing.Point(48, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 25);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "Gestionar envio";
             // 
             // dataGridViewShippingManagement
             // 
@@ -185,16 +173,6 @@
             this.buttonAddShipp.Text = "Agregar";
             this.buttonAddShipp.UseVisualStyleBackColor = true;
             this.buttonAddShipp.Click += new System.EventHandler(this.buttonAddShipp_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label1.Location = new System.Drawing.Point(491, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 25);
-            this.label1.TabIndex = 65;
-            this.label1.Text = "Asignar ruta";
             // 
             // dataGridViewCarry
             // 
@@ -363,14 +341,12 @@
             this.Controls.Add(this.buttonDeleteCarry);
             this.Controls.Add(this.buttonAddCarry);
             this.Controls.Add(this.dateTimePickerShippManagement);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewCarry);
             this.Controls.Add(this.labelShipDate);
             this.Controls.Add(this.labelIDLot);
             this.Controls.Add(this.txtBoxIDBatchShippManagement);
             this.Controls.Add(this.txtBoxIDTruckShippManagement);
             this.Controls.Add(this.labelIDTruck);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewShippingManagement);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonRefreshShipps);
@@ -394,13 +370,11 @@
         private System.Windows.Forms.TextBox txtBoxIDBatchShippManagement;
         private System.Windows.Forms.TextBox txtBoxIDTruckShippManagement;
         private System.Windows.Forms.Label labelIDTruck;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewShippingManagement;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonRefreshShipps;
         private System.Windows.Forms.Button buttonDeleteShipp;
         private System.Windows.Forms.Button buttonAddShipp;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewCarry;
         private System.Windows.Forms.DateTimePicker dateTimePickerShippManagement;
         private System.Windows.Forms.Button buttonRefreshCarry;

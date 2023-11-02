@@ -315,4 +315,7 @@
   <data name="Map" xml:space="preserve">
     <value>Mapa</value>
   </data>
+  <data name="IDOperator" xml:space="preserve">
+    <value>ID Operario</value>
+  </data>
 </root>
