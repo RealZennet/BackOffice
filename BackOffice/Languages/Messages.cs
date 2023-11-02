@@ -9,6 +9,7 @@ namespace BackOffice.Languages
     public static class Messages
     {
         public static string ProductFound => LanguageManager.GetString("ProductFound");
+        public static string ProductAndLotDistribution => LanguageManager.GetString("ProductAndLotDistribution");
         public static string ProductNotFound => LanguageManager.GetString("ProductNotFound");
         public static string Error => LanguageManager.GetString("Error");
         public static string ErrorSyntax => LanguageManager.GetString("ErrorSyntax");
@@ -29,6 +30,6 @@ namespace BackOffice.Languages
         public static string ManageTrucks => LanguageManager.GetString("ManageTrucks");
         public static string ManageUsers => LanguageManager.GetString("ManageUsers");
         public static string AssignUser => LanguageManager.GetString("AssignUser");
-        public static string TravelManager => LanguageManager.GetString("TravelManager");
+        public static string TravelManager => LanguageManager.GetString("ManageTravels");
     }
 }

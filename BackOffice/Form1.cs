@@ -40,7 +40,7 @@ namespace BackOffice
             buttonTrucksManager.Text = LanguageManager.GetString("ManageTrucks");
             buttonUsersManager.Text = LanguageManager.GetString("ManageUsers");
             buttonUsersAssign.Text = LanguageManager.GetString("AssignUser");
-            buttonTravelManager.Text = LanguageManager.GetString("TravelManager");
+            buttonTravelManager.Text = LanguageManager.GetString("ManageTravels");
         }
 
         private void roundedCircleForm()
@@ -322,6 +322,20 @@ namespace BackOffice
         private void buttonMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void buttonLanguageSpanish_Click(object sender, EventArgs e)
+        {
+            LanguageManager.Initialize(typeof(Languages.Resource_language_spanish));
+            UpdateUI();
+            LanguageChanged?.Invoke();
+        }
+
+        private void buttonEnglishLanguage_Click(object sender, EventArgs e)
+        {
+            LanguageManager.Initialize(typeof(Languages.Resource_language_english));
+            UpdateUI();
+            LanguageChanged?.Invoke();
         }
 
         #region destinationmanager
