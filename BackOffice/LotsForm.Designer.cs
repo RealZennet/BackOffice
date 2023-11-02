@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewLots = new System.Windows.Forms.DataGridView();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelEstimatedDate = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.dateTimePickerShippingDate = new System.Windows.Forms.DateTimePicker();
             this.txtBoxIDShipp = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelIDShippment = new System.Windows.Forms.Label();
+            this.labelActivated = new System.Windows.Forms.Label();
             this.txtBoxActivedBatch = new System.Windows.Forms.TextBox();
             this.dateTimePickerBatchManagementTime = new System.Windows.Forms.DateTimePicker();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
@@ -52,23 +52,23 @@
             this.dataGridViewLots.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewLots.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewLots.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLots.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLots.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewLots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewLots.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewLots.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewLots.EnableHeadersVisualStyles = false;
             this.dataGridViewLots.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewLots.Location = new System.Drawing.Point(12, 44);
@@ -86,16 +86,16 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // label2
+            // labelEstimatedDate
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label2.Location = new System.Drawing.Point(527, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Fecha estimada de entrega";
+            this.labelEstimatedDate.AutoSize = true;
+            this.labelEstimatedDate.BackColor = System.Drawing.Color.Transparent;
+            this.labelEstimatedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.labelEstimatedDate.Location = new System.Drawing.Point(527, 101);
+            this.labelEstimatedDate.Name = "labelEstimatedDate";
+            this.labelEstimatedDate.Size = new System.Drawing.Size(181, 17);
+            this.labelEstimatedDate.TabIndex = 3;
+            this.labelEstimatedDate.Text = "Fecha estimada de entrega";
             // 
             // buttonAdd
             // 
@@ -141,31 +141,31 @@
             this.txtBoxIDShipp.Size = new System.Drawing.Size(50, 20);
             this.txtBoxIDShipp.TabIndex = 9;
             // 
-            // label3
+            // labelIDShippment
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label3.Location = new System.Drawing.Point(527, 176);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 17);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "ID Envio";
+            this.labelIDShippment.AutoSize = true;
+            this.labelIDShippment.BackColor = System.Drawing.Color.Transparent;
+            this.labelIDShippment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.labelIDShippment.Location = new System.Drawing.Point(527, 176);
+            this.labelIDShippment.Name = "labelIDShippment";
+            this.labelIDShippment.Size = new System.Drawing.Size(60, 17);
+            this.labelIDShippment.TabIndex = 10;
+            this.labelIDShippment.Text = "ID Envio";
             // 
-            // label4
+            // labelActivated
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label4.Location = new System.Drawing.Point(601, 176);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 17);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Activado (true - false)";
+            this.labelActivated.AutoSize = true;
+            this.labelActivated.BackColor = System.Drawing.Color.Transparent;
+            this.labelActivated.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.labelActivated.Location = new System.Drawing.Point(617, 176);
+            this.labelActivated.Name = "labelActivated";
+            this.labelActivated.Size = new System.Drawing.Size(144, 17);
+            this.labelActivated.TabIndex = 12;
+            this.labelActivated.Text = "Activado (true - false)";
             // 
             // txtBoxActivedBatch
             // 
-            this.txtBoxActivedBatch.Location = new System.Drawing.Point(604, 196);
+            this.txtBoxActivedBatch.Location = new System.Drawing.Point(658, 196);
             this.txtBoxActivedBatch.Name = "txtBoxActivedBatch";
             this.txtBoxActivedBatch.Size = new System.Drawing.Size(50, 20);
             this.txtBoxActivedBatch.TabIndex = 11;
@@ -205,15 +205,15 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtBoxEmail);
             this.Controls.Add(this.dateTimePickerBatchManagementTime);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelActivated);
             this.Controls.Add(this.txtBoxActivedBatch);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelIDShippment);
             this.Controls.Add(this.txtBoxIDShipp);
             this.Controls.Add(this.dateTimePickerShippingDate);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelEstimatedDate);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.dataGridViewLots);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -230,14 +230,14 @@
 
         private System.Windows.Forms.DataGridView dataGridViewLots;
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelEstimatedDate;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.DateTimePicker dateTimePickerShippingDate;
         private System.Windows.Forms.TextBox txtBoxIDShipp;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelIDShippment;
+        private System.Windows.Forms.Label labelActivated;
         private System.Windows.Forms.TextBox txtBoxActivedBatch;
         private System.Windows.Forms.DateTimePicker dateTimePickerBatchManagementTime;
         private System.Windows.Forms.TextBox txtBoxEmail;
