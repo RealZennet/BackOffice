@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.labelShipDate = new System.Windows.Forms.Label();
+            this.labelIDLot = new System.Windows.Forms.Label();
             this.txtBoxIDBatchShippManagement = new System.Windows.Forms.TextBox();
             this.txtBoxIDTruckShippManagement = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelIDTruck = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewShippingManagement = new System.Windows.Forms.DataGridView();
             this.buttonBack = new System.Windows.Forms.Button();
@@ -50,36 +50,36 @@
             this.buttonDeleteCarry = new System.Windows.Forms.Button();
             this.buttonAddCarry = new System.Windows.Forms.Button();
             this.buttonEditCarry = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelIDLot2 = new System.Windows.Forms.Label();
             this.txtBoxIDBatchCarrie = new System.Windows.Forms.TextBox();
             this.txtBoxIDTruckCarrie = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelIDestination = new System.Windows.Forms.Label();
             this.txtBoxIDDestinationCarrie = new System.Windows.Forms.TextBox();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.dateTimePickerShippManagementTime = new System.Windows.Forms.DateTimePicker();
             this.panelSeparator = new System.Windows.Forms.Panel();
+            this.labelIDTruck2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShippingManagement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarry)).BeginInit();
             this.SuspendLayout();
             // 
-            // label6
+            // labelShipDate
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 403);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
-            this.label6.TabIndex = 61;
-            this.label6.Text = "Fecha de salida";
+            this.labelShipDate.AutoSize = true;
+            this.labelShipDate.Location = new System.Drawing.Point(12, 403);
+            this.labelShipDate.Name = "labelShipDate";
+            this.labelShipDate.Size = new System.Drawing.Size(82, 13);
+            this.labelShipDate.TabIndex = 61;
+            this.labelShipDate.Text = "Fecha de salida";
             // 
-            // label5
+            // labelIDLot
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 361);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
-            this.label5.TabIndex = 59;
-            this.label5.Text = "ID Lote";
+            this.labelIDLot.AutoSize = true;
+            this.labelIDLot.Location = new System.Drawing.Point(12, 361);
+            this.labelIDLot.Name = "labelIDLot";
+            this.labelIDLot.Size = new System.Drawing.Size(42, 13);
+            this.labelIDLot.TabIndex = 59;
+            this.labelIDLot.Text = "ID Lote";
             // 
             // txtBoxIDBatchShippManagement
             // 
@@ -95,14 +95,14 @@
             this.txtBoxIDTruckShippManagement.Size = new System.Drawing.Size(41, 20);
             this.txtBoxIDTruckShippManagement.TabIndex = 57;
             // 
-            // label4
+            // labelIDTruck
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 316);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 56;
-            this.label4.Text = "ID Camion";
+            this.labelIDTruck.AutoSize = true;
+            this.labelIDTruck.Location = new System.Drawing.Point(12, 316);
+            this.labelIDTruck.Name = "labelIDTruck";
+            this.labelIDTruck.Size = new System.Drawing.Size(56, 13);
+            this.labelIDTruck.TabIndex = 56;
+            this.labelIDTruck.Text = "ID Camion";
             // 
             // label2
             // 
@@ -119,23 +119,23 @@
             this.dataGridViewShippingManagement.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewShippingManagement.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewShippingManagement.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewShippingManagement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewShippingManagement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewShippingManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewShippingManagement.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewShippingManagement.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewShippingManagement.EnableHeadersVisualStyles = false;
             this.dataGridViewShippingManagement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewShippingManagement.Location = new System.Drawing.Point(12, 69);
@@ -201,23 +201,23 @@
             this.dataGridViewCarry.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewCarry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewCarry.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCarry.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCarry.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewCarry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCarry.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCarry.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewCarry.EnableHeadersVisualStyles = false;
             this.dataGridViewCarry.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewCarry.Location = new System.Drawing.Point(455, 69);
@@ -271,14 +271,14 @@
             this.buttonEditCarry.Text = "Editar";
             this.buttonEditCarry.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // labelIDLot2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(476, 361);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 74;
-            this.label3.Text = "ID Lote";
+            this.labelIDLot2.AutoSize = true;
+            this.labelIDLot2.Location = new System.Drawing.Point(476, 361);
+            this.labelIDLot2.Name = "labelIDLot2";
+            this.labelIDLot2.Size = new System.Drawing.Size(42, 13);
+            this.labelIDLot2.TabIndex = 74;
+            this.labelIDLot2.Text = "ID Lote";
             // 
             // txtBoxIDBatchCarrie
             // 
@@ -294,23 +294,14 @@
             this.txtBoxIDTruckCarrie.Size = new System.Drawing.Size(41, 20);
             this.txtBoxIDTruckCarrie.TabIndex = 72;
             // 
-            // label7
+            // labelIDestination
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(476, 316);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
-            this.label7.TabIndex = 71;
-            this.label7.Text = "ID Camion";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(478, 405);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 13);
-            this.label8.TabIndex = 76;
-            this.label8.Text = "ID Destino";
+            this.labelIDestination.AutoSize = true;
+            this.labelIDestination.Location = new System.Drawing.Point(478, 405);
+            this.labelIDestination.Name = "labelIDestination";
+            this.labelIDestination.Size = new System.Drawing.Size(57, 13);
+            this.labelIDestination.TabIndex = 76;
+            this.labelIDestination.Text = "ID Destino";
             // 
             // txtBoxIDDestinationCarrie
             // 
@@ -343,21 +334,30 @@
             this.panelSeparator.Size = new System.Drawing.Size(3, 557);
             this.panelSeparator.TabIndex = 81;
             // 
+            // labelIDTruck2
+            // 
+            this.labelIDTruck2.AutoSize = true;
+            this.labelIDTruck2.Location = new System.Drawing.Point(474, 316);
+            this.labelIDTruck2.Name = "labelIDTruck2";
+            this.labelIDTruck2.Size = new System.Drawing.Size(56, 13);
+            this.labelIDTruck2.TabIndex = 82;
+            this.labelIDTruck2.Text = "ID Camion";
+            // 
             // ShippingManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
+            this.Controls.Add(this.labelIDTruck2);
             this.Controls.Add(this.panelSeparator);
             this.Controls.Add(this.dateTimePickerShippManagementTime);
             this.Controls.Add(this.comboBoxStatus);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.labelIDestination);
             this.Controls.Add(this.txtBoxIDDestinationCarrie);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelIDLot2);
             this.Controls.Add(this.txtBoxIDBatchCarrie);
             this.Controls.Add(this.txtBoxIDTruckCarrie);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonEditCarry);
             this.Controls.Add(this.buttonRefreshCarry);
             this.Controls.Add(this.buttonDeleteCarry);
@@ -365,11 +365,11 @@
             this.Controls.Add(this.dateTimePickerShippManagement);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewCarry);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelShipDate);
+            this.Controls.Add(this.labelIDLot);
             this.Controls.Add(this.txtBoxIDBatchShippManagement);
             this.Controls.Add(this.txtBoxIDTruckShippManagement);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelIDTruck);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewShippingManagement);
             this.Controls.Add(this.buttonBack);
@@ -389,11 +389,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelShipDate;
+        private System.Windows.Forms.Label labelIDLot;
         private System.Windows.Forms.TextBox txtBoxIDBatchShippManagement;
         private System.Windows.Forms.TextBox txtBoxIDTruckShippManagement;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelIDTruck;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewShippingManagement;
         private System.Windows.Forms.Button buttonBack;
@@ -407,14 +407,14 @@
         private System.Windows.Forms.Button buttonDeleteCarry;
         private System.Windows.Forms.Button buttonAddCarry;
         private System.Windows.Forms.Button buttonEditCarry;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelIDLot2;
         private System.Windows.Forms.TextBox txtBoxIDBatchCarrie;
         private System.Windows.Forms.TextBox txtBoxIDTruckCarrie;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelIDestination;
         private System.Windows.Forms.TextBox txtBoxIDDestinationCarrie;
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.DateTimePicker dateTimePickerShippManagementTime;
         private System.Windows.Forms.Panel panelSeparator;
+        private System.Windows.Forms.Label labelIDTruck2;
     }
 }

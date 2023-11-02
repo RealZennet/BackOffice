@@ -28,6 +28,7 @@ namespace BackOffice
             buttonDeleteDestination.Text = LanguageManager.GetString("Delete");
             buttonRefreshDestination.Text = LanguageManager.GetString("Refresh");
             buttonBack.Text = LanguageManager.GetString("Back");
+            buttonShowMap.Text = LanguageManager.GetString("Map");
             labelActivated.Text = LanguageManager.GetString("Activated");
             labelShipDate.Text = LanguageManager.GetString("DateOfShipment");
             labelStreet.Text = LanguageManager.GetString("Street");
@@ -102,7 +103,7 @@ namespace BackOffice
                 int id = (int)dataGridViewDestinations.Rows[selectedIndex].Cells["ID"].Value;
                 DataTable dataTableDestinations = (DataTable)dataGridViewDestinations.DataSource;
                 dataTableDestinations.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show("El destino fue eliminado!");
+                MessageBox.Show(Languages.Messages.Successful);
                 DestinationController.DeleteDestination(id);
                 dataGridViewDestinations.DataSource = dataTableDestinations;
                 RefreshTable();

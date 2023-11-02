@@ -312,4 +312,7 @@
   <data name="ManageUsers" xml:space="preserve">
     <value>Gestionar Usuarios</value>
   </data>
+  <data name="Map" xml:space="preserve">
+    <value>Mapa</value>
+  </data>
 </root>
