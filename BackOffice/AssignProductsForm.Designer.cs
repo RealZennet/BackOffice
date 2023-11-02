@@ -34,8 +34,8 @@
             this.dataGridViewAssignedProducts = new System.Windows.Forms.DataGridView();
             this.buttonBack = new System.Windows.Forms.Button();
             this.txtBoxIDProduct = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelProductID = new System.Windows.Forms.Label();
+            this.labelBatchID = new System.Windows.Forms.Label();
             this.txtBoxIDLote = new System.Windows.Forms.TextBox();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
@@ -97,23 +97,23 @@
             this.txtBoxIDProduct.Size = new System.Drawing.Size(231, 20);
             this.txtBoxIDProduct.TabIndex = 3;
             // 
-            // label2
+            // labelProductID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(527, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "ID del producto a asignar";
+            this.labelProductID.AutoSize = true;
+            this.labelProductID.Location = new System.Drawing.Point(527, 59);
+            this.labelProductID.Name = "labelProductID";
+            this.labelProductID.Size = new System.Drawing.Size(126, 13);
+            this.labelProductID.TabIndex = 4;
+            this.labelProductID.Text = "ID del producto a asignar";
             // 
-            // label3
+            // labelBatchID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(527, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "ID del lote a asignar";
+            this.labelBatchID.AutoSize = true;
+            this.labelBatchID.Location = new System.Drawing.Point(527, 126);
+            this.labelBatchID.Name = "labelBatchID";
+            this.labelBatchID.Size = new System.Drawing.Size(101, 13);
+            this.labelBatchID.TabIndex = 6;
+            this.labelBatchID.Text = "ID del lote a asignar";
             // 
             // txtBoxIDLote
             // 
@@ -162,9 +162,9 @@
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelBatchID);
             this.Controls.Add(this.txtBoxIDLote);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelProductID);
             this.Controls.Add(this.txtBoxIDProduct);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.dataGridViewAssignedProducts);
@@ -183,8 +183,8 @@
         private System.Windows.Forms.DataGridView dataGridViewAssignedProducts;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.TextBox txtBoxIDProduct;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelProductID;
+        private System.Windows.Forms.Label labelBatchID;
         private System.Windows.Forms.TextBox txtBoxIDLote;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonDelete;
