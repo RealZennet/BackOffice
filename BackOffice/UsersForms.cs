@@ -13,10 +13,33 @@ namespace BackOffice
 {
     public partial class UsersForms : Form
     {
+
+        public event Action LanguageChanged;
+
         public UsersForms()
         {
             InitializeComponent();
             RefreshTable();
+            QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
+            if (mainForm != null)
+            {
+                mainForm.LanguageChanged += updateLanguage;
+            }
+        }
+
+        private void updateLanguage()
+        {
+            buttonAdd.Text = LanguageManager.GetString("Add");
+            buttonDelete.Text = LanguageManager.GetString("Delete");
+            buttonRefresh.Text = LanguageManager.GetString("Refresh");
+            buttonEditUser.Text = LanguageManager.GetString("Edit");
+            buttonBack.Text = LanguageManager.GetString("Back");
+            labelFirstName.Text = LanguageManager.GetString("FirstName");
+            labelFirstLastName.Text = LanguageManager.GetString("FirstLastName");
+            labelPhoneNumber.Text = LanguageManager.GetString("PhoneNumber");
+            labelUsername.Text = LanguageManager.GetString("Username");
+            labelPassword.Text = LanguageManager.GetString("Password");
+
         }
 
         private void UsersForms_Load(object sender, EventArgs e)
@@ -69,7 +92,7 @@ namespace BackOffice
         {
             if (!ValidateInputsUser())
             {
-                MessageBox.Show("Porfavor complete los campos correspondientes");
+                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
                 return;
             }
             createUser();
@@ -84,7 +107,7 @@ namespace BackOffice
                 txtBoxUsername.Text,
                 txtBoxPassword.Text
             );
-            MessageBox.Show("Usuario agregado");
+            MessageBox.Show(Languages.Messages.Successful);
             RefreshTable();
             ClearTxtBoxes();
         }
@@ -102,7 +125,7 @@ namespace BackOffice
                 int id = (int)dataGridViewUsers.Rows[selectedIndex].Cells["id"].Value;
                 DataTable dataTableUsers = (DataTable)dataGridViewUsers.DataSource;
                 dataTableUsers.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show("El usuario fue eliminado!");
+                MessageBox.Show(Languages.Messages.Successful);
                 UserController.DeleteUser(id);
                 dataGridViewUsers.DataSource = dataTableUsers;
                 RefreshTable();
@@ -132,13 +155,13 @@ namespace BackOffice
                 if (ValidateInputsUser())
                 {
                     UserController.Edit(Int32.Parse(txtBoxUserID.Text), txtBoxFirstName.Text, txtBoxFirstLastName.Text, txtBoxPhoneNumber.Text,txtBoxUsername.Text, txtBoxPassword.Text);
-                    MessageBox.Show("Datos actualizados.");
+                    MessageBox.Show(Languages.Messages.Successful);
                     ClearTxtBoxes();
                     RefreshTable();
                 }
                 else
                 {
-                    MessageBox.Show("Completa todos los campos antes de guardar.");
+                    MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
                 }
             }
             catch (Exception ex)

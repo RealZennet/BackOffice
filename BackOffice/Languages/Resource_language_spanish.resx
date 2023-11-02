@@ -318,7 +318,22 @@
   <data name="IDOperator" xml:space="preserve">
     <value>ID Operario</value>
   </data>
+  <data name="FirstLastName" xml:space="preserve">
+    <value>Primer Apellido</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Primer Nombre</value>
+  </data>
   <data name="IDTrucker" xml:space="preserve">
     <value>ID Camionero</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Telefono</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Nombre de usuario</value>
   </data>
 </root>
