@@ -33,14 +33,14 @@
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelIDDestination = new System.Windows.Forms.Label();
             this.txtBoxIDDestination = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelIDStoreHouse = new System.Windows.Forms.Label();
             this.txtBoxIDStoreHouse = new System.Windows.Forms.TextBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.dataGridViewTravels = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelTypeTravel = new System.Windows.Forms.Label();
+            this.labelDateTravel = new System.Windows.Forms.Label();
             this.dateTimePickerShippmentDate = new System.Windows.Forms.DateTimePicker();
             this.comboBoxTypeTravel = new System.Windows.Forms.ComboBox();
             this.dateTimePickerShippmentDateTime = new System.Windows.Forms.DateTimePicker();
@@ -77,14 +77,14 @@
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // label3
+            // labelIDDestination
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(510, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "ID Destino";
+            this.labelIDDestination.AutoSize = true;
+            this.labelIDDestination.Location = new System.Drawing.Point(510, 123);
+            this.labelIDDestination.Name = "labelIDDestination";
+            this.labelIDDestination.Size = new System.Drawing.Size(57, 13);
+            this.labelIDDestination.TabIndex = 17;
+            this.labelIDDestination.Text = "ID Destino";
             // 
             // txtBoxIDDestination
             // 
@@ -93,14 +93,14 @@
             this.txtBoxIDDestination.Size = new System.Drawing.Size(210, 20);
             this.txtBoxIDDestination.TabIndex = 16;
             // 
-            // label2
+            // labelIDStoreHouse
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(510, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "ID Almacen";
+            this.labelIDStoreHouse.AutoSize = true;
+            this.labelIDStoreHouse.Location = new System.Drawing.Point(510, 56);
+            this.labelIDStoreHouse.Name = "labelIDStoreHouse";
+            this.labelIDStoreHouse.Size = new System.Drawing.Size(62, 13);
+            this.labelIDStoreHouse.TabIndex = 15;
+            this.labelIDStoreHouse.Text = "ID Almacen";
             // 
             // txtBoxIDStoreHouse
             // 
@@ -148,23 +148,23 @@
             this.dataGridViewTravels.Size = new System.Drawing.Size(480, 475);
             this.dataGridViewTravels.TabIndex = 11;
             // 
-            // label4
+            // labelTypeTravel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(510, 183);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Tipo Trayecto";
+            this.labelTypeTravel.AutoSize = true;
+            this.labelTypeTravel.Location = new System.Drawing.Point(510, 183);
+            this.labelTypeTravel.Name = "labelTypeTravel";
+            this.labelTypeTravel.Size = new System.Drawing.Size(73, 13);
+            this.labelTypeTravel.TabIndex = 22;
+            this.labelTypeTravel.Text = "Tipo Trayecto";
             // 
-            // label5
+            // labelDateTravel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(510, 249);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 13);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Fecha Trayecto";
+            this.labelDateTravel.AutoSize = true;
+            this.labelDateTravel.Location = new System.Drawing.Point(510, 249);
+            this.labelDateTravel.Name = "labelDateTravel";
+            this.labelDateTravel.Size = new System.Drawing.Size(82, 13);
+            this.labelDateTravel.TabIndex = 24;
+            this.labelDateTravel.Text = "Fecha Trayecto";
             // 
             // dateTimePickerShippmentDate
             // 
@@ -198,14 +198,14 @@
             this.Controls.Add(this.dateTimePickerShippmentDateTime);
             this.Controls.Add(this.comboBoxTypeTravel);
             this.Controls.Add(this.dateTimePickerShippmentDate);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelDateTravel);
+            this.Controls.Add(this.labelTypeTravel);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelIDDestination);
             this.Controls.Add(this.txtBoxIDDestination);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelIDStoreHouse);
             this.Controls.Add(this.txtBoxIDStoreHouse);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.dataGridViewTravels);
@@ -224,14 +224,14 @@
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelIDDestination;
         private System.Windows.Forms.TextBox txtBoxIDDestination;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelIDStoreHouse;
         private System.Windows.Forms.TextBox txtBoxIDStoreHouse;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.DataGridView dataGridViewTravels;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelTypeTravel;
+        private System.Windows.Forms.Label labelDateTravel;
         private System.Windows.Forms.DateTimePicker dateTimePickerShippmentDate;
         private System.Windows.Forms.ComboBox comboBoxTypeTravel;
         private System.Windows.Forms.DateTimePicker dateTimePickerShippmentDateTime;
