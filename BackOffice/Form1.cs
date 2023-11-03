@@ -20,7 +20,6 @@ namespace BackOffice
         {
             InitializeComponent();
             customMenus();
-            roundedCircleForm();
         }
         
         private void Form1_Load(object sender, EventArgs e)
@@ -41,22 +40,6 @@ namespace BackOffice
             buttonUsersManager.Text = LanguageManager.GetString("ManageUsers");
             buttonUsersAssign.Text = LanguageManager.GetString("AssignUser");
             buttonTravelManager.Text = LanguageManager.GetString("ManageTravels");
-        }
-
-        private void roundedCircleForm()
-        {
-            int radiusBorder = 25;
-
-            Rectangle rectangleBorder = new Rectangle(0, 0, this.Width, this.Height);
-
-            GraphicsPath graphicBorder = new GraphicsPath();
-            graphicBorder.AddArc(rectangleBorder.X, rectangleBorder.Y, radiusBorder, radiusBorder, 180, 90);
-            graphicBorder.AddArc(rectangleBorder.Right - radiusBorder, rectangleBorder.Y, radiusBorder, radiusBorder, 270, 90);
-            graphicBorder.AddArc(rectangleBorder.Right - radiusBorder, rectangleBorder.Bottom - radiusBorder, radiusBorder, radiusBorder, 0, 90);
-            graphicBorder.AddArc(rectangleBorder.X, rectangleBorder.Bottom - radiusBorder, radiusBorder, radiusBorder, 90, 90);
-            graphicBorder.CloseAllFigures();
-
-            this.Region = new Region(graphicBorder);
         }
 
         #region generalMenu

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.leftPanelContainer = new System.Windows.Forms.Panel();
+            this.buttonLanguageSpanish = new System.Windows.Forms.Button();
+            this.buttonEnglishLanguage = new System.Windows.Forms.Button();
             this.managementPanel = new System.Windows.Forms.Panel();
             this.buttonGmail = new System.Windows.Forms.Button();
             this.buttonTravelManager = new System.Windows.Forms.Button();
@@ -47,11 +49,6 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFormsLoader = new System.Windows.Forms.Panel();
-            this.SlidePanel = new System.Windows.Forms.Panel();
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.buttonMinimize = new System.Windows.Forms.Button();
-            this.buttonEnglishLanguage = new System.Windows.Forms.Button();
-            this.buttonLanguageSpanish = new System.Windows.Forms.Button();
             this.leftPanelContainer.SuspendLayout();
             this.managementPanel.SuspendLayout();
             this.productsAndLotsPanel.SuspendLayout();
@@ -75,6 +72,37 @@
             this.leftPanelContainer.Name = "leftPanelContainer";
             this.leftPanelContainer.Size = new System.Drawing.Size(250, 607);
             this.leftPanelContainer.TabIndex = 1;
+            // 
+            // buttonLanguageSpanish
+            // 
+            this.buttonLanguageSpanish.FlatAppearance.BorderSize = 0;
+            this.buttonLanguageSpanish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLanguageSpanish.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonLanguageSpanish.Location = new System.Drawing.Point(105, 578);
+            this.buttonLanguageSpanish.Name = "buttonLanguageSpanish";
+            this.buttonLanguageSpanish.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonLanguageSpanish.Size = new System.Drawing.Size(132, 26);
+            this.buttonLanguageSpanish.TabIndex = 9;
+            this.buttonLanguageSpanish.Text = "Spanish";
+            this.buttonLanguageSpanish.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonLanguageSpanish.UseVisualStyleBackColor = true;
+            this.buttonLanguageSpanish.Click += new System.EventHandler(this.buttonLanguageSpanish_Click);
+            // 
+            // buttonEnglishLanguage
+            // 
+            this.buttonEnglishLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            this.buttonEnglishLanguage.FlatAppearance.BorderSize = 0;
+            this.buttonEnglishLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEnglishLanguage.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonEnglishLanguage.Location = new System.Drawing.Point(0, 576);
+            this.buttonEnglishLanguage.Name = "buttonEnglishLanguage";
+            this.buttonEnglishLanguage.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonEnglishLanguage.Size = new System.Drawing.Size(99, 28);
+            this.buttonEnglishLanguage.TabIndex = 8;
+            this.buttonEnglishLanguage.Text = "English";
+            this.buttonEnglishLanguage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEnglishLanguage.UseVisualStyleBackColor = false;
+            this.buttonEnglishLanguage.Click += new System.EventHandler(this.buttonEnglishLanguage_Click);
             // 
             // managementPanel
             // 
@@ -333,86 +361,16 @@
             this.panelFormsLoader.TabIndex = 2;
             this.panelFormsLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormsLoader_Paint);
             // 
-            // SlidePanel
-            // 
-            this.SlidePanel.Location = new System.Drawing.Point(256, 0);
-            this.SlidePanel.Name = "SlidePanel";
-            this.SlidePanel.Size = new System.Drawing.Size(712, 35);
-            this.SlidePanel.TabIndex = 3;
-            this.SlidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSlider_Paint);
-            this.SlidePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SlidePanel_MouseDown);
-            this.SlidePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SlidePanel_MouseMove);
-            this.SlidePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SlidePanel_MouseUp);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.ForeColor = System.Drawing.Color.Orange;
-            this.buttonClose.Location = new System.Drawing.Point(974, 9);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(23, 23);
-            this.buttonClose.TabIndex = 4;
-            this.buttonClose.Text = "X";
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
-            // buttonMinimize
-            // 
-            this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinimize.ForeColor = System.Drawing.Color.Orange;
-            this.buttonMinimize.Location = new System.Drawing.Point(1002, 9);
-            this.buttonMinimize.Name = "buttonMinimize";
-            this.buttonMinimize.Size = new System.Drawing.Size(23, 23);
-            this.buttonMinimize.TabIndex = 5;
-            this.buttonMinimize.Text = "_";
-            this.buttonMinimize.UseVisualStyleBackColor = true;
-            this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
-            // 
-            // buttonEnglishLanguage
-            // 
-            this.buttonEnglishLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            this.buttonEnglishLanguage.FlatAppearance.BorderSize = 0;
-            this.buttonEnglishLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEnglishLanguage.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonEnglishLanguage.Location = new System.Drawing.Point(0, 576);
-            this.buttonEnglishLanguage.Name = "buttonEnglishLanguage";
-            this.buttonEnglishLanguage.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonEnglishLanguage.Size = new System.Drawing.Size(99, 28);
-            this.buttonEnglishLanguage.TabIndex = 8;
-            this.buttonEnglishLanguage.Text = "English";
-            this.buttonEnglishLanguage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEnglishLanguage.UseVisualStyleBackColor = false;
-            this.buttonEnglishLanguage.Click += new System.EventHandler(this.buttonEnglishLanguage_Click);
-            // 
-            // buttonLanguageSpanish
-            // 
-            this.buttonLanguageSpanish.FlatAppearance.BorderSize = 0;
-            this.buttonLanguageSpanish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLanguageSpanish.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonLanguageSpanish.Location = new System.Drawing.Point(105, 578);
-            this.buttonLanguageSpanish.Name = "buttonLanguageSpanish";
-            this.buttonLanguageSpanish.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonLanguageSpanish.Size = new System.Drawing.Size(132, 26);
-            this.buttonLanguageSpanish.TabIndex = 9;
-            this.buttonLanguageSpanish.Text = "Spanish";
-            this.buttonLanguageSpanish.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonLanguageSpanish.UseVisualStyleBackColor = true;
-            this.buttonLanguageSpanish.Click += new System.EventHandler(this.buttonLanguageSpanish_Click);
-            // 
             // QuickCarry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1037, 607);
-            this.Controls.Add(this.buttonMinimize);
-            this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.SlidePanel);
             this.Controls.Add(this.panelFormsLoader);
             this.Controls.Add(this.leftPanelContainer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QuickCarry";
-            this.Text = "Form1";
+            this.Text = "ZTracking";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.leftPanelContainer.ResumeLayout(false);
             this.managementPanel.ResumeLayout(false);
@@ -443,9 +401,6 @@
         private System.Windows.Forms.Button buttonDestinationManager;
         private System.Windows.Forms.Button buttonTravelManager;
         private System.Windows.Forms.Button buttonGmail;
-        private System.Windows.Forms.Panel SlidePanel;
-        private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Button buttonMinimize;
         private System.Windows.Forms.Button buttonLanguageSpanish;
         private System.Windows.Forms.Button buttonEnglishLanguage;
     }
