@@ -333,4 +333,10 @@
   <data name="Username" xml:space="preserve">
     <value>Username</value>
   </data>
+  <data name="Destination" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
 </root>

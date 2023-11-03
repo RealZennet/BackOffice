@@ -336,4 +336,10 @@
   <data name="Username" xml:space="preserve">
     <value>Nombre de usuario</value>
   </data>
+  <data name="Destination" xml:space="preserve">
+    <value>Destino</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Asunto</value>
+  </data>
 </root>
