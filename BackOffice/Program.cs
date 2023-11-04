@@ -16,7 +16,7 @@ namespace BackOffice
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QuickCarry());
+            Application.Run(new LoginForm());
         }
     }
 }

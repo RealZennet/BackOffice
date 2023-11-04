@@ -13,39 +13,11 @@ namespace BackOffice
 {
     public partial class TruckManagerForm : Form
     {
-
-        public event Action LanguageChanged;
-
         public TruckManagerForm()
         {
             InitializeComponent();
             RefreshTableTruck();
             RefreshTableTrucker();
-            QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
-            if (mainForm != null)
-            {
-                mainForm.LanguageChanged += updateLanguage;
-            }
-        }
-
-        private void updateLanguage()
-        {
-            buttonAddAssignedTruck.Text = LanguageManager.GetString("Add");
-            buttonAddTruck.Text = LanguageManager.GetString("Add");
-            buttonDeleteAssignedTruck.Text = LanguageManager.GetString("Delete");
-            buttonDeleteTruck.Text = LanguageManager.GetString("Delete");
-            buttonRefreshAssignTrucker.Text = LanguageManager.GetString("Refresh");
-            buttonRefreshTruck.Text = LanguageManager.GetString("Refresh");
-            buttonEdit.Text = LanguageManager.GetString("Edit");
-            buttonBack.Text = LanguageManager.GetString("Back");
-            labelActived.Text = LanguageManager.GetString("Activated");
-            labelIDTruck.Text = LanguageManager.GetString("IDTruck");
-            labelIDTruck2.Text = LanguageManager.GetString("IDTruck");
-            labelIDTrucker.Text = LanguageManager.GetString("IDTrucker");
-            labelActived.Text = LanguageManager.GetString("Activated");
-            labelTruckWeight.Text = LanguageManager.GetString("Weight");
-            labelTruckVolume.Text = LanguageManager.GetString("Volume");
-
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -85,12 +57,12 @@ namespace BackOffice
                 !int.TryParse(txtBoxVolumeTruck.Text, out int volume) ||
                 !bool.TryParse(txtBoxActiveTruck.Text, out bool isActive))
             {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                MessageBox.Show("Por favor, ingrese valores validos en todos los campos.");
                 return;
             }
 
             TruckController.Create(weight, volume, isActive);
-            MessageBox.Show(Languages.Messages.Successful);
+            MessageBox.Show("Camion Agregado");
             RefreshTableTruck();
             ClearTxtBoxesTruck();
         }
@@ -106,19 +78,19 @@ namespace BackOffice
                 {
                     DataTable dataTableTruckSelected = (DataTable)dataGridViewAddTruck.DataSource;
                     dataTableTruckSelected.Rows.RemoveAt(selectedIndex);
-                    MessageBox.Show(Languages.Messages.Successful);
+                    MessageBox.Show("El camion fue eliminado!");
                     TruckController.DeleteTruck(id);
                     dataGridViewAddTruck.DataSource = dataTableTruckSelected;
                     RefreshTableTruck();
                 }
                 else
                 {
-                    MessageBox.Show(Languages.Messages.SelectAnIndex);
+                    MessageBox.Show("No se ha seleccionado un camion válido para eliminar.");
                 }
             }
             else
             {
-                MessageBox.Show(Languages.Messages.SelectAnIndex);
+                MessageBox.Show("No se ha seleccionado un camion para eliminar.");
             }
         }
 
@@ -131,7 +103,7 @@ namespace BackOffice
                 Convert.ToBoolean(txtBoxActiveTruck.Text)
             );
             RefreshTableTruck();
-            MessageBox.Show(Languages.Messages.Successful);
+            MessageBox.Show("Modificado");
         }
 
         #region trucker
@@ -159,14 +131,14 @@ namespace BackOffice
                 !int.TryParse(txtBoxIDAssignedTruck.Text, out int truckId) ||
                 !int.TryParse(txtBoxIDAssignedTrucker.Text, out int truckerId))
             {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                MessageBox.Show("Por favor, ingrese valores válidos en todos los campos.");
                 return;
             }
 
             try
             {
                 TruckerController.Create(truckId, truckerId);
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("Camion asignado");
                 RefreshTableTrucker();
                 ClearTxtBoxesTrucker();
             }
@@ -188,19 +160,19 @@ namespace BackOffice
                 {
                     DataTable dataTableTruckerSelected = (DataTable)dataGridViewAssignTruck.DataSource;
                     dataTableTruckerSelected.Rows.RemoveAt(selectedIndex);
-                    MessageBox.Show(Languages.Messages.Successful);
+                    MessageBox.Show("La asignacion fue eliminada!");
                     TruckerController.DeleteTrucker(id);
                     dataGridViewAssignTruck.DataSource = dataTableTruckerSelected;
                     RefreshTableTrucker();
                 }
                 else
                 {
-                    MessageBox.Show(Languages.Messages.SelectAnIndex);
+                    MessageBox.Show("No se ha seleccionado una asignación válida para eliminar.");
                 }
             }
             else
             {
-                MessageBox.Show(Languages.Messages.SelectAnIndex);
+                MessageBox.Show("No se ha seleccionado una asignación para eliminar.");
             }
         }
 

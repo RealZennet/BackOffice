@@ -13,38 +13,11 @@ namespace BackOffice
 {
     public partial class StoreHouse : Form
     {
-
-        public event Action LanguageChanged;
-
         public StoreHouse()
         {
             InitializeComponent();
             RefreshTableAddStoreHouse();
             RefreshTableAssignOperatorToStoreHouse();
-            QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
-            if (mainForm != null)
-            {
-                mainForm.LanguageChanged += updateLanguage;
-            }
-        }
-
-        private void updateLanguage()
-        {
-            buttonAddStoreHouse.Text = LanguageManager.GetString("Add");
-            buttonAddOperatorToStoreHouse.Text = LanguageManager.GetString("Add");
-            buttonDeleteStoreHouse.Text = LanguageManager.GetString("Delete");
-            buttonDeleteOperatorFromStoreHouse.Text = LanguageManager.GetString("Delete");
-            buttonRefreshStoreHouse.Text = LanguageManager.GetString("Refresh");
-            buttonRefreshAddOperatorStoreHouses.Text = LanguageManager.GetString("Refresh");
-            buttonEditStoreHouse.Text = LanguageManager.GetString("Edit");
-            buttonBack.Text = LanguageManager.GetString("Back");
-            labelStreet.Text = LanguageManager.GetString("Street");
-            labelCorner.Text = LanguageManager.GetString("Corner");
-            labelNumber.Text = LanguageManager.GetString("Number");
-            labelActived.Text = LanguageManager.GetString("Activated");
-            labelIDOperator.Text = LanguageManager.GetString("IDOperator");
-            labelIDStoreHouse.Text = LanguageManager.GetString("StoreHouseID");
-
         }
 
         private void StoreHouse_Load(object sender, EventArgs e)
@@ -92,13 +65,13 @@ namespace BackOffice
             if (bool.TryParse(txtBoxStoreHouseActived.Text, out bool isActivated))
             {
                 StoreHouseController.Create(txtBoxStoreHouseStreet.Text, txtBoxStoreHouseDoorNumber.Text, txtBoxStoreHouseCorner.Text, isActivated);
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("Almacén agregado");
                 RefreshTableAddStoreHouse();
                 ClearTxtBoxesAddStoreHouse();
             }
             else
             {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                MessageBox.Show("El valor de activación no es válido. Debe ser 'True' o 'False'.");
             }
         }
 
@@ -115,7 +88,7 @@ namespace BackOffice
                 int id = (int)dataGridViewStoreHouses.Rows[selectedIndex].Cells["id"].Value;
                 DataTable dataTableProducts = (DataTable)dataGridViewStoreHouses.DataSource;
                 dataTableProducts.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("El almacen fue eliminado!");
                 StoreHouseController.DeleteStoreHouse(id);
                 dataGridViewStoreHouses.DataSource = dataTableProducts;
                 RefreshTableAddStoreHouse();
@@ -158,7 +131,7 @@ namespace BackOffice
         private void assignOperatorToStoreHouse()
         {
             AssignOperatorToStoreHouseController.Create(Int32.Parse(txtBoxIDOperator.Text), Int32.Parse(txtBoxIDAddOperatorToStoreHouse.Text));
-            MessageBox.Show(Languages.Messages.Successful);
+            MessageBox.Show($"Operario {Int32.Parse(txtBoxIDOperator.Text)} agregado al almacen {Int32.Parse(txtBoxIDAddOperatorToStoreHouse.Text)}");
             RefreshTableAssignOperatorToStoreHouse();
             ClearTxtBoxesAssignOperatorToStoreHouse();
         }
@@ -171,7 +144,7 @@ namespace BackOffice
                 int id = (int)dataGridViewAddOperatorStoreHouse.Rows[selectedIndex].Cells["ID Operario"].Value;
                 DataTable dataTableAssignedOperators = (DataTable)dataGridViewAddOperatorStoreHouse.DataSource;
                 dataTableAssignedOperators.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("El operario fue removido del almacen!");
                 AssignOperatorToStoreHouseController.DeleteAssignedOperator(id);
                 dataGridViewAddOperatorStoreHouse.DataSource = dataTableAssignedOperators;
                 RefreshTableAddStoreHouse();

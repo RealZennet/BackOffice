@@ -127,17 +127,11 @@
     <Compile Include="GmailsForm.Designer.cs">
       <DependentUpon>GmailsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Languages\LanguageManager.cs" />
-    <Compile Include="Languages\Messages.cs" />
-    <Compile Include="Languages\Resource_language_english.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource_language_english.resx</DependentUpon>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Languages\Resource_language_spanish.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource_language_spanish.resx</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LotsForm.cs">
       <SubType>Form</SubType>
@@ -204,13 +198,8 @@
     <EmbeddedResource Include="GmailsForm.resx">
       <DependentUpon>GmailsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Languages\Resource_language_english.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource_language_english.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Languages\Resource_language_spanish.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource_language_spanish.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LotsForm.resx">
       <DependentUpon>LotsForm.cs</DependentUpon>

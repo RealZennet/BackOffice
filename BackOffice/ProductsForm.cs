@@ -13,34 +13,10 @@ namespace BackOffice
 {
     public partial class ProductsForm : Form
     {
-
-        public event Action LanguageChanged;
-
         public ProductsForm()
         {
             InitializeComponent();
             RefreshTable();
-            QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
-            if (mainForm != null)
-            {
-                mainForm.LanguageChanged += updateLanguage;
-            }
-        }
-
-        private void updateLanguage()
-        {
-            buttonAddProduct.Text = LanguageManager.GetString("Add");
-            buttonDelete.Text = LanguageManager.GetString("Delete");
-            buttonRefresh.Text = LanguageManager.GetString("Refresh");
-            buttonBack.Text = LanguageManager.GetString("Back");
-            labelActived.Text = LanguageManager.GetString("Activated");
-            labelProductCorner.Text = LanguageManager.GetString("Corner");
-            labelCustomer.Text = LanguageManager.GetString("Customer");
-            labelDoorNumber.Text = LanguageManager.GetString("Number");
-            labelProductStreet.Text = LanguageManager.GetString("Street");
-            labelProductVolume.Text = LanguageManager.GetString("Volume");
-            labelProductWeight.Text = LanguageManager.GetString("Weight");
-
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -96,7 +72,7 @@ namespace BackOffice
         {
             if (!ValidateInputsUser())
             {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                MessageBox.Show("Porfavor complete los campos correspondientes");
                 return;
             }
             addProduct();
@@ -107,7 +83,7 @@ namespace BackOffice
             try
             {
             ProductController.Crear(Int32.Parse(txtBoxWeight.Text), Int32.Parse(txtBoxVolume.Text), txtBoxStreet.Text, Int32.Parse(txtBoxDoorNumber.Text), txtBoxCorner.Text,txtBoxCustomer.Text, Convert.ToBoolean(Int32.Parse(txtBoxActive.Text)));
-            MessageBox.Show(Languages.Messages.Successful);
+            MessageBox.Show("Producto Agregado");
             RefreshTable();
             ClearTxtBoxes();
             }
@@ -130,7 +106,7 @@ namespace BackOffice
                 int id = (int)dataGridViewProducts.Rows[selectedIndex].Cells["id"].Value;
                 DataTable dataTableProducts = (DataTable)dataGridViewProducts.DataSource;
                 dataTableProducts.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("El producto fue eliminado!");
 
                 ProductController.EliminarProducto(id);
                 dataGridViewProducts.DataSource = dataTableProducts;

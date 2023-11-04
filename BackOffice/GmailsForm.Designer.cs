@@ -33,8 +33,8 @@
             this.textBoxSubject = new System.Windows.Forms.TextBox();
             this.richTextBoxContent = new System.Windows.Forms.RichTextBox();
             this.buttonSendEmail = new System.Windows.Forms.Button();
-            this.labelDestination = new System.Windows.Forms.Label();
-            this.labelSubject = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonBack
@@ -63,6 +63,8 @@
             // 
             // richTextBoxContent
             // 
+            this.richTextBoxContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
+            this.richTextBoxContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxContent.Location = new System.Drawing.Point(26, 184);
             this.richTextBoxContent.Name = "richTextBoxContent";
             this.richTextBoxContent.Size = new System.Drawing.Size(469, 268);
@@ -79,23 +81,23 @@
             this.buttonSendEmail.UseVisualStyleBackColor = true;
             this.buttonSendEmail.Click += new System.EventHandler(this.buttonSendEmail_Click);
             // 
-            // labelDestination
+            // label1
             // 
-            this.labelDestination.AutoSize = true;
-            this.labelDestination.Location = new System.Drawing.Point(23, 100);
-            this.labelDestination.Name = "labelDestination";
-            this.labelDestination.Size = new System.Drawing.Size(63, 13);
-            this.labelDestination.TabIndex = 73;
-            this.labelDestination.Text = "Destinatario";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "Destinatario";
             // 
-            // labelSubject
+            // label2
             // 
-            this.labelSubject.AutoSize = true;
-            this.labelSubject.Location = new System.Drawing.Point(23, 139);
-            this.labelSubject.Name = "labelSubject";
-            this.labelSubject.Size = new System.Drawing.Size(40, 13);
-            this.labelSubject.TabIndex = 74;
-            this.labelSubject.Text = "Asunto";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "Asunto";
             // 
             // GmailsForm
             // 
@@ -103,8 +105,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(741, 481);
-            this.Controls.Add(this.labelSubject);
-            this.Controls.Add(this.labelDestination);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSendEmail);
             this.Controls.Add(this.richTextBoxContent);
             this.Controls.Add(this.textBoxSubject);
@@ -125,7 +127,7 @@
         private System.Windows.Forms.TextBox textBoxSubject;
         private System.Windows.Forms.RichTextBox richTextBoxContent;
         private System.Windows.Forms.Button buttonSendEmail;
-        private System.Windows.Forms.Label labelDestination;
-        private System.Windows.Forms.Label labelSubject;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

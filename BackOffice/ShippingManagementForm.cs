@@ -13,36 +13,12 @@ namespace BackOffice
 {
     public partial class ShippingManagementForm : Form
     {
-        public event Action LanguageChanged;
 
         public ShippingManagementForm()
         {
             InitializeComponent();
             RefreshTableShippManagement();
             RefreshTableCarrieManagement();
-            QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
-            if (mainForm != null)
-            {
-                mainForm.LanguageChanged += updateLanguage;
-            }
-        }
-
-        private void updateLanguage()
-        {
-            buttonAddCarry.Text = LanguageManager.GetString("Add");
-            buttonAddShipp.Text = LanguageManager.GetString("Add");
-            buttonDeleteCarry.Text = LanguageManager.GetString("Delete");
-            buttonDeleteShipp.Text = LanguageManager.GetString("Delete");
-            buttonRefreshCarry.Text = LanguageManager.GetString("Refresh");
-            buttonRefreshShipps.Text = LanguageManager.GetString("Refresh");
-            buttonEditCarry.Text = LanguageManager.GetString("Edit");
-            buttonBack.Text = LanguageManager.GetString("Back");
-            labelIDLot.Text = LanguageManager.GetString("LotID");
-            labelIDLot2.Text = LanguageManager.GetString("LotID");
-            labelShipDate.Text = LanguageManager.GetString("EstimatedDate");
-            labelIDestination.Text = LanguageManager.GetString("IDDestination");
-            
-
         }
 
         private void ShippingManagementForm_Load(object sender, EventArgs e)
@@ -94,7 +70,7 @@ namespace BackOffice
             DateTime separatedtime = dateTimePickerShippManagementTime.Value;
             DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
             ShippingManagementController.Create(Int32.Parse(txtBoxIDTruckShippManagement.Text), Int32.Parse(txtBoxIDBatchShippManagement.Text), dateandtime);
-            MessageBox.Show(Languages.Messages.Successful);
+            MessageBox.Show("Envio programado");
             RefreshTableShippManagement();
             ClearTxtBoxesShippingManagement();
             }
@@ -112,7 +88,7 @@ namespace BackOffice
                 int id = (int)dataGridViewShippingManagement.Rows[selectedIndex].Cells["ID Camion"].Value;
                 DataTable dataTableShippings = (DataTable)dataGridViewShippingManagement.DataSource;
                 dataTableShippings.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("El envio fue eliminado!");
                 ShippingManagementController.DeleteShipp(id);
                 dataGridViewShippingManagement.DataSource = dataTableShippings;
                 RefreshTableShippManagement();
@@ -128,7 +104,7 @@ namespace BackOffice
             }
             else
             {
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("Por favor, complete todos los campos.");
             }
         }
 
@@ -181,17 +157,17 @@ namespace BackOffice
                     Int32.Parse(txtBoxIDDestinationCarrie.Text),
                     selectedStatus.ToString()
                 );
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("Cargamento programado");
                 RefreshTableCarrieManagement();
                 ClearTxtBoxesCarrieManagement();
             }
             else if (string.IsNullOrWhiteSpace(selectedStatus))
             {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                MessageBox.Show("Selecciona un estado.");
             }
             else
             {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                MessageBox.Show("Completa todos los campos.");
             }
             }catch(Exception ex)
             {
@@ -207,7 +183,7 @@ namespace BackOffice
                 int id = (int)dataGridViewCarry.Rows[selectedIndex].Cells["ID Camion"].Value;
                 DataTable dataTableCarries = (DataTable)dataGridViewCarry.DataSource;
                 dataTableCarries.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("El cargamento fue eliminado!");
                 CarryShippmentController.DeleteCarry(id);
                 dataGridViewCarry.DataSource = dataTableCarries;
                 RefreshTableCarrieManagement();

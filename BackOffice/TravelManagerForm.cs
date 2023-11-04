@@ -13,35 +13,15 @@ namespace BackOffice
 {
     public partial class TravelManagerForm : Form
     {
-
-        public event Action LanguageChanged;
-
         public TravelManagerForm()
         {
             InitializeComponent();
             RefreshTable();
-            QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
-            if (mainForm != null)
-            {
-                mainForm.LanguageChanged += updateLanguage;
-            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void updateLanguage()
-        {
-            buttonAdd.Text = LanguageManager.GetString("Add");
-            buttonDelete.Text = LanguageManager.GetString("Delete");
-            buttonRefresh.Text = LanguageManager.GetString("Refresh");
-            buttonBack.Text = LanguageManager.GetString("Back");
-            labelIDDestination.Text = LanguageManager.GetString("DestinationID");
-            labelIDStoreHouse.Text = LanguageManager.GetString("StoreHouseID");
-            labelTypeTravel.Text = LanguageManager.GetString("IDOperator");
-            labelDateTravel.Text = LanguageManager.GetString("TruckerID");
         }
 
         public void ClearTxtBoxes()

@@ -13,30 +13,10 @@ namespace BackOffice
 {
     public partial class AssignTypeUser : Form
     {
-
-        public event Action LanguageChanged;
-
         public AssignTypeUser()
         {
             InitializeComponent();
             RefreshTable();
-            QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
-            if (mainForm != null)
-            {
-                mainForm.LanguageChanged += updateLanguage;
-            }
-        }
-
-        private void updateLanguage()
-        {
-            buttonAddOperator.Text = LanguageManager.GetString("Add");
-            buttonAddTrucker.Text = LanguageManager.GetString("Add");
-            buttonDelete.Text = LanguageManager.GetString("Delete");
-            buttonDeleteOperator.Text = LanguageManager.GetString("Delete");
-            buttonRefresh.Text = LanguageManager.GetString("Refresh");
-            buttonBack.Text = LanguageManager.GetString("Back");
-            labelUsernameOperator.Text = LanguageManager.GetString("IDOperator");
-            labelUsernameTrucker.Text = LanguageManager.GetString("TruckerID");
         }
 
         private void AssignTypeUser_Load(object sender, EventArgs e)
@@ -77,13 +57,13 @@ namespace BackOffice
                 if (int.TryParse(txtBoxUsernameTrucker.Text, out int userId))
                 {
                     AssignTypeOfUserTruckerController.Crear(userId);
-                    MessageBox.Show(Languages.Messages.Successful);
+                    MessageBox.Show("Usuario asignado a camionero");
                     RefreshTable();
                     ClearTxtBoxes();
                 }
                 else
                 {
-                    MessageBox.Show(Languages.Messages.InvalidID);
+                    MessageBox.Show("Por favor, ingrese un numero entero valido en el campo de usuario.");
                 }
             }catch(Exception ex)
             {
@@ -99,13 +79,13 @@ namespace BackOffice
                 if (int.TryParse(txtBoxUsernameOperator.Text, out int userId))
                 {
                     AssignTypeOfUserOperatorController.Crear(userId);
-                    MessageBox.Show(Languages.Messages.Successful);
+                    MessageBox.Show("Usuario asignado a operador");
                     RefreshTable();
                     ClearTxtBoxes();
                 }
                 else
                 {
-                    MessageBox.Show(Languages.Messages.ErrorSyntax);
+                    MessageBox.Show("Por favor, ingrese un numero entero valido en el campo de usuario.");
                 }
             }catch(Exception ex)
             {
@@ -128,7 +108,7 @@ namespace BackOffice
                 int id = (int)dataGridViewUsers.Rows[selectedIndex].Cells["ID"].Value;
                 DataTable dataTableUsers = (DataTable)dataGridViewUsers.DataSource;
                 dataTableUsers.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("El usuario fue eliminado!");
                 AssignTypeOfUserTruckerController.DeleteUser(id);
                 dataGridViewUsers.DataSource = dataTableUsers;
                 RefreshTable();
@@ -143,7 +123,7 @@ namespace BackOffice
                 int id = (int)dataGridViewOperators.Rows[selectedIndex].Cells["Nombre de usuario"].Value;
                 DataTable dataTableOperators = (DataTable)dataGridViewOperators.DataSource;
                 dataTableOperators.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("El usuario fue eliminado!");
                 AssignTypeOfUserOperatorController.DeleteUser(id);
                 dataGridViewOperators.DataSource = dataTableOperators;
                 RefreshTable();

@@ -13,32 +13,12 @@ namespace BackOffice
 {
     public partial class LotsForm : Form
     {
-
-        public event Action LanguageChanged;
-
         public LotsForm()
         {
             InitializeComponent();
             RefreshTable();
-            QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
-            if (mainForm != null)
-            {
-                mainForm.LanguageChanged += updateLanguage;
-            }
         }
-
-        private void updateLanguage()
-        {
-            buttonAdd.Text = LanguageManager.GetString("Add");
-            buttonDelete.Text = LanguageManager.GetString("Delete");
-            buttonRefresh.Text = LanguageManager.GetString("Refresh");
-            buttonBack.Text = LanguageManager.GetString("Back");
-            labelActivated.Text = LanguageManager.GetString("Activated");
-            labelEstimatedDate.Text = LanguageManager.GetString("EstimatedDate");
-            labelIDShippment.Text = LanguageManager.GetString("IDDestination");
-
-        }
-
+        
         private void LotsForm_Load(object sender, EventArgs e)
         {
 
@@ -74,12 +54,12 @@ namespace BackOffice
                 DateTime separatedtime = dateTimePickerBatchManagementTime.Value;
                 DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
                 BatchController.Crear(txtBoxEmail.Text.ToString(), dateandtime, Int32.Parse(txtBoxIDShipp.Text), Convert.ToBoolean(txtBoxActivedBatch.Text));
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("Lote Agregado");
                 RefreshTable();
                 }
                 else
                 {
-                    MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                    MessageBox.Show("Completa los campos");
                 }
             
             }catch(Exception ex)
@@ -103,7 +83,7 @@ namespace BackOffice
                 int id = (int)dataGridViewLots.Rows[selectedIndex].Cells["id"].Value;
                 DataTable dataTableLots = (DataTable)dataGridViewLots.DataSource;
                 dataTableLots.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show(Languages.Messages.Successful);
+                MessageBox.Show("El lote fue eliminado!");
                 BatchController.EliminarLote(id);
                 dataGridViewLots.DataSource = dataTableLots;
                 
