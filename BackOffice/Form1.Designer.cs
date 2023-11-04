@@ -32,7 +32,6 @@
             this.buttonLanguageSpanish = new System.Windows.Forms.Button();
             this.buttonEnglishLanguage = new System.Windows.Forms.Button();
             this.managementPanel = new System.Windows.Forms.Panel();
-            this.buttonGmail = new System.Windows.Forms.Button();
             this.buttonTravelManager = new System.Windows.Forms.Button();
             this.buttonDestinationManager = new System.Windows.Forms.Button();
             this.buttonUsersAssign = new System.Windows.Forms.Button();

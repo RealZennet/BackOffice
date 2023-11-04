@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,10 +20,12 @@ namespace BackOffice
             InitializeComponent();
             customMenus();
         }
+        public int m, x, y;
         
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void UpdateUI()
@@ -83,6 +84,18 @@ namespace BackOffice
         private void buttonManagement_Click(object sender, EventArgs e)
         {
             showMenus(managementPanel);
+        }
+
+        private void SlidePanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - x, MousePosition.Y - y);
+            }
+        }
+        private void SlidePanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
         }
 
         #endregion

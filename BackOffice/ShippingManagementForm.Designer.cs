@@ -388,7 +388,10 @@
         private System.Windows.Forms.TextBox txtBoxIDDestinationCarrie;
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.DateTimePicker dateTimePickerShippManagementTime;
+<<<<<<< HEAD
         private System.Windows.Forms.Panel panelSeparator;
         private System.Windows.Forms.Label labelIDTruck2;
+=======
+>>>>>>> main
     }
 }

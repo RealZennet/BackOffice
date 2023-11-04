@@ -36,6 +36,7 @@
             this.buttonRefreshDestination = new System.Windows.Forms.Button();
             this.buttonDeleteDestination = new System.Windows.Forms.Button();
             this.buttonAddDestination = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtBoxIDDestination = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
@@ -65,27 +66,7 @@
             // dataGridViewDestinations
             // 
             this.dataGridViewDestinations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
-            this.dataGridViewDestinations.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewDestinations.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewDestinations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewDestinations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewDestinations.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewDestinations.EnableHeadersVisualStyles = false;
-            this.dataGridViewDestinations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewDestinations.Location = new System.Drawing.Point(12, 68);
             this.dataGridViewDestinations.Name = "dataGridViewDestinations";
             this.dataGridViewDestinations.Size = new System.Drawing.Size(722, 228);
@@ -132,6 +113,16 @@
             this.buttonAddDestination.Text = "Agregar";
             this.buttonAddDestination.UseVisualStyleBackColor = true;
             this.buttonAddDestination.Click += new System.EventHandler(this.buttonAddDestination_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label1.Location = new System.Drawing.Point(284, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(209, 25);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Gestion de destinos.";
             // 
             // txtBoxIDDestination
             // 
@@ -276,6 +267,7 @@
             this.Controls.Add(this.buttonRefreshDestination);
             this.Controls.Add(this.buttonDeleteDestination);
             this.Controls.Add(this.buttonAddDestination);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DestinationForm";
             this.Text = "DestinationForm";
@@ -294,6 +286,7 @@
         private System.Windows.Forms.Button buttonRefreshDestination;
         private System.Windows.Forms.Button buttonDeleteDestination;
         private System.Windows.Forms.Button buttonAddDestination;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxIDDestination;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBack;
