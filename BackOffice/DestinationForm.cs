@@ -1,6 +1,7 @@
 ﻿using capa_logica;
 using System;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BackOffice
@@ -8,10 +9,31 @@ namespace BackOffice
     public partial class DestinationForm : Form
     {
 
+        public event Action LanguageChanged;
+
         public DestinationForm()
         {
             InitializeComponent();
             RefreshTable();
+            QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
+            if (mainForm != null)
+            {
+                mainForm.LanguageChanged += updateLanguage;
+            }
+        }
+
+        private void updateLanguage()
+        {
+            buttonAddDestination.Text = LanguageManager.GetString("Add");
+            buttonDeleteDestination.Text = LanguageManager.GetString("Delete");
+            buttonRefreshDestination.Text = LanguageManager.GetString("Refresh");
+            buttonBack.Text = LanguageManager.GetString("Back");
+            buttonShowMap.Text = LanguageManager.GetString("Map");
+            labelActivated.Text = LanguageManager.GetString("Activated");
+            labelShipDate.Text = LanguageManager.GetString("DateOfShipment");
+            labelStreet.Text = LanguageManager.GetString("Street");
+            labelCorner.Text = LanguageManager.GetString("Corner");
+            labelNumber.Text = LanguageManager.GetString("Number");
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -60,16 +82,16 @@ namespace BackOffice
             {
                 int statusValue = selectedStatus == "true" ? 1 : 0;
                 DestinationController.Create(txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, dateandtime, Convert.ToBoolean(statusValue));
-                MessageBox.Show("Destino agregado");
+                MessageBox.Show(Languages.Messages.Successful);
                 RefreshTable();
             }
             else if (string.IsNullOrWhiteSpace(selectedStatus))
             {
-                MessageBox.Show("Selecciona un estado.");
+                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
             }
             else
             {
-                MessageBox.Show("Completa todos los campos.");
+                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
             }
         }
 
@@ -81,7 +103,7 @@ namespace BackOffice
                 int id = (int)dataGridViewDestinations.Rows[selectedIndex].Cells["ID"].Value;
                 DataTable dataTableDestinations = (DataTable)dataGridViewDestinations.DataSource;
                 dataTableDestinations.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show("El destino fue eliminado!");
+                MessageBox.Show(Languages.Messages.Successful);
                 DestinationController.DeleteDestination(id);
                 dataGridViewDestinations.DataSource = dataTableDestinations;
                 RefreshTable();
@@ -118,11 +140,11 @@ namespace BackOffice
                 {
                     int statusValue = selectedStatus == "true" ? 1 : 0;
                     DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, dateandtime, Convert.ToBoolean(statusValue));
-                    MessageBox.Show("Datos actualizados.");
+                    MessageBox.Show(Languages.Messages.Successful);
                 }
                 else
                 {
-                    MessageBox.Show("Completa todos los campos antes de guardar.");
+                    MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
                 }
             }
             catch(Exception ex)

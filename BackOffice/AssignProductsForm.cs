@@ -13,10 +13,29 @@ namespace BackOffice
 {
     public partial class AssignProductsForm : Form
     {
+
+        public event Action LanguageChanged;
+
         public AssignProductsForm()
         {
             InitializeComponent();
             RefreshTable();
+            QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
+            if (mainForm != null)
+            {
+                mainForm.LanguageChanged += updateLanguage;
+            }
+        }
+
+        private void updateLanguage()
+        {
+            buttonAdd.Text = LanguageManager.GetString("Add");
+            buttonDelete.Text = LanguageManager.GetString("Delete");
+            buttonRefresh.Text = LanguageManager.GetString("Refresh");
+            buttonBack.Text = LanguageManager.GetString("Back");
+            labelProductID.Text = LanguageManager.GetString("ProductID");
+            labelBatchID.Text = LanguageManager.GetString("LotID");
+
         }
 
         private void AssignProductsForm_Load(object sender, EventArgs e)
@@ -62,13 +81,13 @@ namespace BackOffice
                 if (validateInputsUsers())
                 {
                     AssignProductsController.Crear(Int32.Parse(txtBoxIDProduct.Text), Int32.Parse(txtBoxIDLote.Text));
-                    MessageBox.Show("Producto Agregado al lote");
+                    MessageBox.Show(Languages.Messages.Successful);
                     RefreshTable();
                     ClearTxtBoxes();
                 }
                 else
                 {
-                    MessageBox.Show("No pueden existir parametros vacios!");
+                    MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
                 }
             }catch(Exception ex)
             {
@@ -89,7 +108,7 @@ namespace BackOffice
                 int id = (int)dataGridViewAssignedProducts.Rows[selectedIndex].Cells["Lote ID"].Value;
                 DataTable dataTableAssignedProduct = (DataTable)dataGridViewAssignedProducts.DataSource;
                 dataTableAssignedProduct.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show("El producto fue eliminado del lote especificado!");
+                MessageBox.Show(Languages.Messages.Successful);
                 AssignProductsController.DeleteAssignedProduct(id);
                 dataGridViewAssignedProducts.DataSource = dataTableAssignedProduct;
                 RefreshTable();

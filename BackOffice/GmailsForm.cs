@@ -13,16 +13,32 @@ namespace BackOffice
 {
     public partial class GmailsForm : Form
     {
+
+        public event Action LanguageChanged;
+
         protected string email = "quickcarry.correo@gmail.com";
         protected string passwordemail = "hwsnwtkluboprshu";
         public GmailsForm()
         {
             InitializeComponent();
+            QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
+            if (mainForm != null)
+            {
+                mainForm.LanguageChanged += updateLanguage;
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void updateLanguage()
+        {
+            buttonSendEmail.Text = LanguageManager.GetString("Add");
+            buttonBack.Text = LanguageManager.GetString("Back");
+            labelDestination.Text = LanguageManager.GetString("Destination");
+            labelSubject.Text = LanguageManager.GetString("Subject");
         }
 
         private bool checkInputs()

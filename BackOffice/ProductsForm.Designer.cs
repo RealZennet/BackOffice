@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
             this.buttonAddProduct = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
@@ -38,16 +36,16 @@
             this.txtBoxWeight = new System.Windows.Forms.TextBox();
             this.txtBoxActive = new System.Windows.Forms.TextBox();
             this.txtBoxCustomer = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelProductWeight = new System.Windows.Forms.Label();
+            this.labelActived = new System.Windows.Forms.Label();
+            this.labelCustomer = new System.Windows.Forms.Label();
+            this.labelProductVolume = new System.Windows.Forms.Label();
             this.txtBoxVolume = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelProductStreet = new System.Windows.Forms.Label();
             this.txtBoxStreet = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelDoorNumber = new System.Windows.Forms.Label();
             this.txtBoxDoorNumber = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelProductCorner = new System.Windows.Forms.Label();
             this.txtBoxCorner = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
             this.SuspendLayout();
@@ -59,29 +57,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewProducts.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewProducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProducts.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewProducts.EnableHeadersVisualStyles = false;
-            this.dataGridViewProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
+            this.dataGridViewProducts.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridViewProducts.Location = new System.Drawing.Point(12, 44);
             this.dataGridViewProducts.Name = "dataGridViewProducts";
-            this.dataGridViewProducts.Size = new System.Drawing.Size(477, 503);
+            this.dataGridViewProducts.Size = new System.Drawing.Size(480, 503);
             this.dataGridViewProducts.TabIndex = 0;
             this.dataGridViewProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProducts_CellContentClick);
             // 
@@ -158,41 +138,41 @@
             this.txtBoxCustomer.Size = new System.Drawing.Size(253, 20);
             this.txtBoxCustomer.TabIndex = 8;
             // 
-            // label2
+            // labelProductWeight
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(495, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Peso de producto:";
+            this.labelProductWeight.AutoSize = true;
+            this.labelProductWeight.Location = new System.Drawing.Point(495, 129);
+            this.labelProductWeight.Name = "labelProductWeight";
+            this.labelProductWeight.Size = new System.Drawing.Size(94, 13);
+            this.labelProductWeight.TabIndex = 10;
+            this.labelProductWeight.Text = "Peso de producto:";
             // 
-            // label3
+            // labelActived
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(498, 393);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Activo (1) - No activo (0)";
+            this.labelActived.AutoSize = true;
+            this.labelActived.Location = new System.Drawing.Point(498, 393);
+            this.labelActived.Name = "labelActived";
+            this.labelActived.Size = new System.Drawing.Size(122, 13);
+            this.labelActived.TabIndex = 11;
+            this.labelActived.Text = "Activo (1) - No activo (0)";
             // 
-            // label4
+            // labelCustomer
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(498, 437);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Cliente:";
+            this.labelCustomer.AutoSize = true;
+            this.labelCustomer.Location = new System.Drawing.Point(498, 437);
+            this.labelCustomer.Name = "labelCustomer";
+            this.labelCustomer.Size = new System.Drawing.Size(42, 13);
+            this.labelCustomer.TabIndex = 12;
+            this.labelCustomer.Text = "Cliente:";
             // 
-            // label6
+            // labelProductVolume
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(495, 180);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 13);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Volumen de producto:";
+            this.labelProductVolume.AutoSize = true;
+            this.labelProductVolume.Location = new System.Drawing.Point(495, 180);
+            this.labelProductVolume.Name = "labelProductVolume";
+            this.labelProductVolume.Size = new System.Drawing.Size(111, 13);
+            this.labelProductVolume.TabIndex = 15;
+            this.labelProductVolume.Text = "Volumen de producto:";
             // 
             // txtBoxVolume
             // 
@@ -201,14 +181,14 @@
             this.txtBoxVolume.Size = new System.Drawing.Size(253, 20);
             this.txtBoxVolume.TabIndex = 14;
             // 
-            // label7
+            // labelProductStreet
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(495, 230);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Calle (envio):";
+            this.labelProductStreet.AutoSize = true;
+            this.labelProductStreet.Location = new System.Drawing.Point(495, 230);
+            this.labelProductStreet.Name = "labelProductStreet";
+            this.labelProductStreet.Size = new System.Drawing.Size(68, 13);
+            this.labelProductStreet.TabIndex = 17;
+            this.labelProductStreet.Text = "Calle (envio):";
             // 
             // txtBoxStreet
             // 
@@ -217,14 +197,14 @@
             this.txtBoxStreet.Size = new System.Drawing.Size(253, 20);
             this.txtBoxStreet.TabIndex = 16;
             // 
-            // label8
+            // labelDoorNumber
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(495, 339);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Numero de puerta(envio)";
+            this.labelDoorNumber.AutoSize = true;
+            this.labelDoorNumber.Location = new System.Drawing.Point(495, 339);
+            this.labelDoorNumber.Name = "labelDoorNumber";
+            this.labelDoorNumber.Size = new System.Drawing.Size(124, 13);
+            this.labelDoorNumber.TabIndex = 19;
+            this.labelDoorNumber.Text = "Numero de puerta(envio)";
             // 
             // txtBoxDoorNumber
             // 
@@ -233,14 +213,14 @@
             this.txtBoxDoorNumber.Size = new System.Drawing.Size(37, 20);
             this.txtBoxDoorNumber.TabIndex = 18;
             // 
-            // label9
+            // labelProductCorner
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(495, 271);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 13);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Esquina (envio):";
+            this.labelProductCorner.AutoSize = true;
+            this.labelProductCorner.Location = new System.Drawing.Point(495, 271);
+            this.labelProductCorner.Name = "labelProductCorner";
+            this.labelProductCorner.Size = new System.Drawing.Size(83, 13);
+            this.labelProductCorner.TabIndex = 21;
+            this.labelProductCorner.Text = "Esquina (envio):";
             // 
             // txtBoxCorner
             // 
@@ -255,17 +235,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.labelProductCorner);
             this.Controls.Add(this.txtBoxCorner);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.labelDoorNumber);
             this.Controls.Add(this.txtBoxDoorNumber);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelProductStreet);
             this.Controls.Add(this.txtBoxStreet);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelProductVolume);
             this.Controls.Add(this.txtBoxVolume);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelCustomer);
+            this.Controls.Add(this.labelActived);
+            this.Controls.Add(this.labelProductWeight);
             this.Controls.Add(this.txtBoxCustomer);
             this.Controls.Add(this.txtBoxActive);
             this.Controls.Add(this.txtBoxWeight);
@@ -294,16 +274,16 @@
         private System.Windows.Forms.TextBox txtBoxWeight;
         private System.Windows.Forms.TextBox txtBoxActive;
         private System.Windows.Forms.TextBox txtBoxCustomer;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelProductWeight;
+        private System.Windows.Forms.Label labelActived;
+        private System.Windows.Forms.Label labelCustomer;
+        private System.Windows.Forms.Label labelProductVolume;
         private System.Windows.Forms.TextBox txtBoxVolume;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelProductStreet;
         private System.Windows.Forms.TextBox txtBoxStreet;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelDoorNumber;
         private System.Windows.Forms.TextBox txtBoxDoorNumber;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelProductCorner;
         private System.Windows.Forms.TextBox txtBoxCorner;
     }
 }

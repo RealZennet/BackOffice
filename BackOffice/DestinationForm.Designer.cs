@@ -30,62 +30,43 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelActivated = new System.Windows.Forms.Label();
             this.dataGridViewDestinations = new System.Windows.Forms.DataGridView();
             this.buttonEditDestination = new System.Windows.Forms.Button();
             this.buttonRefreshDestination = new System.Windows.Forms.Button();
             this.buttonDeleteDestination = new System.Windows.Forms.Button();
             this.buttonAddDestination = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtBoxIDDestination = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.dateTimePickerDestinationManagementTime = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDestinationManagement = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelShipDate = new System.Windows.Forms.Label();
             this.txtBoxDestinationStreet = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelStreet = new System.Windows.Forms.Label();
             this.txtBoxDestinationCorner = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelCorner = new System.Windows.Forms.Label();
             this.txtBoxDestinationDoorNumber = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelNumber = new System.Windows.Forms.Label();
             this.buttonShowMap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDestinations)).BeginInit();
             this.SuspendLayout();
             // 
-            // label7
+            // labelActivated
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 443);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 63;
-            this.label7.Text = "Activo";
+            this.labelActivated.AutoSize = true;
+            this.labelActivated.Location = new System.Drawing.Point(12, 443);
+            this.labelActivated.Name = "labelActivated";
+            this.labelActivated.Size = new System.Drawing.Size(37, 13);
+            this.labelActivated.TabIndex = 63;
+            this.labelActivated.Text = "Activo";
             // 
             // dataGridViewDestinations
             // 
             this.dataGridViewDestinations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
-            this.dataGridViewDestinations.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewDestinations.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewDestinations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewDestinations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewDestinations.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewDestinations.EnableHeadersVisualStyles = false;
-            this.dataGridViewDestinations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewDestinations.Location = new System.Drawing.Point(12, 68);
             this.dataGridViewDestinations.Name = "dataGridViewDestinations";
             this.dataGridViewDestinations.Size = new System.Drawing.Size(722, 228);
@@ -132,6 +113,16 @@
             this.buttonAddDestination.Text = "Agregar";
             this.buttonAddDestination.UseVisualStyleBackColor = true;
             this.buttonAddDestination.Click += new System.EventHandler(this.buttonAddDestination_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label1.Location = new System.Drawing.Point(284, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(209, 25);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Gestion de destinos.";
             // 
             // txtBoxIDDestination
             // 
@@ -182,14 +173,14 @@
             this.dateTimePickerDestinationManagement.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerDestinationManagement.TabIndex = 82;
             // 
-            // label3
+            // labelShipDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(203, 308);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
-            this.label3.TabIndex = 81;
-            this.label3.Text = "Fecha de salida";
+            this.labelShipDate.AutoSize = true;
+            this.labelShipDate.Location = new System.Drawing.Point(203, 308);
+            this.labelShipDate.Name = "labelShipDate";
+            this.labelShipDate.Size = new System.Drawing.Size(82, 13);
+            this.labelShipDate.TabIndex = 81;
+            this.labelShipDate.Text = "Fecha de salida";
             // 
             // txtBoxDestinationStreet
             // 
@@ -198,14 +189,14 @@
             this.txtBoxDestinationStreet.Size = new System.Drawing.Size(100, 20);
             this.txtBoxDestinationStreet.TabIndex = 58;
             // 
-            // label4
+            // labelStreet
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 315);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 57;
-            this.label4.Text = "Calle";
+            this.labelStreet.AutoSize = true;
+            this.labelStreet.Location = new System.Drawing.Point(12, 315);
+            this.labelStreet.Name = "labelStreet";
+            this.labelStreet.Size = new System.Drawing.Size(30, 13);
+            this.labelStreet.TabIndex = 57;
+            this.labelStreet.Text = "Calle";
             // 
             // txtBoxDestinationCorner
             // 
@@ -214,14 +205,14 @@
             this.txtBoxDestinationCorner.Size = new System.Drawing.Size(100, 20);
             this.txtBoxDestinationCorner.TabIndex = 86;
             // 
-            // label5
+            // labelCorner
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 352);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 85;
-            this.label5.Text = "Esquina";
+            this.labelCorner.AutoSize = true;
+            this.labelCorner.Location = new System.Drawing.Point(11, 352);
+            this.labelCorner.Name = "labelCorner";
+            this.labelCorner.Size = new System.Drawing.Size(45, 13);
+            this.labelCorner.TabIndex = 85;
+            this.labelCorner.Text = "Esquina";
             // 
             // txtBoxDestinationDoorNumber
             // 
@@ -230,14 +221,14 @@
             this.txtBoxDestinationDoorNumber.Size = new System.Drawing.Size(100, 20);
             this.txtBoxDestinationDoorNumber.TabIndex = 88;
             // 
-            // label6
+            // labelNumber
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 394);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
-            this.label6.TabIndex = 87;
-            this.label6.Text = "Numero";
+            this.labelNumber.AutoSize = true;
+            this.labelNumber.Location = new System.Drawing.Point(11, 394);
+            this.labelNumber.Name = "labelNumber";
+            this.labelNumber.Size = new System.Drawing.Size(44, 13);
+            this.labelNumber.TabIndex = 87;
+            this.labelNumber.Text = "Numero";
             // 
             // buttonShowMap
             // 
@@ -258,24 +249,25 @@
             this.ControlBox = false;
             this.Controls.Add(this.buttonShowMap);
             this.Controls.Add(this.txtBoxDestinationDoorNumber);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelNumber);
             this.Controls.Add(this.txtBoxDestinationCorner);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelCorner);
             this.Controls.Add(this.dateTimePickerDestinationManagementTime);
             this.Controls.Add(this.dateTimePickerDestinationManagement);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelShipDate);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.txtBoxIDDestination);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelActivated);
             this.Controls.Add(this.txtBoxDestinationStreet);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelStreet);
             this.Controls.Add(this.dataGridViewDestinations);
             this.Controls.Add(this.buttonEditDestination);
             this.Controls.Add(this.buttonRefreshDestination);
             this.Controls.Add(this.buttonDeleteDestination);
             this.Controls.Add(this.buttonAddDestination);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DestinationForm";
             this.Text = "DestinationForm";
@@ -288,25 +280,26 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelActivated;
         private System.Windows.Forms.DataGridView dataGridViewDestinations;
         private System.Windows.Forms.Button buttonEditDestination;
         private System.Windows.Forms.Button buttonRefreshDestination;
         private System.Windows.Forms.Button buttonDeleteDestination;
         private System.Windows.Forms.Button buttonAddDestination;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxIDDestination;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.DateTimePicker dateTimePickerDestinationManagementTime;
         private System.Windows.Forms.DateTimePicker dateTimePickerDestinationManagement;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelShipDate;
         private System.Windows.Forms.TextBox txtBoxDestinationStreet;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelStreet;
         private System.Windows.Forms.TextBox txtBoxDestinationCorner;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelCorner;
         private System.Windows.Forms.TextBox txtBoxDestinationDoorNumber;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelNumber;
         private System.Windows.Forms.Button buttonShowMap;
     }
 }

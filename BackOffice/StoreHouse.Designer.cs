@@ -28,34 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonEditStoreHouse = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonRefreshStoreHouse = new System.Windows.Forms.Button();
             this.buttonDeleteStoreHouse = new System.Windows.Forms.Button();
             this.buttonAddStoreHouse = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewStoreHouses = new System.Windows.Forms.DataGridView();
             this.dataGridViewAddOperatorStoreHouse = new System.Windows.Forms.DataGridView();
             this.buttonRefreshAddOperatorStoreHouses = new System.Windows.Forms.Button();
             this.buttonDeleteOperatorFromStoreHouse = new System.Windows.Forms.Button();
             this.buttonAddOperatorToStoreHouse = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelStreet = new System.Windows.Forms.Label();
             this.txtBoxStoreHouseStreet = new System.Windows.Forms.TextBox();
             this.txtBoxStoreHouseDoorNumber = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelNumber = new System.Windows.Forms.Label();
             this.txtBoxStoreHouseCorner = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelCorner = new System.Windows.Forms.Label();
             this.txtBoxStoreHouseActived = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelActived = new System.Windows.Forms.Label();
+            this.labelIDOperator = new System.Windows.Forms.Label();
             this.txtBoxIDOperator = new System.Windows.Forms.TextBox();
             this.txtBoxIDAddOperatorToStoreHouse = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelIDStoreHouse = new System.Windows.Forms.Label();
             this.panelSeparator = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStoreHouses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddOperatorStoreHouse)).BeginInit();
@@ -112,30 +107,20 @@
             this.buttonAddStoreHouse.UseVisualStyleBackColor = true;
             this.buttonAddStoreHouse.Click += new System.EventHandler(this.buttonAddStoreHouse_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label1.Location = new System.Drawing.Point(284, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 25);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Gestion de almacenes.";
+            // 
             // dataGridViewStoreHouses
             // 
             this.dataGridViewStoreHouses.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
-            this.dataGridViewStoreHouses.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewStoreHouses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStoreHouses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewStoreHouses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewStoreHouses.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewStoreHouses.EnableHeadersVisualStyles = false;
-            this.dataGridViewStoreHouses.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewStoreHouses.Location = new System.Drawing.Point(12, 73);
             this.dataGridViewStoreHouses.Name = "dataGridViewStoreHouses";
             this.dataGridViewStoreHouses.Size = new System.Drawing.Size(290, 228);
@@ -144,28 +129,8 @@
             // dataGridViewAddOperatorStoreHouse
             // 
             this.dataGridViewAddOperatorStoreHouse.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
-            this.dataGridViewAddOperatorStoreHouse.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewAddOperatorStoreHouse.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAddOperatorStoreHouse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewAddOperatorStoreHouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewAddOperatorStoreHouse.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewAddOperatorStoreHouse.EnableHeadersVisualStyles = false;
-            this.dataGridViewAddOperatorStoreHouse.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
-            this.dataGridViewAddOperatorStoreHouse.Location = new System.Drawing.Point(455, 73);
+            this.dataGridViewAddOperatorStoreHouse.Location = new System.Drawing.Point(457, 73);
             this.dataGridViewAddOperatorStoreHouse.Name = "dataGridViewAddOperatorStoreHouse";
             this.dataGridViewAddOperatorStoreHouse.Size = new System.Drawing.Size(290, 228);
             this.dataGridViewAddOperatorStoreHouse.TabIndex = 38;
@@ -200,34 +165,14 @@
             this.buttonAddOperatorToStoreHouse.UseVisualStyleBackColor = true;
             this.buttonAddOperatorToStoreHouse.Click += new System.EventHandler(this.buttonAddOperatorToStoreHouse_Click);
             // 
-            // label2
+            // labelStreet
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label2.Location = new System.Drawing.Point(48, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 25);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Agregar almacenes.";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label3.Location = new System.Drawing.Point(461, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(300, 25);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Añadir operario a un almacen.";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 320);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 41;
-            this.label4.Text = "Calle";
+            this.labelStreet.AutoSize = true;
+            this.labelStreet.Location = new System.Drawing.Point(12, 320);
+            this.labelStreet.Name = "labelStreet";
+            this.labelStreet.Size = new System.Drawing.Size(30, 13);
+            this.labelStreet.TabIndex = 41;
+            this.labelStreet.Text = "Calle";
             // 
             // txtBoxStoreHouseStreet
             // 
@@ -243,14 +188,14 @@
             this.txtBoxStoreHouseDoorNumber.Size = new System.Drawing.Size(100, 20);
             this.txtBoxStoreHouseDoorNumber.TabIndex = 43;
             // 
-            // label5
+            // labelNumber
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 365);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Numero";
+            this.labelNumber.AutoSize = true;
+            this.labelNumber.Location = new System.Drawing.Point(12, 365);
+            this.labelNumber.Name = "labelNumber";
+            this.labelNumber.Size = new System.Drawing.Size(44, 13);
+            this.labelNumber.TabIndex = 44;
+            this.labelNumber.Text = "Numero";
             // 
             // txtBoxStoreHouseCorner
             // 
@@ -259,14 +204,14 @@
             this.txtBoxStoreHouseCorner.Size = new System.Drawing.Size(100, 20);
             this.txtBoxStoreHouseCorner.TabIndex = 45;
             // 
-            // label6
+            // labelCorner
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 407);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 13);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "Esquina";
+            this.labelCorner.AutoSize = true;
+            this.labelCorner.Location = new System.Drawing.Point(12, 407);
+            this.labelCorner.Name = "labelCorner";
+            this.labelCorner.Size = new System.Drawing.Size(45, 13);
+            this.labelCorner.TabIndex = 46;
+            this.labelCorner.Text = "Esquina";
             // 
             // txtBoxStoreHouseActived
             // 
@@ -275,23 +220,23 @@
             this.txtBoxStoreHouseActived.Size = new System.Drawing.Size(100, 20);
             this.txtBoxStoreHouseActived.TabIndex = 47;
             // 
-            // label7
+            // labelActived
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 448);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 48;
-            this.label7.Text = "Activo";
+            this.labelActived.AutoSize = true;
+            this.labelActived.Location = new System.Drawing.Point(12, 448);
+            this.labelActived.Name = "labelActived";
+            this.labelActived.Size = new System.Drawing.Size(37, 13);
+            this.labelActived.TabIndex = 48;
+            this.labelActived.Text = "Activo";
             // 
-            // label8
+            // labelIDOperator
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(454, 381);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
-            this.label8.TabIndex = 52;
-            this.label8.Text = "ID Operario";
+            this.labelIDOperator.AutoSize = true;
+            this.labelIDOperator.Location = new System.Drawing.Point(454, 381);
+            this.labelIDOperator.Name = "labelIDOperator";
+            this.labelIDOperator.Size = new System.Drawing.Size(61, 13);
+            this.labelIDOperator.TabIndex = 52;
+            this.labelIDOperator.Text = "ID Operario";
             // 
             // txtBoxIDOperator
             // 
@@ -307,22 +252,14 @@
             this.txtBoxIDAddOperatorToStoreHouse.Size = new System.Drawing.Size(43, 20);
             this.txtBoxIDAddOperatorToStoreHouse.TabIndex = 50;
             // 
-            // label9
+            // labelIDStoreHouse
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(454, 336);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
-            this.label9.TabIndex = 49;
-            this.label9.Text = "ID Almacen";
-            // 
-            // panelSeparator
-            // 
-            this.panelSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            this.panelSeparator.Location = new System.Drawing.Point(385, 1);
-            this.panelSeparator.Name = "panelSeparator";
-            this.panelSeparator.Size = new System.Drawing.Size(3, 557);
-            this.panelSeparator.TabIndex = 82;
+            this.labelIDStoreHouse.AutoSize = true;
+            this.labelIDStoreHouse.Location = new System.Drawing.Point(454, 336);
+            this.labelIDStoreHouse.Name = "labelIDStoreHouse";
+            this.labelIDStoreHouse.Size = new System.Drawing.Size(62, 13);
+            this.labelIDStoreHouse.TabIndex = 49;
+            this.labelIDStoreHouse.Text = "ID Almacen";
             // 
             // StoreHouse
             // 
@@ -332,20 +269,18 @@
             this.ClientSize = new System.Drawing.Size(773, 559);
             this.ControlBox = false;
             this.Controls.Add(this.panelSeparator);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.labelIDOperator);
             this.Controls.Add(this.txtBoxIDOperator);
             this.Controls.Add(this.txtBoxIDAddOperatorToStoreHouse);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelIDStoreHouse);
+            this.Controls.Add(this.labelActived);
             this.Controls.Add(this.txtBoxStoreHouseActived);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelCorner);
             this.Controls.Add(this.txtBoxStoreHouseCorner);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelNumber);
             this.Controls.Add(this.txtBoxStoreHouseDoorNumber);
             this.Controls.Add(this.txtBoxStoreHouseStreet);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelStreet);
             this.Controls.Add(this.dataGridViewAddOperatorStoreHouse);
             this.Controls.Add(this.buttonRefreshAddOperatorStoreHouses);
             this.Controls.Add(this.buttonDeleteOperatorFromStoreHouse);
@@ -356,6 +291,7 @@
             this.Controls.Add(this.buttonRefreshStoreHouse);
             this.Controls.Add(this.buttonDeleteStoreHouse);
             this.Controls.Add(this.buttonAddStoreHouse);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StoreHouse";
             this.Text = "StoreHouse";
@@ -374,25 +310,24 @@
         private System.Windows.Forms.Button buttonRefreshStoreHouse;
         private System.Windows.Forms.Button buttonDeleteStoreHouse;
         private System.Windows.Forms.Button buttonAddStoreHouse;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewStoreHouses;
         private System.Windows.Forms.DataGridView dataGridViewAddOperatorStoreHouse;
         private System.Windows.Forms.Button buttonRefreshAddOperatorStoreHouses;
         private System.Windows.Forms.Button buttonDeleteOperatorFromStoreHouse;
         private System.Windows.Forms.Button buttonAddOperatorToStoreHouse;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelStreet;
         private System.Windows.Forms.TextBox txtBoxStoreHouseStreet;
         private System.Windows.Forms.TextBox txtBoxStoreHouseDoorNumber;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelNumber;
         private System.Windows.Forms.TextBox txtBoxStoreHouseCorner;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelCorner;
         private System.Windows.Forms.TextBox txtBoxStoreHouseActived;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelActived;
+        private System.Windows.Forms.Label labelIDOperator;
         private System.Windows.Forms.TextBox txtBoxIDOperator;
         private System.Windows.Forms.TextBox txtBoxIDAddOperatorToStoreHouse;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelIDStoreHouse;
         private System.Windows.Forms.Panel panelSeparator;
     }
 }
