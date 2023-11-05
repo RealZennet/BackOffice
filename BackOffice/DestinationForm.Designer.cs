@@ -55,6 +55,7 @@
             // 
             // labelActivated
             // 
+            this.labelActivated.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelActivated.AutoSize = true;
             this.labelActivated.Location = new System.Drawing.Point(12, 443);
             this.labelActivated.Name = "labelActivated";
@@ -95,6 +96,7 @@
             // 
             // buttonEditDestination
             // 
+            this.buttonEditDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonEditDestination.Location = new System.Drawing.Point(142, 359);
             this.buttonEditDestination.Name = "buttonEditDestination";
             this.buttonEditDestination.Size = new System.Drawing.Size(46, 26);
@@ -105,6 +107,7 @@
             // 
             // buttonRefreshDestination
             // 
+            this.buttonRefreshDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonRefreshDestination.Location = new System.Drawing.Point(160, 485);
             this.buttonRefreshDestination.Name = "buttonRefreshDestination";
             this.buttonRefreshDestination.Size = new System.Drawing.Size(68, 26);
@@ -115,6 +118,7 @@
             // 
             // buttonDeleteDestination
             // 
+            this.buttonDeleteDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonDeleteDestination.Location = new System.Drawing.Point(86, 485);
             this.buttonDeleteDestination.Name = "buttonDeleteDestination";
             this.buttonDeleteDestination.Size = new System.Drawing.Size(68, 26);
@@ -125,6 +129,7 @@
             // 
             // buttonAddDestination
             // 
+            this.buttonAddDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonAddDestination.Location = new System.Drawing.Point(12, 485);
             this.buttonAddDestination.Name = "buttonAddDestination";
             this.buttonAddDestination.Size = new System.Drawing.Size(68, 26);
@@ -135,6 +140,7 @@
             // 
             // txtBoxIDDestination
             // 
+            this.txtBoxIDDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBoxIDDestination.Location = new System.Drawing.Point(142, 334);
             this.txtBoxIDDestination.Name = "txtBoxIDDestination";
             this.txtBoxIDDestination.Size = new System.Drawing.Size(46, 20);
@@ -142,6 +148,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(139, 315);
             this.label2.Name = "label2";
@@ -161,6 +168,7 @@
             // 
             // comboBoxStatus
             // 
+            this.comboBoxStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBoxStatus.FormattingEnabled = true;
             this.comboBoxStatus.Location = new System.Drawing.Point(12, 459);
             this.comboBoxStatus.Name = "comboBoxStatus";
@@ -169,6 +177,7 @@
             // 
             // dateTimePickerDestinationManagementTime
             // 
+            this.dateTimePickerDestinationManagementTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateTimePickerDestinationManagementTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePickerDestinationManagementTime.Location = new System.Drawing.Point(206, 365);
             this.dateTimePickerDestinationManagementTime.Name = "dateTimePickerDestinationManagementTime";
@@ -177,6 +186,7 @@
             // 
             // dateTimePickerDestinationManagement
             // 
+            this.dateTimePickerDestinationManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateTimePickerDestinationManagement.Location = new System.Drawing.Point(204, 336);
             this.dateTimePickerDestinationManagement.Name = "dateTimePickerDestinationManagement";
             this.dateTimePickerDestinationManagement.Size = new System.Drawing.Size(200, 20);
@@ -184,6 +194,7 @@
             // 
             // labelShipDate
             // 
+            this.labelShipDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelShipDate.AutoSize = true;
             this.labelShipDate.Location = new System.Drawing.Point(203, 308);
             this.labelShipDate.Name = "labelShipDate";
@@ -193,6 +204,7 @@
             // 
             // txtBoxDestinationStreet
             // 
+            this.txtBoxDestinationStreet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBoxDestinationStreet.Location = new System.Drawing.Point(13, 331);
             this.txtBoxDestinationStreet.Name = "txtBoxDestinationStreet";
             this.txtBoxDestinationStreet.Size = new System.Drawing.Size(100, 20);
@@ -200,6 +212,7 @@
             // 
             // labelStreet
             // 
+            this.labelStreet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelStreet.AutoSize = true;
             this.labelStreet.Location = new System.Drawing.Point(12, 315);
             this.labelStreet.Name = "labelStreet";
@@ -209,6 +222,7 @@
             // 
             // txtBoxDestinationCorner
             // 
+            this.txtBoxDestinationCorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBoxDestinationCorner.Location = new System.Drawing.Point(12, 368);
             this.txtBoxDestinationCorner.Name = "txtBoxDestinationCorner";
             this.txtBoxDestinationCorner.Size = new System.Drawing.Size(100, 20);
@@ -216,6 +230,7 @@
             // 
             // labelCorner
             // 
+            this.labelCorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelCorner.AutoSize = true;
             this.labelCorner.Location = new System.Drawing.Point(11, 352);
             this.labelCorner.Name = "labelCorner";
@@ -225,6 +240,7 @@
             // 
             // txtBoxDestinationDoorNumber
             // 
+            this.txtBoxDestinationDoorNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBoxDestinationDoorNumber.Location = new System.Drawing.Point(12, 410);
             this.txtBoxDestinationDoorNumber.Name = "txtBoxDestinationDoorNumber";
             this.txtBoxDestinationDoorNumber.Size = new System.Drawing.Size(100, 20);
@@ -232,6 +248,7 @@
             // 
             // labelNumber
             // 
+            this.labelNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelNumber.AutoSize = true;
             this.labelNumber.Location = new System.Drawing.Point(11, 394);
             this.labelNumber.Name = "labelNumber";
@@ -241,6 +258,7 @@
             // 
             // buttonShowMap
             // 
+            this.buttonShowMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonShowMap.Location = new System.Drawing.Point(234, 485);
             this.buttonShowMap.Name = "buttonShowMap";
             this.buttonShowMap.Size = new System.Drawing.Size(68, 26);
