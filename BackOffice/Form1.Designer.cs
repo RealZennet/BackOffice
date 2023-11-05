@@ -370,7 +370,7 @@
             this.Controls.Add(this.panelFormsLoader);
             this.Controls.Add(this.leftPanelContainer);
             this.Name = "QuickCarry";
-            this.Text = "ZTracking";
+            this.Text = "BackOffice";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.leftPanelContainer.ResumeLayout(false);
             this.managementPanel.ResumeLayout(false);
