@@ -63,6 +63,7 @@
             // 
             // labelShipDate
             // 
+            this.labelShipDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelShipDate.AutoSize = true;
             this.labelShipDate.Location = new System.Drawing.Point(12, 403);
             this.labelShipDate.Name = "labelShipDate";
@@ -72,6 +73,7 @@
             // 
             // labelIDLot
             // 
+            this.labelIDLot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelIDLot.AutoSize = true;
             this.labelIDLot.Location = new System.Drawing.Point(12, 361);
             this.labelIDLot.Name = "labelIDLot";
@@ -81,6 +83,7 @@
             // 
             // txtBoxIDBatchShippManagement
             // 
+            this.txtBoxIDBatchShippManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBoxIDBatchShippManagement.Location = new System.Drawing.Point(13, 377);
             this.txtBoxIDBatchShippManagement.Name = "txtBoxIDBatchShippManagement";
             this.txtBoxIDBatchShippManagement.Size = new System.Drawing.Size(41, 20);
@@ -88,6 +91,7 @@
             // 
             // txtBoxIDTruckShippManagement
             // 
+            this.txtBoxIDTruckShippManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBoxIDTruckShippManagement.Location = new System.Drawing.Point(13, 332);
             this.txtBoxIDTruckShippManagement.Name = "txtBoxIDTruckShippManagement";
             this.txtBoxIDTruckShippManagement.Size = new System.Drawing.Size(41, 20);
@@ -95,6 +99,7 @@
             // 
             // labelIDTruck
             // 
+            this.labelIDTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelIDTruck.AutoSize = true;
             this.labelIDTruck.Location = new System.Drawing.Point(12, 316);
             this.labelIDTruck.Name = "labelIDTruck";
@@ -104,6 +109,8 @@
             // 
             // dataGridViewShippingManagement
             // 
+            this.dataGridViewShippingManagement.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewShippingManagement.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewShippingManagement.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewShippingManagement.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -128,14 +135,11 @@
             this.dataGridViewShippingManagement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewShippingManagement.Location = new System.Drawing.Point(12, 69);
             this.dataGridViewShippingManagement.Name = "dataGridViewShippingManagement";
-            this.dataGridViewShippingManagement.Size = new System.Drawing.Size(290, 228);
+            this.dataGridViewShippingManagement.Size = new System.Drawing.Size(324, 228);
             this.dataGridViewShippingManagement.TabIndex = 54;
             // 
             // buttonBack
             // 
-            this.buttonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBack.Location = new System.Drawing.Point(12, 12);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(96, 26);
@@ -146,6 +150,7 @@
             // 
             // buttonRefreshShipps
             // 
+            this.buttonRefreshShipps.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonRefreshShipps.Location = new System.Drawing.Point(160, 500);
             this.buttonRefreshShipps.Name = "buttonRefreshShipps";
             this.buttonRefreshShipps.Size = new System.Drawing.Size(68, 26);
@@ -156,6 +161,7 @@
             // 
             // buttonDeleteShipp
             // 
+            this.buttonDeleteShipp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonDeleteShipp.Location = new System.Drawing.Point(86, 500);
             this.buttonDeleteShipp.Name = "buttonDeleteShipp";
             this.buttonDeleteShipp.Size = new System.Drawing.Size(68, 26);
@@ -166,6 +172,7 @@
             // 
             // buttonAddShipp
             // 
+            this.buttonAddShipp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonAddShipp.Location = new System.Drawing.Point(12, 500);
             this.buttonAddShipp.Name = "buttonAddShipp";
             this.buttonAddShipp.Size = new System.Drawing.Size(68, 26);
@@ -176,6 +183,8 @@
             // 
             // dataGridViewCarry
             // 
+            this.dataGridViewCarry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCarry.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewCarry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewCarry.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -198,13 +207,14 @@
             this.dataGridViewCarry.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewCarry.EnableHeadersVisualStyles = false;
             this.dataGridViewCarry.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
-            this.dataGridViewCarry.Location = new System.Drawing.Point(455, 69);
+            this.dataGridViewCarry.Location = new System.Drawing.Point(387, 69);
             this.dataGridViewCarry.Name = "dataGridViewCarry";
-            this.dataGridViewCarry.Size = new System.Drawing.Size(290, 228);
+            this.dataGridViewCarry.Size = new System.Drawing.Size(358, 228);
             this.dataGridViewCarry.TabIndex = 64;
             // 
             // dateTimePickerShippManagement
             // 
+            this.dateTimePickerShippManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateTimePickerShippManagement.Location = new System.Drawing.Point(13, 431);
             this.dateTimePickerShippManagement.Name = "dateTimePickerShippManagement";
             this.dateTimePickerShippManagement.Size = new System.Drawing.Size(200, 20);
@@ -212,7 +222,8 @@
             // 
             // buttonRefreshCarry
             // 
-            this.buttonRefreshCarry.Location = new System.Drawing.Point(625, 500);
+            this.buttonRefreshCarry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefreshCarry.Location = new System.Drawing.Point(535, 499);
             this.buttonRefreshCarry.Name = "buttonRefreshCarry";
             this.buttonRefreshCarry.Size = new System.Drawing.Size(68, 26);
             this.buttonRefreshCarry.TabIndex = 69;
@@ -222,7 +233,8 @@
             // 
             // buttonDeleteCarry
             // 
-            this.buttonDeleteCarry.Location = new System.Drawing.Point(551, 500);
+            this.buttonDeleteCarry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDeleteCarry.Location = new System.Drawing.Point(461, 499);
             this.buttonDeleteCarry.Name = "buttonDeleteCarry";
             this.buttonDeleteCarry.Size = new System.Drawing.Size(68, 26);
             this.buttonDeleteCarry.TabIndex = 68;
@@ -232,7 +244,8 @@
             // 
             // buttonAddCarry
             // 
-            this.buttonAddCarry.Location = new System.Drawing.Point(477, 500);
+            this.buttonAddCarry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddCarry.Location = new System.Drawing.Point(387, 499);
             this.buttonAddCarry.Name = "buttonAddCarry";
             this.buttonAddCarry.Size = new System.Drawing.Size(68, 26);
             this.buttonAddCarry.TabIndex = 67;
@@ -242,7 +255,8 @@
             // 
             // buttonEditCarry
             // 
-            this.buttonEditCarry.Location = new System.Drawing.Point(699, 500);
+            this.buttonEditCarry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEditCarry.Location = new System.Drawing.Point(609, 499);
             this.buttonEditCarry.Name = "buttonEditCarry";
             this.buttonEditCarry.Size = new System.Drawing.Size(68, 26);
             this.buttonEditCarry.TabIndex = 70;
@@ -251,8 +265,9 @@
             // 
             // labelIDLot2
             // 
+            this.labelIDLot2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelIDLot2.AutoSize = true;
-            this.labelIDLot2.Location = new System.Drawing.Point(476, 361);
+            this.labelIDLot2.Location = new System.Drawing.Point(386, 360);
             this.labelIDLot2.Name = "labelIDLot2";
             this.labelIDLot2.Size = new System.Drawing.Size(42, 13);
             this.labelIDLot2.TabIndex = 74;
@@ -260,22 +275,25 @@
             // 
             // txtBoxIDBatchCarrie
             // 
-            this.txtBoxIDBatchCarrie.Location = new System.Drawing.Point(477, 377);
+            this.txtBoxIDBatchCarrie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxIDBatchCarrie.Location = new System.Drawing.Point(387, 376);
             this.txtBoxIDBatchCarrie.Name = "txtBoxIDBatchCarrie";
             this.txtBoxIDBatchCarrie.Size = new System.Drawing.Size(41, 20);
             this.txtBoxIDBatchCarrie.TabIndex = 73;
             // 
             // txtBoxIDTruckCarrie
             // 
-            this.txtBoxIDTruckCarrie.Location = new System.Drawing.Point(477, 332);
+            this.txtBoxIDTruckCarrie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxIDTruckCarrie.Location = new System.Drawing.Point(387, 331);
             this.txtBoxIDTruckCarrie.Name = "txtBoxIDTruckCarrie";
             this.txtBoxIDTruckCarrie.Size = new System.Drawing.Size(41, 20);
             this.txtBoxIDTruckCarrie.TabIndex = 72;
             // 
             // labelIDestination
             // 
+            this.labelIDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelIDestination.AutoSize = true;
-            this.labelIDestination.Location = new System.Drawing.Point(478, 405);
+            this.labelIDestination.Location = new System.Drawing.Point(388, 404);
             this.labelIDestination.Name = "labelIDestination";
             this.labelIDestination.Size = new System.Drawing.Size(57, 13);
             this.labelIDestination.TabIndex = 76;
@@ -283,21 +301,24 @@
             // 
             // txtBoxIDDestinationCarrie
             // 
-            this.txtBoxIDDestinationCarrie.Location = new System.Drawing.Point(479, 421);
+            this.txtBoxIDDestinationCarrie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxIDDestinationCarrie.Location = new System.Drawing.Point(389, 420);
             this.txtBoxIDDestinationCarrie.Name = "txtBoxIDDestinationCarrie";
             this.txtBoxIDDestinationCarrie.Size = new System.Drawing.Size(41, 20);
             this.txtBoxIDDestinationCarrie.TabIndex = 75;
             // 
             // comboBoxStatus
             // 
+            this.comboBoxStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxStatus.FormattingEnabled = true;
-            this.comboBoxStatus.Location = new System.Drawing.Point(477, 460);
+            this.comboBoxStatus.Location = new System.Drawing.Point(387, 459);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
             this.comboBoxStatus.TabIndex = 79;
             // 
             // dateTimePickerShippManagementTime
             // 
+            this.dateTimePickerShippManagementTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateTimePickerShippManagementTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePickerShippManagementTime.Location = new System.Drawing.Point(15, 460);
             this.dateTimePickerShippManagementTime.Name = "dateTimePickerShippManagementTime";
@@ -306,6 +327,7 @@
             // 
             // panelSeparator
             // 
+            this.panelSeparator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panelSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
             this.panelSeparator.Location = new System.Drawing.Point(359, 1);
             this.panelSeparator.Name = "panelSeparator";
@@ -314,8 +336,9 @@
             // 
             // labelIDTruck2
             // 
+            this.labelIDTruck2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelIDTruck2.AutoSize = true;
-            this.labelIDTruck2.Location = new System.Drawing.Point(474, 316);
+            this.labelIDTruck2.Location = new System.Drawing.Point(384, 315);
             this.labelIDTruck2.Name = "labelIDTruck2";
             this.labelIDTruck2.Size = new System.Drawing.Size(56, 13);
             this.labelIDTruck2.TabIndex = 82;
