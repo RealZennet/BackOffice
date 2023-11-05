@@ -61,6 +61,7 @@
             // 
             // buttonEditStoreHouse
             // 
+            this.buttonEditStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonEditStoreHouse.Location = new System.Drawing.Point(234, 504);
             this.buttonEditStoreHouse.Name = "buttonEditStoreHouse";
             this.buttonEditStoreHouse.Size = new System.Drawing.Size(68, 26);
@@ -70,9 +71,6 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBack.Location = new System.Drawing.Point(12, 16);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(96, 26);
@@ -83,6 +81,7 @@
             // 
             // buttonRefreshStoreHouse
             // 
+            this.buttonRefreshStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonRefreshStoreHouse.Location = new System.Drawing.Point(160, 504);
             this.buttonRefreshStoreHouse.Name = "buttonRefreshStoreHouse";
             this.buttonRefreshStoreHouse.Size = new System.Drawing.Size(68, 26);
@@ -93,6 +92,7 @@
             // 
             // buttonDeleteStoreHouse
             // 
+            this.buttonDeleteStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonDeleteStoreHouse.Location = new System.Drawing.Point(86, 504);
             this.buttonDeleteStoreHouse.Name = "buttonDeleteStoreHouse";
             this.buttonDeleteStoreHouse.Size = new System.Drawing.Size(68, 26);
@@ -102,6 +102,7 @@
             // 
             // buttonAddStoreHouse
             // 
+            this.buttonAddStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonAddStoreHouse.Location = new System.Drawing.Point(12, 504);
             this.buttonAddStoreHouse.Name = "buttonAddStoreHouse";
             this.buttonAddStoreHouse.Size = new System.Drawing.Size(68, 26);
@@ -112,6 +113,8 @@
             // 
             // dataGridViewStoreHouses
             // 
+            this.dataGridViewStoreHouses.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewStoreHouses.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewStoreHouses.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewStoreHouses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -141,6 +144,7 @@
             // 
             // dataGridViewAddOperatorStoreHouse
             // 
+            this.dataGridViewAddOperatorStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewAddOperatorStoreHouse.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewAddOperatorStoreHouse.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewAddOperatorStoreHouse.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -165,11 +169,12 @@
             this.dataGridViewAddOperatorStoreHouse.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewAddOperatorStoreHouse.Location = new System.Drawing.Point(455, 73);
             this.dataGridViewAddOperatorStoreHouse.Name = "dataGridViewAddOperatorStoreHouse";
-            this.dataGridViewAddOperatorStoreHouse.Size = new System.Drawing.Size(290, 228);
+            this.dataGridViewAddOperatorStoreHouse.Size = new System.Drawing.Size(290, 295);
             this.dataGridViewAddOperatorStoreHouse.TabIndex = 38;
             // 
             // buttonRefreshAddOperatorStoreHouses
             // 
+            this.buttonRefreshAddOperatorStoreHouses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRefreshAddOperatorStoreHouses.Location = new System.Drawing.Point(605, 504);
             this.buttonRefreshAddOperatorStoreHouses.Name = "buttonRefreshAddOperatorStoreHouses";
             this.buttonRefreshAddOperatorStoreHouses.Size = new System.Drawing.Size(68, 26);
@@ -180,6 +185,7 @@
             // 
             // buttonDeleteOperatorFromStoreHouse
             // 
+            this.buttonDeleteOperatorFromStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDeleteOperatorFromStoreHouse.Location = new System.Drawing.Point(531, 504);
             this.buttonDeleteOperatorFromStoreHouse.Name = "buttonDeleteOperatorFromStoreHouse";
             this.buttonDeleteOperatorFromStoreHouse.Size = new System.Drawing.Size(68, 26);
@@ -190,6 +196,7 @@
             // 
             // buttonAddOperatorToStoreHouse
             // 
+            this.buttonAddOperatorToStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddOperatorToStoreHouse.Location = new System.Drawing.Point(457, 504);
             this.buttonAddOperatorToStoreHouse.Name = "buttonAddOperatorToStoreHouse";
             this.buttonAddOperatorToStoreHouse.Size = new System.Drawing.Size(68, 26);
@@ -200,6 +207,7 @@
             // 
             // labelStreet
             // 
+            this.labelStreet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelStreet.AutoSize = true;
             this.labelStreet.Location = new System.Drawing.Point(12, 320);
             this.labelStreet.Name = "labelStreet";
@@ -209,6 +217,7 @@
             // 
             // txtBoxStoreHouseStreet
             // 
+            this.txtBoxStoreHouseStreet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBoxStoreHouseStreet.Location = new System.Drawing.Point(13, 336);
             this.txtBoxStoreHouseStreet.Name = "txtBoxStoreHouseStreet";
             this.txtBoxStoreHouseStreet.Size = new System.Drawing.Size(100, 20);
@@ -216,6 +225,7 @@
             // 
             // txtBoxStoreHouseDoorNumber
             // 
+            this.txtBoxStoreHouseDoorNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBoxStoreHouseDoorNumber.Location = new System.Drawing.Point(13, 381);
             this.txtBoxStoreHouseDoorNumber.Name = "txtBoxStoreHouseDoorNumber";
             this.txtBoxStoreHouseDoorNumber.Size = new System.Drawing.Size(100, 20);
@@ -223,6 +233,7 @@
             // 
             // labelNumber
             // 
+            this.labelNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelNumber.AutoSize = true;
             this.labelNumber.Location = new System.Drawing.Point(12, 365);
             this.labelNumber.Name = "labelNumber";
@@ -232,6 +243,7 @@
             // 
             // txtBoxStoreHouseCorner
             // 
+            this.txtBoxStoreHouseCorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBoxStoreHouseCorner.Location = new System.Drawing.Point(12, 422);
             this.txtBoxStoreHouseCorner.Name = "txtBoxStoreHouseCorner";
             this.txtBoxStoreHouseCorner.Size = new System.Drawing.Size(100, 20);
@@ -239,6 +251,7 @@
             // 
             // labelCorner
             // 
+            this.labelCorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelCorner.AutoSize = true;
             this.labelCorner.Location = new System.Drawing.Point(12, 407);
             this.labelCorner.Name = "labelCorner";
@@ -248,6 +261,7 @@
             // 
             // txtBoxStoreHouseActived
             // 
+            this.txtBoxStoreHouseActived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBoxStoreHouseActived.Location = new System.Drawing.Point(13, 464);
             this.txtBoxStoreHouseActived.Name = "txtBoxStoreHouseActived";
             this.txtBoxStoreHouseActived.Size = new System.Drawing.Size(100, 20);
@@ -255,6 +269,7 @@
             // 
             // labelActived
             // 
+            this.labelActived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelActived.AutoSize = true;
             this.labelActived.Location = new System.Drawing.Point(12, 448);
             this.labelActived.Name = "labelActived";
@@ -264,8 +279,9 @@
             // 
             // labelIDOperator
             // 
+            this.labelIDOperator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelIDOperator.AutoSize = true;
-            this.labelIDOperator.Location = new System.Drawing.Point(454, 381);
+            this.labelIDOperator.Location = new System.Drawing.Point(454, 452);
             this.labelIDOperator.Name = "labelIDOperator";
             this.labelIDOperator.Size = new System.Drawing.Size(61, 13);
             this.labelIDOperator.TabIndex = 52;
@@ -273,22 +289,25 @@
             // 
             // txtBoxIDOperator
             // 
-            this.txtBoxIDOperator.Location = new System.Drawing.Point(455, 397);
+            this.txtBoxIDOperator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxIDOperator.Location = new System.Drawing.Point(455, 468);
             this.txtBoxIDOperator.Name = "txtBoxIDOperator";
             this.txtBoxIDOperator.Size = new System.Drawing.Size(43, 20);
             this.txtBoxIDOperator.TabIndex = 51;
             // 
             // txtBoxIDAddOperatorToStoreHouse
             // 
-            this.txtBoxIDAddOperatorToStoreHouse.Location = new System.Drawing.Point(455, 352);
+            this.txtBoxIDAddOperatorToStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxIDAddOperatorToStoreHouse.Location = new System.Drawing.Point(455, 423);
             this.txtBoxIDAddOperatorToStoreHouse.Name = "txtBoxIDAddOperatorToStoreHouse";
             this.txtBoxIDAddOperatorToStoreHouse.Size = new System.Drawing.Size(43, 20);
             this.txtBoxIDAddOperatorToStoreHouse.TabIndex = 50;
             // 
             // labelIDStoreHouse
             // 
+            this.labelIDStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelIDStoreHouse.AutoSize = true;
-            this.labelIDStoreHouse.Location = new System.Drawing.Point(454, 336);
+            this.labelIDStoreHouse.Location = new System.Drawing.Point(454, 407);
             this.labelIDStoreHouse.Name = "labelIDStoreHouse";
             this.labelIDStoreHouse.Size = new System.Drawing.Size(62, 13);
             this.labelIDStoreHouse.TabIndex = 49;
@@ -296,6 +315,7 @@
             // 
             // panelSeparator
             // 
+            this.panelSeparator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panelSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
             this.panelSeparator.Location = new System.Drawing.Point(385, 1);
             this.panelSeparator.Name = "panelSeparator";
