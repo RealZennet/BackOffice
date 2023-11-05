@@ -371,6 +371,7 @@
             this.Controls.Add(this.leftPanelContainer);
             this.Name = "QuickCarry";
             this.Text = "BackOffice";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QuickCarry_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.leftPanelContainer.ResumeLayout(false);
             this.managementPanel.ResumeLayout(false);

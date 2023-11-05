@@ -139,6 +139,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource_language_spanish.resx</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LotsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     <EmbeddedResource Include="Languages\Resource_language_spanish.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource_language_spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LotsForm.resx">
       <DependentUpon>LotsForm.cs</DependentUpon>

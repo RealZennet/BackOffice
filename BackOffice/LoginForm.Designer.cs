@@ -100,6 +100,7 @@
             this.buttonLogin.TabIndex = 61;
             this.buttonLogin.Text = "Iniciar sesion";
             this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // LoginForm
             // 
@@ -115,6 +116,7 @@
             this.Controls.Add(this.buttonLogin);
             this.Name = "LoginForm";
             this.Text = "BackOffice";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

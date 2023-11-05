@@ -321,6 +321,13 @@ namespace BackOffice
             LanguageChanged?.Invoke();
         }
 
+        private void QuickCarry_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
+
         #region destinationmanager
 
         private void showDestinationManagerForm()
