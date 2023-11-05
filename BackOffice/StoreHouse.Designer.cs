@@ -55,6 +55,8 @@
             this.txtBoxIDAddOperatorToStoreHouse = new System.Windows.Forms.TextBox();
             this.labelIDStoreHouse = new System.Windows.Forms.Label();
             this.panelSeparator = new System.Windows.Forms.Panel();
+            this.labelAddStoreHouse = new System.Windows.Forms.Label();
+            this.labelAssignOperatorToStoreHouse = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStoreHouses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddOperatorStoreHouse)).BeginInit();
             this.SuspendLayout();
@@ -322,6 +324,28 @@
             this.panelSeparator.Size = new System.Drawing.Size(3, 557);
             this.panelSeparator.TabIndex = 82;
             // 
+            // labelAddStoreHouse
+            // 
+            this.labelAddStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAddStoreHouse.AutoSize = true;
+            this.labelAddStoreHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelAddStoreHouse.Location = new System.Drawing.Point(164, 22);
+            this.labelAddStoreHouse.Name = "labelAddStoreHouse";
+            this.labelAddStoreHouse.Size = new System.Drawing.Size(138, 20);
+            this.labelAddStoreHouse.TabIndex = 83;
+            this.labelAddStoreHouse.Text = "Agregar Almacen";
+            // 
+            // labelAssignOperatorToStoreHouse
+            // 
+            this.labelAssignOperatorToStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAssignOperatorToStoreHouse.AutoSize = true;
+            this.labelAssignOperatorToStoreHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelAssignOperatorToStoreHouse.Location = new System.Drawing.Point(535, 22);
+            this.labelAssignOperatorToStoreHouse.Name = "labelAssignOperatorToStoreHouse";
+            this.labelAssignOperatorToStoreHouse.Size = new System.Drawing.Size(136, 20);
+            this.labelAssignOperatorToStoreHouse.TabIndex = 84;
+            this.labelAssignOperatorToStoreHouse.Text = "Asignar Operario";
+            // 
             // StoreHouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +353,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
             this.ControlBox = false;
+            this.Controls.Add(this.labelAssignOperatorToStoreHouse);
+            this.Controls.Add(this.labelAddStoreHouse);
             this.Controls.Add(this.panelSeparator);
             this.Controls.Add(this.labelIDOperator);
             this.Controls.Add(this.txtBoxIDOperator);
@@ -388,5 +414,7 @@
         private System.Windows.Forms.TextBox txtBoxIDAddOperatorToStoreHouse;
         private System.Windows.Forms.Label labelIDStoreHouse;
         private System.Windows.Forms.Panel panelSeparator;
+        private System.Windows.Forms.Label labelAddStoreHouse;
+        private System.Windows.Forms.Label labelAssignOperatorToStoreHouse;
     }
 }

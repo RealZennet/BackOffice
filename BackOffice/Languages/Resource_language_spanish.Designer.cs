@@ -79,6 +79,15 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Agregar almacen.
+        /// </summary>
+        internal static string AddStoreHouse {
+            get {
+                return ResourceManager.GetString("AddStoreHouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Aplicacion Almacen.
         /// </summary>
         internal static string AppStoreHouseTitle {
@@ -93,6 +102,15 @@ namespace BackOffice.Languages {
         internal static string AssignLotToTrucker {
             get {
                 return ResourceManager.GetString("AssignLotToTrucker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Asignara operario.
+        /// </summary>
+        internal static string AssignOperatorToStoreHouse {
+            get {
+                return ResourceManager.GetString("AssignOperatorToStoreHouse", resourceCulture);
             }
         }
         

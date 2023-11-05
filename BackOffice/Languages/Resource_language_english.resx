@@ -342,4 +342,10 @@
   <data name="Gerency" xml:space="preserve">
     <value>Gerency</value>
   </data>
+  <data name="AssignOperatorToStoreHouse" xml:space="preserve">
+    <value>Assign Operator</value>
+  </data>
+  <data name="AddStoreHouse" xml:space="preserve">
+    <value>Add storehouse</value>
+  </data>
 </root>

@@ -44,7 +44,8 @@ namespace BackOffice
             labelActived.Text = LanguageManager.GetString("Activated");
             labelIDOperator.Text = LanguageManager.GetString("IDOperator");
             labelIDStoreHouse.Text = LanguageManager.GetString("StoreHouseID");
-
+            labelAssignOperatorToStoreHouse.Text = LanguageManager.GetString("AssignOperatorToStoreHouse");
+            labelAddStoreHouse.Text = LanguageManager.GetString("AddStoreHouse");
         }
 
         private void StoreHouse_Load(object sender, EventArgs e)

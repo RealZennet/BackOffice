@@ -345,4 +345,10 @@
   <data name="Gerency" xml:space="preserve">
     <value>Gerencia</value>
   </data>
+  <data name="AssignOperatorToStoreHouse" xml:space="preserve">
+    <value>Asignara operario</value>
+  </data>
+  <data name="AddStoreHouse" xml:space="preserve">
+    <value>Agregar almacen</value>
+  </data>
 </root>
