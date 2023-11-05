@@ -54,6 +54,9 @@
             // 
             // dataGridViewUsers
             // 
+            this.dataGridViewUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewUsers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -78,11 +81,12 @@
             this.dataGridViewUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewUsers.Location = new System.Drawing.Point(12, 44);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
-            this.dataGridViewUsers.Size = new System.Drawing.Size(480, 503);
+            this.dataGridViewUsers.Size = new System.Drawing.Size(480, 433);
             this.dataGridViewUsers.TabIndex = 0;
             // 
             // labelFirstLastName
             // 
+            this.labelFirstLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelFirstLastName.AutoSize = true;
             this.labelFirstLastName.Location = new System.Drawing.Point(497, 108);
             this.labelFirstLastName.Name = "labelFirstLastName";
@@ -92,6 +96,7 @@
             // 
             // labelFirstName
             // 
+            this.labelFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelFirstName.AutoSize = true;
             this.labelFirstName.Location = new System.Drawing.Point(497, 60);
             this.labelFirstName.Name = "labelFirstName";
@@ -102,6 +107,7 @@
             // 
             // txtBoxFirstLastName
             // 
+            this.txtBoxFirstLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxFirstLastName.Location = new System.Drawing.Point(498, 124);
             this.txtBoxFirstLastName.Name = "txtBoxFirstLastName";
             this.txtBoxFirstLastName.Size = new System.Drawing.Size(253, 20);
@@ -109,6 +115,7 @@
             // 
             // txtBoxFirstName
             // 
+            this.txtBoxFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxFirstName.Location = new System.Drawing.Point(498, 85);
             this.txtBoxFirstName.Name = "txtBoxFirstName";
             this.txtBoxFirstName.Size = new System.Drawing.Size(253, 20);
@@ -117,6 +124,7 @@
             // 
             // txtBoxPhoneNumber
             // 
+            this.txtBoxPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxPhoneNumber.Location = new System.Drawing.Point(498, 174);
             this.txtBoxPhoneNumber.Name = "txtBoxPhoneNumber";
             this.txtBoxPhoneNumber.Size = new System.Drawing.Size(253, 20);
@@ -124,6 +132,7 @@
             // 
             // labelPhoneNumber
             // 
+            this.labelPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPhoneNumber.AutoSize = true;
             this.labelPhoneNumber.Location = new System.Drawing.Point(498, 158);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
@@ -133,6 +142,7 @@
             // 
             // buttonRefresh
             // 
+            this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRefresh.Location = new System.Drawing.Point(677, 410);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(68, 26);
@@ -143,6 +153,7 @@
             // 
             // buttonDelete
             // 
+            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDelete.Location = new System.Drawing.Point(588, 410);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(68, 26);
@@ -153,6 +164,7 @@
             // 
             // buttonAdd
             // 
+            this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAdd.Location = new System.Drawing.Point(498, 410);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(68, 26);
@@ -173,6 +185,7 @@
             // 
             // txtBoxUsername
             // 
+            this.txtBoxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxUsername.Location = new System.Drawing.Point(498, 222);
             this.txtBoxUsername.Name = "txtBoxUsername";
             this.txtBoxUsername.Size = new System.Drawing.Size(253, 20);
@@ -180,6 +193,7 @@
             // 
             // txtBoxPassword
             // 
+            this.txtBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxPassword.Location = new System.Drawing.Point(498, 270);
             this.txtBoxPassword.Name = "txtBoxPassword";
             this.txtBoxPassword.PasswordChar = '*';
@@ -188,6 +202,7 @@
             // 
             // labelUsername
             // 
+            this.labelUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUsername.AutoSize = true;
             this.labelUsername.Location = new System.Drawing.Point(495, 206);
             this.labelUsername.Name = "labelUsername";
@@ -197,6 +212,7 @@
             // 
             // labelPassword
             // 
+            this.labelPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPassword.AutoSize = true;
             this.labelPassword.Location = new System.Drawing.Point(498, 254);
             this.labelPassword.Name = "labelPassword";
@@ -206,6 +222,7 @@
             // 
             // comboBoxTypeUser
             // 
+            this.comboBoxTypeUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxTypeUser.FormattingEnabled = true;
             this.comboBoxTypeUser.Items.AddRange(new object[] {
             "Operador",
@@ -217,6 +234,7 @@
             // 
             // txtBoxUserID
             // 
+            this.txtBoxUserID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxUserID.Location = new System.Drawing.Point(689, 323);
             this.txtBoxUserID.Name = "txtBoxUserID";
             this.txtBoxUserID.Size = new System.Drawing.Size(56, 20);
@@ -224,6 +242,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(687, 307);
             this.label2.Name = "label2";
@@ -233,6 +252,7 @@
             // 
             // buttonEditUser
             // 
+            this.buttonEditUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEditUser.Location = new System.Drawing.Point(690, 349);
             this.buttonEditUser.Name = "buttonEditUser";
             this.buttonEditUser.Size = new System.Drawing.Size(55, 26);
