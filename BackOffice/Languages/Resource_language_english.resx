@@ -339,4 +339,7 @@
   <data name="Subject" xml:space="preserve">
     <value>Subject</value>
   </data>
+  <data name="Gerency" xml:space="preserve">
+    <value>Gerency</value>
+  </data>
 </root>

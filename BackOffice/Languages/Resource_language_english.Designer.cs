@@ -277,6 +277,15 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Gerency.
+        /// </summary>
+        internal static string Gerency {
+            get {
+                return ResourceManager.GetString("Gerency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ID Destination.
         /// </summary>
         internal static string IDDestination {

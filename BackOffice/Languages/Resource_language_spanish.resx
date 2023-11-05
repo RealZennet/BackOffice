@@ -342,4 +342,7 @@
   <data name="Subject" xml:space="preserve">
     <value>Asunto</value>
   </data>
+  <data name="Gerency" xml:space="preserve">
+    <value>Gerencia</value>
+  </data>
 </root>

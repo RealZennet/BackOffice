@@ -33,6 +33,7 @@ namespace BackOffice
             buttonAssignProducts.Text = LanguageManager.GetString("AssignProducts");
             buttonProductsManager.Text = LanguageManager.GetString("ManageProducts");
             buttonLotesManager.Text = LanguageManager.GetString("ManageLots");
+            buttonManagement.Text = LanguageManager.GetString("Gerency");
             buttonDestinationManager.Text = LanguageManager.GetString("DestinationManager");
             buttonShippingManager.Text = LanguageManager.GetString("ManageShipments");
             ButtonStoreHouseManagement.Text = LanguageManager.GetString("ManageStoreHouse");
