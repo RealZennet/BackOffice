@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
             this.buttonAddProduct = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
@@ -54,29 +54,28 @@
             // 
             // dataGridViewProducts
             // 
-            this.dataGridViewProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridViewProducts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewProducts.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewProducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProducts.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewProducts.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewProducts.EnableHeadersVisualStyles = false;
             this.dataGridViewProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewProducts.Location = new System.Drawing.Point(12, 44);
@@ -87,10 +86,8 @@
             // 
             // buttonAddProduct
             // 
-            this.buttonAddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddProduct.Location = new System.Drawing.Point(498, 492);
+            this.buttonAddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddProduct.Location = new System.Drawing.Point(498, 407);
             this.buttonAddProduct.Name = "buttonAddProduct";
             this.buttonAddProduct.Size = new System.Drawing.Size(68, 26);
             this.buttonAddProduct.TabIndex = 1;
@@ -100,10 +97,8 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelete.Location = new System.Drawing.Point(594, 492);
+            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDelete.Location = new System.Drawing.Point(594, 407);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(68, 26);
             this.buttonDelete.TabIndex = 2;
@@ -113,10 +108,8 @@
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRefresh.Location = new System.Drawing.Point(690, 492);
+            this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefresh.Location = new System.Drawing.Point(690, 407);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(68, 26);
             this.buttonRefresh.TabIndex = 3;
@@ -126,9 +119,6 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBack.Location = new System.Drawing.Point(12, 12);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(96, 26);
@@ -139,29 +129,33 @@
             // 
             // txtBoxWeight
             // 
-            this.txtBoxWeight.Location = new System.Drawing.Point(498, 145);
+            this.txtBoxWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxWeight.Location = new System.Drawing.Point(498, 60);
             this.txtBoxWeight.Name = "txtBoxWeight";
             this.txtBoxWeight.Size = new System.Drawing.Size(253, 20);
             this.txtBoxWeight.TabIndex = 6;
             // 
             // txtBoxActive
             // 
-            this.txtBoxActive.Location = new System.Drawing.Point(498, 409);
+            this.txtBoxActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxActive.Location = new System.Drawing.Point(498, 324);
             this.txtBoxActive.Name = "txtBoxActive";
             this.txtBoxActive.Size = new System.Drawing.Size(37, 20);
             this.txtBoxActive.TabIndex = 7;
             // 
             // txtBoxCustomer
             // 
-            this.txtBoxCustomer.Location = new System.Drawing.Point(498, 453);
+            this.txtBoxCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxCustomer.Location = new System.Drawing.Point(498, 368);
             this.txtBoxCustomer.Name = "txtBoxCustomer";
             this.txtBoxCustomer.Size = new System.Drawing.Size(253, 20);
             this.txtBoxCustomer.TabIndex = 8;
             // 
             // labelProductWeight
             // 
+            this.labelProductWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelProductWeight.AutoSize = true;
-            this.labelProductWeight.Location = new System.Drawing.Point(495, 129);
+            this.labelProductWeight.Location = new System.Drawing.Point(495, 44);
             this.labelProductWeight.Name = "labelProductWeight";
             this.labelProductWeight.Size = new System.Drawing.Size(94, 13);
             this.labelProductWeight.TabIndex = 10;
@@ -169,8 +163,9 @@
             // 
             // labelActived
             // 
+            this.labelActived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelActived.AutoSize = true;
-            this.labelActived.Location = new System.Drawing.Point(498, 393);
+            this.labelActived.Location = new System.Drawing.Point(498, 308);
             this.labelActived.Name = "labelActived";
             this.labelActived.Size = new System.Drawing.Size(122, 13);
             this.labelActived.TabIndex = 11;
@@ -178,8 +173,9 @@
             // 
             // labelCustomer
             // 
+            this.labelCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCustomer.AutoSize = true;
-            this.labelCustomer.Location = new System.Drawing.Point(498, 437);
+            this.labelCustomer.Location = new System.Drawing.Point(498, 352);
             this.labelCustomer.Name = "labelCustomer";
             this.labelCustomer.Size = new System.Drawing.Size(42, 13);
             this.labelCustomer.TabIndex = 12;
@@ -187,8 +183,9 @@
             // 
             // labelProductVolume
             // 
+            this.labelProductVolume.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelProductVolume.AutoSize = true;
-            this.labelProductVolume.Location = new System.Drawing.Point(495, 180);
+            this.labelProductVolume.Location = new System.Drawing.Point(495, 95);
             this.labelProductVolume.Name = "labelProductVolume";
             this.labelProductVolume.Size = new System.Drawing.Size(111, 13);
             this.labelProductVolume.TabIndex = 15;
@@ -196,15 +193,17 @@
             // 
             // txtBoxVolume
             // 
-            this.txtBoxVolume.Location = new System.Drawing.Point(498, 196);
+            this.txtBoxVolume.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxVolume.Location = new System.Drawing.Point(498, 111);
             this.txtBoxVolume.Name = "txtBoxVolume";
             this.txtBoxVolume.Size = new System.Drawing.Size(253, 20);
             this.txtBoxVolume.TabIndex = 14;
             // 
             // labelProductStreet
             // 
+            this.labelProductStreet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelProductStreet.AutoSize = true;
-            this.labelProductStreet.Location = new System.Drawing.Point(495, 230);
+            this.labelProductStreet.Location = new System.Drawing.Point(495, 145);
             this.labelProductStreet.Name = "labelProductStreet";
             this.labelProductStreet.Size = new System.Drawing.Size(68, 13);
             this.labelProductStreet.TabIndex = 17;
@@ -212,15 +211,17 @@
             // 
             // txtBoxStreet
             // 
-            this.txtBoxStreet.Location = new System.Drawing.Point(498, 246);
+            this.txtBoxStreet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxStreet.Location = new System.Drawing.Point(498, 161);
             this.txtBoxStreet.Name = "txtBoxStreet";
             this.txtBoxStreet.Size = new System.Drawing.Size(253, 20);
             this.txtBoxStreet.TabIndex = 16;
             // 
             // labelDoorNumber
             // 
+            this.labelDoorNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDoorNumber.AutoSize = true;
-            this.labelDoorNumber.Location = new System.Drawing.Point(495, 339);
+            this.labelDoorNumber.Location = new System.Drawing.Point(495, 254);
             this.labelDoorNumber.Name = "labelDoorNumber";
             this.labelDoorNumber.Size = new System.Drawing.Size(124, 13);
             this.labelDoorNumber.TabIndex = 19;
@@ -228,15 +229,17 @@
             // 
             // txtBoxDoorNumber
             // 
-            this.txtBoxDoorNumber.Location = new System.Drawing.Point(498, 355);
+            this.txtBoxDoorNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxDoorNumber.Location = new System.Drawing.Point(498, 270);
             this.txtBoxDoorNumber.Name = "txtBoxDoorNumber";
             this.txtBoxDoorNumber.Size = new System.Drawing.Size(37, 20);
             this.txtBoxDoorNumber.TabIndex = 18;
             // 
             // labelProductCorner
             // 
+            this.labelProductCorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelProductCorner.AutoSize = true;
-            this.labelProductCorner.Location = new System.Drawing.Point(495, 271);
+            this.labelProductCorner.Location = new System.Drawing.Point(495, 186);
             this.labelProductCorner.Name = "labelProductCorner";
             this.labelProductCorner.Size = new System.Drawing.Size(83, 13);
             this.labelProductCorner.TabIndex = 21;
@@ -244,7 +247,8 @@
             // 
             // txtBoxCorner
             // 
-            this.txtBoxCorner.Location = new System.Drawing.Point(498, 287);
+            this.txtBoxCorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxCorner.Location = new System.Drawing.Point(498, 202);
             this.txtBoxCorner.Name = "txtBoxCorner";
             this.txtBoxCorner.Size = new System.Drawing.Size(253, 20);
             this.txtBoxCorner.TabIndex = 20;
