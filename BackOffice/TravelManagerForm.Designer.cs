@@ -49,6 +49,7 @@
             // 
             // buttonRefresh
             // 
+            this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRefresh.Location = new System.Drawing.Point(661, 345);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(68, 26);
@@ -59,6 +60,7 @@
             // 
             // buttonDelete
             // 
+            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDelete.Location = new System.Drawing.Point(587, 345);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(68, 26);
@@ -69,6 +71,7 @@
             // 
             // buttonAdd
             // 
+            this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAdd.Location = new System.Drawing.Point(513, 345);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(68, 26);
@@ -79,6 +82,7 @@
             // 
             // labelIDDestination
             // 
+            this.labelIDDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelIDDestination.AutoSize = true;
             this.labelIDDestination.Location = new System.Drawing.Point(510, 123);
             this.labelIDDestination.Name = "labelIDDestination";
@@ -88,6 +92,7 @@
             // 
             // txtBoxIDDestination
             // 
+            this.txtBoxIDDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxIDDestination.Location = new System.Drawing.Point(513, 148);
             this.txtBoxIDDestination.Name = "txtBoxIDDestination";
             this.txtBoxIDDestination.Size = new System.Drawing.Size(210, 20);
@@ -95,6 +100,7 @@
             // 
             // labelIDStoreHouse
             // 
+            this.labelIDStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelIDStoreHouse.AutoSize = true;
             this.labelIDStoreHouse.Location = new System.Drawing.Point(510, 56);
             this.labelIDStoreHouse.Name = "labelIDStoreHouse";
@@ -104,6 +110,7 @@
             // 
             // txtBoxIDStoreHouse
             // 
+            this.txtBoxIDStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxIDStoreHouse.Location = new System.Drawing.Point(513, 81);
             this.txtBoxIDStoreHouse.Name = "txtBoxIDStoreHouse";
             this.txtBoxIDStoreHouse.Size = new System.Drawing.Size(210, 20);
@@ -121,6 +128,9 @@
             // 
             // dataGridViewTravels
             // 
+            this.dataGridViewTravels.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewTravels.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewTravels.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewTravels.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -145,11 +155,12 @@
             this.dataGridViewTravels.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewTravels.Location = new System.Drawing.Point(7, 41);
             this.dataGridViewTravels.Name = "dataGridViewTravels";
-            this.dataGridViewTravels.Size = new System.Drawing.Size(480, 475);
+            this.dataGridViewTravels.Size = new System.Drawing.Size(480, 412);
             this.dataGridViewTravels.TabIndex = 11;
             // 
             // labelTypeTravel
             // 
+            this.labelTypeTravel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTypeTravel.AutoSize = true;
             this.labelTypeTravel.Location = new System.Drawing.Point(510, 183);
             this.labelTypeTravel.Name = "labelTypeTravel";
@@ -159,6 +170,7 @@
             // 
             // labelDateTravel
             // 
+            this.labelDateTravel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDateTravel.AutoSize = true;
             this.labelDateTravel.Location = new System.Drawing.Point(510, 249);
             this.labelDateTravel.Name = "labelDateTravel";
@@ -168,6 +180,7 @@
             // 
             // dateTimePickerShippmentDate
             // 
+            this.dateTimePickerShippmentDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerShippmentDate.Location = new System.Drawing.Point(513, 274);
             this.dateTimePickerShippmentDate.Name = "dateTimePickerShippmentDate";
             this.dateTimePickerShippmentDate.Size = new System.Drawing.Size(210, 20);
@@ -175,6 +188,7 @@
             // 
             // comboBoxTypeTravel
             // 
+            this.comboBoxTypeTravel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxTypeTravel.FormattingEnabled = true;
             this.comboBoxTypeTravel.Location = new System.Drawing.Point(513, 214);
             this.comboBoxTypeTravel.Name = "comboBoxTypeTravel";
@@ -183,6 +197,7 @@
             // 
             // dateTimePickerShippmentDateTime
             // 
+            this.dateTimePickerShippmentDateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerShippmentDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePickerShippmentDateTime.Location = new System.Drawing.Point(513, 300);
             this.dateTimePickerShippmentDateTime.Name = "dateTimePickerShippmentDateTime";
