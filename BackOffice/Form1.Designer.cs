@@ -75,6 +75,7 @@
             // 
             // buttonLanguageSpanish
             // 
+            this.buttonLanguageSpanish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonLanguageSpanish.FlatAppearance.BorderSize = 0;
             this.buttonLanguageSpanish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLanguageSpanish.ForeColor = System.Drawing.Color.Gainsboro;
@@ -90,6 +91,7 @@
             // 
             // buttonEnglishLanguage
             // 
+            this.buttonEnglishLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonEnglishLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
             this.buttonEnglishLanguage.FlatAppearance.BorderSize = 0;
             this.buttonEnglishLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -353,7 +355,9 @@
             // 
             // panelFormsLoader
             // 
-            this.panelFormsLoader.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelFormsLoader.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelFormsLoader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.panelFormsLoader.Location = new System.Drawing.Point(256, 41);
             this.panelFormsLoader.Name = "panelFormsLoader";

@@ -13,7 +13,6 @@ namespace BackOffice
 {
     public partial class QuickCarry : Form
     {
-        public int m, x, y;
         public event Action LanguageChanged;
 
         public QuickCarry()
@@ -21,10 +20,10 @@ namespace BackOffice
             InitializeComponent();
             customMenus();
         }
-        
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void UpdateUI()
@@ -64,7 +63,7 @@ namespace BackOffice
 
         private void showMenus(Panel subMenu)
         {
-            if(subMenu.Visible == false)
+            if (subMenu.Visible == false)
             {
                 hideMenus();
                 subMenu.Visible = true;
@@ -280,33 +279,7 @@ namespace BackOffice
             Environment.Exit(0);
         }
 
-        private void SlidePanel_MouseUp(object sender, MouseEventArgs e)
-        {
-            m = 0;
-        }
-
-        private void SlidePanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                m = 1;
-                x = e.X;
-                y = e.Y;
-            }
-        }
-
-        private void SlidePanel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (m == 1)
-            {
-                this.SetDesktopLocation(MousePosition.X - x, MousePosition.Y - y);
-            }
-        }
-
-        private void buttonMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+    
 
         private void buttonLanguageSpanish_Click(object sender, EventArgs e)
         {
