@@ -26,6 +26,8 @@ namespace BackOffice
             {
                 mainForm.LanguageChanged += updateLanguage;
             }
+            LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_spanish));
+            LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_english));
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
