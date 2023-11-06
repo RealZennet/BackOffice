@@ -111,7 +111,7 @@ namespace BackOffice
             if (dataGridViewShippingManagement.SelectedRows.Count > 0)
             {
                 int selectedIndex = dataGridViewShippingManagement.SelectedRows[0].Index;
-                int id = (int)dataGridViewShippingManagement.Rows[selectedIndex].Cells["ID Camion"].Value;
+                int id = (int)dataGridViewShippingManagement.Rows[selectedIndex].Cells["ID Lote"].Value;
                 DataTable dataTableShippings = (DataTable)dataGridViewShippingManagement.DataSource;
                 dataTableShippings.Rows.RemoveAt(selectedIndex);
                 MessageBox.Show(Languages.Messages.Successful);
