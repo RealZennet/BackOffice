@@ -14,15 +14,15 @@ namespace capa_logica
         {
             try
             {
-
-            ModelProduct product = new ModelProduct();
-            product.ProductWeight = productweight;
-            product.Volume = productvolume;
-            product.DoorNumber = doornumber;
-            product.Corner = corner;
-            product.Customer = customer;
-            product.ActivatedProduct = activeproduct;
-            product.Save();
+                ModelProduct product = new ModelProduct();
+                product.ProductWeight = productweight;
+                product.Volume = productvolume;
+                product.Street = street;
+                product.DoorNumber = doornumber;
+                product.Corner = corner;
+                product.Customer = customer;
+                product.ActivatedProduct = activeproduct;
+                product.Save();
             }
             catch(Exception ex)
             {
@@ -39,6 +39,7 @@ namespace capa_logica
             table.Columns.Add("id", typeof(int));
             table.Columns.Add("Peso", typeof(int));
             table.Columns.Add("Volumen", typeof(int));
+            table.Columns.Add("Calle", typeof(string));
             table.Columns.Add("Numero puerta", typeof(int));
             table.Columns.Add("Esquina", typeof(string));
             table.Columns.Add("Cliente", typeof(string));
@@ -50,6 +51,7 @@ namespace capa_logica
                 row["id"] = product.IDProduct;
                 row["Peso"] = product.ProductWeight;
                 row["Volumen"] = product.Volume;
+                row["Calle"] = product.Street;
                 row["Numero puerta"] = product.DoorNumber;
                 row["Esquina"] = product.Corner;
                 row["Cliente"] = product.Customer;

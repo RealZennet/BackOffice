@@ -274,13 +274,6 @@ namespace BackOffice
 
         }
 
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
-    
-
         private void buttonLanguageSpanish_Click(object sender, EventArgs e)
         {
             LanguageManager.Initialize(typeof(Languages.Resource_language_spanish));
