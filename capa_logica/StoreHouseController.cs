@@ -44,12 +44,25 @@ namespace capa_logica
             }
             return table;
         }
+
         public static void DeleteStoreHouse(int id)
         {
             StoreHouseModel storehouse = new StoreHouseModel();
             storehouse.IDStoreHouse = id;
             storehouse.Delete();
         }
+
+        public static void UpdateStoreHouse(int id, string street, string doornumber, string corner, bool activedstorehouse)
+        {
+            StoreHouseModel storehouse = new StoreHouseModel();
+            storehouse.IDStoreHouse = id;
+            storehouse.Street = street;
+            storehouse.DoorNumber = doornumber;
+            storehouse.Corner = corner;
+            storehouse.ActivatedStoreHouse = activedstorehouse;
+            storehouse.Update();
+        }
+
     }
 }
 

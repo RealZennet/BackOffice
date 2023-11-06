@@ -13,7 +13,7 @@ namespace BackOffice
 {
     public partial class StoreHouse : Form
     {
-
+        private int selectedStoreHouseID;
         public event Action LanguageChanged;
 
         public StoreHouse()
@@ -26,6 +26,10 @@ namespace BackOffice
             {
                 mainForm.LanguageChanged += updateLanguage;
             }
+            LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_spanish));
+            LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_english));
+
+
         }
 
         private void updateLanguage()
@@ -99,29 +103,13 @@ namespace BackOffice
             }
             else
             {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                MessageBox.Show(LanguageManager.GetString("CompleteAllBoxAndStatus"));
             }
         }
 
         private void buttonAddStoreHouse_Click(object sender, EventArgs e)
         {
             addStoreHouse();
-        }
-
-        private void deleteStoreHouse()
-        {
-            if (dataGridViewStoreHouses.SelectedRows.Count > 0)
-            {
-                int selectedIndex = dataGridViewStoreHouses.SelectedRows[0].Index;
-                int id = (int)dataGridViewStoreHouses.Rows[selectedIndex].Cells["id"].Value;
-                DataTable dataTableProducts = (DataTable)dataGridViewStoreHouses.DataSource;
-                dataTableProducts.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show(Languages.Messages.Successful);
-                StoreHouseController.DeleteStoreHouse(id);
-                dataGridViewStoreHouses.DataSource = dataTableProducts;
-                RefreshTableAddStoreHouse();
-
-            }
         }
 
         private void buttonRefreshStoreHouse_Click(object sender, EventArgs e)
@@ -158,10 +146,17 @@ namespace BackOffice
 
         private void assignOperatorToStoreHouse()
         {
+            if (ValidateAssignOperatorToStoreHouseInputsUser())
+            {
             AssignOperatorToStoreHouseController.Create(Int32.Parse(txtBoxIDOperator.Text), Int32.Parse(txtBoxIDAddOperatorToStoreHouse.Text));
             MessageBox.Show(Languages.Messages.Successful);
             RefreshTableAssignOperatorToStoreHouse();
             ClearTxtBoxesAssignOperatorToStoreHouse();
+            }
+            else
+            {
+                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+            }
         }
 
         private void deleteAssignedOperatorToStoreHouse()
@@ -194,8 +189,56 @@ namespace BackOffice
         {
             RefreshTableAssignOperatorToStoreHouse();
         }
+
         #endregion AssignOperatorToStoreHouse
 
+
+        private void buttonEditStoreHouse_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewStoreHouses.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridViewStoreHouses.SelectedRows[0].Index;
+                int id = (int)dataGridViewStoreHouses.Rows[selectedIndex].Cells["id"].Value;
+
+                if (bool.TryParse(txtBoxStoreHouseActived.Text, out bool isActivated))
+                {
+                    StoreHouseController.UpdateStoreHouse(id, txtBoxStoreHouseStreet.Text, txtBoxStoreHouseDoorNumber.Text, txtBoxStoreHouseCorner.Text, isActivated);
+                    MessageBox.Show(Languages.Messages.Successful);
+                    RefreshTableAddStoreHouse();
+                    ClearTxtBoxesAddStoreHouse();
+                }
+                else
+                {
+                    MessageBox.Show(LanguageManager.GetString("CompleteAllBoxAndStatus"));
+                }
+            }
+
+        }
+        
+        private void dataGridViewStoreHouses_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == 0)
+            {
+                selectedStoreHouseID = (int)dataGridViewStoreHouses.Rows[e.RowIndex].Cells["id"].Value;
+            }
+        }
+
+        private void buttonDeleteStoreHouse_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewStoreHouses.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridViewStoreHouses.SelectedRows[0].Index;
+                int id = (int)dataGridViewStoreHouses.Rows[selectedIndex].Cells["id"].Value;
+                DataTable dataTableStoreHouses = (DataTable)dataGridViewStoreHouses.DataSource;
+                dataTableStoreHouses.Rows.RemoveAt(selectedIndex);
+                MessageBox.Show(Languages.Messages.Successful);
+
+                StoreHouseController.DeleteStoreHouse(id);
+                dataGridViewStoreHouses.DataSource = dataTableStoreHouses;
+                Refresh();
+
+            }
+        }
 
     }
 }

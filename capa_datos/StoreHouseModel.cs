@@ -44,10 +44,25 @@ namespace capa_datos
             this.Reader.Close();
             return result;
         }
+
         public void Delete()
         {
             this.Command.CommandText = $"DELETE FROM almacen WHERE id_alma = {this.IDStoreHouse}";
             this.Command.ExecuteNonQuery();
         }
+
+        public void Update()
+        {
+            int activatedValue = this.ActivatedStoreHouse ? 1 : 0;
+            this.Command.CommandText = $"UPDATE almacen SET " +
+                $"calle = '{this.Street}', " +
+                $"num = '{this.DoorNumber}', " +
+                $"esq = '{this.Corner}', " +
+                $"bajalogica = {activatedValue} " +
+                $"WHERE id_alma = {this.IDStoreHouse}";
+
+            this.Command.ExecuteNonQuery();
+        }
+
     }
 }
