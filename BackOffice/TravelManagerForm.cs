@@ -43,7 +43,7 @@ namespace BackOffice
             labelIDDestination.Text = LanguageManager.GetString("DestinationID");
             labelIDStoreHouse.Text = LanguageManager.GetString("StoreHouseID");
             labelTypeTravel.Text = LanguageManager.GetString("IDOperator");
-            labelDateTravel.Text = LanguageManager.GetString("TruckerID");
+            labelDateTravel.Text = LanguageManager.GetString("EstimatedDate");
         }
 
         public void ClearTxtBoxes()
