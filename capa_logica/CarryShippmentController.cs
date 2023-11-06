@@ -24,7 +24,7 @@ namespace capa_logica
             }
             catch(Exception ex)
             {
-                throw new Exception("Error");
+                throw new Exception(ex.Message);
             }
         }
 
