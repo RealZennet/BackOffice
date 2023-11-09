@@ -348,4 +348,7 @@
   <data name="AddStoreHouse" xml:space="preserve">
     <value>Add storehouse</value>
   </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
 </root>

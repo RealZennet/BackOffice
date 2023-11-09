@@ -351,4 +351,7 @@
   <data name="AddStoreHouse" xml:space="preserve">
     <value>Agregar almacen</value>
   </data>
+  <data name="Position" xml:space="preserve">
+    <value>Posicion</value>
+  </data>
 </root>

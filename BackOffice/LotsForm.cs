@@ -27,9 +27,11 @@ namespace BackOffice
             }
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_spanish));
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_english));
+
             comboBoxPosition.Items.Add("Adelante");
             comboBoxPosition.Items.Add("Intermedio");
             comboBoxPosition.Items.Add("Atras");
+
             comboBoxActivated.Items.Add("true");
             comboBoxActivated.Items.Add("false");
         }
@@ -40,9 +42,11 @@ namespace BackOffice
             buttonDelete.Text = LanguageManager.GetString("Delete");
             buttonRefresh.Text = LanguageManager.GetString("Refresh");
             buttonBack.Text = LanguageManager.GetString("Back");
+
             labelActivated.Text = LanguageManager.GetString("Activated");
             labelEstimatedDate.Text = LanguageManager.GetString("EstimatedDate");
             labelIDShippment.Text = LanguageManager.GetString("IDDestination");
+            labelPosition.Text = LanguageManager.GetString("Position");
 
         }
 

@@ -33,5 +33,6 @@ namespace BackOffice.Languages
         public static string TravelManager => LanguageManager.GetString("ManageTravels");
         public static string ProductID => LanguageManager.GetString("ProductID");
         public static string LotID => LanguageManager.GetString("LotID");
+        public static string Position => LanguageManager.GetString("Position");
     }
 }
