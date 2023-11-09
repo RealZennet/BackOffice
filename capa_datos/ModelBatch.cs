@@ -14,16 +14,18 @@ namespace capa_datos
         public DateTime DateOfCreation { get; set; }
         public DateTime ShippingDate { get; set; }
         public int IDShipp { get; set; }
+        public string Position { get; set; }
         public bool ActivedBatch { get; set; }
 
         public void Save()
         {
             try {
-            this.Command.CommandText = $"INSERT INTO lote (email, fech_Crea, fech_Entre, id_Des, bajalogica) VALUES " +
+            this.Command.CommandText = $"INSERT INTO lote (email, fech_Crea, fech_Entre, id_Des, posicion, bajalogica) VALUES " +
                 $"('{this.Email.ToString()}', " +
                 $"'{this.DateOfCreation.ToString("yyyy-MM-dd HH:mm:ss")}', " +
-                $"'{this.ShippingDate.ToString("yyyy-MM-dd HH:mm:ss")}'," +
-                $"{this.IDShipp}," +
+                $"'{this.ShippingDate.ToString("yyyy-MM-dd HH:mm:ss")}', " +
+                $"{this.IDShipp}, " +
+                $"'{this.Position}', " +
                 $"{this.ActivedBatch})";
             this.Command.ExecuteNonQuery();
 
@@ -43,14 +45,15 @@ namespace capa_datos
             List<ModelBatch> result = new List<ModelBatch>();
             while (this.Reader.Read())
             {
-                ModelBatch lote = new ModelBatch();
-                lote.IDBatch = Int32.Parse(this.Reader["id_Lote"].ToString());
-                lote.Email = this.Reader["email"].ToString();
-                lote.DateOfCreation = DateTime.Parse(this.Reader["fech_Crea"].ToString());
-                lote.ShippingDate = DateTime.Parse(this.Reader["fech_Entre"].ToString());
-                lote.IDShipp = Int32.Parse(this.Reader["id_Des"].ToString());
-                lote.ActivedBatch = Convert.ToBoolean(this.Reader["bajalogica"]);
-                result.Add(lote);
+                ModelBatch lot = new ModelBatch();
+                lot.IDBatch = Int32.Parse(this.Reader["id_Lote"].ToString());
+                lot.Email = this.Reader["email"].ToString();
+                lot.DateOfCreation = DateTime.Parse(this.Reader["fech_Crea"].ToString());
+                lot.ShippingDate = DateTime.Parse(this.Reader["fech_Entre"].ToString());
+                lot.IDShipp = Int32.Parse(this.Reader["id_Des"].ToString());
+                lot.Position = this.Reader["posicion"].ToString();
+                lot.ActivedBatch = Convert.ToBoolean(this.Reader["bajalogica"]);
+                result.Add(lot);
             }
             this.Reader.Close();
             return result;

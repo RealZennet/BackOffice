@@ -10,19 +10,19 @@ namespace capa_logica
 {
     public static class BatchController
     {
-        public static void Crear(string email, DateTime ShippingDate, int idshipp, bool activedbatch)
+        public static void Crear(string email, DateTime ShippingDate, int idshipp, string position, bool activedbatch)
         {
             try
             {
-
-            DateTime DateCreation = DateTime.Now;
-            ModelBatch lote = new ModelBatch();
-            lote.Email = email;
-            lote.ShippingDate = ShippingDate;
-            lote.DateOfCreation = DateCreation;
-            lote.IDShipp = idshipp;
-            lote.ActivedBatch = activedbatch;
-            lote.Save();
+                DateTime DateCreation = DateTime.Now;
+                ModelBatch lot = new ModelBatch();
+                lot.Email = email;
+                lot.ShippingDate = ShippingDate;
+                lot.DateOfCreation = DateCreation;
+                lot.IDShipp = idshipp;
+                lot.Position = position;
+                lot.ActivedBatch = activedbatch;
+                lot.Save();
             }
             catch(Exception ex)
             {
@@ -33,24 +33,26 @@ namespace capa_logica
         public static DataTable Obtener()
         {
             ModelBatch LotsTableModel = new ModelBatch();
-            List<ModelBatch> lotes = LotsTableModel.GetAllLots();
+            List<ModelBatch> lots = LotsTableModel.GetAllLots();
             DataTable table = new DataTable();
             table.Columns.Add("id", typeof(int));
             table.Columns.Add("Email", typeof(string));
             table.Columns.Add("Fecha de creacion", typeof(DateTime));
             table.Columns.Add("Fecha de envio", typeof(DateTime));
             table.Columns.Add("ID Envio", typeof(int));
+            table.Columns.Add("Posicion", typeof(string));
             table.Columns.Add("Activo", typeof(bool));
 
-            foreach (ModelBatch lote in lotes)
+            foreach (ModelBatch lot in lots)
             {
                 DataRow row = table.NewRow();
-                row["id"] = lote.IDBatch;
-                row["Email"] = lote.Email;
-                row["Fecha de creacion"] = lote.DateOfCreation;
-                row["Fecha de envio"] = lote.ShippingDate;
-                row["ID Envio"] = lote.IDShipp;
-                row["Activo"] = lote.ActivedBatch;
+                row["id"] = lot.IDBatch;
+                row["Email"] = lot.Email;
+                row["Fecha de creacion"] = lot.DateOfCreation;
+                row["Fecha de envio"] = lot.ShippingDate;
+                row["ID Envio"] = lot.IDShipp;
+                row["Posicion"] = lot.Position;
+                row["Activo"] = lot.ActivedBatch;
                 table.Rows.Add(row);
             }
             return table;

@@ -27,6 +27,11 @@ namespace BackOffice
             }
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_spanish));
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_english));
+            comboBoxPosition.Items.Add("Adelante");
+            comboBoxPosition.Items.Add("Intermedio");
+            comboBoxPosition.Items.Add("Atras");
+            comboBoxActivated.Items.Add("true");
+            comboBoxActivated.Items.Add("false");
         }
 
         private void updateLanguage()
@@ -58,8 +63,7 @@ namespace BackOffice
 
         private bool validateUsersInputs()
         {
-            if (string.IsNullOrWhiteSpace(txtBoxActivedBatch.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxIDShipp.Text) ||
+            if (string.IsNullOrWhiteSpace(txtBoxIDShipp.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxEmail.Text))
             {
                 return false;
@@ -71,11 +75,13 @@ namespace BackOffice
         {
             try
             {
-            if (validateUsersInputs()) {
+                string selectedStatus = comboBoxActivated.SelectedItem as string;
+                int statusValue = selectedStatus == "true" ? 1 : 0;
+                if (validateUsersInputs() && !string.IsNullOrWhiteSpace(selectedStatus)) {
                 DateTime separateddate = dateTimePickerShippingDate.Value.Date;
                 DateTime separatedtime = dateTimePickerBatchManagementTime.Value;
                 DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
-                BatchController.Crear(txtBoxEmail.Text.ToString(), dateandtime, Int32.Parse(txtBoxIDShipp.Text), Convert.ToBoolean(txtBoxActivedBatch.Text));
+                BatchController.Crear(txtBoxEmail.Text.ToString(), dateandtime, Int32.Parse(txtBoxIDShipp.Text), comboBoxPosition.SelectedItem.ToString() ,Convert.ToBoolean(statusValue));
                 MessageBox.Show(Languages.Messages.Successful);
                 RefreshTable();
                 }
