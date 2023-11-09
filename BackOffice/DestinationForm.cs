@@ -22,6 +22,10 @@ namespace BackOffice
             }
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_spanish));
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_english));
+            comboBoxStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxStatus.Items.Add("true");
+            comboBoxStatus.Items.Add("false");
+            comboBoxStatus.SelectedItem = "true";
         }
 
         private void updateLanguage()
@@ -45,8 +49,7 @@ namespace BackOffice
 
         private void DestinationForm_Load(object sender, EventArgs e)
         {
-            comboBoxStatus.Items.Add("true");
-            comboBoxStatus.Items.Add("false");
+
         }
 
         #region Destination

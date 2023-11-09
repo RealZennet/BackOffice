@@ -27,6 +27,12 @@ namespace BackOffice
             }
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_spanish));
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_english));
+
+
+            comboBoxActivated.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxActivated.Items.Add("true");
+            comboBoxActivated.Items.Add("false");
+            comboBoxActivated.SelectedItem = "true";
         }
 
         private void updateLanguage()
@@ -62,7 +68,6 @@ namespace BackOffice
 
         public void ClearTxtBoxes()
         {
-            txtBoxActive.Clear();
             txtBoxCustomer.Clear();
             txtBoxWeight.Clear();
             txtBoxCorner.Clear();
@@ -82,7 +87,6 @@ namespace BackOffice
             if (string.IsNullOrWhiteSpace(txtBoxCustomer.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxWeight.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxCustomer.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxActive.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxCorner.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxStreet.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxVolume.Text))
@@ -108,10 +112,12 @@ namespace BackOffice
         {
             try
             {
-            ProductController.Crear(Int32.Parse(txtBoxWeight.Text), Int32.Parse(txtBoxVolume.Text), txtBoxStreet.Text, Int32.Parse(txtBoxDoorNumber.Text), txtBoxCorner.Text,txtBoxCustomer.Text, Convert.ToBoolean(Int32.Parse(txtBoxActive.Text)));
-            MessageBox.Show(Languages.Messages.Successful);
-            RefreshTable();
-            ClearTxtBoxes();
+                string selectedStatus = comboBoxActivated.SelectedItem as string;
+                int statusValue = selectedStatus == "true" ? 1 : 0;
+                ProductController.Crear(Int32.Parse(txtBoxWeight.Text), Int32.Parse(txtBoxVolume.Text), txtBoxStreet.Text, Int32.Parse(txtBoxDoorNumber.Text), txtBoxCorner.Text,txtBoxCustomer.Text, Convert.ToBoolean(statusValue));
+                MessageBox.Show(Languages.Messages.Successful);
+                RefreshTable();
+                ClearTxtBoxes();
             }
             catch(Exception ex)
             {

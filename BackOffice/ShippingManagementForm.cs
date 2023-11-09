@@ -50,11 +50,11 @@ namespace BackOffice
         private void ShippingManagementForm_Load(object sender, EventArgs e)
         {
             comboBoxStatus.Items.Add("Entregado");
-            comboBoxStatus.Items.Add("En Camino");
+            comboBoxStatus.Items.Add("EnCamino");
             comboBoxStatus.Items.Add("Retrasado");
-            comboBoxStatus.Items.Add("No Enviado");
+            comboBoxStatus.Items.Add("NoEnviado");
+            comboBoxStatus.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            
             comboBoxStatus.SelectedIndex = 3;
         }
 

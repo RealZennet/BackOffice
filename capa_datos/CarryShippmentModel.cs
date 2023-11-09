@@ -17,16 +17,16 @@ namespace capa_datos
         {
             try
             {
-            this.Command.CommandText = $"INSERT INTO transporta(id_camion, id_lote, id_des, estatus) VALUES(" +
-               $"{this.IDTruck}, " +
-               $"{this.IDBatch}, " +
-               $"{this.IDDestination}," +
-               $"'{this.ShippingStatus}')";
-            this.Command.ExecuteNonQuery();
+                this.Command.CommandText = $"INSERT INTO transporta(id_camion, id_lote, id_des, estatus) VALUES(" +
+                   $"{this.IDTruck}, " +
+                   $"{this.IDBatch}, " +
+                   $"{this.IDDestination}," +
+                   $"'{this.ShippingStatus}')";
+                this.Command.ExecuteNonQuery();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                throw new Exception("Error");
+                throw new Exception("Error " + ex);
             }
         }
 

@@ -31,9 +31,12 @@ namespace BackOffice
             comboBoxPosition.Items.Add("Adelante");
             comboBoxPosition.Items.Add("Intermedio");
             comboBoxPosition.Items.Add("Atras");
+            comboBoxPosition.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            comboBoxActivated.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxActivated.Items.Add("true");
             comboBoxActivated.Items.Add("false");
+            comboBoxActivated.SelectedItem = "true";
         }
 
         private void updateLanguage()
