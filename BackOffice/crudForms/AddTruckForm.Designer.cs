@@ -32,6 +32,12 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.panelSlide = new System.Windows.Forms.Panel();
+            this.labelTruckVolume = new System.Windows.Forms.Label();
+            this.txtBoxVolumeTruck = new System.Windows.Forms.TextBox();
+            this.labelTruckWeight = new System.Windows.Forms.Label();
+            this.txtBoxWeightTruck = new System.Windows.Forms.TextBox();
+            this.labelActivated = new System.Windows.Forms.Label();
+            this.comboBoxActivated = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // buttonCancel
@@ -52,6 +58,7 @@
             this.buttonSave.TabIndex = 142;
             this.buttonSave.Text = "Guardar";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonClose
             // 
@@ -75,12 +82,76 @@
             this.panelSlide.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelSlide_MouseMove);
             this.panelSlide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelSlide_MouseUp);
             // 
+            // labelTruckVolume
+            // 
+            this.labelTruckVolume.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTruckVolume.AutoSize = true;
+            this.labelTruckVolume.Location = new System.Drawing.Point(9, 154);
+            this.labelTruckVolume.Name = "labelTruckVolume";
+            this.labelTruckVolume.Size = new System.Drawing.Size(103, 13);
+            this.labelTruckVolume.TabIndex = 147;
+            this.labelTruckVolume.Text = "Volumen de camion:";
+            // 
+            // txtBoxVolumeTruck
+            // 
+            this.txtBoxVolumeTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxVolumeTruck.Location = new System.Drawing.Point(12, 180);
+            this.txtBoxVolumeTruck.Name = "txtBoxVolumeTruck";
+            this.txtBoxVolumeTruck.Size = new System.Drawing.Size(61, 20);
+            this.txtBoxVolumeTruck.TabIndex = 146;
+            this.txtBoxVolumeTruck.TextChanged += new System.EventHandler(this.txtBoxVolumeTruck_TextChanged);
+            // 
+            // labelTruckWeight
+            // 
+            this.labelTruckWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTruckWeight.AutoSize = true;
+            this.labelTruckWeight.Location = new System.Drawing.Point(9, 95);
+            this.labelTruckWeight.Name = "labelTruckWeight";
+            this.labelTruckWeight.Size = new System.Drawing.Size(86, 13);
+            this.labelTruckWeight.TabIndex = 145;
+            this.labelTruckWeight.Text = "Peso de camion:";
+            this.labelTruckWeight.Click += new System.EventHandler(this.labelTruckWeight_Click);
+            // 
+            // txtBoxWeightTruck
+            // 
+            this.txtBoxWeightTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxWeightTruck.Location = new System.Drawing.Point(12, 121);
+            this.txtBoxWeightTruck.Name = "txtBoxWeightTruck";
+            this.txtBoxWeightTruck.Size = new System.Drawing.Size(61, 20);
+            this.txtBoxWeightTruck.TabIndex = 144;
+            this.txtBoxWeightTruck.TextChanged += new System.EventHandler(this.txtBoxWeightTruck_TextChanged);
+            // 
+            // labelActivated
+            // 
+            this.labelActivated.AutoSize = true;
+            this.labelActivated.BackColor = System.Drawing.Color.Transparent;
+            this.labelActivated.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.labelActivated.Location = new System.Drawing.Point(9, 203);
+            this.labelActivated.Name = "labelActivated";
+            this.labelActivated.Size = new System.Drawing.Size(62, 17);
+            this.labelActivated.TabIndex = 151;
+            this.labelActivated.Text = "Activado";
+            // 
+            // comboBoxActivated
+            // 
+            this.comboBoxActivated.FormattingEnabled = true;
+            this.comboBoxActivated.Location = new System.Drawing.Point(12, 223);
+            this.comboBoxActivated.Name = "comboBoxActivated";
+            this.comboBoxActivated.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxActivated.TabIndex = 150;
+            // 
             // AddTruckForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(276, 363);
+            this.Controls.Add(this.labelActivated);
+            this.Controls.Add(this.comboBoxActivated);
+            this.Controls.Add(this.labelTruckVolume);
+            this.Controls.Add(this.txtBoxVolumeTruck);
+            this.Controls.Add(this.labelTruckWeight);
+            this.Controls.Add(this.txtBoxWeightTruck);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonClose);
@@ -89,6 +160,7 @@
             this.Name = "AddTruckForm";
             this.Text = "AddTruckForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -98,5 +170,11 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Panel panelSlide;
+        private System.Windows.Forms.Label labelTruckVolume;
+        private System.Windows.Forms.TextBox txtBoxVolumeTruck;
+        private System.Windows.Forms.Label labelTruckWeight;
+        private System.Windows.Forms.TextBox txtBoxWeightTruck;
+        private System.Windows.Forms.Label labelActivated;
+        private System.Windows.Forms.ComboBox comboBoxActivated;
     }
 }

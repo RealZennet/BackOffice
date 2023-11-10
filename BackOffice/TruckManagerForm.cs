@@ -42,11 +42,6 @@ namespace BackOffice
             buttonRefreshTruck.Text = LanguageManager.GetString("Refresh");
             buttonEdit.Text = LanguageManager.GetString("Edit");
             buttonBack.Text = LanguageManager.GetString("Back");
-            labelActived.Text = LanguageManager.GetString("Activated");
-            labelIDTruck2.Text = LanguageManager.GetString("IDTruck");
-            labelActived.Text = LanguageManager.GetString("Activated");
-            labelTruckWeight.Text = LanguageManager.GetString("Weight");
-            labelTruckVolume.Text = LanguageManager.GetString("Volume");
             labelAssignTruck.Text = LanguageManager.GetString("AssignTruck");
             labelAddTruck.Text = LanguageManager.GetString("AddTruck");
 
@@ -62,13 +57,6 @@ namespace BackOffice
 
         }
 
-        public void ClearTxtBoxesTruck()
-        {
-            txtBoxActiveTruck.Clear();
-            txtBoxVolumeTruck.Clear();
-            txtBoxWeightTruck.Clear();
-        }
-
         public void RefreshTableTruck()
         {
             DataTable dataTableTruck = TruckController.GetAllTrucks();
@@ -82,21 +70,8 @@ namespace BackOffice
 
         private void buttonAddTruck_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtBoxWeightTruck.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxVolumeTruck.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxActiveTruck.Text) ||
-                !int.TryParse(txtBoxWeightTruck.Text, out int weight) ||
-                !int.TryParse(txtBoxVolumeTruck.Text, out int volume) ||
-                !bool.TryParse(txtBoxActiveTruck.Text, out bool isActive))
-            {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-                return;
-            }
-
-            TruckController.Create(weight, volume, isActive);
-            MessageBox.Show(Languages.Messages.Successful);
-            RefreshTableTruck();
-            ClearTxtBoxesTruck();
+            AddTruckForm addtruckcomponent = new AddTruckForm();
+            addtruckcomponent.Show();
         }
 
         private void buttonDeleteTruck_Click(object sender, EventArgs e)
@@ -128,14 +103,14 @@ namespace BackOffice
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            TruckController.EditTruck(
+            /*TruckController.EditTruck(
                 Int32.Parse(txtBoxTruckID.Text),
                 Int32.Parse(txtBoxWeightTruck.Text),
                 Int32.Parse(txtBoxVolumeTruck.Text),
                 Convert.ToBoolean(txtBoxActiveTruck.Text)
             );
             RefreshTableTruck();
-            MessageBox.Show(Languages.Messages.Successful);
+            MessageBox.Show(Languages.Messages.Successful);*/
         }
 
         #region trucker

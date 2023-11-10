@@ -35,8 +35,6 @@
             this.buttonAddTruck = new System.Windows.Forms.Button();
             this.buttonRefreshTruck = new System.Windows.Forms.Button();
             this.dataGridViewAddTruck = new System.Windows.Forms.DataGridView();
-            this.txtBoxWeightTruck = new System.Windows.Forms.TextBox();
-            this.labelTruckWeight = new System.Windows.Forms.Label();
             this.labelAddTruck = new System.Windows.Forms.Label();
             this.labelAssignTruck = new System.Windows.Forms.Label();
             this.dataGridViewAssignTruck = new System.Windows.Forms.DataGridView();
@@ -44,15 +42,11 @@
             this.buttonDeleteAssignedTruck = new System.Windows.Forms.Button();
             this.buttonAddAssignedTruck = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.txtBoxVolumeTruck = new System.Windows.Forms.TextBox();
-            this.labelTruckVolume = new System.Windows.Forms.Label();
-            this.txtBoxActiveTruck = new System.Windows.Forms.TextBox();
-            this.labelActived = new System.Windows.Forms.Label();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDeleteTruck = new System.Windows.Forms.Button();
+            this.panelSeparator = new System.Windows.Forms.Panel();
             this.labelIDTruck2 = new System.Windows.Forms.Label();
             this.txtBoxTruckID = new System.Windows.Forms.TextBox();
-            this.panelSeparator = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTruck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAssignTruck)).BeginInit();
             this.SuspendLayout();
@@ -108,24 +102,6 @@
             this.dataGridViewAddTruck.Name = "dataGridViewAddTruck";
             this.dataGridViewAddTruck.Size = new System.Drawing.Size(327, 150);
             this.dataGridViewAddTruck.TabIndex = 4;
-            // 
-            // txtBoxWeightTruck
-            // 
-            this.txtBoxWeightTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxWeightTruck.Location = new System.Drawing.Point(499, 479);
-            this.txtBoxWeightTruck.Name = "txtBoxWeightTruck";
-            this.txtBoxWeightTruck.Size = new System.Drawing.Size(61, 20);
-            this.txtBoxWeightTruck.TabIndex = 5;
-            // 
-            // labelTruckWeight
-            // 
-            this.labelTruckWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTruckWeight.AutoSize = true;
-            this.labelTruckWeight.Location = new System.Drawing.Point(496, 450);
-            this.labelTruckWeight.Name = "labelTruckWeight";
-            this.labelTruckWeight.Size = new System.Drawing.Size(86, 13);
-            this.labelTruckWeight.TabIndex = 6;
-            this.labelTruckWeight.Text = "Peso de camion:";
             // 
             // labelAddTruck
             // 
@@ -222,42 +198,6 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // txtBoxVolumeTruck
-            // 
-            this.txtBoxVolumeTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxVolumeTruck.Location = new System.Drawing.Point(593, 479);
-            this.txtBoxVolumeTruck.Name = "txtBoxVolumeTruck";
-            this.txtBoxVolumeTruck.Size = new System.Drawing.Size(61, 20);
-            this.txtBoxVolumeTruck.TabIndex = 22;
-            // 
-            // labelTruckVolume
-            // 
-            this.labelTruckVolume.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTruckVolume.AutoSize = true;
-            this.labelTruckVolume.Location = new System.Drawing.Point(588, 450);
-            this.labelTruckVolume.Name = "labelTruckVolume";
-            this.labelTruckVolume.Size = new System.Drawing.Size(103, 13);
-            this.labelTruckVolume.TabIndex = 23;
-            this.labelTruckVolume.Text = "Volumen de camion:";
-            // 
-            // txtBoxActiveTruck
-            // 
-            this.txtBoxActiveTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxActiveTruck.Location = new System.Drawing.Point(709, 479);
-            this.txtBoxActiveTruck.Name = "txtBoxActiveTruck";
-            this.txtBoxActiveTruck.Size = new System.Drawing.Size(31, 20);
-            this.txtBoxActiveTruck.TabIndex = 24;
-            // 
-            // labelActived
-            // 
-            this.labelActived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelActived.AutoSize = true;
-            this.labelActived.Location = new System.Drawing.Point(697, 450);
-            this.labelActived.Name = "labelActived";
-            this.labelActived.Size = new System.Drawing.Size(64, 13);
-            this.labelActived.TabIndex = 25;
-            this.labelActived.Text = "Activo (1-0):";
-            // 
             // buttonEdit
             // 
             this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -280,24 +220,6 @@
             this.buttonDeleteTruck.UseVisualStyleBackColor = true;
             this.buttonDeleteTruck.Click += new System.EventHandler(this.buttonDeleteTruck_Click);
             // 
-            // labelIDTruck2
-            // 
-            this.labelIDTruck2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelIDTruck2.AutoSize = true;
-            this.labelIDTruck2.Location = new System.Drawing.Point(422, 450);
-            this.labelIDTruck2.Name = "labelIDTruck2";
-            this.labelIDTruck2.Size = new System.Drawing.Size(73, 13);
-            this.labelIDTruck2.TabIndex = 28;
-            this.labelIDTruck2.Text = "ID de camion:";
-            // 
-            // txtBoxTruckID
-            // 
-            this.txtBoxTruckID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxTruckID.Location = new System.Drawing.Point(425, 479);
-            this.txtBoxTruckID.Name = "txtBoxTruckID";
-            this.txtBoxTruckID.Size = new System.Drawing.Size(31, 20);
-            this.txtBoxTruckID.TabIndex = 27;
-            // 
             // panelSeparator
             // 
             this.panelSeparator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -307,20 +229,34 @@
             this.panelSeparator.Size = new System.Drawing.Size(3, 557);
             this.panelSeparator.TabIndex = 83;
             // 
+            // labelIDTruck2
+            // 
+            this.labelIDTruck2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelIDTruck2.AutoSize = true;
+            this.labelIDTruck2.Location = new System.Drawing.Point(422, 464);
+            this.labelIDTruck2.Name = "labelIDTruck2";
+            this.labelIDTruck2.Size = new System.Drawing.Size(73, 13);
+            this.labelIDTruck2.TabIndex = 151;
+            this.labelIDTruck2.Text = "ID de camion:";
+            // 
+            // txtBoxTruckID
+            // 
+            this.txtBoxTruckID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxTruckID.Location = new System.Drawing.Point(425, 490);
+            this.txtBoxTruckID.Name = "txtBoxTruckID";
+            this.txtBoxTruckID.Size = new System.Drawing.Size(31, 20);
+            this.txtBoxTruckID.TabIndex = 150;
+            // 
             // TruckManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
-            this.Controls.Add(this.panelSeparator);
             this.Controls.Add(this.labelIDTruck2);
             this.Controls.Add(this.txtBoxTruckID);
+            this.Controls.Add(this.panelSeparator);
             this.Controls.Add(this.buttonEdit);
-            this.Controls.Add(this.labelActived);
-            this.Controls.Add(this.txtBoxActiveTruck);
-            this.Controls.Add(this.labelTruckVolume);
-            this.Controls.Add(this.txtBoxVolumeTruck);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.labelAssignTruck);
             this.Controls.Add(this.dataGridViewAssignTruck);
@@ -328,8 +264,6 @@
             this.Controls.Add(this.buttonDeleteAssignedTruck);
             this.Controls.Add(this.buttonAddAssignedTruck);
             this.Controls.Add(this.labelAddTruck);
-            this.Controls.Add(this.labelTruckWeight);
-            this.Controls.Add(this.txtBoxWeightTruck);
             this.Controls.Add(this.dataGridViewAddTruck);
             this.Controls.Add(this.buttonRefreshTruck);
             this.Controls.Add(this.buttonDeleteTruck);
@@ -350,8 +284,6 @@
         private System.Windows.Forms.Button buttonAddTruck;
         private System.Windows.Forms.Button buttonRefreshTruck;
         private System.Windows.Forms.DataGridView dataGridViewAddTruck;
-        private System.Windows.Forms.TextBox txtBoxWeightTruck;
-        private System.Windows.Forms.Label labelTruckWeight;
         private System.Windows.Forms.Label labelAddTruck;
         private System.Windows.Forms.Label labelAssignTruck;
         private System.Windows.Forms.DataGridView dataGridViewAssignTruck;
@@ -359,14 +291,10 @@
         private System.Windows.Forms.Button buttonDeleteAssignedTruck;
         private System.Windows.Forms.Button buttonAddAssignedTruck;
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.TextBox txtBoxVolumeTruck;
-        private System.Windows.Forms.Label labelTruckVolume;
-        private System.Windows.Forms.TextBox txtBoxActiveTruck;
-        private System.Windows.Forms.Label labelActived;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDeleteTruck;
+        private System.Windows.Forms.Panel panelSeparator;
         private System.Windows.Forms.Label labelIDTruck2;
         private System.Windows.Forms.TextBox txtBoxTruckID;
-        private System.Windows.Forms.Panel panelSeparator;
     }
 }
