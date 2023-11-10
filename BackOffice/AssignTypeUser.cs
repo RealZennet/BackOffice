@@ -1,4 +1,5 @@
 ﻿using BackOffice.crudForms;
+using BackOffice.Languages;
 using capa_logica;
 using System;
 using System.Collections.Generic;
@@ -140,9 +141,9 @@ namespace BackOffice
                     RefreshTable();
 
                 }
-            }catch(Exception ex)
+            }catch(Exception)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show(Messages.TruckerHasTruckAssigned);
             }
 
         }

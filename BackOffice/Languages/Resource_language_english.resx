@@ -363,4 +363,7 @@
   <data name="AssignTruck" xml:space="preserve">
     <value>Assign Truck</value>
   </data>
+  <data name="TruckerHasTruckAssigned" xml:space="preserve">
+    <value>Error, truck or ship assigned.</value>
+  </data>
 </root>

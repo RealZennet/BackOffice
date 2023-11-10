@@ -366,4 +366,7 @@
   <data name="AssignTruck" xml:space="preserve">
     <value>Asignar camion</value>
   </data>
+  <data name="TruckerHasTruckAssigned" xml:space="preserve">
+    <value>Error, camion o envio asignado al chofer</value>
+  </data>
 </root>

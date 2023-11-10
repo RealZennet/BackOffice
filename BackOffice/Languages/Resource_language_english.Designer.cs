@@ -718,6 +718,15 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Error, truck or ship assigned..
+        /// </summary>
+        internal static string TruckerHasTruckAssigned {
+            get {
+                return ResourceManager.GetString("TruckerHasTruckAssigned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ID Trucker.
         /// </summary>
         internal static string TruckerID {
