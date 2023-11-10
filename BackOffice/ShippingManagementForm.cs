@@ -1,4 +1,5 @@
-﻿using capa_logica;
+﻿using BackOffice.crudForms;
+using capa_logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -132,6 +133,8 @@ namespace BackOffice
             {
                 MessageBox.Show(Languages.Messages.Successful);
             }
+            AssignBatchToTruckForm assignbatchtotruckcomponent = new AssignBatchToTruckForm();
+            assignbatchtotruckcomponent.Show();
         }
 
         private void buttonDeleteShipp_Click(object sender, EventArgs e)
