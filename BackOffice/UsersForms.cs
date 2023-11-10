@@ -1,4 +1,5 @@
-﻿using capa_logica;
+﻿using BackOffice.crudForms;
+using capa_logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,11 +37,6 @@ namespace BackOffice
             buttonRefresh.Text = LanguageManager.GetString("Refresh");
             buttonEditUser.Text = LanguageManager.GetString("Edit");
             buttonBack.Text = LanguageManager.GetString("Back");
-            labelFirstName.Text = LanguageManager.GetString("FirstName");
-            labelFirstLastName.Text = LanguageManager.GetString("FirstLastName");
-            labelPhoneNumber.Text = LanguageManager.GetString("PhoneNumber");
-            labelUsername.Text = LanguageManager.GetString("Username");
-            labelPassword.Text = LanguageManager.GetString("Password");
 
         }
 
@@ -60,31 +56,6 @@ namespace BackOffice
             dataGridViewUsers.DataSource = dataTableUsers;
         }
 
-        public void ClearTxtBoxes()
-        {
-            txtBoxFirstName.Clear();
-            txtBoxFirstLastName.Clear();
-            txtBoxPhoneNumber.Clear();
-            txtBoxPassword.Clear();
-            txtBoxUsername.Clear();
-        }
-        private bool ValidateInputsUser()
-        {
-            
-            if (
-                string.IsNullOrWhiteSpace(txtBoxFirstName.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxFirstLastName.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxPhoneNumber.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxUsername.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxPassword.Text)
-                )
-            {
-                return false; 
-            }
-
-            return true; 
-        }
-
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             RefreshTable();
@@ -92,26 +63,8 @@ namespace BackOffice
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (!ValidateInputsUser())
-            {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-                return;
-            }
-            createUser();
-        }
-
-        private void createUser()
-        {
-            UserController.Crear(
-                txtBoxFirstName.Text,
-                txtBoxFirstLastName.Text,
-                txtBoxPhoneNumber.Text,
-                txtBoxUsername.Text,
-                txtBoxPassword.Text
-            );
-            MessageBox.Show(Languages.Messages.Successful);
-            RefreshTable();
-            ClearTxtBoxes();
+            AddUserForm addusercomponent = new AddUserForm();
+            addusercomponent.Show();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -152,6 +105,7 @@ namespace BackOffice
 
         private void editUser()
         {
+            /*
             try
             {
                 if (ValidateInputsUser())
@@ -169,7 +123,7 @@ namespace BackOffice
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-            }
+            }*/
         }
 
         private void buttonEditUser_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using capa_logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,25 @@ namespace BackOffice.crudForms
         public AddUserForm()
         {
             InitializeComponent();
+            QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
+            if (mainForm != null)
+            {
+                mainForm.LanguageChanged += updateLanguage;
+            }
+            LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_spanish));
+            LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_english));
+        }
+
+        private void updateLanguage()
+        {
+            labelFirstName.Text = LanguageManager.GetString("FirstName");
+            labelFirstLastName.Text = LanguageManager.GetString("FirstLastName");
+            labelPhoneNumber.Text = LanguageManager.GetString("PhoneNumber");
+            labelUsername.Text = LanguageManager.GetString("Username");
+            labelPassword.Text = LanguageManager.GetString("Password");
+            buttonSave.Text = LanguageManager.GetString("Save");
+            buttonCancel.Text = LanguageManager.GetString("Cancel");
+
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -33,6 +53,59 @@ namespace BackOffice.crudForms
         private void panelSlide_MouseUp(object sender, MouseEventArgs e)
         {
             m = 0;
+        }
+
+        public void clearTxtBoxes()
+        {
+            txtBoxFirstName.Clear();
+            txtBoxFirstLastName.Clear();
+            txtBoxPhoneNumber.Clear();
+            txtBoxPassword.Clear();
+            txtBoxUsername.Clear();
+        }
+        private bool validateInputsUser()
+        {
+
+            if (
+                string.IsNullOrWhiteSpace(txtBoxFirstName.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxFirstLastName.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxPhoneNumber.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxUsername.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxPassword.Text)
+                )
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            if (!validateInputsUser())
+            {
+                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                return;
+            }
+            createUser();
+        }
+
+        private void createUser()
+        {
+            UserController.Crear(
+                txtBoxFirstName.Text,
+                txtBoxFirstLastName.Text,
+                txtBoxPhoneNumber.Text,
+                txtBoxUsername.Text,
+                txtBoxPassword.Text
+            );
+            MessageBox.Show(Languages.Messages.Successful);
+            clearTxtBoxes();
+        }
+
+        private void txtBoxFirstName_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void panelSlide_MouseDown(object sender, MouseEventArgs e)

@@ -145,6 +145,12 @@
     <Compile Include="crudForms\AddTruckForm.Designer.cs">
       <DependentUpon>AddTruckForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="crudForms\AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crudForms\AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="crudForms\AssignBatchToTruckForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="crudForms\AddTruckForm.resx">
       <DependentUpon>AddTruckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crudForms\AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="crudForms\AssignBatchToTruckForm.resx">
       <DependentUpon>AssignBatchToTruckForm.cs</DependentUpon>

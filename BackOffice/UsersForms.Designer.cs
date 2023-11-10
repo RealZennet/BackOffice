@@ -31,21 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
-            this.labelFirstLastName = new System.Windows.Forms.Label();
-            this.labelFirstName = new System.Windows.Forms.Label();
-            this.txtBoxFirstLastName = new System.Windows.Forms.TextBox();
-            this.txtBoxFirstName = new System.Windows.Forms.TextBox();
-            this.txtBoxPhoneNumber = new System.Windows.Forms.TextBox();
-            this.labelPhoneNumber = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.txtBoxUsername = new System.Windows.Forms.TextBox();
-            this.txtBoxPassword = new System.Windows.Forms.TextBox();
-            this.labelUsername = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
-            this.comboBoxTypeUser = new System.Windows.Forms.ComboBox();
             this.txtBoxUserID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonEditUser = new System.Windows.Forms.Button();
@@ -83,62 +72,6 @@
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.Size = new System.Drawing.Size(480, 433);
             this.dataGridViewUsers.TabIndex = 0;
-            // 
-            // labelFirstLastName
-            // 
-            this.labelFirstLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelFirstLastName.AutoSize = true;
-            this.labelFirstLastName.Location = new System.Drawing.Point(497, 108);
-            this.labelFirstLastName.Name = "labelFirstLastName";
-            this.labelFirstLastName.Size = new System.Drawing.Size(78, 13);
-            this.labelFirstLastName.TabIndex = 22;
-            this.labelFirstLastName.Text = "Primer apellido:";
-            // 
-            // labelFirstName
-            // 
-            this.labelFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(497, 60);
-            this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(77, 13);
-            this.labelFirstName.TabIndex = 20;
-            this.labelFirstName.Text = "Primer nombre:";
-            this.labelFirstName.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtBoxFirstLastName
-            // 
-            this.txtBoxFirstLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxFirstLastName.Location = new System.Drawing.Point(498, 124);
-            this.txtBoxFirstLastName.Name = "txtBoxFirstLastName";
-            this.txtBoxFirstLastName.Size = new System.Drawing.Size(253, 20);
-            this.txtBoxFirstLastName.TabIndex = 18;
-            // 
-            // txtBoxFirstName
-            // 
-            this.txtBoxFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxFirstName.Location = new System.Drawing.Point(498, 85);
-            this.txtBoxFirstName.Name = "txtBoxFirstName";
-            this.txtBoxFirstName.Size = new System.Drawing.Size(253, 20);
-            this.txtBoxFirstName.TabIndex = 16;
-            this.txtBoxFirstName.TextChanged += new System.EventHandler(this.txtBoxFirstName_TextChanged);
-            // 
-            // txtBoxPhoneNumber
-            // 
-            this.txtBoxPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxPhoneNumber.Location = new System.Drawing.Point(498, 174);
-            this.txtBoxPhoneNumber.Name = "txtBoxPhoneNumber";
-            this.txtBoxPhoneNumber.Size = new System.Drawing.Size(253, 20);
-            this.txtBoxPhoneNumber.TabIndex = 24;
-            // 
-            // labelPhoneNumber
-            // 
-            this.labelPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPhoneNumber.AutoSize = true;
-            this.labelPhoneNumber.Location = new System.Drawing.Point(498, 158);
-            this.labelPhoneNumber.Name = "labelPhoneNumber";
-            this.labelPhoneNumber.Size = new System.Drawing.Size(103, 13);
-            this.labelPhoneNumber.TabIndex = 25;
-            this.labelPhoneNumber.Text = "Numero de telefono:";
             // 
             // buttonRefresh
             // 
@@ -183,55 +116,6 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click_1);
             // 
-            // txtBoxUsername
-            // 
-            this.txtBoxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxUsername.Location = new System.Drawing.Point(498, 222);
-            this.txtBoxUsername.Name = "txtBoxUsername";
-            this.txtBoxUsername.Size = new System.Drawing.Size(253, 20);
-            this.txtBoxUsername.TabIndex = 32;
-            // 
-            // txtBoxPassword
-            // 
-            this.txtBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxPassword.Location = new System.Drawing.Point(498, 270);
-            this.txtBoxPassword.Name = "txtBoxPassword";
-            this.txtBoxPassword.PasswordChar = '*';
-            this.txtBoxPassword.Size = new System.Drawing.Size(253, 20);
-            this.txtBoxPassword.TabIndex = 33;
-            // 
-            // labelUsername
-            // 
-            this.labelUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(495, 206);
-            this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(99, 13);
-            this.labelUsername.TabIndex = 34;
-            this.labelUsername.Text = "Nombre de usuario:";
-            // 
-            // labelPassword
-            // 
-            this.labelPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(498, 254);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(64, 13);
-            this.labelPassword.TabIndex = 35;
-            this.labelPassword.Text = "Contraseña:";
-            // 
-            // comboBoxTypeUser
-            // 
-            this.comboBoxTypeUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxTypeUser.FormattingEnabled = true;
-            this.comboBoxTypeUser.Items.AddRange(new object[] {
-            "Operador",
-            "Camionero"});
-            this.comboBoxTypeUser.Location = new System.Drawing.Point(500, 322);
-            this.comboBoxTypeUser.Name = "comboBoxTypeUser";
-            this.comboBoxTypeUser.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxTypeUser.TabIndex = 36;
-            // 
             // txtBoxUserID
             // 
             this.txtBoxUserID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -270,21 +154,10 @@
             this.Controls.Add(this.buttonEditUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBoxUserID);
-            this.Controls.Add(this.comboBoxTypeUser);
-            this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.labelUsername);
-            this.Controls.Add(this.txtBoxPassword);
-            this.Controls.Add(this.txtBoxUsername);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonRefresh);
-            this.Controls.Add(this.labelPhoneNumber);
-            this.Controls.Add(this.txtBoxPhoneNumber);
-            this.Controls.Add(this.labelFirstLastName);
-            this.Controls.Add(this.labelFirstName);
-            this.Controls.Add(this.txtBoxFirstLastName);
-            this.Controls.Add(this.txtBoxFirstName);
             this.Controls.Add(this.dataGridViewUsers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UsersForms";
@@ -299,21 +172,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewUsers;
-        private System.Windows.Forms.Label labelFirstLastName;
-        private System.Windows.Forms.Label labelFirstName;
-        private System.Windows.Forms.TextBox txtBoxFirstLastName;
-        private System.Windows.Forms.TextBox txtBoxFirstName;
-        private System.Windows.Forms.TextBox txtBoxPhoneNumber;
-        private System.Windows.Forms.Label labelPhoneNumber;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.TextBox txtBoxUsername;
-        private System.Windows.Forms.TextBox txtBoxPassword;
-        private System.Windows.Forms.Label labelUsername;
-        private System.Windows.Forms.Label labelPassword;
-        private System.Windows.Forms.ComboBox comboBoxTypeUser;
         private System.Windows.Forms.TextBox txtBoxUserID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonEditUser;
