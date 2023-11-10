@@ -1,4 +1,5 @@
-﻿using capa_logica;
+﻿using BackOffice.crudForms;
+using capa_logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,10 +43,6 @@ namespace BackOffice
             buttonRefreshAddOperatorStoreHouses.Text = LanguageManager.GetString("Refresh");
             buttonEditStoreHouse.Text = LanguageManager.GetString("Edit");
             buttonBack.Text = LanguageManager.GetString("Back");
-            labelStreet.Text = LanguageManager.GetString("Street");
-            labelCorner.Text = LanguageManager.GetString("Corner");
-            labelNumber.Text = LanguageManager.GetString("Number");
-            labelActived.Text = LanguageManager.GetString("Activated");
             labelIDOperator.Text = LanguageManager.GetString("IDOperator");
             labelIDStoreHouse.Text = LanguageManager.GetString("StoreHouseID");
             labelAssignOperatorToStoreHouse.Text = LanguageManager.GetString("AssignOperatorToStoreHouse");
@@ -70,46 +67,10 @@ namespace BackOffice
             dataGridViewStoreHouses.DataSource = dataTableStoreHouse;
         }
 
-        public void ClearTxtBoxesAddStoreHouse()
-        {
-            txtBoxStoreHouseStreet.Clear();
-            txtBoxStoreHouseDoorNumber.Clear();
-            txtBoxStoreHouseCorner.Clear();
-            txtBoxStoreHouseActived.Clear();
-        }
-
-        private bool ValidateInputsUser()
-        {
-
-            if (string.IsNullOrWhiteSpace(txtBoxStoreHouseActived.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxStoreHouseCorner.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxStoreHouseDoorNumber.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxStoreHouseStreet.Text))
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        private void addStoreHouse()
-        {
-            if (bool.TryParse(txtBoxStoreHouseActived.Text, out bool isActivated))
-            {
-                StoreHouseController.Create(txtBoxStoreHouseStreet.Text, txtBoxStoreHouseDoorNumber.Text, txtBoxStoreHouseCorner.Text, isActivated);
-                MessageBox.Show(Languages.Messages.Successful);
-                RefreshTableAddStoreHouse();
-                ClearTxtBoxesAddStoreHouse();
-            }
-            else
-            {
-                MessageBox.Show(LanguageManager.GetString("CompleteAllBoxAndStatus"));
-            }
-        }
-
         private void buttonAddStoreHouse_Click(object sender, EventArgs e)
         {
-            addStoreHouse();
+            AddStoreHouseForm addstorehousecomponent = new AddStoreHouseForm();
+            addstorehousecomponent.Show();
         }
 
         private void buttonRefreshStoreHouse_Click(object sender, EventArgs e)
@@ -194,7 +155,7 @@ namespace BackOffice
 
 
         private void buttonEditStoreHouse_Click(object sender, EventArgs e)
-        {
+        {/*
             if (dataGridViewStoreHouses.SelectedRows.Count > 0)
             {
                 int selectedIndex = dataGridViewStoreHouses.SelectedRows[0].Index;
@@ -211,7 +172,7 @@ namespace BackOffice
                 {
                     MessageBox.Show(LanguageManager.GetString("CompleteAllBoxAndStatus"));
                 }
-            }
+            }*/
 
         }
         

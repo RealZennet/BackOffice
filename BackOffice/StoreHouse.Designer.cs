@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonEditStoreHouse = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonRefreshStoreHouse = new System.Windows.Forms.Button();
@@ -42,14 +42,6 @@
             this.buttonRefreshAddOperatorStoreHouses = new System.Windows.Forms.Button();
             this.buttonDeleteOperatorFromStoreHouse = new System.Windows.Forms.Button();
             this.buttonAddOperatorToStoreHouse = new System.Windows.Forms.Button();
-            this.labelStreet = new System.Windows.Forms.Label();
-            this.txtBoxStoreHouseStreet = new System.Windows.Forms.TextBox();
-            this.txtBoxStoreHouseDoorNumber = new System.Windows.Forms.TextBox();
-            this.labelNumber = new System.Windows.Forms.Label();
-            this.txtBoxStoreHouseCorner = new System.Windows.Forms.TextBox();
-            this.labelCorner = new System.Windows.Forms.Label();
-            this.txtBoxStoreHouseActived = new System.Windows.Forms.TextBox();
-            this.labelActived = new System.Windows.Forms.Label();
             this.labelIDOperator = new System.Windows.Forms.Label();
             this.txtBoxIDOperator = new System.Windows.Forms.TextBox();
             this.txtBoxIDAddOperatorToStoreHouse = new System.Windows.Forms.TextBox();
@@ -57,7 +49,6 @@
             this.panelSeparator = new System.Windows.Forms.Panel();
             this.labelAddStoreHouse = new System.Windows.Forms.Label();
             this.labelAssignOperatorToStoreHouse = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStoreHouses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddOperatorStoreHouse)).BeginInit();
             this.SuspendLayout();
@@ -123,23 +114,23 @@
             this.dataGridViewStoreHouses.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewStoreHouses.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewStoreHouses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStoreHouses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStoreHouses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewStoreHouses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewStoreHouses.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewStoreHouses.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewStoreHouses.EnableHeadersVisualStyles = false;
             this.dataGridViewStoreHouses.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewStoreHouses.Location = new System.Drawing.Point(12, 73);
@@ -154,23 +145,23 @@
             this.dataGridViewAddOperatorStoreHouse.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewAddOperatorStoreHouse.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewAddOperatorStoreHouse.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAddOperatorStoreHouse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAddOperatorStoreHouse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewAddOperatorStoreHouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewAddOperatorStoreHouse.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAddOperatorStoreHouse.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewAddOperatorStoreHouse.EnableHeadersVisualStyles = false;
             this.dataGridViewAddOperatorStoreHouse.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewAddOperatorStoreHouse.Location = new System.Drawing.Point(455, 73);
@@ -210,78 +201,6 @@
             this.buttonAddOperatorToStoreHouse.Text = "Agregar";
             this.buttonAddOperatorToStoreHouse.UseVisualStyleBackColor = true;
             this.buttonAddOperatorToStoreHouse.Click += new System.EventHandler(this.buttonAddOperatorToStoreHouse_Click);
-            // 
-            // labelStreet
-            // 
-            this.labelStreet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelStreet.AutoSize = true;
-            this.labelStreet.Location = new System.Drawing.Point(12, 320);
-            this.labelStreet.Name = "labelStreet";
-            this.labelStreet.Size = new System.Drawing.Size(30, 13);
-            this.labelStreet.TabIndex = 41;
-            this.labelStreet.Text = "Calle";
-            // 
-            // txtBoxStoreHouseStreet
-            // 
-            this.txtBoxStoreHouseStreet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxStoreHouseStreet.Location = new System.Drawing.Point(13, 336);
-            this.txtBoxStoreHouseStreet.Name = "txtBoxStoreHouseStreet";
-            this.txtBoxStoreHouseStreet.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxStoreHouseStreet.TabIndex = 42;
-            // 
-            // txtBoxStoreHouseDoorNumber
-            // 
-            this.txtBoxStoreHouseDoorNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxStoreHouseDoorNumber.Location = new System.Drawing.Point(13, 381);
-            this.txtBoxStoreHouseDoorNumber.Name = "txtBoxStoreHouseDoorNumber";
-            this.txtBoxStoreHouseDoorNumber.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxStoreHouseDoorNumber.TabIndex = 43;
-            // 
-            // labelNumber
-            // 
-            this.labelNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelNumber.AutoSize = true;
-            this.labelNumber.Location = new System.Drawing.Point(12, 365);
-            this.labelNumber.Name = "labelNumber";
-            this.labelNumber.Size = new System.Drawing.Size(44, 13);
-            this.labelNumber.TabIndex = 44;
-            this.labelNumber.Text = "Numero";
-            // 
-            // txtBoxStoreHouseCorner
-            // 
-            this.txtBoxStoreHouseCorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxStoreHouseCorner.Location = new System.Drawing.Point(12, 422);
-            this.txtBoxStoreHouseCorner.Name = "txtBoxStoreHouseCorner";
-            this.txtBoxStoreHouseCorner.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxStoreHouseCorner.TabIndex = 45;
-            // 
-            // labelCorner
-            // 
-            this.labelCorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelCorner.AutoSize = true;
-            this.labelCorner.Location = new System.Drawing.Point(12, 407);
-            this.labelCorner.Name = "labelCorner";
-            this.labelCorner.Size = new System.Drawing.Size(45, 13);
-            this.labelCorner.TabIndex = 46;
-            this.labelCorner.Text = "Esquina";
-            // 
-            // txtBoxStoreHouseActived
-            // 
-            this.txtBoxStoreHouseActived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxStoreHouseActived.Location = new System.Drawing.Point(13, 464);
-            this.txtBoxStoreHouseActived.Name = "txtBoxStoreHouseActived";
-            this.txtBoxStoreHouseActived.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxStoreHouseActived.TabIndex = 47;
-            // 
-            // labelActived
-            // 
-            this.labelActived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelActived.AutoSize = true;
-            this.labelActived.Location = new System.Drawing.Point(12, 448);
-            this.labelActived.Name = "labelActived";
-            this.labelActived.Size = new System.Drawing.Size(37, 13);
-            this.labelActived.TabIndex = 48;
-            this.labelActived.Text = "Activo";
             // 
             // labelIDOperator
             // 
@@ -350,16 +269,6 @@
             this.labelAssignOperatorToStoreHouse.TabIndex = 84;
             this.labelAssignOperatorToStoreHouse.Text = "Asignar Operario";
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(119, 468);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 85;
-            this.label1.Text = "True-False";
-            // 
             // StoreHouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,7 +276,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelAssignOperatorToStoreHouse);
             this.Controls.Add(this.labelAddStoreHouse);
             this.Controls.Add(this.panelSeparator);
@@ -375,14 +283,6 @@
             this.Controls.Add(this.txtBoxIDOperator);
             this.Controls.Add(this.txtBoxIDAddOperatorToStoreHouse);
             this.Controls.Add(this.labelIDStoreHouse);
-            this.Controls.Add(this.labelActived);
-            this.Controls.Add(this.txtBoxStoreHouseActived);
-            this.Controls.Add(this.labelCorner);
-            this.Controls.Add(this.txtBoxStoreHouseCorner);
-            this.Controls.Add(this.labelNumber);
-            this.Controls.Add(this.txtBoxStoreHouseDoorNumber);
-            this.Controls.Add(this.txtBoxStoreHouseStreet);
-            this.Controls.Add(this.labelStreet);
             this.Controls.Add(this.dataGridViewAddOperatorStoreHouse);
             this.Controls.Add(this.buttonRefreshAddOperatorStoreHouses);
             this.Controls.Add(this.buttonDeleteOperatorFromStoreHouse);
@@ -416,14 +316,6 @@
         private System.Windows.Forms.Button buttonRefreshAddOperatorStoreHouses;
         private System.Windows.Forms.Button buttonDeleteOperatorFromStoreHouse;
         private System.Windows.Forms.Button buttonAddOperatorToStoreHouse;
-        private System.Windows.Forms.Label labelStreet;
-        private System.Windows.Forms.TextBox txtBoxStoreHouseStreet;
-        private System.Windows.Forms.TextBox txtBoxStoreHouseDoorNumber;
-        private System.Windows.Forms.Label labelNumber;
-        private System.Windows.Forms.TextBox txtBoxStoreHouseCorner;
-        private System.Windows.Forms.Label labelCorner;
-        private System.Windows.Forms.TextBox txtBoxStoreHouseActived;
-        private System.Windows.Forms.Label labelActived;
         private System.Windows.Forms.Label labelIDOperator;
         private System.Windows.Forms.TextBox txtBoxIDOperator;
         private System.Windows.Forms.TextBox txtBoxIDAddOperatorToStoreHouse;
@@ -431,6 +323,5 @@
         private System.Windows.Forms.Panel panelSeparator;
         private System.Windows.Forms.Label labelAddStoreHouse;
         private System.Windows.Forms.Label labelAssignOperatorToStoreHouse;
-        private System.Windows.Forms.Label label1;
     }
 }
