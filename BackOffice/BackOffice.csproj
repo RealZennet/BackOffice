@@ -109,6 +109,12 @@
     <Compile Include="AssignTypeUser.Designer.cs">
       <DependentUpon>AssignTypeUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="crudForms\AddBatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crudForms\AddBatchForm.Designer.cs">
+      <DependentUpon>AddBatchForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="crudForms\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AssignTypeUser.resx">
       <DependentUpon>AssignTypeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crudForms\AddBatchForm.resx">
+      <DependentUpon>AddBatchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="crudForms\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BackOffice.crudForms;
 using capa_logica;
 
 namespace BackOffice
@@ -27,16 +28,6 @@ namespace BackOffice
             }
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_spanish));
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_english));
-
-            comboBoxPosition.Items.Add("Adelante");
-            comboBoxPosition.Items.Add("Intermedio");
-            comboBoxPosition.Items.Add("Atras");
-            comboBoxPosition.DropDownStyle = ComboBoxStyle.DropDownList;
-
-            comboBoxActivated.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxActivated.Items.Add("true");
-            comboBoxActivated.Items.Add("false");
-            comboBoxActivated.SelectedItem = "true";
         }
 
         private void updateLanguage()
@@ -45,12 +36,6 @@ namespace BackOffice
             buttonDelete.Text = LanguageManager.GetString("Delete");
             buttonRefresh.Text = LanguageManager.GetString("Refresh");
             buttonBack.Text = LanguageManager.GetString("Back");
-
-            labelActivated.Text = LanguageManager.GetString("Activated");
-            labelEstimatedDate.Text = LanguageManager.GetString("EstimatedDate");
-            labelIDShippment.Text = LanguageManager.GetString("IDDestination");
-            labelPosition.Text = LanguageManager.GetString("Position");
-
         }
 
         private void LotsForm_Load(object sender, EventArgs e)
@@ -68,39 +53,10 @@ namespace BackOffice
             dataGridViewLots.DataSource = dataTableLots;
         }
 
-        private bool validateUsersInputs()
-        {
-            if (string.IsNullOrWhiteSpace(txtBoxIDShipp.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxEmail.Text))
-            {
-                return false;
-            }
-            return true;
-        }
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string selectedStatus = comboBoxActivated.SelectedItem as string;
-                int statusValue = selectedStatus == "true" ? 1 : 0;
-                if (validateUsersInputs() && !string.IsNullOrWhiteSpace(selectedStatus)) {
-                DateTime separateddate = dateTimePickerShippingDate.Value.Date;
-                DateTime separatedtime = dateTimePickerBatchManagementTime.Value;
-                DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
-                BatchController.Crear(txtBoxEmail.Text.ToString(), dateandtime, Int32.Parse(txtBoxIDShipp.Text), comboBoxPosition.SelectedItem.ToString() ,Convert.ToBoolean(statusValue));
-                MessageBox.Show(Languages.Messages.Successful);
-                RefreshTable();
-                }
-                else
-                {
-                    MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-                }
-            
-            }catch(Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            AddBatchForm addbatchcomponent = new AddBatchForm();
+            addbatchcomponent.Show();
 
         }
 
@@ -121,7 +77,6 @@ namespace BackOffice
                 MessageBox.Show(Languages.Messages.Successful);
                 BatchController.EliminarLote(id);
                 dataGridViewLots.DataSource = dataTableLots;
-                
 
             }
         }

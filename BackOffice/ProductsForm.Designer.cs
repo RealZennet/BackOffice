@@ -66,14 +66,14 @@
             this.dataGridViewProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewProducts.Location = new System.Drawing.Point(12, 44);
             this.dataGridViewProducts.Name = "dataGridViewProducts";
-            this.dataGridViewProducts.Size = new System.Drawing.Size(477, 503);
+            this.dataGridViewProducts.Size = new System.Drawing.Size(477, 355);
             this.dataGridViewProducts.TabIndex = 0;
             this.dataGridViewProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProducts_CellContentClick);
             // 
             // buttonAddProduct
             // 
             this.buttonAddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddProduct.Location = new System.Drawing.Point(498, 407);
+            this.buttonAddProduct.Location = new System.Drawing.Point(13, 512);
             this.buttonAddProduct.Name = "buttonAddProduct";
             this.buttonAddProduct.Size = new System.Drawing.Size(68, 26);
             this.buttonAddProduct.TabIndex = 1;
@@ -84,7 +84,7 @@
             // buttonDelete
             // 
             this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelete.Location = new System.Drawing.Point(594, 407);
+            this.buttonDelete.Location = new System.Drawing.Point(109, 512);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(68, 26);
             this.buttonDelete.TabIndex = 2;
@@ -95,7 +95,7 @@
             // buttonRefresh
             // 
             this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRefresh.Location = new System.Drawing.Point(690, 407);
+            this.buttonRefresh.Location = new System.Drawing.Point(205, 512);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(68, 26);
             this.buttonRefresh.TabIndex = 3;

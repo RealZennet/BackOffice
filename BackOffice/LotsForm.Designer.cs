@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewLots = new System.Windows.Forms.DataGridView();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.labelEstimatedDate = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
-            this.dateTimePickerShippingDate = new System.Windows.Forms.DateTimePicker();
-            this.txtBoxIDShipp = new System.Windows.Forms.TextBox();
-            this.labelIDShippment = new System.Windows.Forms.Label();
-            this.labelActivated = new System.Windows.Forms.Label();
-            this.dateTimePickerBatchManagementTime = new System.Windows.Forms.DateTimePicker();
-            this.txtBoxEmail = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelPosition = new System.Windows.Forms.Label();
-            this.comboBoxPosition = new System.Windows.Forms.ComboBox();
-            this.comboBoxActivated = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLots)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,28 +43,28 @@
             this.dataGridViewLots.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewLots.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewLots.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLots.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLots.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewLots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewLots.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewLots.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewLots.EnableHeadersVisualStyles = false;
             this.dataGridViewLots.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewLots.Location = new System.Drawing.Point(12, 44);
             this.dataGridViewLots.Name = "dataGridViewLots";
-            this.dataGridViewLots.Size = new System.Drawing.Size(480, 503);
+            this.dataGridViewLots.Size = new System.Drawing.Size(480, 276);
             this.dataGridViewLots.TabIndex = 0;
             // 
             // buttonBack
@@ -88,20 +77,9 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // labelEstimatedDate
-            // 
-            this.labelEstimatedDate.AutoSize = true;
-            this.labelEstimatedDate.BackColor = System.Drawing.Color.Transparent;
-            this.labelEstimatedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.labelEstimatedDate.Location = new System.Drawing.Point(527, 158);
-            this.labelEstimatedDate.Name = "labelEstimatedDate";
-            this.labelEstimatedDate.Size = new System.Drawing.Size(181, 17);
-            this.labelEstimatedDate.TabIndex = 3;
-            this.labelEstimatedDate.Text = "Fecha estimada de entrega";
-            // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(530, 319);
+            this.buttonAdd.Location = new System.Drawing.Point(9, 521);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(68, 26);
             this.buttonAdd.TabIndex = 5;
@@ -111,7 +89,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(604, 319);
+            this.buttonDelete.Location = new System.Drawing.Point(83, 521);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(68, 26);
             this.buttonDelete.TabIndex = 6;
@@ -121,7 +99,7 @@
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Location = new System.Drawing.Point(678, 319);
+            this.buttonRefresh.Location = new System.Drawing.Point(157, 521);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(68, 26);
             this.buttonRefresh.TabIndex = 7;
@@ -129,115 +107,15 @@
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
-            // dateTimePickerShippingDate
-            // 
-            this.dateTimePickerShippingDate.Location = new System.Drawing.Point(530, 190);
-            this.dateTimePickerShippingDate.Name = "dateTimePickerShippingDate";
-            this.dateTimePickerShippingDate.Size = new System.Drawing.Size(216, 20);
-            this.dateTimePickerShippingDate.TabIndex = 8;
-            // 
-            // txtBoxIDShipp
-            // 
-            this.txtBoxIDShipp.Location = new System.Drawing.Point(530, 282);
-            this.txtBoxIDShipp.Name = "txtBoxIDShipp";
-            this.txtBoxIDShipp.Size = new System.Drawing.Size(50, 20);
-            this.txtBoxIDShipp.TabIndex = 9;
-            // 
-            // labelIDShippment
-            // 
-            this.labelIDShippment.AutoSize = true;
-            this.labelIDShippment.BackColor = System.Drawing.Color.Transparent;
-            this.labelIDShippment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.labelIDShippment.Location = new System.Drawing.Point(527, 262);
-            this.labelIDShippment.Name = "labelIDShippment";
-            this.labelIDShippment.Size = new System.Drawing.Size(60, 17);
-            this.labelIDShippment.TabIndex = 10;
-            this.labelIDShippment.Text = "ID Envio";
-            // 
-            // labelActivated
-            // 
-            this.labelActivated.AutoSize = true;
-            this.labelActivated.BackColor = System.Drawing.Color.Transparent;
-            this.labelActivated.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.labelActivated.Location = new System.Drawing.Point(675, 262);
-            this.labelActivated.Name = "labelActivated";
-            this.labelActivated.Size = new System.Drawing.Size(62, 17);
-            this.labelActivated.TabIndex = 12;
-            this.labelActivated.Text = "Activado";
-            // 
-            // dateTimePickerBatchManagementTime
-            // 
-            this.dateTimePickerBatchManagementTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerBatchManagementTime.Location = new System.Drawing.Point(530, 226);
-            this.dateTimePickerBatchManagementTime.Name = "dateTimePickerBatchManagementTime";
-            this.dateTimePickerBatchManagementTime.Size = new System.Drawing.Size(196, 20);
-            this.dateTimePickerBatchManagementTime.TabIndex = 84;
-            // 
-            // txtBoxEmail
-            // 
-            this.txtBoxEmail.Location = new System.Drawing.Point(530, 64);
-            this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(216, 20);
-            this.txtBoxEmail.TabIndex = 85;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label5.Location = new System.Drawing.Point(527, 44);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 17);
-            this.label5.TabIndex = 86;
-            this.label5.Text = "Email";
-            // 
-            // labelPosition
-            // 
-            this.labelPosition.AutoSize = true;
-            this.labelPosition.BackColor = System.Drawing.Color.Transparent;
-            this.labelPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.labelPosition.Location = new System.Drawing.Point(527, 96);
-            this.labelPosition.Name = "labelPosition";
-            this.labelPosition.Size = new System.Drawing.Size(61, 17);
-            this.labelPosition.TabIndex = 87;
-            this.labelPosition.Text = "Posicion";
-            // 
-            // comboBoxPosition
-            // 
-            this.comboBoxPosition.FormattingEnabled = true;
-            this.comboBoxPosition.Location = new System.Drawing.Point(530, 125);
-            this.comboBoxPosition.Name = "comboBoxPosition";
-            this.comboBoxPosition.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxPosition.TabIndex = 88;
-            // 
-            // comboBoxActivated
-            // 
-            this.comboBoxActivated.FormattingEnabled = true;
-            this.comboBoxActivated.Location = new System.Drawing.Point(678, 282);
-            this.comboBoxActivated.Name = "comboBoxActivated";
-            this.comboBoxActivated.Size = new System.Drawing.Size(59, 21);
-            this.comboBoxActivated.TabIndex = 89;
-            // 
             // LotsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
-            this.Controls.Add(this.comboBoxActivated);
-            this.Controls.Add(this.comboBoxPosition);
-            this.Controls.Add(this.labelPosition);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtBoxEmail);
-            this.Controls.Add(this.dateTimePickerBatchManagementTime);
-            this.Controls.Add(this.labelActivated);
-            this.Controls.Add(this.labelIDShippment);
-            this.Controls.Add(this.txtBoxIDShipp);
-            this.Controls.Add(this.dateTimePickerShippingDate);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.labelEstimatedDate);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.dataGridViewLots);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -246,7 +124,6 @@
             this.Load += new System.EventHandler(this.LotsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLots)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -254,19 +131,8 @@
 
         private System.Windows.Forms.DataGridView dataGridViewLots;
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Label labelEstimatedDate;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonRefresh;
-        private System.Windows.Forms.DateTimePicker dateTimePickerShippingDate;
-        private System.Windows.Forms.TextBox txtBoxIDShipp;
-        private System.Windows.Forms.Label labelIDShippment;
-        private System.Windows.Forms.Label labelActivated;
-        private System.Windows.Forms.DateTimePicker dateTimePickerBatchManagementTime;
-        private System.Windows.Forms.TextBox txtBoxEmail;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelPosition;
-        private System.Windows.Forms.ComboBox comboBoxPosition;
-        private System.Windows.Forms.ComboBox comboBoxActivated;
     }
 }
