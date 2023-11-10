@@ -520,6 +520,15 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Operario.
+        /// </summary>
+        internal static string Operator {
+            get {
+                return ResourceManager.GetString("Operator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Error, el operario no puede estar asignado a un almacen..
         /// </summary>
         internal static string OperatorIsAssignedToAnStoreHouse {
@@ -723,6 +732,15 @@ namespace BackOffice.Languages {
         internal static string Successfull {
             get {
                 return ResourceManager.GetString("Successfull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Chofer.
+        /// </summary>
+        internal static string Trucker {
+            get {
+                return ResourceManager.GetString("Trucker", resourceCulture);
             }
         }
         

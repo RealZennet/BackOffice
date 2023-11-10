@@ -369,4 +369,10 @@
   <data name="OperatorIsAssignedToAnStoreHouse" xml:space="preserve">
     <value>Error, this operator is assigned to an storehouse.</value>
   </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="Trucker" xml:space="preserve">
+    <value>Trucker</value>
+  </data>
 </root>

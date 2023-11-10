@@ -372,4 +372,10 @@
   <data name="OperatorIsAssignedToAnStoreHouse" xml:space="preserve">
     <value>Error, el operario no puede estar asignado a un almacen.</value>
   </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Operario</value>
+  </data>
+  <data name="Trucker" xml:space="preserve">
+    <value>Chofer</value>
+  </data>
 </root>

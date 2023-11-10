@@ -39,6 +39,9 @@ namespace BackOffice
             buttonDeleteOperator.Text = LanguageManager.GetString("Delete");
             buttonRefresh.Text = LanguageManager.GetString("Refresh");
             buttonBack.Text = LanguageManager.GetString("Back");
+
+            labelOperator.Text = LanguageManager.GetString("Operator");
+            labelTrucker.Text = LanguageManager.GetString("Trucker");
         }
 
         private void AssignTypeUser_Load(object sender, EventArgs e)
