@@ -30,7 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.labelActivated = new System.Windows.Forms.Label();
             this.dataGridViewDestinations = new System.Windows.Forms.DataGridView();
             this.buttonEditDestination = new System.Windows.Forms.Button();
             this.buttonRefreshDestination = new System.Windows.Forms.Button();
@@ -39,29 +38,9 @@
             this.txtBoxIDDestination = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerDestinationManagementTime = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerDestinationManagement = new System.Windows.Forms.DateTimePicker();
-            this.labelShipDate = new System.Windows.Forms.Label();
-            this.txtBoxDestinationStreet = new System.Windows.Forms.TextBox();
-            this.labelStreet = new System.Windows.Forms.Label();
-            this.txtBoxDestinationCorner = new System.Windows.Forms.TextBox();
-            this.labelCorner = new System.Windows.Forms.Label();
-            this.txtBoxDestinationDoorNumber = new System.Windows.Forms.TextBox();
-            this.labelNumber = new System.Windows.Forms.Label();
             this.buttonShowMap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDestinations)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelActivated
-            // 
-            this.labelActivated.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelActivated.AutoSize = true;
-            this.labelActivated.Location = new System.Drawing.Point(12, 443);
-            this.labelActivated.Name = "labelActivated";
-            this.labelActivated.Size = new System.Drawing.Size(37, 13);
-            this.labelActivated.TabIndex = 63;
-            this.labelActivated.Text = "Activo";
             // 
             // dataGridViewDestinations
             // 
@@ -166,96 +145,6 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // comboBoxStatus
-            // 
-            this.comboBoxStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboBoxStatus.FormattingEnabled = true;
-            this.comboBoxStatus.Location = new System.Drawing.Point(12, 459);
-            this.comboBoxStatus.Name = "comboBoxStatus";
-            this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxStatus.TabIndex = 68;
-            // 
-            // dateTimePickerDestinationManagementTime
-            // 
-            this.dateTimePickerDestinationManagementTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dateTimePickerDestinationManagementTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerDestinationManagementTime.Location = new System.Drawing.Point(206, 365);
-            this.dateTimePickerDestinationManagementTime.Name = "dateTimePickerDestinationManagementTime";
-            this.dateTimePickerDestinationManagementTime.Size = new System.Drawing.Size(196, 20);
-            this.dateTimePickerDestinationManagementTime.TabIndex = 83;
-            // 
-            // dateTimePickerDestinationManagement
-            // 
-            this.dateTimePickerDestinationManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dateTimePickerDestinationManagement.Location = new System.Drawing.Point(204, 336);
-            this.dateTimePickerDestinationManagement.Name = "dateTimePickerDestinationManagement";
-            this.dateTimePickerDestinationManagement.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerDestinationManagement.TabIndex = 82;
-            // 
-            // labelShipDate
-            // 
-            this.labelShipDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelShipDate.AutoSize = true;
-            this.labelShipDate.Location = new System.Drawing.Point(203, 308);
-            this.labelShipDate.Name = "labelShipDate";
-            this.labelShipDate.Size = new System.Drawing.Size(82, 13);
-            this.labelShipDate.TabIndex = 81;
-            this.labelShipDate.Text = "Fecha de salida";
-            // 
-            // txtBoxDestinationStreet
-            // 
-            this.txtBoxDestinationStreet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxDestinationStreet.Location = new System.Drawing.Point(13, 331);
-            this.txtBoxDestinationStreet.Name = "txtBoxDestinationStreet";
-            this.txtBoxDestinationStreet.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxDestinationStreet.TabIndex = 58;
-            // 
-            // labelStreet
-            // 
-            this.labelStreet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelStreet.AutoSize = true;
-            this.labelStreet.Location = new System.Drawing.Point(12, 315);
-            this.labelStreet.Name = "labelStreet";
-            this.labelStreet.Size = new System.Drawing.Size(30, 13);
-            this.labelStreet.TabIndex = 57;
-            this.labelStreet.Text = "Calle";
-            // 
-            // txtBoxDestinationCorner
-            // 
-            this.txtBoxDestinationCorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxDestinationCorner.Location = new System.Drawing.Point(12, 368);
-            this.txtBoxDestinationCorner.Name = "txtBoxDestinationCorner";
-            this.txtBoxDestinationCorner.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxDestinationCorner.TabIndex = 86;
-            // 
-            // labelCorner
-            // 
-            this.labelCorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelCorner.AutoSize = true;
-            this.labelCorner.Location = new System.Drawing.Point(11, 352);
-            this.labelCorner.Name = "labelCorner";
-            this.labelCorner.Size = new System.Drawing.Size(45, 13);
-            this.labelCorner.TabIndex = 85;
-            this.labelCorner.Text = "Esquina";
-            // 
-            // txtBoxDestinationDoorNumber
-            // 
-            this.txtBoxDestinationDoorNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxDestinationDoorNumber.Location = new System.Drawing.Point(12, 410);
-            this.txtBoxDestinationDoorNumber.Name = "txtBoxDestinationDoorNumber";
-            this.txtBoxDestinationDoorNumber.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxDestinationDoorNumber.TabIndex = 88;
-            // 
-            // labelNumber
-            // 
-            this.labelNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelNumber.AutoSize = true;
-            this.labelNumber.Location = new System.Drawing.Point(11, 394);
-            this.labelNumber.Name = "labelNumber";
-            this.labelNumber.Size = new System.Drawing.Size(44, 13);
-            this.labelNumber.TabIndex = 87;
-            this.labelNumber.Text = "Numero";
-            // 
             // buttonShowMap
             // 
             this.buttonShowMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -275,20 +164,9 @@
             this.ClientSize = new System.Drawing.Size(757, 520);
             this.ControlBox = false;
             this.Controls.Add(this.buttonShowMap);
-            this.Controls.Add(this.txtBoxDestinationDoorNumber);
-            this.Controls.Add(this.labelNumber);
-            this.Controls.Add(this.txtBoxDestinationCorner);
-            this.Controls.Add(this.labelCorner);
-            this.Controls.Add(this.dateTimePickerDestinationManagementTime);
-            this.Controls.Add(this.dateTimePickerDestinationManagement);
-            this.Controls.Add(this.labelShipDate);
-            this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.txtBoxIDDestination);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.labelActivated);
-            this.Controls.Add(this.txtBoxDestinationStreet);
-            this.Controls.Add(this.labelStreet);
             this.Controls.Add(this.dataGridViewDestinations);
             this.Controls.Add(this.buttonEditDestination);
             this.Controls.Add(this.buttonRefreshDestination);
@@ -305,8 +183,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelActivated;
         private System.Windows.Forms.DataGridView dataGridViewDestinations;
         private System.Windows.Forms.Button buttonEditDestination;
         private System.Windows.Forms.Button buttonRefreshDestination;
@@ -315,16 +191,6 @@
         private System.Windows.Forms.TextBox txtBoxIDDestination;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.ComboBox comboBoxStatus;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDestinationManagementTime;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDestinationManagement;
-        private System.Windows.Forms.Label labelShipDate;
-        private System.Windows.Forms.TextBox txtBoxDestinationStreet;
-        private System.Windows.Forms.Label labelStreet;
-        private System.Windows.Forms.TextBox txtBoxDestinationCorner;
-        private System.Windows.Forms.Label labelCorner;
-        private System.Windows.Forms.TextBox txtBoxDestinationDoorNumber;
-        private System.Windows.Forms.Label labelNumber;
         private System.Windows.Forms.Button buttonShowMap;
     }
 }

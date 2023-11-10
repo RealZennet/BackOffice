@@ -1,4 +1,5 @@
-﻿using capa_logica;
+﻿using BackOffice.crudForms;
+using capa_logica;
 using System;
 using System.Data;
 using System.Linq;
@@ -22,10 +23,6 @@ namespace BackOffice
             }
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_spanish));
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_english));
-            comboBoxStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxStatus.Items.Add("true");
-            comboBoxStatus.Items.Add("false");
-            comboBoxStatus.SelectedItem = "true";
         }
 
         private void updateLanguage()
@@ -35,11 +32,6 @@ namespace BackOffice
             buttonRefreshDestination.Text = LanguageManager.GetString("Refresh");
             buttonBack.Text = LanguageManager.GetString("Back");
             buttonShowMap.Text = LanguageManager.GetString("Map");
-            labelActivated.Text = LanguageManager.GetString("Activated");
-            labelShipDate.Text = LanguageManager.GetString("DateOfShipment");
-            labelStreet.Text = LanguageManager.GetString("Street");
-            labelCorner.Text = LanguageManager.GetString("Corner");
-            labelNumber.Text = LanguageManager.GetString("Number");
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -60,46 +52,6 @@ namespace BackOffice
             dataGridViewDestinations.DataSource = dataTableDestination;
         }
 
-        public void AddStoreHouse()
-        {
-            txtBoxDestinationStreet.Clear();
-            txtBoxIDDestination.Clear();
-        }
-
-        private bool ValidateInputsUser()
-        {
-
-            if (string.IsNullOrWhiteSpace(txtBoxDestinationStreet.Text))
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        private void addDestination()
-        {
-            DateTime separateddate = dateTimePickerDestinationManagement.Value.Date;
-            DateTime separatedtime = dateTimePickerDestinationManagementTime.Value;
-            DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
-            string selectedStatus = comboBoxStatus.SelectedItem as string;
-            if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
-            {
-                int statusValue = selectedStatus == "true" ? 1 : 0;
-                DestinationController.Create(txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, dateandtime, Convert.ToBoolean(statusValue));
-                MessageBox.Show(Languages.Messages.Successful);
-                RefreshTable();
-            }
-            else if (string.IsNullOrWhiteSpace(selectedStatus))
-            {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-            }
-            else
-            {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-            }
-        }
-
         private void deleteDestination()
         {
             if (dataGridViewDestinations.SelectedRows.Count > 0)
@@ -118,7 +70,8 @@ namespace BackOffice
 
         private void buttonAddDestination_Click(object sender, EventArgs e)
         {
-            addDestination();
+            AddDestinationForm adddestinationcomponent = new AddDestinationForm();
+            adddestinationcomponent.Show();
         }
 
 
@@ -132,7 +85,7 @@ namespace BackOffice
         {
             deleteDestination();
         }
-
+        /*
         private void edit()
         {
             try
@@ -156,13 +109,13 @@ namespace BackOffice
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-        }
+        }*/
 
         #endregion Destination
 
         private void buttonEditDestination_Click(object sender, EventArgs e)
         {
-            edit();
+            //edit();
         }
 
         private void dataGridViewDestinations_CellClick(object sender, DataGridViewCellEventArgs e)
