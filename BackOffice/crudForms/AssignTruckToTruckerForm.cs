@@ -65,11 +65,6 @@ namespace BackOffice.crudForms
             this.Close();
         }
 
-        private void panelSlide_MouseUp(object sender, MouseEventArgs e)
-        {
-            m = 0;
-        }
-
         public void ClearTxtBoxesTrucker()
         {
             txtBoxIDAssignedTruck.Clear();
@@ -112,6 +107,11 @@ namespace BackOffice.crudForms
             {
                 this.SetDesktopLocation(MousePosition.X - x, MousePosition.Y - y);
             }
+        }
+
+        private void panelSlide_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
         }
 
     }
