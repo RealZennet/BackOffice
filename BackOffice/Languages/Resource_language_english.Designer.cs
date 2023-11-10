@@ -520,6 +520,15 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Error, this operator is assigned to an storehouse..
+        /// </summary>
+        internal static string OperatorIsAssignedToAnStoreHouse {
+            get {
+                return ResourceManager.GetString("OperatorIsAssignedToAnStoreHouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Password.
         /// </summary>
         internal static string Password {

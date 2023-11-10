@@ -39,8 +39,6 @@ namespace BackOffice
             buttonDeleteOperator.Text = LanguageManager.GetString("Delete");
             buttonRefresh.Text = LanguageManager.GetString("Refresh");
             buttonBack.Text = LanguageManager.GetString("Back");
-            labelUsernameOperator.Text = LanguageManager.GetString("IDOperator");
-            labelUsernameTrucker.Text = LanguageManager.GetString("TruckerID");
         }
 
         private void AssignTypeUser_Load(object sender, EventArgs e)
@@ -62,38 +60,9 @@ namespace BackOffice
             dataGridViewOperators.DataSource = dataTableUsersAssignOperator;
         }
 
-        public void ClearTxtBoxes()
-        {
-            txtBoxUsernameTrucker.Clear();
-            txtBoxUsernameOperator.Clear();
-        }
-
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             RefreshTable();
-        }
-
-        private void addUserOperator()
-        {
-            try
-            {
-
-                if (int.TryParse(txtBoxUsernameOperator.Text, out int userId))
-                {
-                    AssignTypeOfUserOperatorController.Crear(userId);
-                    MessageBox.Show(Languages.Messages.Successful);
-                    RefreshTable();
-                    ClearTxtBoxes();
-                }
-                else
-                {
-                    MessageBox.Show(Languages.Messages.ErrorSyntax);
-                }
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
         }
 
 
@@ -113,14 +82,14 @@ namespace BackOffice
                     int id = (int)dataGridViewUsers.Rows[selectedIndex].Cells["ID"].Value;
                     DataTable dataTableUsers = (DataTable)dataGridViewUsers.DataSource;
                     dataTableUsers.Rows.RemoveAt(selectedIndex);
-                    MessageBox.Show(Languages.Messages.Successful);
                     AssignTypeOfUserTruckerController.DeleteUser(id);
+                    MessageBox.Show(Languages.Messages.Successful);
                     dataGridViewUsers.DataSource = dataTableUsers;
                     RefreshTable();
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("(?) " + Messages.TruckerHasTruckAssigned);
             }
 
         }
@@ -132,7 +101,7 @@ namespace BackOffice
                 if (dataGridViewOperators.SelectedRows.Count > 0)
                 {
                     int selectedIndex = dataGridViewOperators.SelectedRows[0].Index;
-                    int id = (int)dataGridViewOperators.Rows[selectedIndex].Cells["Nombre de usuario"].Value;
+                    int id = (int)dataGridViewOperators.Rows[selectedIndex].Cells["ID"].Value;
                     DataTable dataTableOperators = (DataTable)dataGridViewOperators.DataSource;
                     dataTableOperators.Rows.RemoveAt(selectedIndex);
                     AssignTypeOfUserOperatorController.DeleteUser(id);
@@ -143,7 +112,7 @@ namespace BackOffice
                 }
             }catch(Exception)
             {
-                MessageBox.Show(Messages.TruckerHasTruckAssigned);
+                MessageBox.Show("(?) " + Messages.OperatorIsAssignedToAnStoreHouse);
             }
 
         }
@@ -155,7 +124,8 @@ namespace BackOffice
 
         private void buttonAddOperator_Click(object sender, EventArgs e)
         {
-            addUserOperator();
+            AddOperatorForm addoperatoromponent = new AddOperatorForm();
+            addoperatoromponent.Show();
         }
 
         private void buttonDeleteOperator_Click(object sender, EventArgs e)

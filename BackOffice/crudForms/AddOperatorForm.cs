@@ -12,21 +12,14 @@ using System.Windows.Forms;
 
 namespace BackOffice.crudForms
 {
-    public partial class AddCarrieForm : Form
+    public partial class AddOperatorForm : Form
     {
-        public event Action LanguageChanged;
+
         private int x, y, m;
 
-        public AddCarrieForm()
+        public AddOperatorForm()
         {
             InitializeComponent();
-            comboBoxStatus.Items.Add("Entregado");
-            comboBoxStatus.Items.Add("EnCamino");
-            comboBoxStatus.Items.Add("Retrasado");
-            comboBoxStatus.Items.Add("NoEnviado");
-            comboBoxStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-
-            comboBoxStatus.SelectedIndex = 3;
             QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
             if (mainForm != null)
             {
@@ -35,6 +28,14 @@ namespace BackOffice.crudForms
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_spanish));
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_english));
             roundedCircleForm();
+        }
+
+        private void updateLanguage()
+        {
+            labelUsernameOperator.Text = LanguageManager.GetString("TruckerID");
+
+            buttonSave.Text = LanguageManager.GetString("Save");
+            buttonCancel.Text = LanguageManager.GetString("Cancel");
         }
 
         private void roundedCircleForm()
@@ -53,14 +54,9 @@ namespace BackOffice.crudForms
             this.Region = new Region(graphicBorder);
         }
 
-        private void updateLanguage()
+        private void panelSlide_MouseUp(object sender, MouseEventArgs e)
         {
-            labelIDTruck2.Text = LanguageManager.GetString("IDTruck");
-            labelIDLot2.Text = LanguageManager.GetString("LotID");
-            labelIDestination.Text = LanguageManager.GetString("IDDestination");
-
-            buttonSave.Text = LanguageManager.GetString("Save");
-            buttonCancel.Text = LanguageManager.GetString("Cancel");
+            m = 0;
         }
 
         private void panelSlide_MouseDown(object sender, MouseEventArgs e)
@@ -69,7 +65,6 @@ namespace BackOffice.crudForms
             x = e.X;
             y = e.Y;
         }
-
         private void panelSlide_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1)
@@ -78,53 +73,25 @@ namespace BackOffice.crudForms
             }
         }
 
-        private void panelSlide_MouseUp(object sender, MouseEventArgs e)
+        private void buttonClose_Click(object sender, EventArgs e)
         {
-            m = 0;
-        }
-
-        private void clearTxtBox()
-        {
-            txtBoxIDBatchCarrie.Clear();
-            txtBoxIDDestinationCarrie.Clear();
-            txtBoxIDTruckCarrie.Clear();
-        }
-
-        private bool ValidateCarrieManagementInputsUser()
-        {
-            if (string.IsNullOrWhiteSpace(txtBoxIDBatchCarrie.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxIDTruckCarrie.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxIDDestinationCarrie.Text))
-            {
-                return false;
-            }
-            return true;
+            this.Close();
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
             try
             {
-                string selectedStatus = comboBoxStatus.SelectedItem as string;
-                if (ValidateCarrieManagementInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
-                {
-                    CarryShippmentController.Create(
-                        Int32.Parse(txtBoxIDTruckCarrie.Text),
-                        Int32.Parse(txtBoxIDBatchCarrie.Text),
-                        Int32.Parse(txtBoxIDDestinationCarrie.Text),
-                        selectedStatus.ToString()
-                    );
-                    MessageBox.Show(Languages.Messages.Successful);
-                    clearTxtBox();
 
-                }
-                else if (string.IsNullOrWhiteSpace(selectedStatus))
+                if (int.TryParse(txtBoxUsernameOperator.Text, out int userId))
                 {
-                    MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                    AssignTypeOfUserOperatorController.Crear(userId);
+                    MessageBox.Show(Languages.Messages.Successful);
+                    txtBoxUsernameOperator.Clear();
                 }
                 else
                 {
-                    MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                    MessageBox.Show(Languages.Messages.ErrorSyntax);
                 }
             }
             catch (Exception ex)
@@ -133,15 +100,9 @@ namespace BackOffice.crudForms
             }
         }
 
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }

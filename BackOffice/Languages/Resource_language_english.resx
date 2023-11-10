@@ -366,4 +366,7 @@
   <data name="TruckerHasTruckAssigned" xml:space="preserve">
     <value>Error, truck or ship assigned.</value>
   </data>
+  <data name="OperatorIsAssignedToAnStoreHouse" xml:space="preserve">
+    <value>Error, this operator is assigned to an storehouse.</value>
+  </data>
 </root>

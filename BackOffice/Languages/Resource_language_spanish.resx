@@ -369,4 +369,7 @@
   <data name="TruckerHasTruckAssigned" xml:space="preserve">
     <value>Error, camion o envio asignado al chofer</value>
   </data>
+  <data name="OperatorIsAssignedToAnStoreHouse" xml:space="preserve">
+    <value>Error, el operario no puede estar asignado a un almacen.</value>
+  </data>
 </root>

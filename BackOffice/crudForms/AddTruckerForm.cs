@@ -33,6 +33,9 @@ namespace BackOffice.crudForms
         private void updateLanguage()
         {
             labelUsernameTrucker.Text = LanguageManager.GetString("TruckerID");
+
+            buttonSave.Text = LanguageManager.GetString("Save");
+            buttonCancel.Text = LanguageManager.GetString("Cancel");
         }
 
         private void roundedCircleForm()

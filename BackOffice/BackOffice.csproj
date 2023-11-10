@@ -127,6 +127,12 @@
     <Compile Include="crudForms\AddDestinationForm.Designer.cs">
       <DependentUpon>AddDestinationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="crudForms\AddOperatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crudForms\AddOperatorForm.Designer.cs">
+      <DependentUpon>AddOperatorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="crudForms\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="crudForms\AddDestinationForm.resx">
       <DependentUpon>AddDestinationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crudForms\AddOperatorForm.resx">
+      <DependentUpon>AddOperatorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="crudForms\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
