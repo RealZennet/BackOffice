@@ -109,6 +109,12 @@
     <Compile Include="AssignTypeUser.Designer.cs">
       <DependentUpon>AssignTypeUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="crudForms\AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crudForms\AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DestinationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AssignTypeUser.resx">
       <DependentUpon>AssignTypeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crudForms\AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DestinationForm.resx">
       <DependentUpon>DestinationForm.cs</DependentUpon>

@@ -142,6 +142,15 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Cancel.
+        /// </summary>
+        internal static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Change Status.
         /// </summary>
         internal static string ChangeStatus {
@@ -579,6 +588,15 @@ namespace BackOffice.Languages {
         internal static string Routes {
             get {
                 return ResourceManager.GetString("Routes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Save.
+        /// </summary>
+        internal static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
             }
         }
         

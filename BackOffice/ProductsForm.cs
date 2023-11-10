@@ -1,4 +1,5 @@
-﻿using capa_logica;
+﻿using BackOffice.crudForms;
+using capa_logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,12 +28,6 @@ namespace BackOffice
             }
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_spanish));
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_english));
-
-
-            comboBoxActivated.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxActivated.Items.Add("true");
-            comboBoxActivated.Items.Add("false");
-            comboBoxActivated.SelectedItem = "true";
         }
 
         private void updateLanguage()
@@ -41,14 +36,6 @@ namespace BackOffice
             buttonDelete.Text = LanguageManager.GetString("Delete");
             buttonRefresh.Text = LanguageManager.GetString("Refresh");
             buttonBack.Text = LanguageManager.GetString("Back");
-            labelActived.Text = LanguageManager.GetString("Activated");
-            labelProductCorner.Text = LanguageManager.GetString("Corner");
-            labelCustomer.Text = LanguageManager.GetString("Customer");
-            labelDoorNumber.Text = LanguageManager.GetString("Number");
-            labelProductStreet.Text = LanguageManager.GetString("Street");
-            labelProductVolume.Text = LanguageManager.GetString("Volume");
-            labelProductWeight.Text = LanguageManager.GetString("Weight");
-
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -66,63 +53,16 @@ namespace BackOffice
             dataGridViewProducts.DataSource = dataTableProducts;
         }
 
-        public void ClearTxtBoxes()
-        {
-            txtBoxCustomer.Clear();
-            txtBoxWeight.Clear();
-            txtBoxCorner.Clear();
-            txtBoxStreet.Clear();
-            txtBoxVolume.Clear();
-
-        }
-
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             RefreshTable();
         }
 
-        private bool ValidateInputsUser()
-        {
-
-            if (string.IsNullOrWhiteSpace(txtBoxCustomer.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxWeight.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxCustomer.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxCorner.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxStreet.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxVolume.Text))
-            {
-                return false;
-            }
-
-            return true;
-        }
-
 
         private void buttonAddProduct_Click(object sender, EventArgs e)
         {
-            if (!ValidateInputsUser())
-            {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-                return;
-            }
-            addProduct();
-        }
-
-        private void addProduct()
-        {
-            try
-            {
-                string selectedStatus = comboBoxActivated.SelectedItem as string;
-                int statusValue = selectedStatus == "true" ? 1 : 0;
-                ProductController.Crear(Int32.Parse(txtBoxWeight.Text), Int32.Parse(txtBoxVolume.Text), txtBoxStreet.Text, Int32.Parse(txtBoxDoorNumber.Text), txtBoxCorner.Text,txtBoxCustomer.Text, Convert.ToBoolean(statusValue));
-                MessageBox.Show(Languages.Messages.Successful);
-                RefreshTable();
-                ClearTxtBoxes();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            AddProductForm addproductcomponent = new AddProductForm();
+            addproductcomponent.Show();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
