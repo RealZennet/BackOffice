@@ -103,32 +103,10 @@ namespace BackOffice
 
         }
 
-        private void editUser()
-        {
-            /*
-            try
-            {
-                if (ValidateInputsUser())
-                {
-                    UserController.Edit(Int32.Parse(txtBoxUserID.Text), txtBoxFirstName.Text, txtBoxFirstLastName.Text, txtBoxPhoneNumber.Text,txtBoxUsername.Text, txtBoxPassword.Text);
-                    MessageBox.Show(Languages.Messages.Successful);
-                    ClearTxtBoxes();
-                    RefreshTable();
-                }
-                else
-                {
-                    MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }*/
-        }
-
         private void buttonEditUser_Click(object sender, EventArgs e)
         {
-            editUser();
+            EditUserForm editusercomponent = new EditUserForm();
+            editusercomponent.Show();
         }
     }
 }

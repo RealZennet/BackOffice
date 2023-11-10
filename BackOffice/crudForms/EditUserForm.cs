@@ -1,4 +1,5 @@
-﻿using System;
+﻿using capa_logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -79,6 +80,27 @@ namespace BackOffice.crudForms
         private void panelSlide_MouseUp(object sender, MouseEventArgs e)
         {
             m = 0;
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (validateInputsUser())
+                {
+                    UserController.Edit(Int32.Parse(txtBoxUserID.Text), txtBoxFirstName.Text, txtBoxFirstLastName.Text, txtBoxPhoneNumber.Text, txtBoxUsername.Text, txtBoxPassword.Text);
+                    MessageBox.Show(Languages.Messages.Successful);
+                    clearTxtBoxes();
+                }
+                else
+                {
+                    MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void panelSlide_MouseDown(object sender, MouseEventArgs e)
