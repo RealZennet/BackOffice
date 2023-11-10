@@ -114,6 +114,13 @@ namespace BackOffice.crudForms
             x = e.X;
             y = e.Y;
         }
+        private void panelSlide_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - x, MousePosition.Y - y);
+            }
+        }
 
         private void buttonClose_Click_1(object sender, EventArgs e)
         {
@@ -130,12 +137,6 @@ namespace BackOffice.crudForms
             this.Close();
         }
 
-        private void panelSlide_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (m == 1)
-            {
-                this.SetDesktopLocation(MousePosition.X - x, MousePosition.Y - y);
-            }
-        }
+
     }
 }

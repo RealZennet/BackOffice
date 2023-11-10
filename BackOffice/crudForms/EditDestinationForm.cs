@@ -73,6 +73,35 @@ namespace BackOffice.crudForms
             return true;
         }
 
+        private void panelSlide_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+        }
+
+        private void panelSlide_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            x = e.X;
+            y = e.Y;
+        }
+        private void panelSlide_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - x, MousePosition.Y - y);
+            }
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void clearTxtBoxs()
         {
             txtBoxDestinationStreet.Clear();
