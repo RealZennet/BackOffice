@@ -21,6 +21,7 @@ namespace BackOffice
             InitializeComponent();
             RefreshTableShippManagement();
             RefreshTableCarrieManagement();
+
             QuickCarry mainForm = Application.OpenForms.OfType<QuickCarry>().FirstOrDefault();
             if (mainForm != null)
             {
@@ -40,23 +41,11 @@ namespace BackOffice
             buttonRefreshShipps.Text = LanguageManager.GetString("Refresh");
             buttonEditCarry.Text = LanguageManager.GetString("Edit");
             buttonBack.Text = LanguageManager.GetString("Back");
-            labelIDLot.Text = LanguageManager.GetString("LotID");
-            labelIDLot2.Text = LanguageManager.GetString("LotID");
-            labelShipDate.Text = LanguageManager.GetString("EstimatedDate");
-            labelIDestination.Text = LanguageManager.GetString("IDDestination");
-            
-
         }
 
         private void ShippingManagementForm_Load(object sender, EventArgs e)
         {
-            comboBoxStatus.Items.Add("Entregado");
-            comboBoxStatus.Items.Add("EnCamino");
-            comboBoxStatus.Items.Add("Retrasado");
-            comboBoxStatus.Items.Add("NoEnviado");
-            comboBoxStatus.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            comboBoxStatus.SelectedIndex = 3;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -69,42 +58,6 @@ namespace BackOffice
         {
             DataTable dataTableShippManagement = ShippingManagementController.GetAllShippings();
             dataGridViewShippingManagement.DataSource = dataTableShippManagement;
-        }
-
-        public void ClearTxtBoxesShippingManagement()
-        {
-            txtBoxIDBatchShippManagement.Clear();
-            txtBoxIDTruckShippManagement.Clear();
-        }
-
-        private bool ValidateShippingManagerInputsUser()
-        {
-
-            if (string.IsNullOrWhiteSpace(txtBoxIDBatchShippManagement.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxIDTruckShippManagement.Text))
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        private void addShippment()
-        {
-            try
-            {
-            DateTime separateddate = dateTimePickerShippManagement.Value.Date;
-            DateTime separatedtime = dateTimePickerShippManagementTime.Value;
-            DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
-            ShippingManagementController.Create(Int32.Parse(txtBoxIDTruckShippManagement.Text), Int32.Parse(txtBoxIDBatchShippManagement.Text), dateandtime);
-            MessageBox.Show(Languages.Messages.Successful);
-            RefreshTableShippManagement();
-            ClearTxtBoxesShippingManagement();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void deleteShippment()
@@ -125,14 +78,6 @@ namespace BackOffice
 
         private void buttonAddShipp_Click(object sender, EventArgs e)
         {
-            if (ValidateShippingManagerInputsUser())
-            {
-                addShippment();
-            }
-            else
-            {
-                MessageBox.Show(Languages.Messages.Successful);
-            }
             AssignBatchToTruckForm assignbatchtotruckcomponent = new AssignBatchToTruckForm();
             assignbatchtotruckcomponent.Show();
         }
@@ -156,54 +101,6 @@ namespace BackOffice
             dataGridViewCarry.DataSource = dataTableCarrieManagement;
         }
 
-        public void ClearTxtBoxesCarrieManagement()
-        {
-            txtBoxIDBatchShippManagement.Clear();
-            txtBoxIDTruckShippManagement.Clear();
-        }
-
-        private bool ValidateCarrieManagementInputsUser()
-        {
-            if (string.IsNullOrWhiteSpace(txtBoxIDBatchCarrie.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxIDTruckCarrie.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxIDDestinationCarrie.Text))
-            {
-                return false;
-            }
-            return true;
-        }
-
-        private void addCarrie()
-        {
-            try
-            {
-            string selectedStatus = comboBoxStatus.SelectedItem as string;
-            if (ValidateCarrieManagementInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
-            {
-                CarryShippmentController.Create(
-                    Int32.Parse(txtBoxIDTruckCarrie.Text),
-                    Int32.Parse(txtBoxIDBatchCarrie.Text),
-                    Int32.Parse(txtBoxIDDestinationCarrie.Text),
-                    selectedStatus.ToString()
-                );
-                MessageBox.Show(Languages.Messages.Successful);
-                RefreshTableCarrieManagement();
-                ClearTxtBoxesCarrieManagement();
-            }
-            else if (string.IsNullOrWhiteSpace(selectedStatus))
-            {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-            }
-            else
-            {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-            }
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void deleteCarrie()
         {
             if (dataGridViewCarry.SelectedRows.Count > 0)
@@ -222,7 +119,8 @@ namespace BackOffice
 
         private void buttonAddCarry_Click(object sender, EventArgs e)
         {
-            addCarrie();
+            AddCarrieForm addcarriecomponent = new AddCarrieForm();
+            addcarriecomponent.Show();
         }
 
         private void buttonDeleteCarry_Click(object sender, EventArgs e)

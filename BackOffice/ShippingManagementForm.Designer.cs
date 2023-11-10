@@ -32,80 +32,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.labelShipDate = new System.Windows.Forms.Label();
-            this.labelIDLot = new System.Windows.Forms.Label();
-            this.txtBoxIDBatchShippManagement = new System.Windows.Forms.TextBox();
-            this.txtBoxIDTruckShippManagement = new System.Windows.Forms.TextBox();
-            this.labelIDTruck = new System.Windows.Forms.Label();
             this.dataGridViewShippingManagement = new System.Windows.Forms.DataGridView();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonRefreshShipps = new System.Windows.Forms.Button();
             this.buttonDeleteShipp = new System.Windows.Forms.Button();
             this.buttonAddShipp = new System.Windows.Forms.Button();
             this.dataGridViewCarry = new System.Windows.Forms.DataGridView();
-            this.dateTimePickerShippManagement = new System.Windows.Forms.DateTimePicker();
             this.buttonRefreshCarry = new System.Windows.Forms.Button();
             this.buttonDeleteCarry = new System.Windows.Forms.Button();
             this.buttonAddCarry = new System.Windows.Forms.Button();
             this.buttonEditCarry = new System.Windows.Forms.Button();
-            this.labelIDLot2 = new System.Windows.Forms.Label();
-            this.txtBoxIDBatchCarrie = new System.Windows.Forms.TextBox();
-            this.txtBoxIDTruckCarrie = new System.Windows.Forms.TextBox();
-            this.labelIDestination = new System.Windows.Forms.Label();
-            this.txtBoxIDDestinationCarrie = new System.Windows.Forms.TextBox();
-            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerShippManagementTime = new System.Windows.Forms.DateTimePicker();
             this.panelSeparator = new System.Windows.Forms.Panel();
-            this.labelIDTruck2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShippingManagement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarry)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelShipDate
-            // 
-            this.labelShipDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelShipDate.AutoSize = true;
-            this.labelShipDate.Location = new System.Drawing.Point(12, 403);
-            this.labelShipDate.Name = "labelShipDate";
-            this.labelShipDate.Size = new System.Drawing.Size(82, 13);
-            this.labelShipDate.TabIndex = 61;
-            this.labelShipDate.Text = "Fecha de salida";
-            // 
-            // labelIDLot
-            // 
-            this.labelIDLot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelIDLot.AutoSize = true;
-            this.labelIDLot.Location = new System.Drawing.Point(12, 361);
-            this.labelIDLot.Name = "labelIDLot";
-            this.labelIDLot.Size = new System.Drawing.Size(42, 13);
-            this.labelIDLot.TabIndex = 59;
-            this.labelIDLot.Text = "ID Lote";
-            // 
-            // txtBoxIDBatchShippManagement
-            // 
-            this.txtBoxIDBatchShippManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxIDBatchShippManagement.Location = new System.Drawing.Point(13, 377);
-            this.txtBoxIDBatchShippManagement.Name = "txtBoxIDBatchShippManagement";
-            this.txtBoxIDBatchShippManagement.Size = new System.Drawing.Size(41, 20);
-            this.txtBoxIDBatchShippManagement.TabIndex = 58;
-            // 
-            // txtBoxIDTruckShippManagement
-            // 
-            this.txtBoxIDTruckShippManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxIDTruckShippManagement.Location = new System.Drawing.Point(13, 332);
-            this.txtBoxIDTruckShippManagement.Name = "txtBoxIDTruckShippManagement";
-            this.txtBoxIDTruckShippManagement.Size = new System.Drawing.Size(41, 20);
-            this.txtBoxIDTruckShippManagement.TabIndex = 57;
-            // 
-            // labelIDTruck
-            // 
-            this.labelIDTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelIDTruck.AutoSize = true;
-            this.labelIDTruck.Location = new System.Drawing.Point(12, 316);
-            this.labelIDTruck.Name = "labelIDTruck";
-            this.labelIDTruck.Size = new System.Drawing.Size(56, 13);
-            this.labelIDTruck.TabIndex = 56;
-            this.labelIDTruck.Text = "ID Camion";
             // 
             // dataGridViewShippingManagement
             // 
@@ -212,14 +152,6 @@
             this.dataGridViewCarry.Size = new System.Drawing.Size(358, 228);
             this.dataGridViewCarry.TabIndex = 64;
             // 
-            // dateTimePickerShippManagement
-            // 
-            this.dateTimePickerShippManagement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dateTimePickerShippManagement.Location = new System.Drawing.Point(13, 431);
-            this.dateTimePickerShippManagement.Name = "dateTimePickerShippManagement";
-            this.dateTimePickerShippManagement.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerShippManagement.TabIndex = 66;
-            // 
             // buttonRefreshCarry
             // 
             this.buttonRefreshCarry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -263,68 +195,6 @@
             this.buttonEditCarry.Text = "Editar";
             this.buttonEditCarry.UseVisualStyleBackColor = true;
             // 
-            // labelIDLot2
-            // 
-            this.labelIDLot2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelIDLot2.AutoSize = true;
-            this.labelIDLot2.Location = new System.Drawing.Point(386, 360);
-            this.labelIDLot2.Name = "labelIDLot2";
-            this.labelIDLot2.Size = new System.Drawing.Size(42, 13);
-            this.labelIDLot2.TabIndex = 74;
-            this.labelIDLot2.Text = "ID Lote";
-            // 
-            // txtBoxIDBatchCarrie
-            // 
-            this.txtBoxIDBatchCarrie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxIDBatchCarrie.Location = new System.Drawing.Point(387, 376);
-            this.txtBoxIDBatchCarrie.Name = "txtBoxIDBatchCarrie";
-            this.txtBoxIDBatchCarrie.Size = new System.Drawing.Size(41, 20);
-            this.txtBoxIDBatchCarrie.TabIndex = 73;
-            // 
-            // txtBoxIDTruckCarrie
-            // 
-            this.txtBoxIDTruckCarrie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxIDTruckCarrie.Location = new System.Drawing.Point(387, 331);
-            this.txtBoxIDTruckCarrie.Name = "txtBoxIDTruckCarrie";
-            this.txtBoxIDTruckCarrie.Size = new System.Drawing.Size(41, 20);
-            this.txtBoxIDTruckCarrie.TabIndex = 72;
-            // 
-            // labelIDestination
-            // 
-            this.labelIDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelIDestination.AutoSize = true;
-            this.labelIDestination.Location = new System.Drawing.Point(388, 404);
-            this.labelIDestination.Name = "labelIDestination";
-            this.labelIDestination.Size = new System.Drawing.Size(57, 13);
-            this.labelIDestination.TabIndex = 76;
-            this.labelIDestination.Text = "ID Destino";
-            // 
-            // txtBoxIDDestinationCarrie
-            // 
-            this.txtBoxIDDestinationCarrie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxIDDestinationCarrie.Location = new System.Drawing.Point(389, 420);
-            this.txtBoxIDDestinationCarrie.Name = "txtBoxIDDestinationCarrie";
-            this.txtBoxIDDestinationCarrie.Size = new System.Drawing.Size(41, 20);
-            this.txtBoxIDDestinationCarrie.TabIndex = 75;
-            // 
-            // comboBoxStatus
-            // 
-            this.comboBoxStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxStatus.FormattingEnabled = true;
-            this.comboBoxStatus.Location = new System.Drawing.Point(387, 459);
-            this.comboBoxStatus.Name = "comboBoxStatus";
-            this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxStatus.TabIndex = 79;
-            // 
-            // dateTimePickerShippManagementTime
-            // 
-            this.dateTimePickerShippManagementTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dateTimePickerShippManagementTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerShippManagementTime.Location = new System.Drawing.Point(15, 460);
-            this.dateTimePickerShippManagementTime.Name = "dateTimePickerShippManagementTime";
-            this.dateTimePickerShippManagementTime.Size = new System.Drawing.Size(196, 20);
-            this.dateTimePickerShippManagementTime.TabIndex = 80;
-            // 
             // panelSeparator
             // 
             this.panelSeparator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -334,42 +204,18 @@
             this.panelSeparator.Size = new System.Drawing.Size(3, 557);
             this.panelSeparator.TabIndex = 81;
             // 
-            // labelIDTruck2
-            // 
-            this.labelIDTruck2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelIDTruck2.AutoSize = true;
-            this.labelIDTruck2.Location = new System.Drawing.Point(384, 315);
-            this.labelIDTruck2.Name = "labelIDTruck2";
-            this.labelIDTruck2.Size = new System.Drawing.Size(56, 13);
-            this.labelIDTruck2.TabIndex = 82;
-            this.labelIDTruck2.Text = "ID Camion";
-            // 
             // ShippingManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(773, 559);
-            this.Controls.Add(this.labelIDTruck2);
             this.Controls.Add(this.panelSeparator);
-            this.Controls.Add(this.dateTimePickerShippManagementTime);
-            this.Controls.Add(this.comboBoxStatus);
-            this.Controls.Add(this.labelIDestination);
-            this.Controls.Add(this.txtBoxIDDestinationCarrie);
-            this.Controls.Add(this.labelIDLot2);
-            this.Controls.Add(this.txtBoxIDBatchCarrie);
-            this.Controls.Add(this.txtBoxIDTruckCarrie);
             this.Controls.Add(this.buttonEditCarry);
             this.Controls.Add(this.buttonRefreshCarry);
             this.Controls.Add(this.buttonDeleteCarry);
             this.Controls.Add(this.buttonAddCarry);
-            this.Controls.Add(this.dateTimePickerShippManagement);
             this.Controls.Add(this.dataGridViewCarry);
-            this.Controls.Add(this.labelShipDate);
-            this.Controls.Add(this.labelIDLot);
-            this.Controls.Add(this.txtBoxIDBatchShippManagement);
-            this.Controls.Add(this.txtBoxIDTruckShippManagement);
-            this.Controls.Add(this.labelIDTruck);
             this.Controls.Add(this.dataGridViewShippingManagement);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonRefreshShipps);
@@ -382,36 +228,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShippingManagement)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarry)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelShipDate;
-        private System.Windows.Forms.Label labelIDLot;
-        private System.Windows.Forms.TextBox txtBoxIDBatchShippManagement;
-        private System.Windows.Forms.TextBox txtBoxIDTruckShippManagement;
-        private System.Windows.Forms.Label labelIDTruck;
         private System.Windows.Forms.DataGridView dataGridViewShippingManagement;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonRefreshShipps;
         private System.Windows.Forms.Button buttonDeleteShipp;
         private System.Windows.Forms.Button buttonAddShipp;
         private System.Windows.Forms.DataGridView dataGridViewCarry;
-        private System.Windows.Forms.DateTimePicker dateTimePickerShippManagement;
         private System.Windows.Forms.Button buttonRefreshCarry;
         private System.Windows.Forms.Button buttonDeleteCarry;
         private System.Windows.Forms.Button buttonAddCarry;
         private System.Windows.Forms.Button buttonEditCarry;
-        private System.Windows.Forms.Label labelIDLot2;
-        private System.Windows.Forms.TextBox txtBoxIDBatchCarrie;
-        private System.Windows.Forms.TextBox txtBoxIDTruckCarrie;
-        private System.Windows.Forms.Label labelIDestination;
-        private System.Windows.Forms.TextBox txtBoxIDDestinationCarrie;
-        private System.Windows.Forms.ComboBox comboBoxStatus;
-        private System.Windows.Forms.DateTimePicker dateTimePickerShippManagementTime;
         private System.Windows.Forms.Panel panelSeparator;
-        private System.Windows.Forms.Label labelIDTruck2;
     }
 }

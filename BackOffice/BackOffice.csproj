@@ -115,6 +115,12 @@
     <Compile Include="crudForms\AddBatchForm.Designer.cs">
       <DependentUpon>AddBatchForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="crudForms\AddCarrieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crudForms\AddCarrieForm.Designer.cs">
+      <DependentUpon>AddCarrieForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="crudForms\AddDestinationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,12 @@
     </Compile>
     <Compile Include="crudForms\AddProductForm.Designer.cs">
       <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="crudForms\AssignBatchToTruckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crudForms\AssignBatchToTruckForm.Designer.cs">
+      <DependentUpon>AssignBatchToTruckForm.cs</DependentUpon>
     </Compile>
     <Compile Include="crudForms\AssignProductToBatchForm.cs">
       <SubType>Form</SubType>
@@ -234,11 +246,17 @@
     <EmbeddedResource Include="crudForms\AddBatchForm.resx">
       <DependentUpon>AddBatchForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="crudForms\AddCarrieForm.resx">
+      <DependentUpon>AddCarrieForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="crudForms\AddDestinationForm.resx">
       <DependentUpon>AddDestinationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="crudForms\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crudForms\AssignBatchToTruckForm.resx">
+      <DependentUpon>AssignBatchToTruckForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="crudForms\AssignProductToBatchForm.resx">
       <DependentUpon>AssignProductToBatchForm.cs</DependentUpon>

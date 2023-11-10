@@ -331,7 +331,7 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a ID Trucker.
+        ///   Busca una cadena traducida similar a ID Truck.
         /// </summary>
         internal static string IDTruck {
             get {
