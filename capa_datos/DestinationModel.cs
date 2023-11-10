@@ -77,10 +77,10 @@ namespace capa_datos
             {
                 this.Command.CommandText = $"UPDATE destino SET " +
                     $"calle = '{this.StreetDestination}', " +
-                    $"num = {this.DoorNumber}," +
-                    $"esq = '{this.CornerDestination}'," +
-                    $"bajalogica = {this.ActivedDestination} " +
-                    $"fech_esti = '{this.EstimatedDate}' " +
+                    $"num = '{this.DoorNumber}', " +
+                    $"esq = '{this.CornerDestination}', " +
+                    $"bajalogica = {this.ActivedDestination}, " +
+                    $"fech_esti = '{this.EstimatedDate.ToString("yyyy-MM-dd HH:mm:ss")}' " +
                     $"WHERE id_des = {this.IDDestination}";
                 this.Command.ExecuteNonQuery();
             }

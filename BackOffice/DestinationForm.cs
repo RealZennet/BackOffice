@@ -85,37 +85,18 @@ namespace BackOffice
         {
             deleteDestination();
         }
-        /*
+        
         private void edit()
         {
-            try
-            {
-                DateTime separateddate = dateTimePickerDestinationManagement.Value.Date;
-                DateTime separatedtime = dateTimePickerDestinationManagementTime.Value;
-                DateTime dateandtime = separateddate.Add(separatedtime.TimeOfDay);
-                string selectedStatus = comboBoxStatus.SelectedItem as string;
-                if (ValidateInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
-                {
-                    int statusValue = selectedStatus == "true" ? 1 : 0;
-                    DestinationController.EditDestination(Int32.Parse(txtBoxIDDestination.Text), txtBoxDestinationStreet.Text, txtBoxDestinationDoorNumber.Text, txtBoxDestinationCorner.Text, dateandtime, Convert.ToBoolean(statusValue));
-                    MessageBox.Show(Languages.Messages.Successful);
-                }
-                else
-                {
-                    MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }*/
+           
+        }
 
         #endregion Destination
 
         private void buttonEditDestination_Click(object sender, EventArgs e)
         {
-            //edit();
+            EditDestinationForm editestinationcomponent = new EditDestinationForm();
+            editestinationcomponent.Show();
         }
 
         private void dataGridViewDestinations_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -35,8 +35,6 @@
             this.buttonRefreshDestination = new System.Windows.Forms.Button();
             this.buttonDeleteDestination = new System.Windows.Forms.Button();
             this.buttonAddDestination = new System.Windows.Forms.Button();
-            this.txtBoxIDDestination = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonShowMap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDestinations)).BeginInit();
@@ -76,9 +74,9 @@
             // buttonEditDestination
             // 
             this.buttonEditDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonEditDestination.Location = new System.Drawing.Point(142, 359);
+            this.buttonEditDestination.Location = new System.Drawing.Point(234, 485);
             this.buttonEditDestination.Name = "buttonEditDestination";
-            this.buttonEditDestination.Size = new System.Drawing.Size(46, 26);
+            this.buttonEditDestination.Size = new System.Drawing.Size(68, 26);
             this.buttonEditDestination.TabIndex = 54;
             this.buttonEditDestination.Text = "Editar";
             this.buttonEditDestination.UseVisualStyleBackColor = true;
@@ -117,24 +115,6 @@
             this.buttonAddDestination.UseVisualStyleBackColor = true;
             this.buttonAddDestination.Click += new System.EventHandler(this.buttonAddDestination_Click);
             // 
-            // txtBoxIDDestination
-            // 
-            this.txtBoxIDDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxIDDestination.Location = new System.Drawing.Point(142, 334);
-            this.txtBoxIDDestination.Name = "txtBoxIDDestination";
-            this.txtBoxIDDestination.Size = new System.Drawing.Size(46, 20);
-            this.txtBoxIDDestination.TabIndex = 66;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(139, 315);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
-            this.label2.TabIndex = 65;
-            this.label2.Text = "ID";
-            // 
             // buttonBack
             // 
             this.buttonBack.Location = new System.Drawing.Point(15, 10);
@@ -148,7 +128,7 @@
             // buttonShowMap
             // 
             this.buttonShowMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonShowMap.Location = new System.Drawing.Point(234, 485);
+            this.buttonShowMap.Location = new System.Drawing.Point(305, 485);
             this.buttonShowMap.Name = "buttonShowMap";
             this.buttonShowMap.Size = new System.Drawing.Size(68, 26);
             this.buttonShowMap.TabIndex = 89;
@@ -165,8 +145,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.buttonShowMap);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.txtBoxIDDestination);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewDestinations);
             this.Controls.Add(this.buttonEditDestination);
             this.Controls.Add(this.buttonRefreshDestination);
@@ -178,7 +156,6 @@
             this.Load += new System.EventHandler(this.DestinationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDestinations)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -188,8 +165,6 @@
         private System.Windows.Forms.Button buttonRefreshDestination;
         private System.Windows.Forms.Button buttonDeleteDestination;
         private System.Windows.Forms.Button buttonAddDestination;
-        private System.Windows.Forms.TextBox txtBoxIDDestination;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonShowMap;
     }
