@@ -1,4 +1,5 @@
-﻿using capa_logica;
+﻿using BackOffice.crudForms;
+using capa_logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,7 @@ namespace BackOffice
             LanguageManager.Initialize(typeof(BackOffice.Languages.Resource_language_english));
         }
 
+
         private void updateLanguage()
         {
             buttonAddAssignedTruck.Text = LanguageManager.GetString("Add");
@@ -41,9 +43,7 @@ namespace BackOffice
             buttonEdit.Text = LanguageManager.GetString("Edit");
             buttonBack.Text = LanguageManager.GetString("Back");
             labelActived.Text = LanguageManager.GetString("Activated");
-            labelIDTruck.Text = LanguageManager.GetString("IDTruck");
             labelIDTruck2.Text = LanguageManager.GetString("IDTruck");
-            labelIDTrucker.Text = LanguageManager.GetString("IDTrucker");
             labelActived.Text = LanguageManager.GetString("Activated");
             labelTruckWeight.Text = LanguageManager.GetString("Weight");
             labelTruckVolume.Text = LanguageManager.GetString("Volume");
@@ -156,26 +156,8 @@ namespace BackOffice
 
         private void buttonAddAssignedTruck_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtBoxIDAssignedTruck.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxIDAssignedTrucker.Text) ||
-                !int.TryParse(txtBoxIDAssignedTruck.Text, out int truckId) ||
-                !int.TryParse(txtBoxIDAssignedTrucker.Text, out int truckerId))
-            {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-                return;
-            }
-
-            try
-            {
-                TruckerController.Create(truckId, truckerId);
-                MessageBox.Show(Languages.Messages.Successful);
-                RefreshTableTrucker();
-                ClearTxtBoxesTrucker();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            AssignTruckToTruckerForm assigntrucktotruckcomponent = new AssignTruckToTruckerForm();
+            assigntrucktotruckcomponent.Show();
         }
 
 

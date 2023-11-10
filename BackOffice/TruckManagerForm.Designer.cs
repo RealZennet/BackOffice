@@ -28,25 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonAddTruck = new System.Windows.Forms.Button();
             this.buttonRefreshTruck = new System.Windows.Forms.Button();
             this.dataGridViewAddTruck = new System.Windows.Forms.DataGridView();
             this.txtBoxWeightTruck = new System.Windows.Forms.TextBox();
             this.labelTruckWeight = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelIDTruck = new System.Windows.Forms.Label();
-            this.txtBoxIDAssignedTruck = new System.Windows.Forms.TextBox();
+            this.labelAddTruck = new System.Windows.Forms.Label();
+            this.labelAssignTruck = new System.Windows.Forms.Label();
             this.dataGridViewAssignTruck = new System.Windows.Forms.DataGridView();
             this.buttonRefreshAssignTrucker = new System.Windows.Forms.Button();
             this.buttonDeleteAssignedTruck = new System.Windows.Forms.Button();
             this.buttonAddAssignedTruck = new System.Windows.Forms.Button();
-            this.labelIDTrucker = new System.Windows.Forms.Label();
-            this.txtBoxIDAssignedTrucker = new System.Windows.Forms.TextBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.txtBoxVolumeTruck = new System.Windows.Forms.TextBox();
             this.labelTruckVolume = new System.Windows.Forms.Label();
@@ -89,23 +85,23 @@
             this.dataGridViewAddTruck.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewAddTruck.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewAddTruck.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAddTruck.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAddTruck.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewAddTruck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewAddTruck.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAddTruck.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewAddTruck.EnableHeadersVisualStyles = false;
             this.dataGridViewAddTruck.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewAddTruck.Location = new System.Drawing.Point(425, 297);
@@ -131,45 +127,27 @@
             this.labelTruckWeight.TabIndex = 6;
             this.labelTruckWeight.Text = "Peso de camion:";
             // 
-            // label3
+            // labelAddTruck
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.label3.Location = new System.Drawing.Point(534, 251);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Agregar camion";
+            this.labelAddTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAddTruck.AutoSize = true;
+            this.labelAddTruck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
+            this.labelAddTruck.Location = new System.Drawing.Point(534, 251);
+            this.labelAddTruck.Name = "labelAddTruck";
+            this.labelAddTruck.Size = new System.Drawing.Size(127, 20);
+            this.labelAddTruck.TabIndex = 7;
+            this.labelAddTruck.Text = "Agregar camion";
             // 
-            // label4
+            // labelAssignTruck
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.label4.Location = new System.Drawing.Point(94, 251);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 20);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Asignar camion";
-            // 
-            // labelIDTruck
-            // 
-            this.labelIDTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelIDTruck.AutoSize = true;
-            this.labelIDTruck.Location = new System.Drawing.Point(23, 450);
-            this.labelIDTruck.Name = "labelIDTruck";
-            this.labelIDTruck.Size = new System.Drawing.Size(56, 13);
-            this.labelIDTruck.TabIndex = 13;
-            this.labelIDTruck.Text = "ID Camion";
-            // 
-            // txtBoxIDAssignedTruck
-            // 
-            this.txtBoxIDAssignedTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxIDAssignedTruck.Location = new System.Drawing.Point(26, 479);
-            this.txtBoxIDAssignedTruck.Name = "txtBoxIDAssignedTruck";
-            this.txtBoxIDAssignedTruck.Size = new System.Drawing.Size(44, 20);
-            this.txtBoxIDAssignedTruck.TabIndex = 12;
+            this.labelAssignTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelAssignTruck.AutoSize = true;
+            this.labelAssignTruck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
+            this.labelAssignTruck.Location = new System.Drawing.Point(94, 251);
+            this.labelAssignTruck.Name = "labelAssignTruck";
+            this.labelAssignTruck.Size = new System.Drawing.Size(125, 20);
+            this.labelAssignTruck.TabIndex = 14;
+            this.labelAssignTruck.Text = "Asignar camion";
             // 
             // dataGridViewAssignTruck
             // 
@@ -177,23 +155,23 @@
             this.dataGridViewAssignTruck.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewAssignTruck.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewAssignTruck.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAssignTruck.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAssignTruck.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewAssignTruck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewAssignTruck.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(84)))), ((int)(((byte)(112)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAssignTruck.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewAssignTruck.EnableHeadersVisualStyles = false;
             this.dataGridViewAssignTruck.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(68)))));
             this.dataGridViewAssignTruck.Location = new System.Drawing.Point(26, 297);
@@ -233,24 +211,6 @@
             this.buttonAddAssignedTruck.Text = "Agregar";
             this.buttonAddAssignedTruck.UseVisualStyleBackColor = true;
             this.buttonAddAssignedTruck.Click += new System.EventHandler(this.buttonAddAssignedTruck_Click);
-            // 
-            // labelIDTrucker
-            // 
-            this.labelIDTrucker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelIDTrucker.AutoSize = true;
-            this.labelIDTrucker.Location = new System.Drawing.Point(95, 450);
-            this.labelIDTrucker.Name = "labelIDTrucker";
-            this.labelIDTrucker.Size = new System.Drawing.Size(52, 13);
-            this.labelIDTrucker.TabIndex = 15;
-            this.labelIDTrucker.Text = "ID Chofer";
-            // 
-            // txtBoxIDAssignedTrucker
-            // 
-            this.txtBoxIDAssignedTrucker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBoxIDAssignedTrucker.Location = new System.Drawing.Point(98, 479);
-            this.txtBoxIDAssignedTrucker.Name = "txtBoxIDAssignedTrucker";
-            this.txtBoxIDAssignedTrucker.Size = new System.Drawing.Size(44, 20);
-            this.txtBoxIDAssignedTrucker.TabIndex = 18;
             // 
             // buttonBack
             // 
@@ -362,16 +322,12 @@
             this.Controls.Add(this.labelTruckVolume);
             this.Controls.Add(this.txtBoxVolumeTruck);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.txtBoxIDAssignedTrucker);
-            this.Controls.Add(this.labelIDTrucker);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.labelIDTruck);
-            this.Controls.Add(this.txtBoxIDAssignedTruck);
+            this.Controls.Add(this.labelAssignTruck);
             this.Controls.Add(this.dataGridViewAssignTruck);
             this.Controls.Add(this.buttonRefreshAssignTrucker);
             this.Controls.Add(this.buttonDeleteAssignedTruck);
             this.Controls.Add(this.buttonAddAssignedTruck);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelAddTruck);
             this.Controls.Add(this.labelTruckWeight);
             this.Controls.Add(this.txtBoxWeightTruck);
             this.Controls.Add(this.dataGridViewAddTruck);
@@ -396,16 +352,12 @@
         private System.Windows.Forms.DataGridView dataGridViewAddTruck;
         private System.Windows.Forms.TextBox txtBoxWeightTruck;
         private System.Windows.Forms.Label labelTruckWeight;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelIDTruck;
-        private System.Windows.Forms.TextBox txtBoxIDAssignedTruck;
+        private System.Windows.Forms.Label labelAddTruck;
+        private System.Windows.Forms.Label labelAssignTruck;
         private System.Windows.Forms.DataGridView dataGridViewAssignTruck;
         private System.Windows.Forms.Button buttonRefreshAssignTrucker;
         private System.Windows.Forms.Button buttonDeleteAssignedTruck;
         private System.Windows.Forms.Button buttonAddAssignedTruck;
-        private System.Windows.Forms.Label labelIDTrucker;
-        private System.Windows.Forms.TextBox txtBoxIDAssignedTrucker;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.TextBox txtBoxVolumeTruck;
         private System.Windows.Forms.Label labelTruckVolume;
