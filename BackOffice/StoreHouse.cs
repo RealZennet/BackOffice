@@ -43,8 +43,6 @@ namespace BackOffice
             buttonRefreshAddOperatorStoreHouses.Text = LanguageManager.GetString("Refresh");
             buttonEditStoreHouse.Text = LanguageManager.GetString("Edit");
             buttonBack.Text = LanguageManager.GetString("Back");
-            labelIDOperator.Text = LanguageManager.GetString("IDOperator");
-            labelIDStoreHouse.Text = LanguageManager.GetString("StoreHouseID");
             labelAssignOperatorToStoreHouse.Text = LanguageManager.GetString("AssignOperatorToStoreHouse");
             labelAddStoreHouse.Text = LanguageManager.GetString("AddStoreHouse");
         }
@@ -87,39 +85,6 @@ namespace BackOffice
             dataGridViewAddOperatorStoreHouse.DataSource = dataTableAddOperatorToStoreHouse;
         }
 
-        public void ClearTxtBoxesAssignOperatorToStoreHouse()
-        {
-            txtBoxIDOperator.Clear();
-            txtBoxIDAddOperatorToStoreHouse.Clear();
-        }
-
-        private bool ValidateAssignOperatorToStoreHouseInputsUser()
-        {
-
-            if (string.IsNullOrWhiteSpace(txtBoxIDAddOperatorToStoreHouse.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxIDOperator.Text))
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        private void assignOperatorToStoreHouse()
-        {
-            if (ValidateAssignOperatorToStoreHouseInputsUser())
-            {
-            AssignOperatorToStoreHouseController.Create(Int32.Parse(txtBoxIDOperator.Text), Int32.Parse(txtBoxIDAddOperatorToStoreHouse.Text));
-            MessageBox.Show(Languages.Messages.Successful);
-            RefreshTableAssignOperatorToStoreHouse();
-            ClearTxtBoxesAssignOperatorToStoreHouse();
-            }
-            else
-            {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-            }
-        }
-
         private void deleteAssignedOperatorToStoreHouse()
         {
             if (dataGridViewAddOperatorStoreHouse.SelectedRows.Count > 0)
@@ -138,7 +103,8 @@ namespace BackOffice
 
         private void buttonAddOperatorToStoreHouse_Click(object sender, EventArgs e)
         {
-            assignOperatorToStoreHouse();
+            AssignOperatorToStoreHouseForm assignoperatortostorehousecomponent = new AssignOperatorToStoreHouseForm();
+            assignoperatortostorehousecomponent.Show();
         }
 
         private void buttonDeleteOperatorFromStoreHouse_Click(object sender, EventArgs e)

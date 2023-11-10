@@ -42,10 +42,6 @@
             this.buttonRefreshAddOperatorStoreHouses = new System.Windows.Forms.Button();
             this.buttonDeleteOperatorFromStoreHouse = new System.Windows.Forms.Button();
             this.buttonAddOperatorToStoreHouse = new System.Windows.Forms.Button();
-            this.labelIDOperator = new System.Windows.Forms.Label();
-            this.txtBoxIDOperator = new System.Windows.Forms.TextBox();
-            this.txtBoxIDAddOperatorToStoreHouse = new System.Windows.Forms.TextBox();
-            this.labelIDStoreHouse = new System.Windows.Forms.Label();
             this.panelSeparator = new System.Windows.Forms.Panel();
             this.labelAddStoreHouse = new System.Windows.Forms.Label();
             this.labelAssignOperatorToStoreHouse = new System.Windows.Forms.Label();
@@ -202,42 +198,6 @@
             this.buttonAddOperatorToStoreHouse.UseVisualStyleBackColor = true;
             this.buttonAddOperatorToStoreHouse.Click += new System.EventHandler(this.buttonAddOperatorToStoreHouse_Click);
             // 
-            // labelIDOperator
-            // 
-            this.labelIDOperator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelIDOperator.AutoSize = true;
-            this.labelIDOperator.Location = new System.Drawing.Point(454, 452);
-            this.labelIDOperator.Name = "labelIDOperator";
-            this.labelIDOperator.Size = new System.Drawing.Size(61, 13);
-            this.labelIDOperator.TabIndex = 52;
-            this.labelIDOperator.Text = "ID Operario";
-            // 
-            // txtBoxIDOperator
-            // 
-            this.txtBoxIDOperator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxIDOperator.Location = new System.Drawing.Point(455, 468);
-            this.txtBoxIDOperator.Name = "txtBoxIDOperator";
-            this.txtBoxIDOperator.Size = new System.Drawing.Size(43, 20);
-            this.txtBoxIDOperator.TabIndex = 51;
-            // 
-            // txtBoxIDAddOperatorToStoreHouse
-            // 
-            this.txtBoxIDAddOperatorToStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxIDAddOperatorToStoreHouse.Location = new System.Drawing.Point(455, 423);
-            this.txtBoxIDAddOperatorToStoreHouse.Name = "txtBoxIDAddOperatorToStoreHouse";
-            this.txtBoxIDAddOperatorToStoreHouse.Size = new System.Drawing.Size(43, 20);
-            this.txtBoxIDAddOperatorToStoreHouse.TabIndex = 50;
-            // 
-            // labelIDStoreHouse
-            // 
-            this.labelIDStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelIDStoreHouse.AutoSize = true;
-            this.labelIDStoreHouse.Location = new System.Drawing.Point(454, 407);
-            this.labelIDStoreHouse.Name = "labelIDStoreHouse";
-            this.labelIDStoreHouse.Size = new System.Drawing.Size(62, 13);
-            this.labelIDStoreHouse.TabIndex = 49;
-            this.labelIDStoreHouse.Text = "ID Almacen";
-            // 
             // panelSeparator
             // 
             this.panelSeparator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -279,10 +239,6 @@
             this.Controls.Add(this.labelAssignOperatorToStoreHouse);
             this.Controls.Add(this.labelAddStoreHouse);
             this.Controls.Add(this.panelSeparator);
-            this.Controls.Add(this.labelIDOperator);
-            this.Controls.Add(this.txtBoxIDOperator);
-            this.Controls.Add(this.txtBoxIDAddOperatorToStoreHouse);
-            this.Controls.Add(this.labelIDStoreHouse);
             this.Controls.Add(this.dataGridViewAddOperatorStoreHouse);
             this.Controls.Add(this.buttonRefreshAddOperatorStoreHouses);
             this.Controls.Add(this.buttonDeleteOperatorFromStoreHouse);
@@ -316,10 +272,6 @@
         private System.Windows.Forms.Button buttonRefreshAddOperatorStoreHouses;
         private System.Windows.Forms.Button buttonDeleteOperatorFromStoreHouse;
         private System.Windows.Forms.Button buttonAddOperatorToStoreHouse;
-        private System.Windows.Forms.Label labelIDOperator;
-        private System.Windows.Forms.TextBox txtBoxIDOperator;
-        private System.Windows.Forms.TextBox txtBoxIDAddOperatorToStoreHouse;
-        private System.Windows.Forms.Label labelIDStoreHouse;
         private System.Windows.Forms.Panel panelSeparator;
         private System.Windows.Forms.Label labelAddStoreHouse;
         private System.Windows.Forms.Label labelAssignOperatorToStoreHouse;

@@ -145,6 +145,12 @@
     <Compile Include="crudForms\AssignBatchToTruckForm.Designer.cs">
       <DependentUpon>AssignBatchToTruckForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="crudForms\AssignOperatorToStoreHouseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crudForms\AssignOperatorToStoreHouseForm.Designer.cs">
+      <DependentUpon>AssignOperatorToStoreHouseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="crudForms\AssignProductToBatchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="crudForms\AssignBatchToTruckForm.resx">
       <DependentUpon>AssignBatchToTruckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crudForms\AssignOperatorToStoreHouseForm.resx">
+      <DependentUpon>AssignOperatorToStoreHouseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="crudForms\AssignProductToBatchForm.resx">
       <DependentUpon>AssignProductToBatchForm.cs</DependentUpon>
