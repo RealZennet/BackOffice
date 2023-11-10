@@ -54,5 +54,32 @@ namespace capa_datos
             this.Command.CommandText = $"DELETE FROM transporta WHERE id_camion = {this.IDTruck}";
             this.Command.ExecuteNonQuery();
         }
+
+        public void Edit()
+        {
+            bool truckExists = CheckIfTruckExists(this.IDTruck);
+
+            if (truckExists)
+            {
+                this.Command.CommandText = $"UPDATE transporta SET " +
+                    $"id_lote = {this.IDBatch}, " +
+                    $"id_des = {this.IDDestination}, " +
+                    $"estatus = '{this.ShippingStatus}' " +
+                    $"WHERE id_camion = {this.IDTruck}";
+                this.Command.ExecuteNonQuery();
+            }
+            else
+            {
+                throw new Exception("Error: El camión no existe.");
+            }
+        }
+
+        private bool CheckIfTruckExists(int truckId)
+        {
+            this.Command.CommandText = $"SELECT COUNT(*) FROM transporta WHERE id_camion = {truckId}";
+            int count = Convert.ToInt32(this.Command.ExecuteScalar());
+            return count > 0;
+        }
+
     }
 }

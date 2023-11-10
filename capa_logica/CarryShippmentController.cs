@@ -51,6 +51,24 @@ namespace capa_logica
             }
             return table;
         }
+
+        public static void EditCarry(int idTruck, int idBatch, int idDestination, string status)
+        {
+            try
+            {
+                CarryShippmentModel carry = new CarryShippmentModel();
+                carry.IDTruck = idTruck;
+                carry.IDBatch = idBatch;
+                carry.IDDestination = idDestination;
+                carry.ShippingStatus = status;
+                carry.Edit();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public static void DeleteCarry(int id)
         {
             CarryShippmentModel Carry = new CarryShippmentModel();

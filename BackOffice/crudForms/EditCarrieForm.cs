@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BackOffice.Languages;
+using capa_logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,6 +69,40 @@ namespace BackOffice.crudForms
             txtBoxIDDestinationCarrie.Clear();
             txtBoxIDTruckCarrie.Clear();
         }
+
+        private bool ValidateCarrieManagementInputsUser()
+        {
+            if (string.IsNullOrWhiteSpace(txtBoxIDBatchCarrie.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxIDTruckCarrie.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxIDDestinationCarrie.Text))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            string selectedStatus = comboBoxStatus.SelectedItem as string;
+            if (ValidateCarrieManagementInputsUser() && !string.IsNullOrWhiteSpace(selectedStatus))
+            {
+                int idTruck = int.Parse(txtBoxIDTruckCarrie.Text);
+                int idBatch = int.Parse(txtBoxIDBatchCarrie.Text);
+                int idDestination = int.Parse(txtBoxIDDestinationCarrie.Text);
+                CarryShippmentController.EditCarry(idTruck, idBatch, idDestination, selectedStatus);
+                MessageBox.Show(Messages.Successful);
+                clearTxtBox();
+            }
+            else if (string.IsNullOrWhiteSpace(selectedStatus))
+            {
+                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+            }
+            else
+            {
+                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+            }
+        }
+
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
