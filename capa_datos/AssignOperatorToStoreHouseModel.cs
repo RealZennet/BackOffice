@@ -13,10 +13,17 @@ namespace capa_datos
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO gestiona(id_operario, id_alma) VALUES(" +
-               $"{this.IDStoreHouse}, " +
-               $"{this.IDOperator})";
-            this.Command.ExecuteNonQuery();
+            try
+            {
+                this.Command.CommandText = $"INSERT INTO gestiona(id_operario, id_alma) VALUES(" +
+                   $"{this.IDStoreHouse}, " +
+                   $"{this.IDOperator})";
+                this.Command.ExecuteNonQuery();
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
         public List<AssignOperatorToStoreHouseModel> GetAllOperatorsAssignedToStoreHouses()

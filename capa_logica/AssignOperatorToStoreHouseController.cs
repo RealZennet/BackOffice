@@ -12,10 +12,17 @@ namespace capa_logica
     {
         public static void Create(int idstorehouse, int idoperator)
         {
-            AssignOperatorToStoreHouseModel assignedOperatorToStoreHouse = new AssignOperatorToStoreHouseModel();
-            assignedOperatorToStoreHouse.IDStoreHouse = idstorehouse;
-            assignedOperatorToStoreHouse.IDOperator = idoperator;
-            assignedOperatorToStoreHouse.Save();
+            try
+            {
+                AssignOperatorToStoreHouseModel assignedOperatorToStoreHouse = new AssignOperatorToStoreHouseModel();
+                assignedOperatorToStoreHouse.IDStoreHouse = idstorehouse;
+                assignedOperatorToStoreHouse.IDOperator = idoperator;
+                assignedOperatorToStoreHouse.Save();
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
         public static DataTable GetAllOperatorsAssignedToStoreHouses()

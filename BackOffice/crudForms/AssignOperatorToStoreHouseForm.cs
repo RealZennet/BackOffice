@@ -1,4 +1,5 @@
-﻿using capa_logica;
+﻿using BackOffice.Languages;
+using capa_logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -105,16 +106,27 @@ namespace BackOffice.crudForms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if (ValidateAssignOperatorToStoreHouseInputsUser())
+            try
             {
-                AssignOperatorToStoreHouseController.Create(Int32.Parse(txtBoxIDOperator.Text), Int32.Parse(txtBoxIDAddOperatorToStoreHouse.Text));
-                MessageBox.Show(Languages.Messages.Successful);
-                ClearTxtBoxesAssignOperatorToStoreHouse();
-            }
-            else
+                if (ValidateAssignOperatorToStoreHouseInputsUser())
+                {
+                    AssignOperatorToStoreHouseController.Create(Int32.Parse(txtBoxIDOperator.Text), Int32.Parse(txtBoxIDAddOperatorToStoreHouse.Text));
+                    MessageBox.Show(Languages.Messages.Successful);
+                    ClearTxtBoxesAssignOperatorToStoreHouse();
+                }
+                else
+                {
+                    MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                }
+            }catch (Exception ex)
             {
-                MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
+                MessageBox.Show(Messages.InvalidID+"/'s",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
             }
+
         }
     }
 }
