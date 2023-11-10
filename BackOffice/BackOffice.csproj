@@ -163,6 +163,12 @@
     <Compile Include="crudForms\EditDestinationForm.Designer.cs">
       <DependentUpon>EditDestinationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="crudForms\EditStoreHouseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crudForms\EditStoreHouseForm.Designer.cs">
+      <DependentUpon>EditStoreHouseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DestinationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="crudForms\EditDestinationForm.resx">
       <DependentUpon>EditDestinationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crudForms\EditStoreHouseForm.resx">
+      <DependentUpon>EditStoreHouseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DestinationForm.resx">
       <DependentUpon>DestinationForm.cs</DependentUpon>

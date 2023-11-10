@@ -155,25 +155,9 @@ namespace BackOffice
 
 
         private void buttonEditStoreHouse_Click(object sender, EventArgs e)
-        {/*
-            if (dataGridViewStoreHouses.SelectedRows.Count > 0)
-            {
-                int selectedIndex = dataGridViewStoreHouses.SelectedRows[0].Index;
-                int id = (int)dataGridViewStoreHouses.Rows[selectedIndex].Cells["id"].Value;
-
-                if (bool.TryParse(txtBoxStoreHouseActived.Text, out bool isActivated))
-                {
-                    StoreHouseController.UpdateStoreHouse(id, txtBoxStoreHouseStreet.Text, txtBoxStoreHouseDoorNumber.Text, txtBoxStoreHouseCorner.Text, isActivated);
-                    MessageBox.Show(Languages.Messages.Successful);
-                    RefreshTableAddStoreHouse();
-                    ClearTxtBoxesAddStoreHouse();
-                }
-                else
-                {
-                    MessageBox.Show(LanguageManager.GetString("CompleteAllBoxAndStatus"));
-                }
-            }*/
-
+        {
+            EditStoreHouseForm editstorehousecomponent = new EditStoreHouseForm();
+            editstorehousecomponent.Show();
         }
         
         private void dataGridViewStoreHouses_CellClick(object sender, DataGridViewCellEventArgs e)
