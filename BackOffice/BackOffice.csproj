@@ -139,6 +139,12 @@
     <Compile Include="crudForms\AddStoreHouseForm.Designer.cs">
       <DependentUpon>AddStoreHouseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="crudForms\AddTruckerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crudForms\AddTruckerForm.Designer.cs">
+      <DependentUpon>AddTruckerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="crudForms\AddTruckForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="crudForms\AddStoreHouseForm.resx">
       <DependentUpon>AddStoreHouseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crudForms\AddTruckerForm.resx">
+      <DependentUpon>AddTruckerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="crudForms\AddTruckForm.resx">
       <DependentUpon>AddTruckForm.cs</DependentUpon>

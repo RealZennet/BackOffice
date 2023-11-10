@@ -1,4 +1,5 @@
-﻿using capa_logica;
+﻿using BackOffice.crudForms;
+using capa_logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,28 +72,6 @@ namespace BackOffice
             RefreshTable();
         }
 
-        private void addUserTracker()
-        {
-            try
-            {
-
-                if (int.TryParse(txtBoxUsernameTrucker.Text, out int userId))
-                {
-                    AssignTypeOfUserTruckerController.Crear(userId);
-                    MessageBox.Show(Languages.Messages.Successful);
-                    RefreshTable();
-                    ClearTxtBoxes();
-                }
-                else
-                {
-                    MessageBox.Show(Languages.Messages.InvalidID);
-                }
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void addUserOperator()
         {
             try
@@ -119,38 +98,53 @@ namespace BackOffice
 
         private void buttonAddTrucker_Click(object sender, EventArgs e)
         {
-            addUserTracker();
+            AddTruckerForm addtruckercomponente = new AddTruckerForm();
+            addtruckercomponente.Show();
         }
 
         private void deleteUserTrucker()
         {
-            if (dataGridViewUsers.SelectedRows.Count > 0)
+            try
             {
-                int selectedIndex = dataGridViewUsers.SelectedRows[0].Index;
-                int id = (int)dataGridViewUsers.Rows[selectedIndex].Cells["ID"].Value;
-                DataTable dataTableUsers = (DataTable)dataGridViewUsers.DataSource;
-                dataTableUsers.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show(Languages.Messages.Successful);
-                AssignTypeOfUserTruckerController.DeleteUser(id);
-                dataGridViewUsers.DataSource = dataTableUsers;
-                RefreshTable();
+                if (dataGridViewUsers.SelectedRows.Count > 0)
+                {
+                    int selectedIndex = dataGridViewUsers.SelectedRows[0].Index;
+                    int id = (int)dataGridViewUsers.Rows[selectedIndex].Cells["ID"].Value;
+                    DataTable dataTableUsers = (DataTable)dataGridViewUsers.DataSource;
+                    dataTableUsers.Rows.RemoveAt(selectedIndex);
+                    MessageBox.Show(Languages.Messages.Successful);
+                    AssignTypeOfUserTruckerController.DeleteUser(id);
+                    dataGridViewUsers.DataSource = dataTableUsers;
+                    RefreshTable();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
+
         }
 
         private void deleteUserOperator()
         {
-            if (dataGridViewOperators.SelectedRows.Count > 0)
+            try
             {
-                int selectedIndex = dataGridViewOperators.SelectedRows[0].Index;
-                int id = (int)dataGridViewOperators.Rows[selectedIndex].Cells["Nombre de usuario"].Value;
-                DataTable dataTableOperators = (DataTable)dataGridViewOperators.DataSource;
-                dataTableOperators.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show(Languages.Messages.Successful);
-                AssignTypeOfUserOperatorController.DeleteUser(id);
-                dataGridViewOperators.DataSource = dataTableOperators;
-                RefreshTable();
+                if (dataGridViewOperators.SelectedRows.Count > 0)
+                {
+                    int selectedIndex = dataGridViewOperators.SelectedRows[0].Index;
+                    int id = (int)dataGridViewOperators.Rows[selectedIndex].Cells["Nombre de usuario"].Value;
+                    DataTable dataTableOperators = (DataTable)dataGridViewOperators.DataSource;
+                    dataTableOperators.Rows.RemoveAt(selectedIndex);
+                    AssignTypeOfUserOperatorController.DeleteUser(id);
+                    MessageBox.Show(Languages.Messages.Successful);
+                    dataGridViewOperators.DataSource = dataTableOperators;
+                    RefreshTable();
 
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
+
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)

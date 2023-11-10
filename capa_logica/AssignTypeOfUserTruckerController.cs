@@ -37,9 +37,16 @@ namespace capa_logica
         }
         public static void DeleteUser(int id)
         {
-            AssignTypeOfUserTruckerModel user = new AssignTypeOfUserTruckerModel();
-            user.IDTrucker = id;
-            user.DeleteUser();
+            try
+            {
+                AssignTypeOfUserTruckerModel user = new AssignTypeOfUserTruckerModel();
+                user.IDTrucker = id;
+                user.DeleteUser();
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
     }
