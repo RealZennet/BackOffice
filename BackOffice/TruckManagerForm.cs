@@ -103,14 +103,8 @@ namespace BackOffice
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            /*TruckController.EditTruck(
-                Int32.Parse(txtBoxTruckID.Text),
-                Int32.Parse(txtBoxWeightTruck.Text),
-                Int32.Parse(txtBoxVolumeTruck.Text),
-                Convert.ToBoolean(txtBoxActiveTruck.Text)
-            );
-            RefreshTableTruck();
-            MessageBox.Show(Languages.Messages.Successful);*/
+            EditTruckForm edittruckcomponent = new EditTruckForm();
+            edittruckcomponent.Show();
         }
 
         #region trucker
