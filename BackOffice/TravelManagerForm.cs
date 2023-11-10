@@ -1,4 +1,5 @@
-﻿using capa_logica;
+﻿using BackOffice.crudForms;
+using capa_logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,16 +41,6 @@ namespace BackOffice
             buttonDelete.Text = LanguageManager.GetString("Delete");
             buttonRefresh.Text = LanguageManager.GetString("Refresh");
             buttonBack.Text = LanguageManager.GetString("Back");
-            labelIDDestination.Text = LanguageManager.GetString("DestinationID");
-            labelIDStoreHouse.Text = LanguageManager.GetString("StoreHouseID");
-            labelTypeTravel.Text = LanguageManager.GetString("IDOperator");
-            labelDateTravel.Text = LanguageManager.GetString("EstimatedDate");
-        }
-
-        public void ClearTxtBoxes()
-        {
-            txtBoxIDDestination.Clear();
-            txtBoxIDStoreHouse.Clear();
         }
 
         public void RefreshTable()
@@ -58,59 +49,16 @@ namespace BackOffice
             dataGridViewTravels.DataSource = dataTableTravel;
         }
 
-        private bool ValidateInputsUser()
-        {
-
-            if (string.IsNullOrWhiteSpace(txtBoxIDStoreHouse.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxIDDestination.Text))
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        private void addShippment()
-        {
-            try
-            {
-                string selectedStatus = comboBoxTypeTravel.SelectedItem as string;
-                DateTime fechaSeleccionada = dateTimePickerShippmentDate.Value.Date;
-                DateTime horaSeleccionada = dateTimePickerShippmentDateTime.Value;
-                DateTime fechaHoraSeleccionada = fechaSeleccionada.Add(horaSeleccionada.TimeOfDay);
-                if (ValidateInputsUser() && !string.IsNullOrEmpty(selectedStatus))
-                {
-                    TravelController.Create(Int32.Parse(txtBoxIDStoreHouse.Text), Int32.Parse(txtBoxIDDestination.Text), selectedStatus, fechaHoraSeleccionada);
-                    MessageBox.Show("Envío programado");
-                    Refresh();
-                    ClearTxtBoxes();
-                }
-                else if (string.IsNullOrWhiteSpace(selectedStatus))
-                {
-                    MessageBox.Show("Selecciona un estado.");
-                }
-                else
-                {
-                    MessageBox.Show("Completa todos los campos.");
-                }
-            }catch(Exception ex)
-            {
-                MessageBox.Show("Error " + ex.Message);
-            }
-
-        }
-
 
         private void TravelManagerForm_Load(object sender, EventArgs e)
         {
-            comboBoxTypeTravel.Items.Add("Inicio");
-            comboBoxTypeTravel.Items.Add("Parada");
-            comboBoxTypeTravel.Items.Add("Fin");
+
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            addShippment();
+            AddTravelForm addtravelcomponent = new AddTravelForm();
+            addtravelcomponent.Show();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
