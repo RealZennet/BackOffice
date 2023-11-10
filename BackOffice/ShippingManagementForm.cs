@@ -132,8 +132,13 @@ namespace BackOffice
         {
             RefreshTableCarrieManagement();
         }
+
         #endregion Carries
 
-
+        private void buttonEditCarry_Click(object sender, EventArgs e)
+        {
+            EditCarrieForm editcarriecomponent = new EditCarrieForm();
+            editcarriecomponent.Show();
+        }
     }
 }
