@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BackOffice.crudForms;
 using capa_logica;
 
 namespace BackOffice
@@ -35,8 +36,6 @@ namespace BackOffice
             buttonDelete.Text = LanguageManager.GetString("Delete");
             buttonRefresh.Text = LanguageManager.GetString("Refresh");
             buttonBack.Text = LanguageManager.GetString("Back");
-            labelProductID.Text = LanguageManager.GetString("ProductID");
-            labelBatchID.Text = LanguageManager.GetString("LotID");
 
         }
 
@@ -49,11 +48,7 @@ namespace BackOffice
         {
             this.Close();
         }
-        public void ClearTxtBoxes()
-        {
-            txtBoxIDLote.Clear();
-            txtBoxIDProduct.Clear();
-        }
+
         
         public void RefreshTable()
         {
@@ -65,41 +60,11 @@ namespace BackOffice
         {
             RefreshTable();
         }
-       
-        private bool validateInputsUsers()
-        {
-            if(!string.IsNullOrEmpty(txtBoxIDProduct.Text) ||
-                !string.IsNullOrEmpty(txtBoxIDLote.Text))
-            {
-                return true;
-            }
-            return false;
-        }
-        
-        private void assignProduct()
-        {
-            try
-            {
-                if (validateInputsUsers())
-                {
-                    AssignProductsController.Crear(Int32.Parse(txtBoxIDProduct.Text), Int32.Parse(txtBoxIDLote.Text));
-                    MessageBox.Show(Languages.Messages.Successful);
-                    RefreshTable();
-                    ClearTxtBoxes();
-                }
-                else
-                {
-                    MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
-                }
-            }catch(Exception ex)
-            {
-                MessageBox.Show("Error!" + ex.Message);
-            }
-        }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            assignProduct();
+            AssignProductToBatchForm assignproducttobatchcomponent = new AssignProductToBatchForm();
+            assignproducttobatchcomponent.Show();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
