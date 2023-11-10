@@ -357,4 +357,10 @@
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="AddTruck" xml:space="preserve">
+    <value>Add Truck</value>
+  </data>
+  <data name="AssignTruck" xml:space="preserve">
+    <value>Assign Truck</value>
+  </data>
 </root>

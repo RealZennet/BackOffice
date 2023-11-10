@@ -360,4 +360,10 @@
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="AddTruck" xml:space="preserve">
+    <value>Agregara camion</value>
+  </data>
+  <data name="AssignTruck" xml:space="preserve">
+    <value>Asignar camion</value>
+  </data>
 </root>

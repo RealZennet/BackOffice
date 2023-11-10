@@ -47,6 +47,8 @@ namespace BackOffice
             labelActived.Text = LanguageManager.GetString("Activated");
             labelTruckWeight.Text = LanguageManager.GetString("Weight");
             labelTruckVolume.Text = LanguageManager.GetString("Volume");
+            labelAssignTruck.Text = LanguageManager.GetString("AssignTruck");
+            labelAddTruck.Text = LanguageManager.GetString("AddTruck");
 
         }
 
@@ -146,12 +148,6 @@ namespace BackOffice
         private void buttonRefreshAssignTrucker_Click(object sender, EventArgs e)
         {
             RefreshTableTrucker();
-        }
-
-        public void ClearTxtBoxesTrucker()
-        {
-            txtBoxIDAssignedTruck.Clear();
-            txtBoxIDAssignedTrucker.Clear();
         }
 
         private void buttonAddAssignedTruck_Click(object sender, EventArgs e)

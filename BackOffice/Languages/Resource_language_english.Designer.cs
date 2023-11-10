@@ -88,6 +88,15 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Add Truck.
+        /// </summary>
+        internal static string AddTruck {
+            get {
+                return ResourceManager.GetString("AddTruck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a StoreHouse Application.
         /// </summary>
         internal static string AppStoreHouseTitle {
@@ -120,6 +129,15 @@ namespace BackOffice.Languages {
         internal static string AssignProducts {
             get {
                 return ResourceManager.GetString("AssignProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Assign Truck.
+        /// </summary>
+        internal static string AssignTruck {
+            get {
+                return ResourceManager.GetString("AssignTruck", resourceCulture);
             }
         }
         
