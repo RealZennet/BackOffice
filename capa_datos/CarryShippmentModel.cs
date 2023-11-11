@@ -17,11 +17,14 @@ namespace capa_datos
         {
             try
             {
-                this.Command.CommandText = $"INSERT INTO transporta(id_camion, id_lote, id_des, estatus) VALUES(" +
-                   $"{this.IDTruck}, " +
-                   $"{this.IDBatch}, " +
-                   $"{this.IDDestination}," +
-                   $"'{this.ShippingStatus}')";
+                this.Command.CommandText = "INSERT INTO transporta(id_camion, id_lote, id_des, estatus) " +
+                                           "VALUES(@IDTruck, @IDBatch, @IDDestination, @ShippingStatus)";
+
+                this.Command.Parameters.AddWithValue("@IDTruck", this.IDTruck);
+                this.Command.Parameters.AddWithValue("@IDBatch", this.IDBatch);
+                this.Command.Parameters.AddWithValue("@IDDestination", this.IDDestination);
+                this.Command.Parameters.AddWithValue("@ShippingStatus", this.ShippingStatus);
+
                 this.Command.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -61,11 +64,17 @@ namespace capa_datos
 
             if (truckExists)
             {
-                this.Command.CommandText = $"UPDATE transporta SET " +
-                    $"id_lote = {this.IDBatch}, " +
-                    $"id_des = {this.IDDestination}, " +
-                    $"estatus = '{this.ShippingStatus}' " +
-                    $"WHERE id_camion = {this.IDTruck}";
+                this.Command.CommandText = "UPDATE transporta SET " +
+                                           "id_lote = @IDBatch, " +
+                                           "id_des = @IDDestination, " +
+                                           "estatus = @ShippingStatus " +
+                                           "WHERE id_camion = @IDTruck";
+
+                this.Command.Parameters.AddWithValue("@IDBatch", this.IDBatch);
+                this.Command.Parameters.AddWithValue("@IDDestination", this.IDDestination);
+                this.Command.Parameters.AddWithValue("@ShippingStatus", this.ShippingStatus);
+                this.Command.Parameters.AddWithValue("@IDTruck", this.IDTruck);
+
                 this.Command.ExecuteNonQuery();
             }
             else
