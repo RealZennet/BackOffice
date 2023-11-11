@@ -21,18 +21,21 @@ namespace capa_datos
         {
             try
             {
-            this.Command.CommandText = $"INSERT INTO producto(peso_producto, bajalogica, volumen_producto, calle, num, esq, cliente) VALUES(" +
-               $"{this.ProductWeight}, " +
-               $"{this.ActivatedProduct}, " +
-               $"{this.Volume}," +
-               $"'{this.Street}'," +
-               $"{this.DoorNumber}," +
-               $"'{this.Corner}'," +
-               $"'{this.Customer}')";
-            this.Command.ExecuteNonQuery();
+                this.Command.CommandText = "INSERT INTO producto(peso_producto, bajalogica, volumen_producto, calle, num, esq, cliente) " +
+                                           "VALUES(@ProductWeight, @ActivatedProduct, @Volume, @Street, @DoorNumber, @Corner, @Customer)";
 
-            this.Command.CommandText = "SELECT LAST_INSERT_ID()";
-            this.IDProduct = Convert.ToInt32(this.Command.ExecuteScalar());
+                this.Command.Parameters.AddWithValue("@ProductWeight", this.ProductWeight);
+                this.Command.Parameters.AddWithValue("@ActivatedProduct", this.ActivatedProduct);
+                this.Command.Parameters.AddWithValue("@Volume", this.Volume);
+                this.Command.Parameters.AddWithValue("@Street", this.Street);
+                this.Command.Parameters.AddWithValue("@DoorNumber", this.DoorNumber);
+                this.Command.Parameters.AddWithValue("@Corner", this.Corner);
+                this.Command.Parameters.AddWithValue("@Customer", this.Customer);
+
+                this.Command.ExecuteNonQuery();
+
+                this.Command.CommandText = "SELECT LAST_INSERT_ID()";
+                this.IDProduct = Convert.ToInt32(this.Command.ExecuteScalar());
             }
             catch (Exception ex)
             {
