@@ -17,12 +17,14 @@ namespace capa_datos
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO destino(calle, num, esq, fech_esti,bajalogica) VALUES(" +
-                 $"'{this.StreetDestination}'," +
-                 $"'{this.DoorNumber}'," +
-                 $"'{this.CornerDestination}'," +
-                 $"'{this.EstimatedDate.ToString("yyyy-MM-dd HH:mm:ss")}'," +
-                 $"{this.ActivedDestination})";
+            this.Command.CommandText = "INSERT INTO destino(calle, num, esq, fech_esti, bajalogica) " +
+                                       "VALUES(@StreetDestination, @DoorNumber, @CornerDestination, @EstimatedDate, @ActivedDestination)";
+
+            this.Command.Parameters.AddWithValue("@StreetDestination", this.StreetDestination);
+            this.Command.Parameters.AddWithValue("@DoorNumber", this.DoorNumber);
+            this.Command.Parameters.AddWithValue("@CornerDestination", this.CornerDestination);
+            this.Command.Parameters.AddWithValue("@EstimatedDate", this.EstimatedDate.ToString("yyyy-MM-dd HH:mm:ss"));
+            this.Command.Parameters.AddWithValue("@ActivedDestination", this.ActivedDestination);
 
             this.Command.ExecuteNonQuery();
         }
@@ -70,18 +72,25 @@ namespace capa_datos
 
         public void Edit()
         {
-
             bool destinationExists = CheckIfDestinationExists(this.IDDestination);
 
-            if (destinationExists == true)
+            if (destinationExists)
             {
-                this.Command.CommandText = $"UPDATE destino SET " +
-                    $"calle = '{this.StreetDestination}', " +
-                    $"num = '{this.DoorNumber}', " +
-                    $"esq = '{this.CornerDestination}', " +
-                    $"bajalogica = {this.ActivedDestination}, " +
-                    $"fech_esti = '{this.EstimatedDate.ToString("yyyy-MM-dd HH:mm:ss")}' " +
-                    $"WHERE id_des = {this.IDDestination}";
+                this.Command.CommandText = "UPDATE destino SET " +
+                                           "calle = @StreetDestination, " +
+                                           "num = @DoorNumber, " +
+                                           "esq = @CornerDestination, " +
+                                           "bajalogica = @ActivedDestination, " +
+                                           "fech_esti = @EstimatedDate " +
+                                           "WHERE id_des = @IDDestination";
+
+                this.Command.Parameters.AddWithValue("@StreetDestination", this.StreetDestination);
+                this.Command.Parameters.AddWithValue("@DoorNumber", this.DoorNumber);
+                this.Command.Parameters.AddWithValue("@CornerDestination", this.CornerDestination);
+                this.Command.Parameters.AddWithValue("@ActivedDestination", this.ActivedDestination);
+                this.Command.Parameters.AddWithValue("@EstimatedDate", this.EstimatedDate.ToString("yyyy-MM-dd HH:mm:ss"));
+                this.Command.Parameters.AddWithValue("@IDDestination", this.IDDestination);
+
                 this.Command.ExecuteNonQuery();
             }
             else

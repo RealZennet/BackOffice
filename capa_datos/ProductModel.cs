@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_datos
 {
-    public class ModelProduct:DataBaseControl
+    public class ProductModel:DataBaseControl
     {
         public int IDProduct { get; set; }
         public int ProductWeight { get; set; }
@@ -43,15 +43,15 @@ namespace capa_datos
             }
         }
 
-        public List<ModelProduct> GetAllProducts()
+        public List<ProductModel> GetAllProducts()
         {
             this.Command.CommandText = "SELECT * FROM producto";
             this.Reader = this.Command.ExecuteReader();
 
-            List<ModelProduct> result = new List<ModelProduct>();
+            List<ProductModel> result = new List<ProductModel>();
             while (this.Reader.Read())
             {
-                ModelProduct product = new ModelProduct();
+                ProductModel product = new ProductModel();
                 product.IDProduct = Int32.Parse(this.Reader["id_prod"].ToString());
                 product.ProductWeight = Int32.Parse(this.Reader["peso_producto"].ToString());
                 product.ActivatedProduct = Convert.ToBoolean(this.Reader["bajalogica"].ToString());

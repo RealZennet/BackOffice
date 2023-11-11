@@ -15,7 +15,7 @@ namespace capa_logica
             try
             {
                 DateTime DateCreation = DateTime.Now;
-                ModelBatch lot = new ModelBatch();
+                BatchModel lot = new BatchModel();
                 lot.Email = email;
                 lot.ShippingDate = ShippingDate;
                 lot.DateOfCreation = DateCreation;
@@ -32,8 +32,8 @@ namespace capa_logica
 
         public static DataTable Obtener()
         {
-            ModelBatch LotsTableModel = new ModelBatch();
-            List<ModelBatch> lots = LotsTableModel.GetAllLots();
+            BatchModel LotsTableModel = new BatchModel();
+            List<BatchModel> lots = LotsTableModel.GetAllLots();
             DataTable table = new DataTable();
             table.Columns.Add("id", typeof(int));
             table.Columns.Add("Email", typeof(string));
@@ -43,7 +43,7 @@ namespace capa_logica
             table.Columns.Add("Posicion", typeof(string));
             table.Columns.Add("Activo", typeof(bool));
 
-            foreach (ModelBatch lot in lots)
+            foreach (BatchModel lot in lots)
             {
                 DataRow row = table.NewRow();
                 row["id"] = lot.IDBatch;
@@ -59,7 +59,7 @@ namespace capa_logica
         }
         public static void EliminarLote(int id)
         {
-            ModelBatch lote = new ModelBatch();
+            BatchModel lote = new BatchModel();
             lote.IDBatch = id;
             lote.DeleteLots();
         }
