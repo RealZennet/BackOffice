@@ -17,11 +17,14 @@ namespace capa_datos
         public void Save()
         {
             int activatedValue = this.ActivatedStoreHouse ? 1 : 0;
-            this.Command.CommandText = $"INSERT INTO almacen(calle, num, esq, bajalogica) VALUES(" +
-               $"'{this.Street}', " +
-               $"'{this.DoorNumber}', " +
-               $"'{this.Corner}'," +
-               $"{activatedValue})";
+            this.Command.CommandText = "INSERT INTO almacen(calle, num, esq, bajalogica) " +
+                                       "VALUES(@Street, @DoorNumber, @Corner, @ActivatedStoreHouse)";
+
+            this.Command.Parameters.AddWithValue("@Street", this.Street);
+            this.Command.Parameters.AddWithValue("@DoorNumber", this.DoorNumber);
+            this.Command.Parameters.AddWithValue("@Corner", this.Corner);
+            this.Command.Parameters.AddWithValue("@ActivatedStoreHouse", activatedValue);
+
             this.Command.ExecuteNonQuery();
         }
 
@@ -54,12 +57,18 @@ namespace capa_datos
         public void Update()
         {
             int activatedValue = this.ActivatedStoreHouse ? 1 : 0;
-            this.Command.CommandText = $"UPDATE almacen SET " +
-                $"calle = '{this.Street}', " +
-                $"num = '{this.DoorNumber}', " +
-                $"esq = '{this.Corner}', " +
-                $"bajalogica = {activatedValue} " +
-                $"WHERE id_alma = {this.IDStoreHouse}";
+            this.Command.CommandText = "UPDATE almacen SET " +
+                                       "calle = @Street, " +
+                                       "num = @DoorNumber, " +
+                                       "esq = @Corner, " +
+                                       "bajalogica = @ActivatedStoreHouse " +
+                                       "WHERE id_alma = @IDStoreHouse";
+
+            this.Command.Parameters.AddWithValue("@Street", this.Street);
+            this.Command.Parameters.AddWithValue("@DoorNumber", this.DoorNumber);
+            this.Command.Parameters.AddWithValue("@Corner", this.Corner);
+            this.Command.Parameters.AddWithValue("@ActivatedStoreHouse", activatedValue);
+            this.Command.Parameters.AddWithValue("@IDStoreHouse", this.IDStoreHouse);
 
             this.Command.ExecuteNonQuery();
         }
