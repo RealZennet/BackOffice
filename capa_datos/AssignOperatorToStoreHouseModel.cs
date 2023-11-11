@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace capa_datos
 {
@@ -15,15 +12,15 @@ namespace capa_datos
         {
             try
             {
-                this.Command.CommandText = $"INSERT INTO gestiona(id_operario, id_alma) VALUES(" +
-                   $"{this.IDStoreHouse}, " +
-                   $"{this.IDOperator})";
+                this.Command.CommandText = "INSERT INTO gestiona (id_operario, id_alma) VALUES (@IDStoreHouse, @IDOperator)";
+                this.Command.Parameters.AddWithValue("@IDStoreHouse", this.IDStoreHouse);
+                this.Command.Parameters.AddWithValue("@IDOperator", this.IDOperator);
                 this.Command.ExecuteNonQuery();
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-
         }
 
         public List<AssignOperatorToStoreHouseModel> GetAllOperatorsAssignedToStoreHouses()

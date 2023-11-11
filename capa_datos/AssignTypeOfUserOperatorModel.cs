@@ -15,10 +15,11 @@ namespace capa_datos
         {
             try
             {
-            this.Command.CommandText = $"INSERT INTO operario (id_operario) VALUES (" +
-                $"'{this.IDOperator}')";
-            this.Command.ExecuteNonQuery();
-            }catch(Exception ex)
+                this.Command.CommandText = "INSERT INTO operario (id_operario) VALUES (@IDOperator)";
+                this.Command.Parameters.AddWithValue("@IDOperator", this.IDOperator);
+                this.Command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
             {
                 throw new Exception("Error al guardar");
             }
