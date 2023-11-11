@@ -1,4 +1,5 @@
-﻿using capa_logica;
+﻿using BackOffice.Languages;
+using capa_logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,12 +88,19 @@ namespace BackOffice.crudForms
                 MessageBox.Show(Languages.Messages.CompleteAllBoxAndStatus);
                 return;
             }
+            if (txtBoxUsername.Text.Length > 16)
+            {
+                MessageBox.Show(Messages.UsernameTooLong);
+                return;
+            }
             createUser();
         }
 
         private void createUser()
         {
-            UserController.Crear(
+            try
+            {
+                UserController.Crear(
                 txtBoxFirstName.Text,
                 txtBoxFirstLastName.Text,
                 txtBoxPhoneNumber.Text,
@@ -101,6 +109,11 @@ namespace BackOffice.crudForms
             );
             MessageBox.Show(Languages.Messages.Successful);
             clearTxtBoxes();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(Messages.Error + " " + ex.Message);
+            }
+
         }
 
         private void txtBoxFirstName_TextChanged(object sender, EventArgs e)

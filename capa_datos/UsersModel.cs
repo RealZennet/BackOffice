@@ -19,14 +19,24 @@ namespace capa_datos
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO trabajador (nom, ape, bajalogica, tel, username, pass) VALUES (" +
-                $"'{this.FirstName}'," +
-                $"'{this.FirstLastName}', " +
-                $"{this.ActivedUser}," +
-                $"{this.PhoneNumber}," +
-                $"'{this.UserName}'," +
-                $"'{Hash.Content(this.Password)}')";
-            this.Command.ExecuteNonQuery();
+            try
+            {
+                this.Command.CommandText = "INSERT INTO trabajador (nom, ape, bajalogica, tel, username, pass) " +
+                "VALUES (@FirstName, @FirstLastName, @ActivedUser, @PhoneNumber, @UserName, @Password)";
+
+                this.Command.Parameters.AddWithValue("@FirstName", this.FirstName);
+                this.Command.Parameters.AddWithValue("@FirstLastName", this.FirstLastName);
+                this.Command.Parameters.AddWithValue("@ActivedUser", this.ActivedUser);
+                this.Command.Parameters.AddWithValue("@PhoneNumber", this.PhoneNumber);
+                this.Command.Parameters.AddWithValue("@UserName", this.UserName);
+                this.Command.Parameters.AddWithValue("@Password", Hash.Content(this.Password));
+
+                this.Command.ExecuteNonQuery();
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
         public List<UsersModel> GetAllUsers()
@@ -78,15 +88,29 @@ namespace capa_datos
 
             if (userExists)
             {
-                this.Command.CommandText = $"UPDATE trabajador SET " +
-                    $"username = '{this.UserName}', " +
-                    $"nom = '{this.FirstName}', " +
-                    $"ape = '{this.FirstLastName}', " +
-                    $"bajalogica = {this.ActivedUser}, " +
-                    $"tel = '{this.PhoneNumber}' " +
-                    $"WHERE id = {this.UserID}";
+                try
+                {
+                    this.Command.CommandText = "UPDATE trabajador SET " +
+                        "username = @UserName, " +
+                        "nom = @FirstName, " +
+                        "ape = @FirstLastName, " +
+                        "bajalogica = @ActivedUser, " +
+                        "tel = @PhoneNumber " +
+                        "WHERE id = @UserID";
 
-                this.Command.ExecuteNonQuery();
+                    this.Command.Parameters.AddWithValue("@UserName", this.UserName);
+                    this.Command.Parameters.AddWithValue("@FirstName", this.FirstName);
+                    this.Command.Parameters.AddWithValue("@FirstLastName", this.FirstLastName);
+                    this.Command.Parameters.AddWithValue("@ActivedUser", this.ActivedUser);
+                    this.Command.Parameters.AddWithValue("@PhoneNumber", this.PhoneNumber);
+                    this.Command.Parameters.AddWithValue("@UserID", this.UserID);
+
+                    this.Command.ExecuteNonQuery();
+                }catch(Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+
             }
             else
             {

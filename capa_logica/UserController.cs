@@ -12,13 +12,20 @@ namespace capa_logica
     {
         public static void Crear(string firstname , string firstlastname, string phonenumber, string username, string password)
         {
-            UsersModel user = new UsersModel();
-            user.FirstName = firstname;
-            user.FirstLastName = firstlastname;
-            user.PhoneNumber = phonenumber;
-            user.UserName = username;
-            user.Password = password;
-            user.Save();
+            try
+            {
+                UsersModel user = new UsersModel();
+                user.FirstName = firstname;
+                user.FirstLastName = firstlastname;
+                user.PhoneNumber = phonenumber;
+                user.UserName = username;
+                user.Password = password;
+                user.Save();
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
 
@@ -66,15 +73,22 @@ namespace capa_logica
         {
             if (UserExists(id))
             {
-                UsersModel usuario = new UsersModel();
-                usuario.UserID = id;
-                usuario.FirstName = firstname;
-                usuario.FirstLastName = firstlastname;
-                usuario.PhoneNumber = phonenumber;
-                usuario.UserName = username;
-                usuario.Password = password;
+                try
+                {
+                    UsersModel usuario = new UsersModel();
+                    usuario.UserID = id;
+                    usuario.FirstName = firstname;
+                    usuario.FirstLastName = firstlastname;
+                    usuario.PhoneNumber = phonenumber;
+                    usuario.UserName = username;
+                    usuario.Password = password;
 
-                usuario.EditUser();
+                    usuario.EditUser();
+                }catch(Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+
             }
             else
             {

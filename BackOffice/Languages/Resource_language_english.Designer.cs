@@ -790,6 +790,15 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Username max length are 16 characters.
+        /// </summary>
+        internal static string UsernameTooLong {
+            get {
+                return ResourceManager.GetString("UsernameTooLong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Please entered data.
         /// </summary>
         internal static string VerifyInformation {
