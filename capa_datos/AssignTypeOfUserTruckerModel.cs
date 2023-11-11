@@ -12,8 +12,8 @@ namespace capa_datos
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO camionero (id_camionero) VALUES (" +
-                $"{this.IDTrucker})";
+            this.Command.CommandText = "INSERT INTO camionero (id_camionero) VALUES (@IDTrucker)";
+            this.Command.Parameters.AddWithValue("@IDTrucker", this.IDTrucker);
             this.Command.ExecuteNonQuery();
         }
 

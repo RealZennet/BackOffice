@@ -160,7 +160,7 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Cancel.
+        ///   Busca una cadena traducida similar a Cancelar.
         /// </summary>
         internal static string Cancel {
             get {
@@ -628,7 +628,7 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Save.
+        ///   Busca una cadena traducida similar a Guardar.
         /// </summary>
         internal static string Save {
             get {
@@ -786,6 +786,15 @@ namespace BackOffice.Languages {
         internal static string Username {
             get {
                 return ResourceManager.GetString("Username", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Username no puede exceder los 16 caracteres.
+        /// </summary>
+        internal static string UsernameTooLong {
+            get {
+                return ResourceManager.GetString("UsernameTooLong", resourceCulture);
             }
         }
         

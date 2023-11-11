@@ -16,17 +16,20 @@ namespace capa_datos
         {
             try
             {
-            this.Command.CommandText = $"INSERT INTO llevan(id_camion, id_lote, fech_sal) VALUES(" +
-               $"{this.IDTruck}, " +
-               $"{this.IDBatch}," +
-               $"'{this.DateShipping.ToString("yyyy-MM-dd HH:mm:ss")}')";
-            this.Command.ExecuteNonQuery();
-            }catch(Exception ex)
+                this.Command.CommandText = "INSERT INTO llevan(id_camion, id_lote, fech_sal) " +
+                                           "VALUES(@IDTruck, @IDBatch, @DateShipping)";
+
+                this.Command.Parameters.AddWithValue("@IDTruck", this.IDTruck);
+                this.Command.Parameters.AddWithValue("@IDBatch", this.IDBatch);
+                this.Command.Parameters.AddWithValue("@DateShipping", this.DateShipping);
+
+                this.Command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
             {
                 throw new Exception("Error");
             }
         }
-
 
         public List<ShippingManagementModel> GetAllShippings()
         {

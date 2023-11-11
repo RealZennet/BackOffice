@@ -21,16 +21,20 @@ namespace capa_datos
             {
                 throw new Exception("Datos incorrectos.");
             }
+
             try
             {
+                this.Command.CommandText = "INSERT INTO recorrido(id_alma, id_des, tipo_trayecto, fech_trayecto) " +
+                                           "VALUES(@IDStoreHouse, @IDDestination, @TypeTravel, @ShipmentDate)";
 
-            this.Command.CommandText = $"INSERT INTO recorrido(id_alma, id_des, tipo_trayecto, fech_trayecto) VALUES(" +
-                $"{this.IDStoreHouse}, " +
-                $"{this.IDDestination}, " +
-                $"'{this.TypeTravel}', " +
-                $"'{this.ShippmentDate.ToString("yyyy-MM-dd HH:mm:ss")}')";
-            this.Command.ExecuteNonQuery();
-            }catch(Exception ex)
+                this.Command.Parameters.AddWithValue("@IDStoreHouse", this.IDStoreHouse);
+                this.Command.Parameters.AddWithValue("@IDDestination", this.IDDestination);
+                this.Command.Parameters.AddWithValue("@TypeTravel", this.TypeTravel);
+                this.Command.Parameters.AddWithValue("@ShipmentDate", this.ShippmentDate);
+
+                this.Command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -156,5 +160,6 @@ namespace capa_datos
             this.Command.CommandText = $"DELETE FROM recorrido WHERE id_alma = {this.IDStoreHouse}";
             this.Command.ExecuteNonQuery();
         }
+
     }
 }

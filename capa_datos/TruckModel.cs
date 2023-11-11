@@ -15,10 +15,12 @@ namespace capa_datos
 
         public void Save()
         {
-            this.Command.CommandText = $"INSERT INTO camion(peso_camion, volumen_camion, bajalogica) VALUES(" +
-                $"{this.TruckWeight}," +
-                $"{this.TruckVolume}," +
-                $"{this.ActivedTruck})";
+            this.Command.CommandText = "INSERT INTO camion(peso_camion, volumen_camion, bajalogica) " +
+                                       "VALUES(@TruckWeight, @TruckVolume, @ActivedTruck)";
+
+            this.Command.Parameters.AddWithValue("@TruckWeight", this.TruckWeight);
+            this.Command.Parameters.AddWithValue("@TruckVolume", this.TruckVolume);
+            this.Command.Parameters.AddWithValue("@ActivedTruck", this.ActivedTruck);
 
             this.Command.ExecuteNonQuery();
         }
@@ -64,16 +66,21 @@ namespace capa_datos
 
         public void Edit()
         {
-
             bool truckExists = CheckIfTruckExists(this.IDTruck);
 
-            if (truckExists == true)
+            if (truckExists)
             {
-                this.Command.CommandText = $"UPDATE camion SET " +
-                    $"peso_camion = {this.TruckWeight}, " +
-                    $"volumen_camion = {this.TruckVolume}, " +
-                    $"bajalogica = {this.ActivedTruck} " +
-                    $"WHERE id_camion = {this.IDTruck}";
+                this.Command.CommandText = "UPDATE camion SET " +
+                                           "peso_camion = @TruckWeight, " +
+                                           "volumen_camion = @TruckVolume, " +
+                                           "bajalogica = @ActivedTruck " +
+                                           "WHERE id_camion = @IDTruck";
+
+                this.Command.Parameters.AddWithValue("@TruckWeight", this.TruckWeight);
+                this.Command.Parameters.AddWithValue("@TruckVolume", this.TruckVolume);
+                this.Command.Parameters.AddWithValue("@ActivedTruck", this.ActivedTruck);
+                this.Command.Parameters.AddWithValue("@IDTruck", this.IDTruck);
+
                 this.Command.ExecuteNonQuery();
             }
             else

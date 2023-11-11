@@ -7,7 +7,7 @@ using MySqlConnector;
 
 namespace capa_datos
 {
-    public class ModelBatch : DataBaseControl
+    public class BatchModel : DataBaseControl
     {
         public int IDBatch { get; set; }
         public string Email { get; set; }
@@ -19,33 +19,39 @@ namespace capa_datos
 
         public void Save()
         {
-            try {
-            this.Command.CommandText = $"INSERT INTO lote (email, fech_Crea, fech_Entre, id_Des, posicion, bajalogica) VALUES " +
-                $"('{this.Email.ToString()}', " +
-                $"'{this.DateOfCreation.ToString("yyyy-MM-dd HH:mm:ss")}', " +
-                $"'{this.ShippingDate.ToString("yyyy-MM-dd HH:mm:ss")}', " +
-                $"{this.IDShipp}, " +
-                $"'{this.Position}', " +
-                $"{this.ActivedBatch})";
-            this.Command.ExecuteNonQuery();
+            try
+            {
+                this.Command.CommandText = "INSERT INTO lote (email, fech_Crea, fech_Entre, id_Des, posicion, bajalogica) " +
+                                           "VALUES (@Email, @DateOfCreation, @ShippingDate, @IDShipp, @Position, @ActivedBatch)";
 
-            this.Command.CommandText = "SELECT last_insert_id()";
-            this.IDBatch = Convert.ToInt32(this.Command.ExecuteScalar());
-            }catch(Exception ex)
+                this.Command.Parameters.AddWithValue("@Email", this.Email.ToString());
+                this.Command.Parameters.AddWithValue("@DateOfCreation", this.DateOfCreation.ToString("yyyy-MM-dd HH:mm:ss"));
+                this.Command.Parameters.AddWithValue("@ShippingDate", this.ShippingDate.ToString("yyyy-MM-dd HH:mm:ss"));
+                this.Command.Parameters.AddWithValue("@IDShipp", this.IDShipp);
+                this.Command.Parameters.AddWithValue("@Position", this.Position);
+                this.Command.Parameters.AddWithValue("@ActivedBatch", this.ActivedBatch);
+
+                this.Command.ExecuteNonQuery();
+
+                this.Command.CommandText = "SELECT last_insert_id()";
+                this.IDBatch = Convert.ToInt32(this.Command.ExecuteScalar());
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
 
-        public List<ModelBatch> GetAllLots()
+
+        public List<BatchModel> GetAllLots()
         {
             this.Command.CommandText = $"SELECT * FROM lote";
             this.Reader = this.Command.ExecuteReader();
 
-            List<ModelBatch> result = new List<ModelBatch>();
+            List<BatchModel> result = new List<BatchModel>();
             while (this.Reader.Read())
             {
-                ModelBatch lot = new ModelBatch();
+                BatchModel lot = new BatchModel();
                 lot.IDBatch = Int32.Parse(this.Reader["id_Lote"].ToString());
                 lot.Email = this.Reader["email"].ToString();
                 lot.DateOfCreation = DateTime.Parse(this.Reader["fech_Crea"].ToString());

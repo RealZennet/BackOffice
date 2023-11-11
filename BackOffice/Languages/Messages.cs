@@ -36,5 +36,6 @@ namespace BackOffice.Languages
         public static string Position => LanguageManager.GetString("Position");
         public static string TruckerHasTruckAssigned => LanguageManager.GetString("TruckerHasTruckAssigned");
         public static string OperatorIsAssignedToAnStoreHouse => LanguageManager.GetString("OperatorIsAssignedToAnStoreHouse");
+        public static string UsernameTooLong => LanguageManager.GetString("UsernameTooLong");
     }
 }

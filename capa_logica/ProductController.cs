@@ -14,7 +14,7 @@ namespace capa_logica
         {
             try
             {
-                ModelProduct product = new ModelProduct();
+                ProductModel product = new ProductModel();
                 product.ProductWeight = productweight;
                 product.Volume = productvolume;
                 product.Street = street;
@@ -32,8 +32,8 @@ namespace capa_logica
 
         public static DataTable Obtener()
         {
-            ModelProduct ProductTableModel = new ModelProduct();
-            List<ModelProduct> products = ProductTableModel.GetAllProducts();
+            ProductModel ProductTableModel = new ProductModel();
+            List<ProductModel> products = ProductTableModel.GetAllProducts();
 
             DataTable table = new DataTable();
             table.Columns.Add("id", typeof(int));
@@ -45,7 +45,7 @@ namespace capa_logica
             table.Columns.Add("Cliente", typeof(string));
             table.Columns.Add("Activo", typeof(bool));
 
-            foreach (ModelProduct product in products)
+            foreach (ProductModel product in products)
             {
                 DataRow row = table.NewRow();
                 row["id"] = product.IDProduct;
@@ -62,7 +62,7 @@ namespace capa_logica
         }
         public static void EliminarProducto(int id)
         {
-            ModelProduct producto = new ModelProduct();
+            ProductModel producto = new ProductModel();
             producto.IDProduct = id;
             producto.Delete();
         }

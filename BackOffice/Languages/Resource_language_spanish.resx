@@ -355,10 +355,10 @@
     <value>Posicion</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Cancelar</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>Guardar</value>
   </data>
   <data name="AddTruck" xml:space="preserve">
     <value>Agregara camion</value>
@@ -377,5 +377,8 @@
   </data>
   <data name="Trucker" xml:space="preserve">
     <value>Chofer</value>
+  </data>
+  <data name="UsernameTooLong" xml:space="preserve">
+    <value>Username no puede exceder los 16 caracteres</value>
   </data>
 </root>

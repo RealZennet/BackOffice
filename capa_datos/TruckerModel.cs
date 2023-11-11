@@ -17,9 +17,11 @@ namespace capa_datos
             {
                 throw new Exception("El conductor no existe.");
             }
-            this.Command.CommandText = $"INSERT INTO conduce(id_camion, id_camionero) VALUES(" +
-                $"{this.IDTruck}," +
-                $"{this.IDTrucker})";
+
+            this.Command.CommandText = "INSERT INTO conduce(id_camion, id_camionero) VALUES(@IDTruck, @IDTrucker)";
+
+            this.Command.Parameters.AddWithValue("@IDTruck", this.IDTruck);
+            this.Command.Parameters.AddWithValue("@IDTrucker", this.IDTrucker);
 
             this.Command.ExecuteNonQuery();
         }

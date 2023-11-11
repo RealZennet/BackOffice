@@ -16,7 +16,9 @@ namespace capa_datos
         {
             try
             {
-                this.Command.CommandText = $"INSERT INTO integra (id_prod, id_lote) VALUES ({this.IDProduct}, {this.IDBatch})";
+                this.Command.CommandText = "INSERT INTO integra (id_prod, id_lote) VALUES (@IDProduct, @IDBatch)";
+                this.Command.Parameters.AddWithValue("@IDProduct", this.IDProduct);
+                this.Command.Parameters.AddWithValue("@IDBatch", this.IDBatch);
                 this.Command.ExecuteNonQuery();
             }
             catch (MySqlException ex)
@@ -35,7 +37,6 @@ namespace capa_datos
                 throw;
             }
         }
-
 
         public List<AssignProductsModel> TodosLosItems()
         {

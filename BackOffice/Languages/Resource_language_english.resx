@@ -375,4 +375,7 @@
   <data name="Trucker" xml:space="preserve">
     <value>Trucker</value>
   </data>
+  <data name="UsernameTooLong" xml:space="preserve">
+    <value>Username max length are 16 characters</value>
+  </data>
 </root>
