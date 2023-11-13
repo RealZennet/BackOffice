@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BackOffice.crudForms;
+using BackOffice.Languages;
 using capa_logica;
 
 namespace BackOffice
@@ -63,8 +64,27 @@ namespace BackOffice
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            AssignProductToBatchForm assignproducttobatchcomponent = new AssignProductToBatchForm();
-            assignproducttobatchcomponent.Show();
+            if (!IsFormOpen<AssignProductToBatchForm>())
+            {
+                AssignProductToBatchForm assignproducttobatchcomponent = new AssignProductToBatchForm();
+                assignproducttobatchcomponent.Show();
+            }
+            else
+            {
+                MessageBox.Show(Messages.Error);
+            }
+        }
+
+        private bool IsFormOpen<T>() where T : Form
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(T))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)

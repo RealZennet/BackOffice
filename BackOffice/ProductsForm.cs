@@ -1,4 +1,5 @@
 ﻿using BackOffice.crudForms;
+using BackOffice.Languages;
 using capa_logica;
 using System;
 using System.Collections.Generic;
@@ -61,9 +62,29 @@ namespace BackOffice
 
         private void buttonAddProduct_Click(object sender, EventArgs e)
         {
-            AddProductForm addproductcomponent = new AddProductForm();
-            addproductcomponent.Show();
+            if (!IsFormOpen<AddProductForm>())
+            {
+                AddProductForm addproductcomponent = new AddProductForm();
+                addproductcomponent.Show();
+            }
+            else
+            {
+                MessageBox.Show(Messages.Error);
+            }
         }
+
+        private bool IsFormOpen<T>() where T : Form
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(T))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {

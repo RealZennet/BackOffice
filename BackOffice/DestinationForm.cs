@@ -1,4 +1,5 @@
 ﻿using BackOffice.crudForms;
+using BackOffice.Languages;
 using capa_logica;
 using System;
 using System.Data;
@@ -70,10 +71,28 @@ namespace BackOffice
 
         private void buttonAddDestination_Click(object sender, EventArgs e)
         {
-            AddDestinationForm adddestinationcomponent = new AddDestinationForm();
-            adddestinationcomponent.Show();
+            if (!IsFormOpen<AddDestinationForm>())
+            {
+                AddDestinationForm adddestinationcomponent = new AddDestinationForm();
+                adddestinationcomponent.Show();
+            }
+            else
+            {
+                MessageBox.Show(Messages.Error);
+            }
         }
 
+        private bool IsFormOpen<T>() where T : Form
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(T))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
         private void buttonRefreshDestination_Click(object sender, EventArgs e)
         {
@@ -86,17 +105,20 @@ namespace BackOffice
             deleteDestination();
         }
         
-        private void edit()
-        {
-           
-        }
 
         #endregion Destination
 
         private void buttonEditDestination_Click(object sender, EventArgs e)
         {
-            EditDestinationForm editestinationcomponent = new EditDestinationForm();
-            editestinationcomponent.Show();
+            if (!IsFormOpen<EditDestinationForm>())
+            {
+                EditDestinationForm editestinationcomponent = new EditDestinationForm();
+                editestinationcomponent.Show();
+            }
+            else
+            {
+                MessageBox.Show(Messages.Error);
+            }
         }
 
         private void dataGridViewDestinations_CellClick(object sender, DataGridViewCellEventArgs e)

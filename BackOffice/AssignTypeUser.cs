@@ -71,8 +71,27 @@ namespace BackOffice
 
         private void buttonAddTrucker_Click(object sender, EventArgs e)
         {
-            AddTruckerForm addtruckercomponente = new AddTruckerForm();
-            addtruckercomponente.Show();
+            if (!IsFormOpen<AddTruckerForm>())
+            {
+                AddTruckerForm addtruckercomponent = new AddTruckerForm();
+                addtruckercomponent.Show();
+            }
+            else
+            {
+                MessageBox.Show(Messages.Error);
+            }
+        }
+
+        private bool IsFormOpen<T>() where T : Form
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(T))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private void deleteUserTrucker()
@@ -127,8 +146,16 @@ namespace BackOffice
 
         private void buttonAddOperator_Click(object sender, EventArgs e)
         {
-            AddOperatorForm addoperatoromponent = new AddOperatorForm();
-            addoperatoromponent.Show();
+
+            if (!IsFormOpen<AddOperatorForm>())
+            {
+                AddOperatorForm addoperatoromponent = new AddOperatorForm();
+                addoperatoromponent.Show();
+            }
+            else
+            {
+                MessageBox.Show(Messages.Error);
+            }
         }
 
         private void buttonDeleteOperator_Click(object sender, EventArgs e)
