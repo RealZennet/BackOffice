@@ -64,7 +64,7 @@ namespace BackOffice.crudForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error!" + ex.Message);
+                MessageBox.Show("Error!");
             }
         }
 

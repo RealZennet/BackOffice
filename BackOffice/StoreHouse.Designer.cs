@@ -209,7 +209,6 @@
             // 
             // labelAddStoreHouse
             // 
-            this.labelAddStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAddStoreHouse.AutoSize = true;
             this.labelAddStoreHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.labelAddStoreHouse.Location = new System.Drawing.Point(164, 22);
@@ -220,7 +219,7 @@
             // 
             // labelAssignOperatorToStoreHouse
             // 
-            this.labelAssignOperatorToStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAssignOperatorToStoreHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAssignOperatorToStoreHouse.AutoSize = true;
             this.labelAssignOperatorToStoreHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.labelAssignOperatorToStoreHouse.Location = new System.Drawing.Point(535, 22);

@@ -361,7 +361,7 @@
     <value>Guardar</value>
   </data>
   <data name="AddTruck" xml:space="preserve">
-    <value>Agregara camion</value>
+    <value>Agregar camion</value>
   </data>
   <data name="AssignTruck" xml:space="preserve">
     <value>Asignar camion</value>

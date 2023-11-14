@@ -88,7 +88,7 @@ namespace BackOffice.Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Agregara camion.
+        ///   Busca una cadena traducida similar a Agregar camion.
         /// </summary>
         internal static string AddTruck {
             get {

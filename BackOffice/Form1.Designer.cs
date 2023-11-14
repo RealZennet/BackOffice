@@ -345,7 +345,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::BackOffice.Properties.Resources.ZENNETLOGO;
+            this.pictureBox1.Image = global::BackOffice.Properties.Resources.Zblanca__1_;
             this.pictureBox1.Location = new System.Drawing.Point(12, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(225, 69);
