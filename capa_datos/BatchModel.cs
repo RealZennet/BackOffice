@@ -66,9 +66,25 @@ namespace capa_datos
         }
         public void DeleteLots()
         {
-            this.Command.CommandText = $"DELETE FROM lote WHERE id_Lote = {this.IDBatch}";
-            this.Command.ExecuteNonQuery();
+            try
+            {
+                this.Command.CommandText = $"SELECT COUNT(*) FROM llevan WHERE id_lote = {this.IDBatch}";
+                int carryCount = Convert.ToInt32(this.Command.ExecuteScalar());
+
+                if (carryCount > 0)
+                {
+                    throw new Exception("Error, lote vinculado a un envio.");
+                }
+
+                this.Command.CommandText = $"DELETE FROM lote WHERE id_Lote = {this.IDBatch}";
+                this.Command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error : " + ex.Message);
+            }
         }
+
 
         public bool CheckIfBatchExists(int id)
         {

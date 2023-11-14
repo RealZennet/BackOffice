@@ -89,15 +89,22 @@ namespace BackOffice
         {
             if (dataGridViewLots.SelectedRows.Count > 0)
             {
-                int selectedIndex = dataGridViewLots.SelectedRows[0].Index;
-                int id = (int)dataGridViewLots.Rows[selectedIndex].Cells["id"].Value;
-                DataTable dataTableLots = (DataTable)dataGridViewLots.DataSource;
-                dataTableLots.Rows.RemoveAt(selectedIndex);
-                MessageBox.Show(Languages.Messages.Successful);
-                BatchController.EliminarLote(id);
-                dataGridViewLots.DataSource = dataTableLots;
+                try
+                {
+                    int selectedIndex = dataGridViewLots.SelectedRows[0].Index;
+                    int id = (int)dataGridViewLots.Rows[selectedIndex].Cells["id"].Value;
+                    DataTable dataTableLots = (DataTable)dataGridViewLots.DataSource;
+                    dataTableLots.Rows.RemoveAt(selectedIndex);
+                    BatchController.EliminarLote(id);
+                    MessageBox.Show(Languages.Messages.Successful);
+                    dataGridViewLots.DataSource = dataTableLots;
+                }catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
 
             }
+
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)

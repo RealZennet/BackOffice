@@ -59,9 +59,16 @@ namespace capa_logica
         }
         public static void EliminarLote(int id)
         {
-            BatchModel lote = new BatchModel();
-            lote.IDBatch = id;
-            lote.DeleteLots();
+            try
+            {
+                BatchModel lote = new BatchModel();
+                lote.IDBatch = id;
+                lote.DeleteLots();
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
     }
 }
