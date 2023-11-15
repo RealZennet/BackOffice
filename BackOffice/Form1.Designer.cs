@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuickCarry));
             this.leftPanelContainer = new System.Windows.Forms.Panel();
             this.buttonLanguageSpanish = new System.Windows.Forms.Button();
             this.buttonEnglishLanguage = new System.Windows.Forms.Button();
@@ -373,6 +374,7 @@
             this.ClientSize = new System.Drawing.Size(1037, 607);
             this.Controls.Add(this.panelFormsLoader);
             this.Controls.Add(this.leftPanelContainer);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "QuickCarry";
             this.Text = "BackOffice";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QuickCarry_FormClosed);

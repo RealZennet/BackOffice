@@ -20,10 +20,10 @@ namespace capa_datos
 
         public DataBaseControl()
         {
-            this.dbip = "localhost";
-            this.dbUser = "root";
-            this.dbPassword = "zackquack";
-            this.dbDatabaseName = "quickCarryDB";
+            this.dbip = "192.168.5.50";
+            this.dbUser = "damian.suffo";
+            this.dbPassword = "52949224";
+            this.dbDatabaseName = "damian_suffo";
 
             this.Connection = new MySqlConnection(
                 $"server={this.dbip};" +
